@@ -1,0 +1,2 @@
+(window["webpackJsonpnicholas-cerisano-portfolio"]=window["webpackJsonpnicholas-cerisano-portfolio"]||[]).push([[0],[,,,function(n,e,o){n.exports=o(10)},,,,,function(n,e,o){},function(n,e,o){},function(n,e,o){"use strict";o.r(e);var t=o(0),c=o.n(t),a=o(2),r=o.n(a),i=(o(8),o(9),function(){return c.a.createElement("div",{className:"App"},c.a.createElement("p",null,"hello"))});r.a.render(c.a.createElement(i,null),document.getElementById("root"))}],[[3,1,2]]]);
+//# sourceMappingURL=main.d1bf0120.chunk.js.map
