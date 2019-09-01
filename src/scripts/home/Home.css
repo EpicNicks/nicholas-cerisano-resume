@@ -1,3 +1,7 @@
 .Home p{
     font-family: Ubuntu, monospace;
 }
+
+.VideoPlayer{
+    alignment: center;
+}

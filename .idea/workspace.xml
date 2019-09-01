@@ -2,37 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cc64d9f7-44b4-4d17-9c29-8d209407a22a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/epicn.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/asset-manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logo192.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logo512.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/precache-manifest.cac2302f8d9d5164832c8b6bb7f120f4.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/robots.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-worker.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/home/Home.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/home/Home.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/navbar/NavBar.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/navbar/NavBar.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/navbar/NavButton.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resume/Resume.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resume/Resume.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/main.67abf06b.chunk.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/main.67abf06b.chunk.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/2.cda9b25b.chunk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/2.cda9b25b.chunk.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/main.4ddca2da.chunk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/main.4ddca2da.chunk.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/runtime~main.4c2230db.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/runtime~main.4c2230db.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/home/Home.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/home/Home.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -137,7 +112,7 @@
       <workItem from="1567281067737" duration="319000" />
       <workItem from="1567281397740" duration="81000" />
       <workItem from="1567281489451" duration="8447000" />
-      <workItem from="1567294333659" duration="5102000" />
+      <workItem from="1567294333659" duration="6072000" />
     </task>
     <servers />
   </component>
