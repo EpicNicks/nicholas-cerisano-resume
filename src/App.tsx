@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.css';
-import { NavBar } from "./navbar/NavBar";
+import { NavBar } from "../src/scripts/navbar/NavBar";
 import {Router, Route, Link, Redirect} from 'react-router-dom';
-import { NavButton } from "./navbar/NavButton";
+import { NavButton } from "../src/scripts/navbar/NavButton";
 import {createBrowserHistory} from "history";
 
 //#region Routes
-import { Home } from './home/Home';
-import { Resume } from "./resume/Resume";
+import { Home } from '../src/scripts/home/Home';
+import { Resume } from "../src/scripts/resume/Resume";
 //#endregion
 
 const history = createBrowserHistory();
