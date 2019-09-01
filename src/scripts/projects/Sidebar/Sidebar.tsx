@@ -1,14 +1,12 @@
 
-import { Link } from "react-router-dom";
-import { Component } from 'react';
-import React from 'react';
+import React, { Component } from 'react';
+import { Link, Route } from 'react-router-dom'
+import {SideButton} from "./SideButton";
+import {NavButton} from "../../navbar/NavButton";
 
-import { NavButton } from "./NavButton";
+import "./Sidebar.css";
 
-
-import "./NavBar.css";
-
-interface IProps{
+interface IProps {
 
 }
 
@@ -17,7 +15,7 @@ interface IState {
     navBtns: Array<NavButton>
 }
 
-export class NavBar extends Component<IProps, IState>{
+export class Sidebar extends Component<IProps, IState>{
 
     state = {
         activeBtn: null,
@@ -31,29 +29,26 @@ export class NavBar extends Component<IProps, IState>{
     }
 
     render(): React.ReactElement<any, string | React.JSXElementConstructor<any>> | string | number | {} | React.ReactNodeArray | React.ReactPortal | boolean | null | undefined {
-
         return(
-            <div className="NavBar">
+            <div className="SideBar">
                 <ul>
                     <li>
-                        <Link to="/home">
-                            <NavButton text="Home" navBtns={this.state.navBtns} navBar={this}/>
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to="/resume">
-                            <NavButton text="Resume" navBtns={this.state.navBtns} navBar={this}/>
-                        </Link>
-                    </li>
-                    <li>
                         <Link to="/projects">
-                            <NavButton text="Projects" navBtns={this.state.navBtns} navBar={this}/>
+                            <SideButton text="Default" navBtns={this.state.navBtns} navBar={this}/>
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/projects/space-shooter">
+                            <SideButton text="Space Shooter" navBtns={this.state.navBtns} navBar={this}/>
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/projects/glitch-garden">
+                            <SideButton text="Glitch Garden" navBtns={this.state.navBtns} navBar={this}/>
                         </Link>
                     </li>
                 </ul>
             </div>
-        )
+        );
     }
 }
-
-

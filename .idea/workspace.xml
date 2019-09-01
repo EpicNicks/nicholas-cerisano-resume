@@ -2,17 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cc64d9f7-44b4-4d17-9c29-8d209407a22a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/scripts/bottom bar/BottomBar.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scripts/bottom bar/BottomBar.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scripts/contact-bar/ContactBar.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scripts/contact-bar/ContactBar.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/videos/2019-02-07 22-34-08.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/projects/ProjectComponents/SpaceShooter.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/projects/Projects.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/projects/Projects.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/projects/Sidebar/SideButton.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/projects/Sidebar/Sidebar.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/projects/Sidebar/Sidebar.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/asset-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/precache-manifest.043ba3d35cfbfa894af6f7b318793233.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/service-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/service-worker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/css/main.b8edc1bf.chunk.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/css/main.b8edc1bf.chunk.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/2.553d87a2.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/2.553d87a2.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/main.714763ee.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/main.714763ee.chunk.js.map" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scripts/components/VideoPlayer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/components/VideoPlayer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/home/Home.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/home/Home.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/home/Home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/home/Home.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scripts/navbar/NavBar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/navbar/NavBar.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scripts/navbar/NavBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/navbar/NavBar.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scripts/navbar/NavButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/navbar/NavButton.tsx" afterDir="false" />
@@ -34,7 +44,18 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
   </component>
   <component name="ProjectId" id="1PRfh12Aas8QAQZrJBQZhNIWwyz" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -51,7 +72,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="terminal" />
     <property name="ts.external.directory.path" value="C:\Users\epicn\WebstormProjects\nicholas-cerisano-portfolio\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
@@ -135,7 +156,8 @@
       <workItem from="1567281067737" duration="319000" />
       <workItem from="1567281397740" duration="81000" />
       <workItem from="1567281489451" duration="8447000" />
-      <workItem from="1567294333659" duration="21245000" />
+      <workItem from="1567294333659" duration="23470000" />
+      <workItem from="1567362307733" duration="5343000" />
     </task>
     <servers />
   </component>

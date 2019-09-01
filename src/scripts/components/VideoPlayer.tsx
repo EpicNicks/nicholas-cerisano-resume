@@ -1,8 +1,7 @@
 
-import ReactPlayer from "react-player";
+//import ReactPlayer from "react-player";
 import React, { Component } from 'react';
 import "../home/Home.css";
-import URL from 'url';
 
 export class VideoPlayer extends Component{
 
