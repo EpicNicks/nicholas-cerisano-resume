@@ -8,6 +8,7 @@ import {createBrowserHistory} from "history";
 //#region Routes
 import { Home } from '../src/scripts/home/Home';
 import { Resume } from "../src/scripts/resume/Resume";
+import { BottomBar } from "./scripts/bottom bar/BottomBar";
 //#endregion
 
 const history = createBrowserHistory();
@@ -22,6 +23,7 @@ class App extends Component {
                     <Redirect from="/" to="/home"/>
                     <Route exact path="/home" component={Home}/>
                     <Route exact path="/resume" component={Resume}/>
+                    <BottomBar/>
                 </Router>
             </div>
         );

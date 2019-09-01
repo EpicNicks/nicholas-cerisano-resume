@@ -1,0 +1,10 @@
+
+.BottomBar{
+    padding: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 0;
+    display: inline-block;
+    width: 100%;
+    background-color: #333333;
+}

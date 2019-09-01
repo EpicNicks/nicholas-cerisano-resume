@@ -1,17 +1,25 @@
 
 import { Component } from 'react';
 import React from 'react';
+import { NavBar } from "./NavBar";
 
-type NavButtonProps = {
+interface IProps {
     text: string,
-};
+    path: string,
+    navBtns: Array<NavButton>,
+    navBar: NavBar,
+}
 
-//Wrapper class for CSS markdown
-export class NavButton extends Component<NavButtonProps>{
+interface IState {
+}
+
+export class NavButton extends Component<IProps, IState>{
 
     render(): React.ReactElement<any, string | React.JSXElementConstructor<any>> | string | number | {} | React.ReactNodeArray | React.ReactPortal | boolean | null | undefined {
+        let className = this.props.navBar.state.activeBtn === this ? "ActiveNavBtn" : "NavButton";
+        this.props.navBtns.push(this);
         return(
-            <div className="NavButton">
+            <div className={className} onClick={()=>{this.props.navBar.setState({activeBtn: this, navBtns: this.props.navBtns})}}>
                 { this.props.text }
             </div>
         );

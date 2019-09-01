@@ -1,7 +1,27 @@
 .Home p{
     font-family: Ubuntu, monospace;
+    color: aliceblue;
+    font-size: 24px;
+}
+
+.Home{
+    display: inline-block;
+    box-sizing: border-box;
+    margin: 0;
+    background-color: #555555;
+    padding: 0;
 }
 
 .VideoPlayer{
+    filter: blur(2px);
     alignment: center;
+}
+
+.VideoContainer p{
+    text-shadow: 2px 2px #00ffff;
+    color: aquamarine;
+    font-size: 72px;
+    position: absolute;
+    top: 40%;
+    left: 25%;
 }

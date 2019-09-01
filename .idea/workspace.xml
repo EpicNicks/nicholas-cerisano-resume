@@ -2,7 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cc64d9f7-44b4-4d17-9c29-8d209407a22a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/bottom bar/BottomBar.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/bottom bar/BottomBar.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/contact-bar/ContactBar.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/contact-bar/ContactBar.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/videos/2019-02-07 22-34-08.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/components/VideoPlayer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/components/VideoPlayer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/home/Home.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/home/Home.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/home/Home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/home/Home.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/navbar/NavBar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/navbar/NavBar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/navbar/NavBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/navbar/NavBar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/navbar/NavButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/navbar/NavButton.tsx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,10 +26,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript JSX File" />
-        <option value="CSS File" />
         <option value="tsconfig.json" />
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -65,7 +78,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="npm.deploy">
+  <component name="RunManager" selected="npm.npm start">
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
       <method v="2" />
     </configuration>
@@ -89,6 +102,21 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="predeploy" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="predeploy" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.predeploy" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -107,7 +135,7 @@
       <workItem from="1567281067737" duration="319000" />
       <workItem from="1567281397740" duration="81000" />
       <workItem from="1567281489451" duration="8447000" />
-      <workItem from="1567294333659" duration="6572000" />
+      <workItem from="1567294333659" duration="21245000" />
     </task>
     <servers />
   </component>

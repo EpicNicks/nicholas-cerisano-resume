@@ -1,0 +1,11 @@
+.ContactBar{
+    display: flex;
+}
+
+.ContactBarLeft{
+    width: 50%;
+}
+
+.ContactBarRight{
+    flex-grow: 1;
+}
