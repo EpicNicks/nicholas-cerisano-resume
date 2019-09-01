@@ -70,7 +70,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="npm.npm start">
+  <component name="RunManager" selected="npm.deploy">
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
       <method v="2" />
     </configuration>
@@ -112,7 +112,7 @@
       <workItem from="1567281067737" duration="319000" />
       <workItem from="1567281397740" duration="81000" />
       <workItem from="1567281489451" duration="8447000" />
-      <workItem from="1567294333659" duration="6072000" />
+      <workItem from="1567294333659" duration="6327000" />
     </task>
     <servers />
   </component>
