@@ -6,8 +6,11 @@ import { createBrowserHistory } from 'history'
 import './Projects.css';
 
 ///#region Component imports
+import { Sidebar } from "./Sidebar/Sidebar";
+
 import { SpaceShooter } from "./ProjectComponents/SpaceShooter";
-import {Sidebar} from "./Sidebar/Sidebar";
+import { GlitchGarden } from "./ProjectComponents/GlitchGarden";
+import { GameDay } from "./ProjectComponents/GameDay";
 ///#endregion
 
 const history = createBrowserHistory();
@@ -15,9 +18,13 @@ const history = createBrowserHistory();
 function DefaultPage() {
     return(
         <div className="ProjectDefault">
-            <p>
-                Project page default
-            </p>
+            <h1>
+                Welcome to the Project Page.
+            </h1>
+            <h3>
+                Feel free to click on the sidebar buttons to get a look at some of my
+                personal projects.
+            </h3>
         </div>
     );
 }
@@ -32,6 +39,8 @@ export class Projects extends Component{
                     <Sidebar/>
                     <Switch>
                         <Route exact path="/projects/space-shooter" component={SpaceShooter}/>
+                        <Route exact path="/projects/glitch-garden" component={GlitchGarden}/>
+                        <Route exact path="/projects/game-day" component={GameDay}/>
                         <Route component={DefaultPage}/>
                     </Switch>
                 </Router>

@@ -34,7 +34,7 @@ export class Sidebar extends Component<IProps, IState>{
                 <ul>
                     <li>
                         <Link to="/projects">
-                            <SideButton text="Default" navBtns={this.state.navBtns} navBar={this}/>
+                            <SideButton text="Projects Home" navBtns={this.state.navBtns} navBar={this}/>
                         </Link>
                     </li>
                     <li>
@@ -45,6 +45,11 @@ export class Sidebar extends Component<IProps, IState>{
                     <li>
                         <Link to="/projects/glitch-garden">
                             <SideButton text="Glitch Garden" navBtns={this.state.navBtns} navBar={this}/>
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/projects/game-day">
+                            <SideButton text="Game Day" navBtns={this.state.navBtns} navBar={this}/>
                         </Link>
                     </li>
                 </ul>

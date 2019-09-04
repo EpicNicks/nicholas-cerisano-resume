@@ -1,11 +1,13 @@
 .NavBar{
     background-color: #333;
+    margin: 0;
+    padding: 0;
 }
 
 .NavBar ul {
     margin: 0;
     padding: 0;
-    padding-left: 100px;
+    padding-left: 10%;
     list-style-type: none;
     overflow: hidden;
 }

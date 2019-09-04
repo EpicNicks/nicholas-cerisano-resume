@@ -10,27 +10,23 @@ export class ContactBar extends Component{
         return (
             <div className="ContactBar">
                 <div className="ContactBarLeft">
-                    <p>
-                        <h1>
-                            Contact Me
-                        </h1>
-                        <h3>
-                            epicnicks2.0@gmail.com
-                        </h3>
-                        <h3>
-                            416-556-4060
-                        </h3>
-                    </p>
+                    <h1>
+                        Contact Me
+                    </h1>
+                    <h3>
+                        epicnicks2.0@gmail.com
+                    </h3>
+                    <h3>
+                        416-556-4060
+                    </h3>
                 </div>
                 <div className="ContactBarRight">
-                    <p>
-                        <h1>
-                            My GitHub:
-                        </h1>
-                        <h3>
-                            <a href="https://github.com/EpicNicks">click here</a>
-                        </h3>
-                    </p>
+                    <h1>
+                        My GitHub:
+                    </h1>
+                    <h3>
+                        <a href="https://github.com/EpicNicks">click here</a>
+                    </h3>
                 </div>
             </div>
         );

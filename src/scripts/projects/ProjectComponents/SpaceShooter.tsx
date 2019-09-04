@@ -9,6 +9,10 @@ export class SpaceShooter extends Component{
                 <p>
                     Space Shooter
                 </p>
+                <img
+                    src={require("C:\\Users\\epicn\\WebstormProjects\\nicholas-cerisano-portfolio\\src\\media\\images\\space shooter demo gif.gif")}
+                    alt={require("C:\\Users\\epicn\\WebstormProjects\\nicholas-cerisano-portfolio\\src\\media\\images\\space shooter screenshot.jpg")}
+                />
             </div>
         )
     }

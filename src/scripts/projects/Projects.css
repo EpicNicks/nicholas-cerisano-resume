@@ -1,9 +1,34 @@
 
+.Projects{
+    min-height: 85.2vh;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+}
+
 .ProjectDefault{
-    float: left;
-    alignment: center;
+    background-color: #555555;
+    display: inline-block;
+    width: 100%;
 }
 
 .SpaceShooter{
-    float: left;
+    display: inline-block;
+    background-color: black;
+    width: 100%;
+}
+
+.GlitchGarden {
+    display: inline-block;
+    text-align: center;
+    background-color: darkgreen;
+    width: 100%;
+}
+
+.GameDay{
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    background-color: white;
+    color: #111;
 }

@@ -1,9 +1,16 @@
+.SideBar{
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    position: absolute;
+    left: 0px;
+}
+
 .SideBar ul{
     margin: 0;
     padding: 0;
     list-style-type: none;
     overflow: hidden;
-    float: left;
 }
 
 .SideBar ul li{
@@ -17,16 +24,20 @@
     line-height: 1.6em;
 }
 
+a .SideButton, a:link .SideButton, a:visited .SideButton{
+    text-decoration: none;
+}
+
 .SideButton{
     -webkit-transition:background-color 500ms ease-out, background-color 200ms ease-in;
-    background-color: greenyellow;
     display: block;
     text-align: center;
     padding: 16px;
 }
 
 .ActiveSideButton{
-    background-color: limegreen;
+    color: aqua;
+    background-color: #7f7f7f;
     display: block;
     text-align: center;
     padding: 16px;
@@ -34,14 +45,74 @@
 
 .SideBar a:link{
     text-decoration: none;
-    color: cornflowerblue;
+    color: aliceblue;
 }
 
 .SideBar a:visited{
-    color: cornflowerblue;
-
+    color: aliceblue;
 }
 
 .SideButton:hover{
-    background-color: limegreen;
+    background-color: #555555;
+    color: aqua;
+}
+
+.glitch-garden.SideButton{
+    background-color: #8b570a;
+}
+
+.ActiveSideButton{
+    display: block;
+    text-align: center;
+    padding: 16px;
+}
+
+/*GLITCH GARDEN CSS*/
+
+.ActiveSideButton.glitch-garden{
+    background-color: saddlebrown;
+}
+a:link .glitch-garden, a:visited .glitch-garden{
+    text-decoration: none;
+    color: #00d600;
+}
+.glitch-garden.SideButton:hover{
+    background-color: saddlebrown;
+}
+
+
+/*SPACE SHOOTER CSS*/
+
+.space-shooter.ActiveSideButton{
+    background-color: black;
+}
+a:link .space-shooter, a:visited .space-shooter.ActiveSideButton{
+    color: aliceblue;
+}
+a:link .space-shooter, a:visited .space-shooter.SideButton{
+    background-color: #333;
+    color: whitesmoke;
+}
+a:hover .space-shooter.SideButton{
+    background-color: #111;
+}
+
+/*GAME DAY CSS*/
+
+.game-day.ActiveSideButton{
+    background-color: white;
+}
+a:link .game-day.ActiveSideButton, a:visited .game-day.ActiveSideButton{
+    color: black;
+}
+.game-day.SideButton{
+    background-color: aliceblue;
+}
+a:link .game-day.SideButton, a:visited .game-day.SideButton{
+    color: #333;
+    background-color: whitesmoke;
+}
+a:hover .game-day.SideButton{
+    background-color: lightgray;
+    color: #111;
 }

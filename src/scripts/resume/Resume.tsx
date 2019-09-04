@@ -1,5 +1,6 @@
 
 import React, { Component } from 'react';
+import './Resume.css';
 
 export class Resume extends Component{
 

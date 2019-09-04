@@ -7,11 +7,12 @@ export class VideoPlayer extends Component{
 
     componentDidMount(): void {
         const video = document.querySelector("video");
-        if(video !== null) video.playbackRate = 10.0;
+        if(video !== null)
+            video.playbackRate = 10.0;
     }
 
     render(): React.ReactElement<any, string | React.JSXElementConstructor<any>> | string | number | {} | React.ReactNodeArray | React.ReactPortal | boolean | null | undefined {
-        const url = require("C:\\Users\\epicn\\WebstormProjects\\nicholas-cerisano-portfolio\\src\\videos\\2019-02-07 22-34-08.mp4");
+        const url = require("C:\\Users\\epicn\\WebstormProjects\\nicholas-cerisano-portfolio\\src\\media\\videos\\2019-02-07 22-34-08.mp4");
         return(
             <div className="VideoContainer">
                 <div className="VideoPlayer">
