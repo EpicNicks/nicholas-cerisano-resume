@@ -41,6 +41,11 @@ export class NavBar extends Component<IProps, IState>{
                         </Link>
                     </li>
                     <li>
+                        <Link to="/about">
+                            <NavButton text="About" navBtns={this.state.navBtns} navBar={this}/>
+                        </Link>
+                    </li>
+                    <li>
                         <Link to="/resume">
                             <NavButton text="Resume" navBtns={this.state.navBtns} navBar={this}/>
                         </Link>

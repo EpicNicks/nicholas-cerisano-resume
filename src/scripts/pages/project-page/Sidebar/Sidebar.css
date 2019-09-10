@@ -1,0 +1,142 @@
+.SideBar{
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    position: absolute;
+    left: 0px;
+}
+
+.SideBar ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    overflow: hidden;
+}
+
+.SideBar ul li{
+    padding: 0px;
+    background-color: #333;
+    /*#f4f4f4*/
+    color: #555555;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16pt;
+    font-weight: normal;
+    line-height: 1.6em;
+}
+
+a .SideButton, a:link .SideButton, a:visited .SideButton{
+    text-decoration: none;
+}
+
+.SideButton{
+    -webkit-transition:background-color 500ms ease-out, background-color 200ms ease-in;
+    display: block;
+    text-align: center;
+    padding: 16px;
+}
+
+.ActiveSideButton{
+    color: aqua;
+    background-color: #7f7f7f;
+    display: block;
+    text-align: center;
+    padding: 16px;
+}
+
+.SideBar a:link{
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.SideBar a:visited{
+    color: aliceblue;
+}
+
+.SideButton:hover{
+    background-color: #555555;
+    color: aqua;
+}
+
+.glitch-garden.SideButton{
+    background-color: #8b570a;
+}
+
+.ActiveSideButton{
+    display: block;
+    text-align: center;
+    padding: 16px;
+}
+
+/*GLITCH GARDEN CSS*/
+
+.ActiveSideButton.glitch-garden{
+    background-color: saddlebrown;
+}
+a:link .glitch-garden, a:visited .glitch-garden{
+    text-decoration: none;
+    color: #00d600;
+}
+.glitch-garden.SideButton:hover{
+    background-color: saddlebrown;
+}
+
+
+/*SPACE SHOOTER CSS*/
+
+.space-shooter.ActiveSideButton{
+    background-color: black;
+}
+a:link .space-shooter, a:visited .space-shooter.ActiveSideButton{
+    color: aliceblue;
+}
+a:link .space-shooter, a:visited .space-shooter.SideButton{
+    background-color: #333;
+    color: whitesmoke;
+}
+a:hover .space-shooter.SideButton{
+    background-color: #111;
+}
+
+/*GAME DAY CSS*/
+
+.game-day.ActiveSideButton{
+    background-color: white;
+}
+a:link .game-day.ActiveSideButton, a:visited .game-day.ActiveSideButton{
+    color: black;
+}
+.game-day.SideButton{
+    background-color: aliceblue;
+}
+a:link .game-day.SideButton, a:visited .game-day.SideButton{
+    color: #333;
+    background-color: grey;
+}
+a:hover .game-day.SideButton{
+    background-color: lightgray;
+    color: #111;
+}
+
+/*INFINITE RUNNER CSS*/
+
+/*GAME DAY CSS*/
+
+.infinite-runner.ActiveSideButton{
+    background-color: turquoise;
+    color: black;
+}
+a:link .infinite-runner.ActiveSideButton, a:visited .infinite-runner.ActiveSideButton{
+    color: black;
+}
+.infinite-runner.SideButton{
+    background-color: paleturquoise;
+    color: #111;
+}
+a:link .infinite-runner.SideButton, a:visited .infinite-runner.SideButton{
+    background-color: paleturquoise;
+    color: #111;
+}
+a:hover .infinite-runner.SideButton{
+    background-color: darkturquoise;
+    color: #111;
+}

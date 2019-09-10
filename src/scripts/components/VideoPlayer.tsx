@@ -1,7 +1,7 @@
 
 //import ReactPlayer from "react-player";
 import React, { Component } from 'react';
-import "../home/Home.css";
+import "../pages/home-page/Home.css";
 
 export class VideoPlayer extends Component{
 
@@ -12,7 +12,7 @@ export class VideoPlayer extends Component{
     }
 
     render(): React.ReactElement<any, string | React.JSXElementConstructor<any>> | string | number | {} | React.ReactNodeArray | React.ReactPortal | boolean | null | undefined {
-        const url = require("C:\\Users\\epicn\\WebstormProjects\\nicholas-cerisano-portfolio\\src\\media\\videos\\2019-02-07 22-34-08.mp4");
+        const url = require("D:\\JetBrains Projects\\WebstormProjects\\nicholas-cerisano-portfolio\\src\\media\\videos\\sample coding clip.mp4");
         return(
             <div className="VideoContainer">
                 <div className="VideoPlayer">

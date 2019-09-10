@@ -4,11 +4,13 @@ import { NavBar } from "./scripts/navbar/NavBar";
 import {Router, Route, Redirect} from 'react-router-dom';
 import {createBrowserHistory} from "history";
 
-//#region Routes
-import { Home } from './scripts/home/Home';
-import { Resume } from "./scripts/resume/Resume";
-import { Projects } from './scripts/projects/Projects';
 import { BottomBar } from "./scripts/bottom bar/BottomBar";
+
+//#region Routes
+import { Home } from './scripts/pages/home-page/Home';
+import { Resume } from "./scripts/pages/resume-page/Resume";
+import { Projects } from './scripts/pages/project-page/Projects';
+import { About } from "./scripts/pages/about-page/About";
 //#endregion
 
 const history = createBrowserHistory();
@@ -22,6 +24,7 @@ class App extends Component {
                     <NavBar/>
                     <Redirect from="/" to="/home"/>
                     <Route exact path="/home" component={Home}/>
+                    <Route exact path="/about" component={About}/>
                     <Route exact path="/resume" component={Resume}/>
                     <Route exact path="/projects" component={Projects}/>
                     <BottomBar/>

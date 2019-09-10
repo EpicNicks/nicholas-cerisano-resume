@@ -1,0 +1,37 @@
+
+.About{
+    min-height: 83vh;
+    color: #111;
+    background-color: aquamarine;
+}
+
+.About h1{
+    padding: 0;
+    margin: 0;
+}
+
+.About-Main{
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+}
+
+.About-Image{
+    display: inline-block;
+    vertical-align: top;
+}
+
+.About-Body{
+    vertical-align: top;
+    display: inline-block;
+    text-align: left;
+    padding-left: 5%;
+}
+
+.About-Body h2{
+
+}
+
+.About-Body p{
+    white-space: pre;
+}
