@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/nicholas-cerisano-resume/static/css/main.c860fc62.chunk.css",
-    "main.js": "/nicholas-cerisano-resume/static/js/main.d03e950e.chunk.js",
-    "main.js.map": "/nicholas-cerisano-resume/static/js/main.d03e950e.chunk.js.map",
+    "main.css": "/nicholas-cerisano-resume/static/css/main.e281eb30.chunk.css",
+    "main.js": "/nicholas-cerisano-resume/static/js/main.03dbaf02.chunk.js",
+    "main.js.map": "/nicholas-cerisano-resume/static/js/main.03dbaf02.chunk.js.map",
     "runtime~main.js": "/nicholas-cerisano-resume/static/js/runtime~main.57d7e6dd.js",
     "runtime~main.js.map": "/nicholas-cerisano-resume/static/js/runtime~main.57d7e6dd.js.map",
-    "static/js/2.028f340d.chunk.js": "/nicholas-cerisano-resume/static/js/2.028f340d.chunk.js",
-    "static/js/2.028f340d.chunk.js.map": "/nicholas-cerisano-resume/static/js/2.028f340d.chunk.js.map",
+    "static/js/2.bcd5b048.chunk.js": "/nicholas-cerisano-resume/static/js/2.bcd5b048.chunk.js",
+    "static/js/2.bcd5b048.chunk.js.map": "/nicholas-cerisano-resume/static/js/2.bcd5b048.chunk.js.map",
     "index.html": "/nicholas-cerisano-resume/index.html",
-    "precache-manifest.0a7b42e35f47349786c52d183a72ba7f.js": "/nicholas-cerisano-resume/precache-manifest.0a7b42e35f47349786c52d183a72ba7f.js",
+    "precache-manifest.c307a2cea583af3577f82e3dfb8b6d52.js": "/nicholas-cerisano-resume/precache-manifest.c307a2cea583af3577f82e3dfb8b6d52.js",
     "service-worker.js": "/nicholas-cerisano-resume/service-worker.js",
-    "static/css/main.c860fc62.chunk.css.map": "/nicholas-cerisano-resume/static/css/main.c860fc62.chunk.css.map",
-    "static/media/2019-02-07 22-34-08.mp4": "/nicholas-cerisano-resume/static/media/2019-02-07 22-34-08.b0fb19f0.mp4",
+    "static/css/main.e281eb30.chunk.css.map": "/nicholas-cerisano-resume/static/css/main.e281eb30.chunk.css.map",
+    "static/media/MyPhoto.jpg": "/nicholas-cerisano-resume/static/media/MyPhoto.9668dd11.jpg",
     "static/media/glitch garden demo gif.gif": "/nicholas-cerisano-resume/static/media/glitch garden demo gif.aebb97e8.gif",
-    "static/media/space shooter demo gif.gif": "/nicholas-cerisano-resume/static/media/space shooter demo gif.459be7c3.gif",
-    "static/media/space shooter screenshot.jpg": "/nicholas-cerisano-resume/static/media/space shooter screenshot.3fca4230.jpg"
+    "static/media/infinite-runner clip.gif": "/nicholas-cerisano-resume/static/media/infinite-runner clip.f6adb8ce.gif",
+    "static/media/sample coding clip.mp4": "/nicholas-cerisano-resume/static/media/sample coding clip.b0fb19f0.mp4"
   }
 }

@@ -18,11 +18,28 @@
     width: 100%;
 }
 
+.SpaceShooter p{
+    width: 60%;
+    margin: auto;
+    text-align: center;
+}
+
+.Unity_SpaceShooter{
+    margin: auto !important;
+    width: 450px !important;
+    height: 800px !important;
+}
+
 .GlitchGarden {
     display: inline-block;
     text-align: center;
     background-color: darkgreen;
     width: 100%;
+}
+
+.Unity_GlitchGarden{
+    margin: auto !important;
+    width: 70% !important;
 }
 
 .GameDay{
@@ -39,4 +56,9 @@
     width: 100%;
     background-color: paleturquoise;
     color: #111;
+}
+
+.Unity_InfiniteRunner{
+    margin: auto !important;
+    width: 70% !important;
 }
