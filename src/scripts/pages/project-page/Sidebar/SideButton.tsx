@@ -2,13 +2,14 @@
 import React, { Component } from 'react';
 import {NavBar} from "../../../navbar/NavBar";
 import {NavButton} from "../../../navbar/NavButton";
+import { Sidebar } from "./Sidebar";
 
 import "./Sidebar.css";
 
 interface IProps {
     text: string,
-    navBtns: Array<NavButton>,
-    navBar: NavBar,
+    navBar: Sidebar,
+    id: string,
 }
 
 interface IState {
@@ -30,13 +31,13 @@ let pathnameToCSSClass = (url : string) : string => {
 
 export class SideButton extends Component<IProps, IState>{
 
-    render(): React.ReactElement<any, string | React.JSXElementConstructor<any>> | string | number | {} | React.ReactNodeArray | React.ReactPortal | boolean | null | undefined {
-        let className = this.props.navBar.state.activeBtn === this ? "ActiveSideButton" : "SideButton";
-        this.props.navBtns.push(this);
+    render(){
+        let className = this.props.navBar.getActiveStateId() === this.props.id ? "ActiveSideButton" : "SideButton";
         return(
-            <div className={className + " " + pathnameToCSSClass(window.location.pathname)/*this is used to differentiate css colors*/}
+            <div className={className + " " + this.props.navBar.getActiveStateId()/*this is used to differentiate css colors*/}
                  onClick={()=> {
-                     this.props.navBar.setState({activeBtn: this, navBtns: this.props.navBtns});
+                     this.props.navBar.setActiveStateId(this.props.id);
+                     this.props.navBar.setState({activeBtn: this});
                  }}
             >
                 { this.props.text }

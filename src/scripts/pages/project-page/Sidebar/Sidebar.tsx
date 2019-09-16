@@ -5,56 +5,59 @@ import {SideButton} from "./SideButton";
 import {NavButton} from "../../../navbar/NavButton";
 
 import "./Sidebar.css";
+import {act} from "react-dom/test-utils";
 
-interface IProps {
-
-}
-
+interface IProps {}
 interface IState {
-    activeBtn: NavButton | null,
-    navBtns: Array<NavButton>
+    activeBtn: SideButton | null,
+    navBtns: Array<SideButton>
 }
+
+let activeStateId: string | null = null;
 
 export class Sidebar extends Component<IProps, IState>{
 
     state = {
         activeBtn: null,
-        navBtns: [] as NavButton[]
+        navBtns: [] as SideButton[]
     };
 
+    setActiveStateId = (id : string) => activeStateId = id;
+    getActiveStateId = () : string | null => activeStateId;
+
     componentDidMount(): void {
-        if(this.state.activeBtn === null){
-            this.setState({activeBtn: this.state.navBtns[0], navBtns: this.state.navBtns});
+        if(activeStateId === null) {
+            activeStateId = 'home';
         }
     }
 
-    render(): React.ReactElement<any, string | React.JSXElementConstructor<any>> | string | number | {} | React.ReactNodeArray | React.ReactPortal | boolean | null | undefined {
+    render(){
         return(
             <div className="SideBar">
                 <ul>
                     <li>
                         <Link to="/projects">
-                            <SideButton text="Projects Home" navBtns={this.state.navBtns} navBar={this}/>
+                            <SideButton text="Projects Home" id="home" navBar={this}/>
                         </Link>
                     </li>
                     <li>
                         <Link to="/projects/space-shooter">
-                            <SideButton text="Space Shooter" navBtns={this.state.navBtns} navBar={this}/>
+                            <SideButton text="Space Shooter" id="space-shooter" navBar={this}/>
                         </Link>
                     </li>
                     <li>
                         <Link to="/projects/glitch-garden">
-                            <SideButton text="Glitch Garden" navBtns={this.state.navBtns} navBar={this}/>
+                            <SideButton text="Glitch Garden" id="glitch-garden" navBar={this}/>
                         </Link>
                     </li>
                     <li>
                         <Link to="/projects/game-day">
-                            <SideButton text="Game Day" navBtns={this.state.navBtns} navBar={this}/>
+                            <SideButton text="Game Day" id="game-day" navBar={this}/>
                         </Link>
                     </li>
                     <li>
                         <Link to="/projects/infinite-runner">
-                            <SideButton text="Infinite Runner" navBtns={this.state.navBtns} navBar={this}/>
+                            <SideButton text="Infinite Runner" id="infinite-runner" navBar={this}/>
                         </Link>
                     </li>
                 </ul>

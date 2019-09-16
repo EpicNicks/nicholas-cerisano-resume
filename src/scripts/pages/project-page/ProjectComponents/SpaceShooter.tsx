@@ -15,12 +15,17 @@ export class SpaceShooter extends Component{
 
     private game : Unity | null = null;
 
-    //kill unity instance (crappy method but it works -_(._.)_- )
-    componentWillUnmount(): void {
-        if(this.game !== null) {
-            document.location.assign('/nicholas-cerisano-resume');
-        }
-    }
+    // kill unity instance (crappy method but it works -_(._.)_- )
+    // componentWillUnmount(): void {
+    //     if(this.game !== null) {
+    //         let path : string = window.location.pathname;
+    //         window.location.assign('/nicholas-cerisano-resume');
+    //         if(document.readyState === 'interactive') {
+    //             window.location.assign(path);
+    //             window.onload = null;
+    //         }
+    //     }
+    // }
 
     render(){
         return (

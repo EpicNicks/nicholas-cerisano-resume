@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 
 import { VideoPlayer } from "../../components/VideoPlayer";
-import ".//Home.css";
+import "./Home.css";
 import {ContactBar} from "../../contact-bar/ContactBar";
 
 export class Home extends Component{

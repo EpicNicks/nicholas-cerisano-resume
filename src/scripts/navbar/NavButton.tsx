@@ -18,7 +18,10 @@ export class NavButton extends Component<IProps, IState>{
         let className = this.props.navBar.state.activeBtn === this ? "ActiveNavBtn" : "NavButton";
         this.props.navBtns.push(this);
         return(
-            <div className={className} onClick={()=>{this.props.navBar.setState({activeBtn: this, navBtns: this.props.navBtns})}}>
+            <div
+                className={className}
+                onClick={()=>{this.props.navBar.setState({activeBtn: this, navBtns: this.props.navBtns})}}
+            >
                 { this.props.text }
             </div>
         );

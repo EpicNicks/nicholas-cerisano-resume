@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import './App.css';
 import { NavBar } from "./scripts/navbar/NavBar";
-import {Router, Route, Redirect} from 'react-router-dom';
+import {Router, Route, Redirect, Switch } from 'react-router-dom';
 import {createBrowserHistory} from "history";
 
 import { BottomBar } from "./scripts/bottom bar/BottomBar";
@@ -22,12 +22,14 @@ class App extends Component {
             <div className="App">
                 <Router history={history}>
                     <NavBar/>
-                    <Redirect from="/" to="/home"/>
-                    <Route exact path="/home" component={Home}/>
-                    <Route exact path="/about" component={About}/>
-                    <Route exact path="/resume" component={Resume}/>
-                    <Route exact path="/projects" component={Projects}/>
-                    <BottomBar/>
+                        <Switch>
+                            <Route exact path="/home" component={Home}/>
+                            <Route exact path="/about" component={About}/>
+                            <Route exact path="/resume" component={Resume}/>
+                            <Route exact path="/projects" component={Projects}/>
+                            <Route component={Home}/>
+                            <BottomBar/>
+                        </Switch>
                 </Router>
             </div>
         );

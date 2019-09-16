@@ -3,8 +3,36 @@
   <component name="ChangeListManager">
     <list default="true" id="cc64d9f7-44b4-4d17-9c29-8d209407a22a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/pages/project-page/ProjectComponents/Infinite Runner.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/pages/project-page/ProjectComponents/Infinite Runner.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/asset-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/precache-manifest.c307a2cea583af3577f82e3dfb8b6d52.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/service-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/service-worker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/main.03dbaf02.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/main.03dbaf02.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/unity/space-shooter/Build/SpaceInvadersClone_HTML5.data.unityweb" beforeDir="false" afterPath="$PROJECT_DIR$/build/unity/space-shooter/Build/SpaceInvadersClone_HTML5.data.unityweb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/unity/space-shooter/Build/SpaceInvadersClone_HTML5.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/unity/space-shooter/Build/SpaceInvadersClone_HTML5.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/unity/space-shooter/Build/SpaceInvadersClone_HTML5.wasm.code.unityweb" beforeDir="false" afterPath="$PROJECT_DIR$/build/unity/space-shooter/Build/SpaceInvadersClone_HTML5.wasm.code.unityweb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/unity/space-shooter/Build/SpaceInvadersClone_HTML5.wasm.framework.unityweb" beforeDir="false" afterPath="$PROJECT_DIR$/build/unity/space-shooter/Build/SpaceInvadersClone_HTML5.wasm.framework.unityweb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/unity/space-shooter/Build/UnityLoader.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/unity/space-shooter/Build/UnityLoader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/unity/space-shooter/TemplateData/UnityProgress.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/unity/space-shooter/TemplateData/UnityProgress.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/unity/space-shooter/Build/SpaceInvadersClone_HTML5.data.unityweb" beforeDir="false" afterPath="$PROJECT_DIR$/public/unity/space-shooter/Build/SpaceInvadersClone_HTML5.data.unityweb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/unity/space-shooter/Build/SpaceInvadersClone_HTML5.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/unity/space-shooter/Build/SpaceInvadersClone_HTML5.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/unity/space-shooter/Build/SpaceInvadersClone_HTML5.wasm.code.unityweb" beforeDir="false" afterPath="$PROJECT_DIR$/public/unity/space-shooter/Build/SpaceInvadersClone_HTML5.wasm.code.unityweb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/unity/space-shooter/Build/SpaceInvadersClone_HTML5.wasm.framework.unityweb" beforeDir="false" afterPath="$PROJECT_DIR$/public/unity/space-shooter/Build/SpaceInvadersClone_HTML5.wasm.framework.unityweb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/unity/space-shooter/Build/UnityLoader.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/unity/space-shooter/Build/UnityLoader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/unity/space-shooter/TemplateData/UnityProgress.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/unity/space-shooter/TemplateData/UnityProgress.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/bottom bar/BottomBar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/bottom bar/BottomBar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/bottom bar/BottomBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/bottom bar/BottomBar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/navbar/NavButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/navbar/NavButton.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/pages/home-page/Home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/pages/home-page/Home.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scripts/pages/project-page/ProjectComponents/SpaceShooter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/pages/project-page/ProjectComponents/SpaceShooter.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/pages/project-page/Projects.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/pages/project-page/Projects.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/pages/project-page/Sidebar/SideButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/pages/project-page/Sidebar/SideButton.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/pages/project-page/Sidebar/Sidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/pages/project-page/Sidebar/Sidebar.tsx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,7 +70,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/unity/infinite-skater" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/unity/space-shooter" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -56,9 +84,9 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\JetBrains Projects\WebstormProjects\nicholas-cerisano-portfolio\public\unity\space-shooter" />
       <recent name="D:\JetBrains Projects\WebstormProjects\nicholas-cerisano-portfolio\public\unity\infinite-skater" />
       <recent name="D:\JetBrains Projects\WebstormProjects\nicholas-cerisano-portfolio\public\unity\glitch-garden" />
-      <recent name="D:\JetBrains Projects\WebstormProjects\nicholas-cerisano-portfolio\public\unity\space-shooter" />
       <recent name="D:\JetBrains Projects\WebstormProjects\nicholas-cerisano-portfolio\src\media\images" />
       <recent name="C:\Users\epicn\WebstormProjects\nicholas-cerisano-portfolio\src\videos" />
     </key>
@@ -82,7 +110,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="npm.deploy">
+  <component name="RunManager" selected="npm.npm start">
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
       <method v="2" />
     </configuration>
@@ -146,7 +174,7 @@
       <workItem from="1567916444494" duration="14433000" />
       <workItem from="1568300268813" duration="463000" />
       <workItem from="1568300803134" duration="1183000" />
-      <workItem from="1568599697409" duration="13975000" />
+      <workItem from="1568599697409" duration="25036000" />
     </task>
     <servers />
   </component>

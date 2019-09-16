@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react';
-import {Router, Route, Switch} from 'react-router-dom';
+import {Router, Route, Switch, Redirect} from 'react-router-dom';
 import { createBrowserHistory } from 'history'
 
 import './Projects.css';
@@ -39,6 +39,7 @@ export class Projects extends Component{
                 <Router history={history}>
                     <Sidebar/>
                     <Switch>
+                        <Route exact path="/projects" component={DefaultPage}/>
                         <Route exact path="/projects/space-shooter" component={SpaceShooter}/>
                         <Route exact path="/projects/glitch-garden" component={GlitchGarden}/>
                         <Route exact path="/projects/game-day" component={GameDay}/>

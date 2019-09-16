@@ -1,15 +1,21 @@
 
 import React, { Component } from 'react';
+import { FaLinkedin, FaGithub } from "react-icons/all";
 import './BottomBar.css';
 
 export class BottomBar extends Component{
 
-    render(): React.ReactElement<any, string | React.JSXElementConstructor<any>> | string | number | {} | React.ReactNodeArray | React.ReactPortal | boolean | null | undefined {
+    render(){
+        const iconSize : number = 50;
+
         return (
             <div className="BottomBar">
-                <p>
-                    lorem ipsum
-                </p>
+                <a href="https://www.linkedin.com/in/nicholas-cerisano-53a389173/">
+                    <FaLinkedin className="LinkedIn" size={iconSize} />
+                </a>
+                <a href="https://github.com/epicnicks">
+                    <FaGithub className="Github" size={iconSize} />
+                </a>
             </div>
         )
     }
