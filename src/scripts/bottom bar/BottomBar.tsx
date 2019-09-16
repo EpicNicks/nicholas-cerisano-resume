@@ -10,10 +10,10 @@ export class BottomBar extends Component{
 
         return (
             <div className="BottomBar">
-                <a href="https://www.linkedin.com/in/nicholas-cerisano-53a389173/">
+                <a href="https://www.linkedin.com/in/nicholas-cerisano-53a389173/" target="_blank" rel="noopener noreferrer">
                     <FaLinkedin className="LinkedIn" size={iconSize} />
                 </a>
-                <a href="https://github.com/epicnicks">
+                <a href="https://github.com/epicnicks" target="_blank" rel="noopener noreferrer">
                     <FaGithub className="Github" size={iconSize} />
                 </a>
             </div>

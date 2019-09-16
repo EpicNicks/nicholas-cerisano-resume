@@ -25,7 +25,8 @@ export class Sidebar extends Component<IProps, IState>{
     setActiveStateId = (id : string) => activeStateId = id;
     getActiveStateId = () : string | null => activeStateId;
 
-    componentDidMount(): void {
+    constructor(props: Readonly<IProps>){
+        super(props);
         if(activeStateId === null) {
             activeStateId = 'home';
         }

@@ -13,11 +13,13 @@ import { Projects } from './scripts/pages/project-page/Projects';
 import { About } from "./scripts/pages/about-page/About";
 //#endregion
 
-const history = createBrowserHistory();
+const history = createBrowserHistory({
+    basename: process.env.PUBLIC_URL,
+});
 
 class App extends Component {
 
-    render(): React.ReactElement<any, string | React.JSXElementConstructor<any>> | string | number | {} | React.ReactNodeArray | React.ReactPortal | boolean | null | undefined {
+    render(){
         return (
             <div className="App">
                 <Router history={history}>
@@ -28,8 +30,8 @@ class App extends Component {
                             <Route exact path="/resume" component={Resume}/>
                             <Route exact path="/projects" component={Projects}/>
                             <Route component={Home}/>
-                            <BottomBar/>
                         </Switch>
+                    <BottomBar/>
                 </Router>
             </div>
         );

@@ -5,22 +5,22 @@ import { NavBar } from "./NavBar";
 
 interface IProps {
     text: string,
-    navBtns: Array<NavButton>,
     navBar: NavBar,
+    id: string,
 }
-
-interface IState {
-}
+interface IState {}
 
 export class NavButton extends Component<IProps, IState>{
 
     render(): React.ReactElement<any, string | React.JSXElementConstructor<any>> | string | number | {} | React.ReactNodeArray | React.ReactPortal | boolean | null | undefined {
-        let className = this.props.navBar.state.activeBtn === this ? "ActiveNavBtn" : "NavButton";
-        this.props.navBtns.push(this);
+        let className = this.props.navBar.getActiveStateId() === this.props.id ? "ActiveNavBtn" : "NavButton";
         return(
             <div
                 className={className}
-                onClick={()=>{this.props.navBar.setState({activeBtn: this, navBtns: this.props.navBtns})}}
+                onClick={()=> {
+                    this.props.navBar.setActiveStateId(this.props.id);
+                    this.props.navBar.setState({activeBtn: this});
+                }}
             >
                 { this.props.text }
             </div>

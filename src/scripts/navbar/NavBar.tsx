@@ -17,12 +17,24 @@ interface IState {
     navBtns: Array<NavButton>
 }
 
+let activeStateId: string | null = null;
+
 export class NavBar extends Component<IProps, IState>{
 
     state = {
         activeBtn: null,
         navBtns: [] as NavButton[]
     };
+
+    constructor(props: Readonly<IProps>){
+        super(props);
+        if(activeStateId === null) {
+            activeStateId = 'home';
+        }
+    }
+
+    setActiveStateId = (id : string) => activeStateId = id;
+    getActiveStateId = () : string | null => activeStateId;
 
     componentDidMount(): void {
         if(this.state.activeBtn === null){
@@ -37,22 +49,22 @@ export class NavBar extends Component<IProps, IState>{
                 <ul>
                     <li>
                         <Link to="/home">
-                            <NavButton text="Home" navBtns={this.state.navBtns} navBar={this}/>
+                            <NavButton text="Home" id="home" navBar={this}/>
                         </Link>
                     </li>
                     <li>
                         <Link to="/about">
-                            <NavButton text="About" navBtns={this.state.navBtns} navBar={this}/>
+                            <NavButton text="About" id="about" navBar={this}/>
                         </Link>
                     </li>
                     <li>
                         <Link to="/resume">
-                            <NavButton text="Resume" navBtns={this.state.navBtns} navBar={this}/>
+                            <NavButton text="Resume" id="resume" navBar={this}/>
                         </Link>
                     </li>
                     <li>
                         <Link to="/projects">
-                            <NavButton text="Projects" navBtns={this.state.navBtns} navBar={this}/>
+                            <NavButton text="Projects" id="projects" navBar={this}/>
                         </Link>
                     </li>
                 </ul>
