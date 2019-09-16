@@ -13,15 +13,6 @@ export class InfiniteRunner extends Component {
         unityLoaderPath
     );
 
-    private game : Unity | null = null;
-
-    //kill unity instance (crappy method but it works -_(._.)_- )
-    componentWillUnmount(): void {
-        if(this.game !== null) {
-            document.location.reload();
-        }
-    }
-
     render(): React.ReactElement<any, string | React.JSXElementConstructor<any>> | string | number | {} | React.ReactNodeArray | React.ReactPortal | boolean | null | undefined {
         return(
             <div className="InfiniteRunner">

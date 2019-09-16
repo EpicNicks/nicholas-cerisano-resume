@@ -18,7 +18,7 @@ export class SpaceShooter extends Component{
     //kill unity instance (crappy method but it works -_(._.)_- )
     componentWillUnmount(): void {
         if(this.game !== null) {
-            document.location.reload();
+            document.location.assign('/nicholas-cerisano-resume');
         }
     }
 

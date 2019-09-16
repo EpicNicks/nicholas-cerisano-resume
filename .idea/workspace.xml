@@ -2,77 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cc64d9f7-44b4-4d17-9c29-8d209407a22a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/unity/glitch-garden/Build/GlitchGarden_HTML5.data.unityweb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/unity/glitch-garden/Build/GlitchGarden_HTML5.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/unity/glitch-garden/Build/GlitchGarden_HTML5.wasm.code.unityweb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/unity/glitch-garden/Build/GlitchGarden_HTML5.wasm.framework.unityweb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/unity/glitch-garden/Build/UnityLoader.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/unity/glitch-garden/TemplateData/UnityProgress.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/unity/glitch-garden/TemplateData/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/unity/glitch-garden/TemplateData/fullscreen.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/unity/glitch-garden/TemplateData/progressEmpty.Dark.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/unity/glitch-garden/TemplateData/progressEmpty.Light.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/unity/glitch-garden/TemplateData/progressFull.Dark.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/unity/glitch-garden/TemplateData/progressFull.Light.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/unity/glitch-garden/TemplateData/progressLogo.Dark.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/unity/glitch-garden/TemplateData/progressLogo.Light.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/unity/glitch-garden/TemplateData/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/unity/glitch-garden/TemplateData/webgl-logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/unity/glitch-garden/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/unity/infinite-skater/Build/InfiniteSkater_HTML5.data.unityweb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/unity/infinite-skater/Build/InfiniteSkater_HTML5.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/unity/infinite-skater/Build/InfiniteSkater_HTML5.wasm.code.unityweb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/unity/infinite-skater/Build/InfiniteSkater_HTML5.wasm.framework.unityweb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/unity/infinite-skater/Build/UnityLoader.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/unity/infinite-skater/TemplateData/UnityProgress.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/unity/infinite-skater/TemplateData/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/unity/infinite-skater/TemplateData/fullscreen.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/unity/infinite-skater/TemplateData/progressEmpty.Dark.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/unity/infinite-skater/TemplateData/progressEmpty.Light.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/unity/infinite-skater/TemplateData/progressFull.Dark.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/unity/infinite-skater/TemplateData/progressFull.Light.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/unity/infinite-skater/TemplateData/progressLogo.Dark.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/unity/infinite-skater/TemplateData/progressLogo.Light.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/unity/infinite-skater/TemplateData/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/unity/infinite-skater/TemplateData/webgl-logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/unity/infinite-skater/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/unity/space-shooter/Build/SpaceInvadersClone_HTML5.data.unityweb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/unity/space-shooter/Build/SpaceInvadersClone_HTML5.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/unity/space-shooter/Build/SpaceInvadersClone_HTML5.wasm.code.unityweb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/unity/space-shooter/Build/SpaceInvadersClone_HTML5.wasm.framework.unityweb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/unity/space-shooter/Build/UnityLoader.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/unity/space-shooter/TemplateData/UnityProgress.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/unity/space-shooter/TemplateData/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/unity/space-shooter/TemplateData/fullscreen.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/unity/space-shooter/TemplateData/progressEmpty.Dark.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/unity/space-shooter/TemplateData/progressEmpty.Light.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/unity/space-shooter/TemplateData/progressFull.Dark.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/unity/space-shooter/TemplateData/progressFull.Light.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/unity/space-shooter/TemplateData/progressLogo.Dark.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/unity/space-shooter/TemplateData/progressLogo.Light.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/unity/space-shooter/TemplateData/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/unity/space-shooter/TemplateData/webgl-logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/unity/space-shooter/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/media/images/infinite-runner clip.gif" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/asset-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/precache-manifest.0a7b42e35f47349786c52d183a72ba7f.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/service-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/service-worker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/css/main.c860fc62.chunk.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/css/main.c860fc62.chunk.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/2.028f340d.chunk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/2.028f340d.chunk.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/main.d03e950e.chunk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/main.d03e950e.chunk.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/runtime~main.57d7e6dd.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/static/js/runtime~main.57d7e6dd.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/media/2019-02-07 22-34-08.b0fb19f0.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/pages/project-page/ProjectComponents/GlitchGarden.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/pages/project-page/ProjectComponents/GlitchGarden.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scripts/pages/project-page/ProjectComponents/Infinite Runner.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/pages/project-page/ProjectComponents/Infinite Runner.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scripts/pages/project-page/ProjectComponents/SpaceShooter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/pages/project-page/ProjectComponents/SpaceShooter.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/pages/project-page/Projects.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/pages/project-page/Projects.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -214,7 +146,7 @@
       <workItem from="1567916444494" duration="14433000" />
       <workItem from="1568300268813" duration="463000" />
       <workItem from="1568300803134" duration="1183000" />
-      <workItem from="1568599697409" duration="12925000" />
+      <workItem from="1568599697409" duration="13975000" />
     </task>
     <servers />
   </component>
