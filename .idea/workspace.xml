@@ -2,22 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cc64d9f7-44b4-4d17-9c29-8d209407a22a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/build/static/js/2.67ef6924.chunk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/static/js/2.67ef6924.chunk.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/asset-manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/precache-manifest.d10e94b4d0ca7f56dab0e9f2f31585bf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/precache-manifest.444deb91c42bed73d5ef2f65118677f5.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/service-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/service-worker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/css/main.e281eb30.chunk.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/css/main.e281eb30.chunk.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/2.bcd5b048.chunk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/2.bcd5b048.chunk.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/main.dadf1fee.chunk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/main.dadf1fee.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/2.ffdd2010.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/2.ffdd2010.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/main.bce920c2.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/main.bce920c2.chunk.js.map" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/bottom bar/BottomBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/bottom bar/BottomBar.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scripts/navbar/NavBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/navbar/NavBar.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scripts/navbar/NavButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/navbar/NavButton.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/pages/project-page/ProjectComponents/SpaceShooter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/pages/project-page/ProjectComponents/SpaceShooter.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/pages/project-page/Projects.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/pages/project-page/Projects.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/pages/project-page/Sidebar/SideButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/pages/project-page/Sidebar/SideButton.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scripts/pages/project-page/Sidebar/Sidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/pages/project-page/Sidebar/Sidebar.tsx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -160,7 +160,7 @@
       <workItem from="1567916444494" duration="14433000" />
       <workItem from="1568300268813" duration="463000" />
       <workItem from="1568300803134" duration="1183000" />
-      <workItem from="1568599697409" duration="27800000" />
+      <workItem from="1568599697409" duration="35420000" />
     </task>
     <servers />
   </component>

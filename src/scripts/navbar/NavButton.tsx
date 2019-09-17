@@ -6,19 +6,20 @@ import { NavBar } from "./NavBar";
 interface IProps {
     text: string,
     navBar: NavBar,
-    id: string,
+    id: Array<string>,
 }
 interface IState {}
 
 export class NavButton extends Component<IProps, IState>{
 
-    render(): React.ReactElement<any, string | React.JSXElementConstructor<any>> | string | number | {} | React.ReactNodeArray | React.ReactPortal | boolean | null | undefined {
-        let className = this.props.navBar.getActiveStateId() === this.props.id ? "ActiveNavBtn" : "NavButton";
+    render(){
+        let href = window.location.href.split('/');
+        let className = this.props.id.includes(href[href.length - 1]) ? "ActiveNavBtn" : "NavButton";
         return(
             <div
                 className={className}
                 onClick={()=> {
-                    this.props.navBar.setActiveStateId(this.props.id);
+                    this.props.navBar.setActiveStateId(this.props.id[0]);
                     this.props.navBar.setState({activeBtn: this});
                 }}
             >

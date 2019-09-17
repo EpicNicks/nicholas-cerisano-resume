@@ -48,23 +48,23 @@ export class NavBar extends Component<IProps, IState>{
             <div className="NavBar">
                 <ul>
                     <li>
-                        <Link to="/home">
-                            <NavButton text="Home" id="home" navBar={this}/>
+                        <Link to="/">
+                            <NavButton text="Home" id={["","home"]} navBar={this}/>
                         </Link>
                     </li>
                     <li>
                         <Link to="/about">
-                            <NavButton text="About" id="about" navBar={this}/>
+                            <NavButton text="About" id={["about"]} navBar={this}/>
                         </Link>
                     </li>
                     <li>
                         <Link to="/resume">
-                            <NavButton text="Resume" id="resume" navBar={this}/>
+                            <NavButton text="Resume" id={["resume"]} navBar={this}/>
                         </Link>
                     </li>
                     <li>
                         <Link to="/projects">
-                            <NavButton text="Projects" id="projects" navBar={this}/>
+                            <NavButton text="Projects" id={["projects"]} navBar={this}/>
                         </Link>
                     </li>
                 </ul>

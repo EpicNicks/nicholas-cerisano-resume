@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react';
-import {Router, Route, Switch, Redirect} from 'react-router-dom';
+import {Router, Route, Switch, Redirect, HashRouter} from 'react-router-dom';
 import { createBrowserHistory } from 'history'
 
 import './Projects.css';
@@ -36,17 +36,17 @@ export class Projects extends Component{
     render(): React.ReactElement<any, string | React.JSXElementConstructor<any>> | string | number | {} | React.ReactNodeArray | React.ReactPortal | boolean | null | undefined {
         return(
             <div className="Projects">
-                <Router history={history}>
+                {/*<Router history={history}>*/}
                     <Sidebar/>
                     <Switch>
-                        <Route exact path="/projects" component={DefaultPage}/>
                         <Route exact path="/projects/space-shooter" component={SpaceShooter}/>
                         <Route exact path="/projects/glitch-garden" component={GlitchGarden}/>
                         <Route exact path="/projects/game-day" component={GameDay}/>
                         <Route exact path="/projects/infinite-runner" component={InfiniteRunner}/>
+                        <Route exact path="/projects" component={DefaultPage}/>
                         <Route component={DefaultPage}/>
                     </Switch>
-                </Router>
+                {/*</Router>*/}
             </div>
         );
     }

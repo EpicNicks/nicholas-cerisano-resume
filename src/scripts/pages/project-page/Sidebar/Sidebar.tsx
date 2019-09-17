@@ -5,7 +5,6 @@ import {SideButton} from "./SideButton";
 import {NavButton} from "../../../navbar/NavButton";
 
 import "./Sidebar.css";
-import {act} from "react-dom/test-utils";
 
 interface IProps {}
 interface IState {
@@ -27,8 +26,11 @@ export class Sidebar extends Component<IProps, IState>{
 
     constructor(props: Readonly<IProps>){
         super(props);
-        if(activeStateId === null) {
+        if(activeStateId === null)
             activeStateId = 'home';
+        else{
+            let href = window.location.href.split('/');
+            activeStateId = href[href.length - 1];
         }
     }
 
@@ -38,7 +40,7 @@ export class Sidebar extends Component<IProps, IState>{
                 <ul>
                     <li>
                         <Link to="/projects">
-                            <SideButton text="Projects Home" id="home" navBar={this}/>
+                            <SideButton text="Projects Home" id="projects" navBar={this}/>
                         </Link>
                     </li>
                     <li>

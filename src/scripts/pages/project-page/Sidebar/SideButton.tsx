@@ -16,25 +16,13 @@ interface IState {
 
 }
 
-let pathnameToCSSClass = (url : string) : string => {
-      let reduced : string[] = [] as string[];
-      for(let i = url.length; i --> 0;){
-            if(url[i] === "/"){
-                break;
-            }
-            else {
-                reduced.unshift(url[i]);
-            }
-      }
-      return reduced.join("");
-};
-
 export class SideButton extends Component<IProps, IState>{
 
     render(){
-        let className = this.props.navBar.getActiveStateId() === this.props.id ? "ActiveSideButton" : "SideButton";
+        let href = window.location.href.split('/');
+        let className = href[href.length - 1] === this.props.id ? "ActiveSideButton" : "SideButton";
         return(
-            <div className={className + " " + this.props.navBar.getActiveStateId()/*this is used to differentiate css colors*/}
+            <div className={className + " " + href[href.length - 1]/*this is used to differentiate css colors*/}
                  onClick={()=> {
                      this.props.navBar.setActiveStateId(this.props.id);
                      this.props.navBar.setState({activeBtn: this});
