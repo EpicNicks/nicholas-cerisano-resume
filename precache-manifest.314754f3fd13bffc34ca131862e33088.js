@@ -1,18 +1,18 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2486b422748cb41fae63127f51352db3",
+    "revision": "b8b5697d571c6f51ebde22524cdfb062",
     "url": "/nicholas-cerisano-resume/index.html"
   },
   {
-    "revision": "351f23c2c717df6518f7",
-    "url": "/nicholas-cerisano-resume/static/css/main.98229040.chunk.css"
+    "revision": "28148d3665a8afe25798",
+    "url": "/nicholas-cerisano-resume/static/css/main.c994ad6b.chunk.css"
   },
   {
     "revision": "38860caac8f88e2eca02",
     "url": "/nicholas-cerisano-resume/static/js/2.430b38df.chunk.js"
   },
   {
-    "revision": "351f23c2c717df6518f7",
+    "revision": "28148d3665a8afe25798",
     "url": "/nicholas-cerisano-resume/static/js/main.f9a5f527.chunk.js"
   },
   {
