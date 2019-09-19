@@ -3,12 +3,20 @@
   <component name="ChangeListManager">
     <list default="true" id="cc64d9f7-44b4-4d17-9c29-8d209407a22a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/asset-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/precache-manifest.e3fefb2682e8bb953deacc2d22c77b1e.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/service-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/service-worker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/css/main.62a97db6.chunk.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/css/main.62a97db6.chunk.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/2.67ef6924.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/2.67ef6924.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/main.c232a24b.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/main.c232a24b.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/pages/about-page/About.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/pages/about-page/About.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/pages/project-page/ProjectComponents/Portfolio.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/pages/project-page/ProjectComponents/Portfolio.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/pages/project-page/Projects.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/pages/project-page/Projects.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/pages/project-page/Sidebar/Sidebar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/pages/project-page/Sidebar/Sidebar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/bottom bar/BottomBar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/bottom bar/BottomBar.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -87,7 +95,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="npm.npm start">
+  <component name="RunManager" selected="npm.deploy">
     <configuration name="renders without crashing" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -176,7 +184,7 @@
       <workItem from="1567916444494" duration="14433000" />
       <workItem from="1568300268813" duration="463000" />
       <workItem from="1568300803134" duration="1183000" />
-      <workItem from="1568599697409" duration="47530000" />
+      <workItem from="1568599697409" duration="51728000" />
     </task>
     <servers />
   </component>
