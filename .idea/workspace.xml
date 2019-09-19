@@ -2,19 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cc64d9f7-44b4-4d17-9c29-8d209407a22a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/scripts/pages/project-page/ProjectComponents/Portfolio.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/bottom bar/BottomBar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/bottom bar/BottomBar.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/bottom bar/BottomBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/bottom bar/BottomBar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/components/VideoPlayer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/components/VideoPlayer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scripts/pages/about-page/About.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/pages/about-page/About.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/pages/home-page/Home.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/pages/home-page/Home.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/pages/home-page/Home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/pages/home-page/Home.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/pages/project-page/ProjectComponents/GameDay.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/pages/project-page/ProjectComponents/GameDay.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/pages/project-page/ProjectComponents/Infinite Runner.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/pages/project-page/ProjectComponents/Infinite Runner.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/pages/project-page/ProjectComponents/Portfolio.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/pages/project-page/ProjectComponents/Portfolio.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scripts/pages/project-page/Projects.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/pages/project-page/Projects.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/pages/project-page/Projects.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/pages/project-page/Projects.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/pages/project-page/Sidebar/Sidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/pages/project-page/Sidebar/Sidebar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/pages/project-page/Sidebar/Sidebar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/pages/project-page/Sidebar/Sidebar.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -182,7 +176,7 @@
       <workItem from="1567916444494" duration="14433000" />
       <workItem from="1568300268813" duration="463000" />
       <workItem from="1568300803134" duration="1183000" />
-      <workItem from="1568599697409" duration="44468000" />
+      <workItem from="1568599697409" duration="47530000" />
     </task>
     <servers />
   </component>

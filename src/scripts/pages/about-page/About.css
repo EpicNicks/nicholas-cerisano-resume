@@ -2,7 +2,8 @@
 .About{
     min-height: 83vh;
     color: #111;
-    background-color: #c3e7ff;
+    background-color: #e3fcff;
+    font-size: 1.2em;
 }
 
 .About h1{

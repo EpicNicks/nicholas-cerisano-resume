@@ -12,6 +12,7 @@
     "@types/react-router-dom": "^4.3.5",
     "gh-pages": "^2.1.1",
     "react": "^16.9.0",
+    "react-app-polyfill": "^1.0.2",
     "react-dom": "^16.9.0",
     "react-icons": "^3.7.0",
     "react-player": "^1.12.0",

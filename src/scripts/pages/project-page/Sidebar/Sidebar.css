@@ -122,21 +122,21 @@ a:hover .game-day.SideButton{
 /*GAME DAY CSS*/
 
 .infinite-runner.ActiveSideButton{
-    background-color: turquoise;
+    background-color: darkturquoise;
     color: black;
 }
 a:link .infinite-runner.ActiveSideButton, a:visited .infinite-runner.ActiveSideButton{
     color: black;
 }
 .infinite-runner.SideButton{
-    background-color: paleturquoise;
+    background-color: turquoise;
     color: #111;
 }
 a:link .infinite-runner.SideButton, a:visited .infinite-runner.SideButton{
-    background-color: paleturquoise;
+    background-color: turquoise;
     color: #111;
 }
 a:hover .infinite-runner.SideButton{
-    background-color: darkturquoise;
+    background-color: paleturquoise;
     color: #111;
 }

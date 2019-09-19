@@ -8,8 +8,13 @@
 
 .ProjectDefault{
     background-color: #555;
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 100%;
+    height: 80vh;
+    font-size: 1.6em;
 }
 
 .SpaceShooter{
@@ -19,6 +24,7 @@
 }
 
 .SpaceShooter p{
+    font-size: 1.2em;
     width: 60%;
     margin: auto;
     text-align: center;
@@ -70,4 +76,16 @@
 
 .PortfolioProject p{
     font-size: 1.2em;
+}
+
+.PortfolioProject a:link{
+    color: turquoise;
+}
+
+.PortfolioProject a:visited{
+    color: turquoise;
+}
+
+.PortfolioProject a:hover{
+    color: darkturquoise;
 }
