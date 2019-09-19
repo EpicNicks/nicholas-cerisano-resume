@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react';
-import {Router, Route, Switch, Redirect, HashRouter} from 'react-router-dom';
+import { Route, Switch,} from 'react-router-dom';
 import { createBrowserHistory } from 'history'
 
 import './Projects.css';
@@ -12,6 +12,7 @@ import { SpaceShooter } from "./ProjectComponents/SpaceShooter";
 import { GlitchGarden } from "./ProjectComponents/GlitchGarden";
 import { GameDay } from "./ProjectComponents/GameDay";
 import { InfiniteRunner } from "./ProjectComponents/Infinite Runner";
+import { Portfolio } from "./ProjectComponents/Portfolio";
 ///#endregion
 
 const history = createBrowserHistory();
@@ -43,6 +44,7 @@ export class Projects extends Component{
                         <Route exact path="/projects/glitch-garden" component={GlitchGarden}/>
                         <Route exact path="/projects/game-day" component={GameDay}/>
                         <Route exact path="/projects/infinite-runner" component={InfiniteRunner}/>
+                        <Route exact path="/projects/portfolio" component={Portfolio}/>
                         <Route exact path="/projects" component={DefaultPage}/>
                         <Route component={DefaultPage}/>
                     </Switch>

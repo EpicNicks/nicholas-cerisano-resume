@@ -1,7 +1,6 @@
 
 //import ReactPlayer from "react-player";
 import React, { Component } from 'react';
-import "../pages/home-page/Home.css";
 
 export class VideoPlayer extends Component{
 
@@ -11,7 +10,7 @@ export class VideoPlayer extends Component{
             video.playbackRate = 10.0;
     }
 
-    render(): React.ReactElement<any, string | React.JSXElementConstructor<any>> | string | number | {} | React.ReactNodeArray | React.ReactPortal | boolean | null | undefined {
+    render(){
         const url = require("D:\\JetBrains Projects\\WebstormProjects\\nicholas-cerisano-portfolio\\src\\media\\videos\\sample coding clip.mp4");
         return(
             <div className="VideoContainer">
@@ -22,8 +21,6 @@ export class VideoPlayer extends Component{
                         muted={false}
                         data-reactid=".0.1.0.0"
                         autoPlay
-                        width="80%"
-                        height="80%"
                     >
                         <source type="video/mp4" data-reactid=".0.1.0.0.0" src={url}/>
                     </video>

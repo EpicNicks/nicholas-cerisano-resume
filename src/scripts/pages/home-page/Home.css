@@ -1,7 +1,14 @@
-.Home p{
-    font-family: Ubuntu, monospace;
-    color: aliceblue;
-    font-size: 24px;
+
+.VideoPlayer{
+    filter: blur(2px);
+    alignment: center;
+    height: 80vh;
+    width: 80vw;
+}
+
+.VideoPlayer video{
+    height: 80vh;
+    width: 80vw;
 }
 
 .Home{
@@ -18,18 +25,14 @@
     animation: fadein 2s;
 }
 
-.VideoPlayer{
-    filter: blur(2px);
-    alignment: center;
-}
 
 .VideoContainer p{
     text-shadow: 2px 2px #00ffff;
     color: aquamarine;
-    font-size: 72px;
     position: absolute;
-    top: 40%;
-    left: 25%;
+    font-size: 4vw;
+    top: 30vh;
+    left: 25vw;
 }
 
 @keyframes fadein {

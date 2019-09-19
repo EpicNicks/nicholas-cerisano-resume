@@ -62,3 +62,12 @@
     margin: auto !important;
     width: 70% !important;
 }
+
+.PortfolioProject{
+    width: 80vw;
+    margin: auto;
+}
+
+.PortfolioProject p{
+    font-size: 1.2em;
+}

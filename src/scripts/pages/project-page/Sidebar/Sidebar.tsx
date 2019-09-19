@@ -63,6 +63,11 @@ export class Sidebar extends Component<IProps, IState>{
                             <SideButton text="Infinite Runner" id="infinite-runner" navBar={this}/>
                         </Link>
                     </li>
+                    <li>
+                        <Link to="/projects/portfolio">
+                            <SideButton text="Portfolio" navBar={this} id="portfolio"/>
+                        </Link>
+                    </li>
                 </ul>
             </div>
         );

@@ -6,22 +6,29 @@
     margin: 0;
     width: 100%;
     background-color: #333;
+}
 
+.BottomBarTitle{
+    padding-bottom: 1vw;
+    font-size: 2vw;
+}
+
+.BottomBarIcons{
     display: flex;
     justify-content: space-evenly;
     flex-direction: row;
     flex-basis: available;
 }
 
-.BottomBar a:link{
+.BottomBarIcons a:link{
     color: white;
 }
 
-.BottomBar a:visited{
+.BottomBarIcons a:visited{
     color: white;
 }
 
-.BottomBar a:hover{
+.BottomBarIcons a:hover{
     color: blue;
 }
 
@@ -31,4 +38,9 @@
 
 .Github{
     flex: 1;
+}
+
+.IconBundle{
+    display: flex;
+    flex-direction: column;
 }

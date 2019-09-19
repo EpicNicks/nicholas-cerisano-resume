@@ -16,9 +16,9 @@ export class InfiniteRunner extends Component {
     render(): React.ReactElement<any, string | React.JSXElementConstructor<any>> | string | number | {} | React.ReactNodeArray | React.ReactPortal | boolean | null | undefined {
         return(
             <div className="InfiniteRunner">
-                <p>
+                <h1>
                     Infinite Runner
-                </p>
+                </h1>
                 <img
                     src={require('D:\\JetBrains Projects\\WebstormProjects\\nicholas-cerisano-portfolio\\src\\media\\images\\infinite-runner clip.gif')}
                     alt={require('D:\\JetBrains Projects\\WebstormProjects\\nicholas-cerisano-portfolio\\src\\media\\images\\infinite-runner clip.gif')}
