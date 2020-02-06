@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5d24af19a45604e09f47898ddb6d8ba0",
+    "revision": "1efe286871e11c52c6bb81f7a5a8d446",
     "url": "/nicholas-cerisano-resume/index.html"
   },
   {
-    "revision": "e30d408ad77ef70d3fd3",
-    "url": "/nicholas-cerisano-resume/static/css/main.59680a3d.chunk.css"
+    "revision": "1953cab3225a3e4ab813",
+    "url": "/nicholas-cerisano-resume/static/css/main.2e073ed0.chunk.css"
   },
   {
     "revision": "5e5734e9fa1f624d9172",
     "url": "/nicholas-cerisano-resume/static/js/2.3a14e241.chunk.js"
   },
   {
-    "revision": "e30d408ad77ef70d3fd3",
-    "url": "/nicholas-cerisano-resume/static/js/main.ddd768dd.chunk.js"
+    "revision": "1953cab3225a3e4ab813",
+    "url": "/nicholas-cerisano-resume/static/js/main.9d6df378.chunk.js"
   },
   {
     "revision": "2a4d1d957337ad34e22e",
@@ -30,6 +30,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "aebb97e8e9bed306bbf1bbab73664d29",
     "url": "/nicholas-cerisano-resume/static/media/glitch garden demo gif.aebb97e8.gif"
+  },
+  {
+    "revision": "2b811bf67141101416ecdbf27c8ea6ce",
+    "url": "/nicholas-cerisano-resume/static/media/grass bg.2b811bf6.jpg"
   },
   {
     "revision": "f6adb8cee7c132d024350405f1ada102",
