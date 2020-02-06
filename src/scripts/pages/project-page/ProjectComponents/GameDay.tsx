@@ -9,6 +9,10 @@ export class GameDay extends Component{
                 <h1>
                     Game Day
                 </h1>
+                <p>
+                    A game I worked on in grade 12 for my religion class's 'Game Day'.<br/>
+
+                </p>
                 <img
                     // src={require("")}
                     // alt={require("")}

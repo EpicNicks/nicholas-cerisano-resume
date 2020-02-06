@@ -4,7 +4,7 @@ import './About.css';
 
 export class About extends Component{
 
-    render(): React.ReactElement<any, string | React.JSXElementConstructor<any>> | string | number | {} | React.ReactNodeArray | React.ReactPortal | boolean | null | undefined {
+    render() {
         return(
             <div className="About">
                 <h1>
@@ -24,14 +24,32 @@ export class About extends Component{
                         </h2>
                         <p>
                             I am a second-year Computer Science student attending York University.<br/>
+                            I am a proactive pragmatic logical thinker.<br/>
                             I spend most of my spare time programming for fun.
                         </p>
                         <h2>
                             Hobbies
                         </h2>
-                        <p>
-
-                        </p>
+                        <h3>
+                            My hobbies include:
+                        </h3>
+                        <ul>
+                            <li>
+                                Trying new frameworks and programming languages to see different ways of reasoning problems
+                            </li>
+                            <li>
+                                Writing utility programs to perform basic tasks such as read my todo-list to me
+                            </li>
+                            <li>
+                                Playing chess
+                            </li>
+                            <li>
+                                Making games in Unity Engine
+                            </li>
+                            <li>
+                                Reading fantasy novels and programming textbooks
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>

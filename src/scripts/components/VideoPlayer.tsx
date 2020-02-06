@@ -18,16 +18,19 @@ export class VideoPlayer extends Component{
                     <video
                         className="video-container video-container-overlay"
                         loop={true}
-                        muted={false}
+                        muted={true}
                         data-reactid=".0.1.0.0"
-                        autoPlay
+                        autoPlay={true}
                     >
                         <source type="video/mp4" data-reactid=".0.1.0.0.0" src={url}/>
                     </video>
                 </div>
-                <p>
+                <h1>
                     About Nicholas Cerisano
-                </p>
+                </h1>
+                <h2>
+                    Aspiring Software Developer
+                </h2>
             </div>
         );
     }

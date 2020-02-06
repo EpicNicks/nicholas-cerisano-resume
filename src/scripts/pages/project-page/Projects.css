@@ -1,6 +1,6 @@
 
 .Projects{
-    min-height: 85.2vh;
+    min-height: 72.3vh;
     display: inline-block;
     text-align: center;
     width: 100%;
@@ -38,9 +38,35 @@
 
 .GlitchGarden {
     display: inline-block;
+    font-size: 1.2em;
+    text-shadow: #2d1603 1px 1px 10px;
+    color: #96f396;
+    /*filter: blur(3px);*/
     text-align: center;
-    background-color: darkgreen;
+    /*background-color: #53843f;*/
     width: 100%;
+}
+
+.GlitchGarden img{
+    height: 70%;
+    width: 70%;
+}
+
+.GlitchGardenBGImage{
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    display: block;
+    background-image: url('../../../media/images/grass bg.jpg');
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+    -webkit-filter: blur(10px);
+    -moz-filter: blur(10px);
+    -o-filter: blur(10px);
+    -ms-filter: blur(10px);
+    filter: blur(10px) brightness(1);
 }
 
 .Unity_GlitchGarden{
@@ -54,6 +80,11 @@
     width: 100%;
     background-color: white;
     color: #111;
+    min-height: 72.3vh;
+}
+
+.GameDay p{
+    font-size: 1.2em;
 }
 
 .InfiniteRunner{
@@ -62,6 +93,12 @@
     width: 100%;
     background-color: paleturquoise;
     color: #111;
+}
+
+.InfiniteRunner img{
+    height: 60%;
+    width: 60%;
+    border: 10px darkturquoise;
 }
 
 .Unity_InfiniteRunner{
@@ -76,6 +113,22 @@
 
 .PortfolioProject p{
     font-size: 1.2em;
+}
+
+.PortfolioProject .PortfolioProjectLogos{
+    display: inline-block;
+}
+
+.PortfolioProject .PortfolioProjectLogos .ReactLogo{
+    height: 20%;
+    width: 20%;
+    padding: 2% 0;
+}
+
+.PortfolioProject .PortfolioProjectLogos .TSLogo{
+    height: 10%;
+    width: 10%;
+    padding: 2% 10%;
 }
 
 .PortfolioProject a:link{

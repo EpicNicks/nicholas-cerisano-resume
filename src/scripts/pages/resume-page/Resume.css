@@ -1,5 +1,7 @@
 .Resume{
-    min-height: 82vh;
+    min-height: 70vh;
+    text-align: left;
+    padding-left: 25vw;
 }
 
 .Resume p{

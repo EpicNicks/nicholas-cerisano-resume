@@ -16,18 +16,24 @@ export class BottomBar extends Component{
                 <div className="BottomBarIcons">
                     <div className="IconBundle">
                         <MdContactMail className="Email" size={iconSize} />
-                        epicnicks2.0@gmail.com
+                        ncerisano@gmail.com
                     </div>
                     <div className="IconBundle">
                         <MdContactPhone className="Phone" size={iconSize} />
                         416-556-4060
                     </div>
-                    <a href="https://www.linkedin.com/in/nicholas-cerisano-53a389173/" target="_blank" rel="noopener noreferrer">
-                        <FaLinkedin className="LinkedIn" size={iconSize} />
-                    </a>
-                    <a href="https://github.com/epicnicks" target="_blank" rel="noopener noreferrer">
-                        <FaGithub className="Github" size={iconSize} />
-                    </a>
+                    <div className="BottomBarLink">
+                        <a href="https://www.linkedin.com/in/nicholas-cerisano-53a389173/" target="_blank" rel="noopener noreferrer">
+                            <FaLinkedin className="LinkedIn" size={iconSize} />
+                        </a>
+                        click me!
+                    </div>
+                    <div className="BottomBarLink">
+                        <a href="https://github.com/epicnicks" target="_blank" rel="noopener noreferrer">
+                            <FaGithub className="Github" size={iconSize} />
+                        </a>
+                        click me!
+                    </div>
                 </div>
             </div>
         )

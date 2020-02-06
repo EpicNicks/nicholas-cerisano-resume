@@ -7,7 +7,7 @@ import "./Home.css";
 
 export class Home extends Component{
 
-    render(): React.ReactElement<any, string | React.JSXElementConstructor<any>> | string | number | {} | React.ReactNodeArray | React.ReactPortal | boolean | null | undefined {
+    render(){
         return(
             <div className="Home">
                 {/*<p>*/}

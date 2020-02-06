@@ -34,7 +34,7 @@ function DefaultPage() {
 export class Projects extends Component{
 
     //add in a scrolling sidebar to navigate different project-page
-    render(): React.ReactElement<any, string | React.JSXElementConstructor<any>> | string | number | {} | React.ReactNodeArray | React.ReactPortal | boolean | null | undefined {
+    render(){
         return(
             <div className="Projects">
                 {/*<Router history={history}>*/}

@@ -13,7 +13,7 @@ export class InfiniteRunner extends Component {
         unityLoaderPath
     );
 
-    render(): React.ReactElement<any, string | React.JSXElementConstructor<any>> | string | number | {} | React.ReactNodeArray | React.ReactPortal | boolean | null | undefined {
+    render(){
         return(
             <div className="InfiniteRunner">
                 <h1>

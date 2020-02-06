@@ -13,24 +13,34 @@
     font-size: 2vw;
 }
 
+/*@supports ( justify-content: space-evenly ) {*/
+/*    .BottomBarIcons{*/
+/*        display: flex;*/
+/*        margin: auto;*/
+/*        justify-content: space-evenly;*/
+/*        flex-direction: row;*/
+/*        flex-basis: available;*/
+/*    }*/
+/*}*/
+
+/*@supports not ( justify-content: space-evenly ) {*/
+/*    .BottomBarIcons{*/
+/*        display: flex;*/
+/*        flex: 1 0 0;*/
+/*        flex-direction: row;*/
+/*        margin: auto;*/
+/*        justify-content: space-between;*/
+/*        width: 80%;*/
+/*    }*/
+/*}*/
 
 .BottomBarIcons{
     display: flex;
+    flex: 1 0 0;
     flex-direction: row;
     margin: auto;
     justify-content: space-between;
-    width: 80%;
-}
-
-@supports (justify-content: space-evenly) {
-    .BottomBarIcons{
-        display: flex;
-        flex: 1 1 auto;
-        margin: auto;
-        justify-content: space-evenly;
-        flex-direction: row;
-        flex-basis: available;
-    }
+    width: 75%;
 }
 
 .BottomBarIcons a:link{
@@ -46,14 +56,19 @@
 }
 
 .LinkedIn{
-    flex: 1;
+    flex: 1 0 0;
 }
 
 .Github{
-    flex: 1;
+    flex: 1 0 0;
 }
 
 .IconBundle{
+    display: flex;
+    flex-direction: column;
+}
+
+.BottomBarLink{
     display: flex;
     flex-direction: column;
 }
