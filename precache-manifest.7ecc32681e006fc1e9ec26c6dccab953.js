@@ -1,18 +1,18 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1efe286871e11c52c6bb81f7a5a8d446",
+    "revision": "03929ab9b262e85d07623803d6cbb917",
     "url": "/nicholas-cerisano-resume/index.html"
   },
   {
-    "revision": "1953cab3225a3e4ab813",
-    "url": "/nicholas-cerisano-resume/static/css/main.2e073ed0.chunk.css"
+    "revision": "c5e31c3a5deb84531602",
+    "url": "/nicholas-cerisano-resume/static/css/main.33f2a411.chunk.css"
   },
   {
     "revision": "5e5734e9fa1f624d9172",
     "url": "/nicholas-cerisano-resume/static/js/2.3a14e241.chunk.js"
   },
   {
-    "revision": "1953cab3225a3e4ab813",
+    "revision": "c5e31c3a5deb84531602",
     "url": "/nicholas-cerisano-resume/static/js/main.9d6df378.chunk.js"
   },
   {
@@ -46,6 +46,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "b0fb19f0356cbdd5288a580bb850b302",
     "url": "/nicholas-cerisano-resume/static/media/sample coding clip.b0fb19f0.mp4"
+  },
+  {
+    "revision": "e53b151a8149a74ef52ddb8442d1bc49",
+    "url": "/nicholas-cerisano-resume/static/media/starfield_alpha.e53b151a.png"
   },
   {
     "revision": "26cc95f255ccb936d154b43614f61602",
