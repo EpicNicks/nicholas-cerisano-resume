@@ -48,6 +48,7 @@ export class SpaceShooter extends Component{
                 {/*    src={require("D:\\JetBrains Projects\\WebstormProjects\\nicholas-cerisano-portfolio\\src\\media\\images\\space shooter demo gif.gif")}*/}
                 {/*    alt={require("D:\\JetBrains Projects\\WebstormProjects\\nicholas-cerisano-portfolio\\src\\media\\images\\space shooter screenshot.jpg")}*/}
                 {/*/>}*/}
+
             </div>
         )
     }
