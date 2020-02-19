@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "03929ab9b262e85d07623803d6cbb917",
+    "revision": "d2e40351003a171d82dd07524e0251ba",
     "url": "/nicholas-cerisano-resume/index.html"
   },
   {
-    "revision": "c5e31c3a5deb84531602",
+    "revision": "8c0bdfc5f69d2aeacae7",
     "url": "/nicholas-cerisano-resume/static/css/main.33f2a411.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/nicholas-cerisano-resume/static/js/2.3a14e241.chunk.js"
   },
   {
-    "revision": "c5e31c3a5deb84531602",
-    "url": "/nicholas-cerisano-resume/static/js/main.9d6df378.chunk.js"
+    "revision": "8c0bdfc5f69d2aeacae7",
+    "url": "/nicholas-cerisano-resume/static/js/main.21b7bed3.chunk.js"
   },
   {
     "revision": "2a4d1d957337ad34e22e",
@@ -24,8 +24,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/nicholas-cerisano-resume/static/media/MyPhoto.9668dd11.jpg"
   },
   {
-    "revision": "1e60c3783a7ff2f3f94af88a1dbddfa8",
-    "url": "/nicholas-cerisano-resume/static/media/Nicholas Cerisano_Resume (January 2020).1e60c378.pdf"
+    "revision": "5a4d33d360d8124e5e457f504d633d95",
+    "url": "/nicholas-cerisano-resume/static/media/Nicholas Cerisano_Resume (February 2020).5a4d33d3.pdf"
   },
   {
     "revision": "aebb97e8e9bed306bbf1bbab73664d29",
