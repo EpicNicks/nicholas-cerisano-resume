@@ -5,7 +5,7 @@ import './Resume.css';
 export class Resume extends Component{
 
     render(){
-        const resumeLink = require("../../../media/documents/Nicholas Cerisano_Resume (January 2020).pdf");
+        const resumeLink = require("../../../media/documents/Nicholas Cerisano_Resume (February 2020).pdf");
         return(
             <div className="Resume">
                 <h1>

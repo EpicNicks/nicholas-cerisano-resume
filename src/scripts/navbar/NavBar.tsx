@@ -42,7 +42,7 @@ export class NavBar extends Component<IProps, IState>{
         }
     }
 
-    render(): React.ReactElement<any, string | React.JSXElementConstructor<any>> | string | number | {} | React.ReactNodeArray | React.ReactPortal | boolean | null | undefined {
+    render(){
 
         return(
             <div className="NavBar">

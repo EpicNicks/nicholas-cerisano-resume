@@ -9,11 +9,11 @@ export class Portfolio extends Component{
                 <h1>
                     This Portfolio
                 </h1>
-                <p>
+                <h3>
                     I built this website myself in React using TypeScript.<br/>
                     You can check out the code on my GitHub using the GitHub icon in the 'Contact Me' bar below, or by
                     clicking <a href="https://github.com/epicnicks" target="_blank" rel="noopener noreferrer">here</a>.<br/>
-                </p>
+                </h3>
                 <div className="PortfolioProjectLogos">
                     <img
                         className="ReactLogo"

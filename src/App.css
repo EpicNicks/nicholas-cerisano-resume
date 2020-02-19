@@ -4,4 +4,7 @@
   font-family: Ubuntu, monospace;
 }
 
+/*DEBUGGING PURPOSES
+* { outline: solid 0.25rem hsla(210, 100%, 100%, 0.5); }
+*/
 

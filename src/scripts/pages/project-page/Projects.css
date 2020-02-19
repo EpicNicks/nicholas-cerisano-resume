@@ -1,8 +1,7 @@
 
 .Projects{
-    min-height: 72.3vh;
+    min-height: 71.9vh;
     display: inline-block;
-    text-align: center;
     width: 100%;
 }
 
@@ -13,8 +12,15 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 80vh;
-    font-size: 1.6em;
+    height: 71.9vh;
+    font-size: 1.5em;
+    color: turquoise;
+}
+
+.ProjectDefault h3{
+    width: 50%;
+    color: whitesmoke;
+    font-weight: normal;
 }
 
 @keyframes spaceShooterAnimatedBG {
@@ -109,11 +115,27 @@
     width: 100%;
     background-color: white;
     color: #111;
-    min-height: 72.3vh;
+    min-height: 71.9vh;
 }
 
 .GameDay p{
     font-size: 1.2em;
+}
+
+.GameDayImages{
+    padding-top: 5vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+}
+
+.GameDayImages img{
+    padding: 0 2vw 0 2vw;
+    max-width: 35%;
+    max-height: 35%;
 }
 
 .InfiniteRunner{
@@ -138,10 +160,23 @@
 .PortfolioProject{
     width: 80vw;
     margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: darkturquoise;
+
 }
 
-.PortfolioProject p{
+.PortfolioProject h1{
+
+}
+
+.PortfolioProject h3{
+    width: 50%;
     font-size: 1.2em;
+    font-weight: normal;
+    color: white;
 }
 
 .PortfolioProject .PortfolioProjectLogos{

@@ -2,10 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cc64d9f7-44b4-4d17-9c29-8d209407a22a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/media/images/DevConsole.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/media/images/Team2Capture.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/pages/project-page/ProjectComponents/GlitchGarden.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/pages/project-page/ProjectComponents/GlitchGarden.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/pages/project-page/ProjectComponents/SpaceShooter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/pages/project-page/ProjectComponents/SpaceShooter.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/asset-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/precache-manifest.6050f32aa69da24c0c5c674debb8dde4.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/service-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/service-worker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/css/main.2e073ed0.chunk.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/css/main.2e073ed0.chunk.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/main.9d6df378.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/main.9d6df378.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/media/Nicholas Cerisano_Resume (January 2020).1e60c378.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/media/documents/Nicholas Cerisano_Resume (January 2020).pdf" beforeDir="false" afterPath="$PROJECT_DIR$/src/media/documents/Nicholas Cerisano_Resume (February 2020).pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/bottom bar/BottomBar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/bottom bar/BottomBar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/bottom bar/BottomBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/bottom bar/BottomBar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/navbar/NavBar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/navbar/NavBar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/navbar/NavBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/navbar/NavBar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/pages/about-page/About.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/pages/about-page/About.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/pages/about-page/About.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/pages/about-page/About.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/pages/project-page/ProjectComponents/GameDay.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/pages/project-page/ProjectComponents/GameDay.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/pages/project-page/ProjectComponents/Portfolio.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/pages/project-page/ProjectComponents/Portfolio.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scripts/pages/project-page/Projects.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/pages/project-page/Projects.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/pages/project-page/Projects.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/pages/project-page/Projects.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/pages/project-page/Sidebar/Sidebar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/pages/project-page/Sidebar/Sidebar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/pages/resume-page/Resume.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/pages/resume-page/Resume.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/pages/resume-page/Resume.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/pages/resume-page/Resume.tsx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -57,19 +80,19 @@
     <property name="ts.external.directory.path" value="D:\JetBrains Projects\WebstormProjects\nicholas-cerisano-portfolio\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\JetBrains Projects\WebstormProjects\nicholas-cerisano-portfolio\src\media\images" />
-      <recent name="D:\JetBrains Projects\WebstormProjects\nicholas-cerisano-portfolio\src\media\documents" />
-      <recent name="D:\JetBrains Projects\WebstormProjects\nicholas-cerisano-portfolio\public" />
-      <recent name="D:\JetBrains Projects\WebstormProjects\nicholas-cerisano-portfolio\src\media\unity\space-shooter" />
-      <recent name="D:\JetBrains Projects\WebstormProjects\nicholas-cerisano-portfolio\src\scripts\pages" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\JetBrains Projects\WebstormProjects\nicholas-cerisano-portfolio\public\unity\space-shooter" />
       <recent name="D:\JetBrains Projects\WebstormProjects\nicholas-cerisano-portfolio\public\unity\infinite-skater" />
       <recent name="D:\JetBrains Projects\WebstormProjects\nicholas-cerisano-portfolio\public\unity\glitch-garden" />
       <recent name="D:\JetBrains Projects\WebstormProjects\nicholas-cerisano-portfolio\src\media\images" />
       <recent name="C:\Users\epicn\WebstormProjects\nicholas-cerisano-portfolio\src\videos" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\JetBrains Projects\WebstormProjects\nicholas-cerisano-portfolio\src\media\images" />
+      <recent name="D:\JetBrains Projects\WebstormProjects\nicholas-cerisano-portfolio\src\media\documents" />
+      <recent name="D:\JetBrains Projects\WebstormProjects\nicholas-cerisano-portfolio\public" />
+      <recent name="D:\JetBrains Projects\WebstormProjects\nicholas-cerisano-portfolio\src\media\unity\space-shooter" />
+      <recent name="D:\JetBrains Projects\WebstormProjects\nicholas-cerisano-portfolio\src\scripts\pages" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -84,7 +107,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="npm.npm start">
+  <component name="RunManager" selected="npm.deploy">
     <configuration name="renders without crashing" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -179,7 +202,8 @@
       <workItem from="1570388331173" duration="3155000" />
       <workItem from="1571101445184" duration="1301000" />
       <workItem from="1580159422722" duration="6827000" />
-      <workItem from="1580231784066" duration="26851000" />
+      <workItem from="1580231784066" duration="28816000" />
+      <workItem from="1582086346707" duration="8225000" />
     </task>
     <servers />
   </component>

@@ -13,10 +13,16 @@ export class GameDay extends Component{
                     A game I worked on in grade 12 for my religion class's 'Game Day'.<br/>
 
                 </p>
-                <img
-                    // src={require("")}
-                    // alt={require("")}
-                />
+                <div className="GameDayImages">
+                    <img
+                        src={require("../../../../media/images/Team2Capture.png")}
+                        alt={require("../../../../media/images/Team2Capture.png")}
+                    />
+                    <img
+                        src={require("../../../../media/images/DevConsole.png")}
+                        alt={require("../../../../media/images/DevConsole.png")}
+                    />
+                </div>
             </div>
         );
     }

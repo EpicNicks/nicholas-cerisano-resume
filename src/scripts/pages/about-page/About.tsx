@@ -38,13 +38,13 @@ export class About extends Component{
                                 Trying new frameworks and programming languages to see different ways of reasoning problems
                             </li>
                             <li>
-                                Writing utility programs to perform basic tasks such as read my todo-list to me
-                            </li>
-                            <li>
-                                Playing chess
+                                Writing utility programs to perform tasks such as read my todo-list to me
                             </li>
                             <li>
                                 Making games in Unity Engine
+                            </li>
+                            <li>
+                                Playing chess
                             </li>
                             <li>
                                 Reading fantasy novels and programming textbooks

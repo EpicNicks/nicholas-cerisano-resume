@@ -1,6 +1,7 @@
 
 .About{
-    min-height: 72.3vh;
+    padding-top: 5vh;
+    min-height: 66.9vh;
     color: #111;
     background-color: #e3fcff;
     font-size: 1.2em;
@@ -15,6 +16,7 @@
     margin: 0 auto;
     padding: 0;
     overflow: hidden;
+    font-family: "Roboto Light";
 }
 
 .About-Image{
@@ -35,4 +37,8 @@
 
 .About-Body p{
     white-space: pre;
+}
+
+.About-Body ul{
+    list-style-type: square;
 }

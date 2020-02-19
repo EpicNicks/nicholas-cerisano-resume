@@ -21,7 +21,7 @@ function DefaultPage() {
     return(
         <div className="ProjectDefault">
             <h1>
-                Welcome to the Project Page.
+                Welcome to the Project Page
             </h1>
             <h3>
                 Feel free to click on the sidebar buttons to get a look at some of my

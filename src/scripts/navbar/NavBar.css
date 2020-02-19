@@ -20,6 +20,7 @@
     color: #555555;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16pt;
+    /*font-size: 1.27vw;*/
     font-weight: normal;
     line-height: 1.6em;
     float: left;
@@ -31,6 +32,7 @@
     display: block;
     text-align: center;
     padding: 16px;
+    /*padding: 1vw;*/
 }
 
 .NavButton{
@@ -38,6 +40,7 @@
     display: block;
     text-align: center;
     padding: 16px;
+    /*padding: 1vw*/
 }
 
 .NavBar a:link{

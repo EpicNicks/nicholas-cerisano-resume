@@ -23,15 +23,19 @@ export class BottomBar extends Component{
                         416-556-4060
                     </div>
                     <div className="BottomBarLink">
-                        <a href="https://www.linkedin.com/in/nicholas-cerisano-53a389173/" target="_blank" rel="noopener noreferrer">
-                            <FaLinkedin className="LinkedIn" size={iconSize} />
-                        </a>
+                        <div className="LinkedInOuter">
+                            <a href="https://www.linkedin.com/in/nicholas-cerisano-53a389173/" target="_blank" rel="noopener noreferrer">
+                                <FaLinkedin className="LinkedIn" size={iconSize} />
+                            </a>
+                        </div>
                         click me!
                     </div>
                     <div className="BottomBarLink">
-                        <a href="https://github.com/epicnicks" target="_blank" rel="noopener noreferrer">
-                            <FaGithub className="Github" size={iconSize} />
-                        </a>
+                        <div className="GithubOuter">
+                            <a href="https://github.com/epicnicks" target="_blank" rel="noopener noreferrer">
+                                <FaGithub className="Github" size={iconSize} />
+                            </a>
+                        </div>
                         click me!
                     </div>
                 </div>

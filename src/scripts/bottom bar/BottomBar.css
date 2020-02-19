@@ -41,6 +41,7 @@
     margin: auto;
     justify-content: space-between;
     width: 75%;
+    font-size: 0.95vw;
 }
 
 .BottomBarIcons a:link{
@@ -51,16 +52,27 @@
     color: white;
 }
 
-.BottomBarIcons a:hover{
-    color: blue;
-}
+/*.BottomBarIcons a:hover{*/
+/*    color: #0072b1;*/
+/*}*/
 
 .LinkedIn{
     flex: 1 0 0;
 }
+.LinkedInOuter a:hover{
+    color: #0072b1;
+}
 
 .Github{
     flex: 1 0 0;
+}
+
+.GithubOuter a:hover{
+    color: #24292e;
+}
+
+.Github a:hover{
+    color: black;
 }
 
 .IconBundle{
