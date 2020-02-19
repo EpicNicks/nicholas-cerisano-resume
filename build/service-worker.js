@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/nicholas-cerisano-resume/precache-manifest.3a9c99b34754751fb86b397abe84fc22.js"
+  "/nicholas-cerisano-resume/precache-manifest.a34d2fb6e6e2d21de1972505832864e6.js"
 );
 
 self.addEventListener('message', (event) => {
