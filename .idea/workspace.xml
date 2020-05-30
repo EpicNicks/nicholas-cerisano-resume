@@ -5,13 +5,13 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/asset-manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/precache-manifest.3a9c99b34754751fb86b397abe84fc22.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/precache-manifest.a34d2fb6e6e2d21de1972505832864e6.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/service-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/service-worker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/main.69cf4b5a.chunk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/main.69cf4b5a.chunk.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/pages/project-page/ProjectComponents/GameDay.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/pages/project-page/ProjectComponents/GameDay.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/css/main.36a3be5f.chunk.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/css/main.36a3be5f.chunk.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/bottom bar/BottomBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/bottom bar/BottomBar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/pages/project-page/Projects.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/pages/project-page/Projects.css" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -43,6 +43,10 @@
   </component>
   <component name="ProjectId" id="1PRfh12Aas8QAQZrJBQZhNIWwyz" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -75,18 +79,6 @@
       <recent name="D:\JetBrains Projects\WebstormProjects\nicholas-cerisano-portfolio\src\media\unity\space-shooter" />
       <recent name="D:\JetBrains Projects\WebstormProjects\nicholas-cerisano-portfolio\src\scripts\pages" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager" selected="npm.deploy">
     <configuration name="renders without crashing" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
@@ -185,7 +177,11 @@
       <workItem from="1580159422722" duration="6827000" />
       <workItem from="1580231784066" duration="28816000" />
       <workItem from="1582086346707" duration="10118000" />
-      <workItem from="1582145112236" duration="1617000" />
+      <workItem from="1582145112236" duration="2694000" />
+      <workItem from="1582179315196" duration="3874000" />
+      <workItem from="1582690126688" duration="182000" />
+      <workItem from="1590517601148" duration="48000" />
+      <workItem from="1590814267046" duration="16000" />
     </task>
     <servers />
   </component>
@@ -197,12 +193,11 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

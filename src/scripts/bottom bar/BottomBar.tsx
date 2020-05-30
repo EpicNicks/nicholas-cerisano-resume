@@ -16,7 +16,7 @@ export class BottomBar extends Component{
                 <div className="BottomBarIcons">
                     <div className="IconBundle">
                         <MdContactMail className="Email" size={iconSize} />
-                        ncerisano@gmail.com
+                        cerisano.nicholas@gmail.com
                     </div>
                     <div className="IconBundle">
                         <MdContactPhone className="Phone" size={iconSize} />

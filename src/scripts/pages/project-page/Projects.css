@@ -134,8 +134,8 @@
 
 .GameDayImages img{
     padding: 0 2vw 0 2vw;
-    max-width: 35%;
-    max-height: 35%;
+    width: 50vh;
+    height: auto;
 }
 
 .InfiniteRunner{
@@ -173,7 +173,7 @@
 }
 
 .PortfolioProject h3{
-    width: 50%;
+    width: 40vw;
     font-size: 1.2em;
     font-weight: normal;
     color: white;
@@ -181,17 +181,18 @@
 
 .PortfolioProject .PortfolioProjectLogos{
     display: inline-block;
+    width: 100%;
 }
 
 .PortfolioProject .PortfolioProjectLogos .ReactLogo{
-    height: 20%;
-    width: 20%;
+    height: auto;
+    width: 15vw;
     padding: 2% 0;
 }
 
 .PortfolioProject .PortfolioProjectLogos .TSLogo{
-    height: 10%;
-    width: 10%;
+    height: auto;
+    width: 7vw;
     padding: 2% 10%;
 }
 
