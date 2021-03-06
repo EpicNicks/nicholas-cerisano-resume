@@ -14,14 +14,21 @@ export class BottomBar extends Component{
                     Contact Me
                 </div>
                 <div className="BottomBarIcons">
-                    <div className="IconBundle">
-                        <MdContactMail className="Email" size={iconSize} />
+                    <div className="BottomBarLink">
+                        <div className="EmailOuter">
+                            <a href="mailto:cerisano.nicholas@gmail.com">
+                                <MdContactMail className="Email" size={iconSize} />
+                            </a>
+                        </div>
                         cerisano.nicholas@gmail.com
                     </div>
-                    <div className="IconBundle">
-                        <MdContactPhone className="Phone" size={iconSize} />
-                        416-556-4060
-                    </div>
+                    {/*<div className="BottomBarLink">*/}
+                    {/*    <div className="PhoneOuter">*/}
+                    {/*        <a href="tel:<number goes here>">*/}
+                    {/*            <MdContactPhone className="Phone" size={iconSize} />*/}
+                    {/*        </a>*/}
+                    {/*    </div>*/}
+                    {/*</div>*/}
                     <div className="BottomBarLink">
                         <div className="LinkedInOuter">
                             <a href="https://www.linkedin.com/in/nicholas-cerisano-53a389173/" target="_blank" rel="noopener noreferrer">

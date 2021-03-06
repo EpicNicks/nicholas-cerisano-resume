@@ -54,7 +54,7 @@ export class NavBar extends Component<IProps, IState>{
                     </li>
                     <li>
                         <Link to="/about">
-                            <NavButton text="About" id={["about"]} navBar={this}/>
+                            <NavButton text="About Me" id={["about"]} navBar={this}/>
                         </Link>
                     </li>
                     <li>
@@ -64,7 +64,7 @@ export class NavBar extends Component<IProps, IState>{
                     </li>
                     <li>
                         <Link to="/projects">
-                            <NavButton text="Projects" id={["projects"]} navBar={this}/>
+                            <NavButton text="My Projects" id={["projects"]} navBar={this}/>
                         </Link>
                     </li>
                 </ul>
