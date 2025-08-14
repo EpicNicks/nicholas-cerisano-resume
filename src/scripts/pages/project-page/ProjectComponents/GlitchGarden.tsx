@@ -26,7 +26,6 @@ export function GlitchGarden() {
           The goal is to keep the enemies from making it to the left side of the
           screen.
           <br />
-          Below is a gif of some gameplay of the first level.
         </p>
         {!isLoaded && <p>Loading... {Math.round(loadingProgression * 100)}%</p>}
         <Unity
