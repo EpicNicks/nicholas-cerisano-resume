@@ -1,94 +1,77 @@
+.BottomBar {
+  margin: 0;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 1000;
 
-.BottomBar{
-    padding: 0;
-    padding-top: 40px;
-    padding-bottom: 20px;
-    margin: 0;
-    width: 100%;
-    background-color: #222;
+  width: 100%;
+  text-align: center;
+  padding: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  /*margin: 0;*/
+  background-color: #222;
 }
 
-.BottomBarTitle{
-    padding-bottom: 1vw;
-    font-size: 2vw;
+.BottomBarTitle {
+  padding-bottom: 1vw;
+  font-size: 1.8em;
+  text-align: center;
 }
 
-/*@supports ( justify-content: space-evenly ) {*/
-/*    .BottomBarIcons{*/
-/*        display: flex;*/
-/*        margin: auto;*/
-/*        justify-content: space-evenly;*/
-/*        flex-direction: row;*/
-/*        flex-basis: available;*/
-/*    }*/
-/*}*/
-
-/*@supports not ( justify-content: space-evenly ) {*/
-/*    .BottomBarIcons{*/
-/*        display: flex;*/
-/*        flex: 1 0 0;*/
-/*        flex-direction: row;*/
-/*        margin: auto;*/
-/*        justify-content: space-between;*/
-/*        width: 80%;*/
-/*    }*/
-/*}*/
-
-.BottomBarIcons{
-    display: flex;
-    flex: 1 0 0;
-    flex-direction: row;
-    margin: auto;
-    justify-content: space-between;
-    width: 75%;
-    font-size: 0.95vw;
+.BottomBarIcons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 600px; /* optional: limit the spread */
+  margin: 0 auto; /* optional: center the container */
 }
 
-.BottomBarIcons a:link{
-    color: white;
+.BottomBarLink {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.8em;
+  width: 200px;
+  text-align: center;
 }
 
-.BottomBarIcons a:visited{
-    color: white;
+.BottomBarIcons a:link {
+  color: white;
 }
 
-/*.BottomBarIcons a:hover{*/
-/*    color: #0072b1;*/
-/*}*/
-
-.LinkedIn{
-    flex: 1 0 0;
-}
-.LinkedInOuter a:hover{
-    color: #0072b1;
+.BottomBarIcons a:visited {
+  color: white;
 }
 
-.Github{
-    flex: 1 0 0;
+.LinkedIn {
+  flex: 1 0 0;
+}
+.LinkedInOuter a:hover {
+  color: #0072b1;
 }
 
-.GithubOuter a:hover{
-    color: #24292e;
+.Github {
+  flex: 1 0 0;
 }
 
-.Github a:hover{
-    color: black;
+.GithubOuter a:hover {
+  color: #24292e;
 }
 
-.EmailOuter a:hover{
-    color: palevioletred;
+.Github a:hover {
+  color: black;
 }
 
-.PhoneOuter a:hover{
-    color: limegreen;
+.EmailOuter a:hover {
+  color: palevioletred;
 }
 
-.IconBundle{
-    display: flex;
-    flex-direction: column;
+.PhoneOuter a:hover {
+  color: limegreen;
 }
 
-.BottomBarLink{
-    display: flex;
-    flex-direction: column;
+.IconBundle {
+  display: flex;
+  flex-direction: column;
 }

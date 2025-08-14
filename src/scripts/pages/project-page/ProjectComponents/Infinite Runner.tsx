@@ -20,8 +20,8 @@ export class InfiniteRunner extends Component {
                     Infinite Runner
                 </h1>
                 <img
-                    src={require('D:\\JetBrains Projects\\WebstormProjects\\nicholas-cerisano-portfolio\\src\\media\\images\\infinite-runner clip.gif')}
-                    alt={require('D:\\JetBrains Projects\\WebstormProjects\\nicholas-cerisano-portfolio\\src\\media\\images\\infinite-runner clip.gif')}
+                    src={require('../../../../../src/media/images/infinite-runner clip.gif')}
+                    alt={require('../../../../../src/media/images/infinite-runner clip.gif')}
                 />
                 {/*Not enough memory...*/}
                 {/*<Unity className="Unity_InfiniteRunner" unityContent={this.unityContent} ref={game => this.game = game}/>*/}

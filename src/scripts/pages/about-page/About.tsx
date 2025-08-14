@@ -14,7 +14,7 @@ export class About extends Component{
                         {/*    Bio*/}
                         {/*</h2>*/}
                         <p>
-                            I'm a second-year Computer Science student attending York University.
+                            I'm a graduate from the Specialized Honors Bachelor of Computer Science program at York University.
                             I'm a proactive pragmatic logical thinker.
                             I spend most of my spare time programming for fun.
                         </p>
@@ -29,10 +29,10 @@ export class About extends Component{
                                 Trying new frameworks and programming languages to see different ways of reasoning problems
                             </li>
                             <li>
-                                Writing utility programs to perform tasks such as read my todo-list to me
+                                Making games in Unity Engine
                             </li>
                             <li>
-                                Making games in Unity Engine
+                                Practicing Brazilian Jiu-Jitsu
                             </li>
                             <li>
                                 Playing chess
@@ -45,8 +45,8 @@ export class About extends Component{
                     <div className="About-Image">
                         <img
                             //placeholder photo
-                            src={require("D:\\JetBrains Projects\\WebstormProjects\\nicholas-cerisano-portfolio\\src\\media\\images\\MyPhoto.jpg")}
-                            alt={require("D:\\JetBrains Projects\\WebstormProjects\\nicholas-cerisano-portfolio\\src\\media\\images\\MyPhoto.jpg")}
+                            src={require("../../../../src/media/images/MyPhoto.jpg")}
+                            alt={require("../../../../src/media/images/MyPhoto.jpg")}
                         />
                     </div>
                 </div>

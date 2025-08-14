@@ -17,13 +17,13 @@ export class Portfolio extends Component{
                 <div className="PortfolioProjectLogos">
                     <img
                         className="ReactLogo"
-                        src={require("D:\\JetBrains Projects\\WebstormProjects\\nicholas-cerisano-portfolio\\src\\media\\images\\react-logo.png")}
-                        alt={require("D:\\JetBrains Projects\\WebstormProjects\\nicholas-cerisano-portfolio\\src\\media\\images\\react-logo.png")}
+                        src={require("../../../../../src/media/images/react-logo.png")}
+                        alt={require("../../../../../src/media/images/react-logo.png")}
                     />
                     <img
                         className="TSLogo"
-                        src={require("D:\\JetBrains Projects\\WebstormProjects\\nicholas-cerisano-portfolio\\src\\media\\images\\typescript-logo.png")}
-                        alt={require("D:\\JetBrains Projects\\WebstormProjects\\nicholas-cerisano-portfolio\\src\\media\\images\\typescript-logo.png")}
+                        src={require("../../../../../src/media/images/typescript-logo.png")}
+                        alt={require("../../../../../src/media/images/typescript-logo.png")}
                     />
                 </div>
                 <img

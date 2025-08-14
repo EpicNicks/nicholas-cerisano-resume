@@ -1,75 +1,56 @@
-
-import React, { Component } from 'react';
-import { Link, Route } from 'react-router-dom'
-import {SideButton} from "./SideButton";
-import {NavButton} from "../../../navbar/NavButton";
-
+import React, { Component } from "react";
+import { SideButton } from "./SideButton";
 import "./Sidebar.css";
 
-interface IProps {}
-interface IState {
-    activeBtn: SideButton | null,
-    navBtns: Array<SideButton>
+interface IProps {
+  currentProject: string;
+  onProjectChange: (projectId: string) => void;
 }
 
-let activeStateId: string | null = null;
+interface IState {
+  activeBtn: SideButton | null;
+  sideBtns: Array<SideButton>;
+}
 
-export class Sidebar extends Component<IProps, IState>{
+export class Sidebar extends Component<IProps, IState> {
+  state = {
+    activeBtn: null,
+    sideBtns: [] as SideButton[],
+  };
 
-    state = {
-        activeBtn: null,
-        navBtns: [] as SideButton[]
-    };
+  setActiveStateId = (id: string): void => {
+    this.props.onProjectChange(id);
+  };
 
-    setActiveStateId = (id : string) => activeStateId = id;
-    getActiveStateId = () : string | null => activeStateId;
+  getCurrentProject = (): string => {
+    return this.props.currentProject;
+  };
 
-    constructor(props: Readonly<IProps>){
-        super(props);
-        if(activeStateId === null)
-            activeStateId = 'home';
-        else{
-            let href = window.location.href.split('/');
-            activeStateId = href[href.length - 1];
-        }
+  componentDidMount(): void {
+    if (this.state.activeBtn === null) {
+      this.setState({
+        activeBtn: this.state.sideBtns[0],
+        sideBtns: this.state.sideBtns,
+      });
     }
+  }
 
-    render(){
-        return(
-            <div className="SideBar">
-                <ul>
-                    <li>
-                        <Link to="/projects">
-                            <SideButton text="Projects Home" id="projects" navBar={this}/>
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to="/projects/space-shooter">
-                            <SideButton text="Space Shooter" id="space-shooter" navBar={this}/>
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to="/projects/glitch-garden">
-                            <SideButton text="Glitch Garden" id="glitch-garden" navBar={this}/>
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to="/projects/game-day">
-                            <SideButton text="Game Day" id="game-day" navBar={this}/>
-                        </Link>
-                    </li>
-                    {/*<li>*/}
-                    {/*    <Link to="/projects/infinite-runner">*/}
-                    {/*        <SideButton text="Infinite Runner" id="infinite-runner" navBar={this}/>*/}
-                    {/*    </Link>*/}
-                    {/*</li>*/}
-                    <li>
-                        <Link to="/projects/portfolio">
-                            <SideButton text="Portfolio" id="portfolio" navBar={this} />
-                        </Link>
-                    </li>
-                </ul>
-            </div>
-        );
-    }
+  render() {
+    return (
+      <div className="sidebar">
+        <div className="sidebar-content">
+          <SideButton text="Overview" id="default" navBar={this} />
+          <SideButton text="Space Shooter" id="space-shooter" navBar={this} />
+          <SideButton text="Glitch Garden" id="glitch-garden" navBar={this} />
+          <SideButton text="Game Day" id="game-day" navBar={this} />
+          <SideButton
+            text="Infinite Runner"
+            id="infinite-runner"
+            navBar={this}
+          />
+          <SideButton text="Portfolio" id="portfolio" navBar={this} />
+        </div>
+      </div>
+    );
+  }
 }

@@ -11,7 +11,7 @@ export class VideoPlayer extends Component{
     }
 
     render(){
-        const url = require("D:\\JetBrains Projects\\WebstormProjects\\nicholas-cerisano-portfolio\\src\\media\\videos\\sample coding clip.mp4");
+        const url = require("../../../src/media/videos/sample coding clip.mp4");
         return(
             <div className="VideoContainer">
                 <div className="VideoPlayer">
@@ -29,7 +29,7 @@ export class VideoPlayer extends Component{
                     About Nicholas Cerisano
                 </h1>
                 <h2>
-                    Aspiring Software Developer
+                    Software Developer
                 </h2>
             </div>
         );

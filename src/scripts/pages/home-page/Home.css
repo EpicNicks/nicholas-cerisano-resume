@@ -6,7 +6,6 @@
     -o-filter: blur(10px);
     -ms-filter: blur(10px);
     filter: blur(12px);
-    alignment: center;
     height: 80vh;
     width: 80vw;
 }
@@ -17,7 +16,9 @@
 }
 
 .Home{
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+
     box-sizing: border-box;
     margin: 0;
     background-color: #555555;

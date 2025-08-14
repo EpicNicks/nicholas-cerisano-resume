@@ -1,57 +1,66 @@
-.NavBar{
-    background-color: #333;
-    margin: 0;
-    padding: 0;
+.NavBar {
+  background-color: #333;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .NavBar ul {
-    margin: 0;
-    padding: 0;
-    padding-left: 10%;
-    list-style-type: none;
-    overflow: hidden;
+  margin: 0;
+  padding: 0;
+  padding-left: 10%;
+  list-style-type: none;
+  overflow: hidden;
 }
 
-.NavBar ul li{
-    padding: 0px;
-    background-color: #333;
-    /*#f4f4f4*/
-    color: #555555;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16pt;
-    /*font-size: 1.27vw;*/
-    font-weight: normal;
-    line-height: 1.6em;
-    float: left;
+.NavBar ul li {
+  padding: 0px;
+  background-color: #333;
+  /*#f4f4f4*/
+  color: #555555;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16pt;
+  /*font-size: 1.27vw;*/
+  font-weight: normal;
+  line-height: 1.6em;
+  float: left;
 }
 
-.ActiveNavBtn{
-    color: aqua;
-    background-color: #7f7f7f;
-    display: block;
-    text-align: center;
-    padding: 16px;
-    /*padding: 1vw;*/
+.ActiveNavBtn {
+  color: aqua;
+  background-color: #7f7f7f;
+  display: block;
+  text-align: center;
+  padding: 16px;
+  /*padding: 1vw;*/
 }
 
-.NavButton{
-    -webkit-transition:background-color 500ms ease-out, background-color 200ms ease-in;
-    display: block;
-    text-align: center;
-    padding: 16px;
-    /*padding: 1vw*/
+.NavButton {
+  -webkit-transition: background-color 500ms ease-out,
+    background-color 200ms ease-in;
+  transition: background-color 500ms ease-out, background-color 200ms ease-in;
+  display: block;
+  text-align: center;
+  padding: 16px;
+  /*padding: 1vw*/
 }
 
-.NavBar a:link{
-    text-decoration: none;
-    color: aliceblue;
+.NavBar a:link {
+  text-decoration: none;
+  color: aliceblue;
 }
 
-.NavBar a:visited{
-    color: aliceblue;
+.NavBar a:visited {
+  color: aliceblue;
 }
 
-.NavButton:hover{
-    background-color: #555555;
-    color: aqua;
+.NavButton:hover {
+  background-color: #555555;
+  color: aqua;
 }

@@ -1,210 +1,226 @@
+/* Updated Projects.css - preserving your original styles with new sidebar */
 
-.Projects{
-    min-height: 71.9vh;
-    display: inline-block;
-    width: 100%;
-    /*font-family: Ubuntu, monospace;*/
+.Projects {
+  min-height: 71.9vh;
+  display: flex; /* Changed from inline-block to flex for sidebar layout */
+  width: 100%;
+  /*font-family: Ubuntu, monospace;*/
 }
 
-.ProjectDefault{
-    background-color: #555;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 71.9vh;
-    font-size: 1.5em;
-    color: var(--blue);
+.project-content {
+  flex: 1;
+  overflow-y: auto;
 }
 
-.ProjectDefault h3{
-    width: 50%;
-    color: whitesmoke;
-    font-weight: normal;
+/* Basic sidebar container - detailed styling should be in Sidebar.css */
+.sidebar {
+  width: 200px;
+  min-height: 71.9vh;
+}
+
+.sidebar-content {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 0 10px;
+}
+
+.ProjectDefault {
+  background-color: #555;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 71.9vh;
+  font-size: 1.5em;
+  color: var(--blue);
+}
+
+.ProjectDefault h3 {
+  width: 50%;
+  color: whitesmoke;
+  font-weight: normal;
 }
 
 @keyframes spaceShooterAnimatedBG {
-    from { background-position: 0 0; }
-    to { background-position: 0 10000px; }
-}
-
-.SpaceShooter{
-    display: inline-block;
-    /*background-color: black;*/
-    width: 100%;
-
+  from {
     background-position: 0 0;
-    background-image: url('../../../media/images/starfield_alpha.png');
-    background-size: 100% 100%;
-    background-repeat: repeat-y;
-
-    animation: spaceShooterAnimatedBG 40s infinite linear;
+  }
+  to {
+    background-position: 0 10000px;
+  }
 }
 
-.SpaceShooter p{
-    font-size: 1.2em;
-    width: 60%;
-    margin: auto;
-    text-align: center;
+.SpaceShooter {
+  display: inline-block;
+  /*background-color: black;*/
+  width: 100%;
+  min-height: 71.9vh;
+
+  background-position: 0 0;
+  background-image: url("../../../media/images/starfield_alpha.png");
+  background-size: 100% 100%;
+  background-repeat: repeat-y;
+
+  animation: spaceShooterAnimatedBG 40s infinite linear;
 }
 
-.Unity_SpaceShooter{
-    margin: auto !important;
-    width: 450px !important;
-    height: 800px !important;
+.SpaceShooter p {
+  font-size: 1.2em;
+  width: 60%;
+  margin: auto;
+  text-align: center;
+}
+
+.Unity_SpaceShooter {
+  margin: auto !important;
+  width: 450px !important;
+  height: 800px !important;
 }
 
 .GlitchGarden {
-    display: inline-block;
-    font-size: 1.2em;
-    text-shadow:
-            #2d1603 0px 0px 10px,
-            #2d1603 0px 0px 10px,
-            #2d1603 0px 0px 20px,
-            #2d1603 0px 0px 20px;
-    color: #9fff9f;
-    /*filter: blur(3px);*/
-    text-align: center;
-    /*background-color: #53843f;*/
-    width: 100%;
+  display: inline-block;
+  font-size: 1.2em;
+  text-shadow: #2d1603 0px 0px 10px, #2d1603 0px 0px 10px, #2d1603 0px 0px 20px,
+    #2d1603 0px 0px 20px;
+  color: #9fff9f;
+  /*filter: blur(3px);*/
+  text-align: center;
+  /*background-color: #53843f;*/
+  width: 100%;
+  min-height: 71.9vh;
 }
 
-.GlitchGarden h1{
-    color: #96f396;
-    text-shadow:
-            #2d1603 0px 0px 10px,
-            #2d1603 0px 0px 10px,
-            #2d1603 0px 0px 20px,
-            #2d1603 0px 0px 20px,
-            #2d1603 0px 0px 20px,
-            #2d1603 0px 0px 20px,
-            #2d1603 0px 0px 50px,
-            #2d1603 0px 0px 50px;
+.GlitchGarden h1 {
+  color: #96f396;
+  text-shadow: #2d1603 0px 0px 10px, #2d1603 0px 0px 10px, #2d1603 0px 0px 20px,
+    #2d1603 0px 0px 20px, #2d1603 0px 0px 20px, #2d1603 0px 0px 20px,
+    #2d1603 0px 0px 50px, #2d1603 0px 0px 50px;
 }
 
-.GlitchGarden img{
-    height: 70%;
-    width: 70%;
+.GlitchGarden img {
+  height: 70%;
+  width: 70%;
 }
 
-.GlitchGardenBGImage{
-    position: absolute;
-    left: 0;
-    right: 0;
-    z-index: -1;
-    display: block;
-    background-image: url('../../../media/images/grass bg.jpg');
-    background-size: contain;
-    width: 100%;
-    height: 100%;
-    -webkit-filter: blur(10px);
-    -moz-filter: blur(10px);
-    -o-filter: blur(10px);
-    -ms-filter: blur(10px);
-    filter: blur(10px) brightness(1);
+.GlitchGardenBGImage {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  display: block;
+  background-image: url("../../../media/images/grass bg.jpg");
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  -webkit-filter: blur(10px);
+  -moz-filter: blur(10px);
+  -o-filter: blur(10px);
+  -ms-filter: blur(10px);
+  filter: blur(10px) brightness(1);
 }
 
-.Unity_GlitchGarden{
-    margin: auto !important;
-    width: 70% !important;
+.Unity_GlitchGarden {
+  margin: auto !important;
+  width: 70% !important;
 }
 
-.GameDay{
-    display: inline-block;
-    text-align: center;
-    width: 100%;
-    background-color: white;
-    color: #111;
-    min-height: 71.9vh;
+.GameDay {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  background-color: white;
+  color: #111;
+  min-height: 71.9vh;
 }
 
-.GameDay p{
-    font-size: 1.2em;
+.GameDay p {
+  font-size: 1.2em;
 }
 
-.GameDayImages{
-    padding-top: 5vh;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    flex-direction: row;
-    height: 100%;
-    width: 100%;
+.GameDayImages {
+  padding-top: 5vh;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
 }
 
-.GameDayImages img{
-    padding: 0 2vw 0 2vw;
-    width: 50vh;
-    height: auto;
+.GameDayImages img {
+  padding: 0 2vw 0 2vw;
+  width: 50vh;
+  height: auto;
 }
 
-.InfiniteRunner{
-    display: inline-block;
-    text-align: center;
-    width: 100%;
-    background-color: paleturquoise;
-    color: #111;
+.InfiniteRunner {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  background-color: paleturquoise;
+  color: #111;
+  min-height: 71.9vh;
 }
 
-.InfiniteRunner img{
-    height: 60%;
-    width: 60%;
-    border: 10px darkturquoise;
+.InfiniteRunner img {
+  height: 60%;
+  width: 60%;
+  border: 10px darkturquoise;
 }
 
-.Unity_InfiniteRunner{
-    margin: auto !important;
-    width: 70% !important;
+.Unity_InfiniteRunner {
+  margin: auto !important;
+  width: 70% !important;
 }
 
-.PortfolioProject{
-    width: 80vw;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: darkturquoise;
-
+.PortfolioProject {
+  width: 80vw;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: darkturquoise;
+  min-height: 71.9vh;
 }
 
-.PortfolioProject h1{
-
+.PortfolioProject h1 {
 }
 
-.PortfolioProject h3{
-    width: 40vw;
-    font-size: 1.2em;
-    font-weight: normal;
-    color: white;
+.PortfolioProject h3 {
+  width: 40vw;
+  font-size: 1.2em;
+  font-weight: normal;
+  color: white;
 }
 
-.PortfolioProject .PortfolioProjectLogos{
-    display: inline-block;
-    width: 100%;
+.PortfolioProject .PortfolioProjectLogos {
+  display: inline-block;
+  width: 100%;
 }
 
-.PortfolioProject .PortfolioProjectLogos .ReactLogo{
-    height: auto;
-    width: 15vw;
-    padding: 2% 0;
+.PortfolioProject .PortfolioProjectLogos .ReactLogo {
+  height: auto;
+  width: 15vw;
+  padding: 2% 0;
 }
 
-.PortfolioProject .PortfolioProjectLogos .TSLogo{
-    height: auto;
-    width: 7vw;
-    padding: 2% 10%;
+.PortfolioProject .PortfolioProjectLogos .TSLogo {
+  height: auto;
+  width: 7vw;
+  padding: 2% 10%;
 }
 
-.PortfolioProject a:link{
-    color: turquoise;
+.PortfolioProject a:link {
+  color: turquoise;
 }
 
-.PortfolioProject a:visited{
-    color: turquoise;
+.PortfolioProject a:visited {
+  color: turquoise;
 }
 
-.PortfolioProject a:hover{
-    color: darkturquoise;
+.PortfolioProject a:hover {
+  color: darkturquoise;
 }

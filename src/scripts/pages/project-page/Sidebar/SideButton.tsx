@@ -1,35 +1,33 @@
-
-import React, { Component } from 'react';
-import {NavBar} from "../../../navbar/NavBar";
-import {NavButton} from "../../../navbar/NavButton";
+import React, { Component } from "react";
 import { Sidebar } from "./Sidebar";
-
 import "./Sidebar.css";
 
 interface IProps {
-    text: string,
-    navBar: Sidebar,
-    id: string,
+  text: string;
+  navBar: Sidebar;
+  id: string;
 }
 
-interface IState {
+interface IState {}
 
-}
+export class SideButton extends Component<IProps, IState> {
+  render() {
+    // Get current project from the sidebar instead of URL
+    const currentProject = this.props.navBar.getCurrentProject();
+    const isActive = currentProject === this.props.id;
 
-export class SideButton extends Component<IProps, IState>{
+    const className = isActive ? "ActiveSideButton" : "SideButton";
 
-    render(){
-        let href = window.location.href.split('/');
-        let className = href[href.length - 1] === this.props.id ? "ActiveSideButton" : "SideButton";
-        return(
-            <div className={className + " " + href[href.length - 1]/*this is used to differentiate css colors*/}
-                 onClick={()=> {
-                     this.props.navBar.setActiveStateId(this.props.id);
-                     this.props.navBar.setState({activeBtn: this});
-                 }}
-            >
-                { this.props.text }
-            </div>
-        );
-    }
+    return (
+      <div
+        className={`${className} ${this.props.id}`} // Keep the ID class for CSS differentiation
+        onClick={() => {
+          this.props.navBar.setActiveStateId(this.props.id);
+          this.props.navBar.setState({ activeBtn: this });
+        }}
+      >
+        {this.props.text}
+      </div>
+    );
+  }
 }

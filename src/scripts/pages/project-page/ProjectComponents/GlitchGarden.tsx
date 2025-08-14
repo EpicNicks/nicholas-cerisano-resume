@@ -30,8 +30,8 @@ export class GlitchGarden extends Component{
                     {/*not enough memory (crashes)*/}
                     {/*<Unity className="Unity_GlitchGarden" unityContent={this.unityContent}/>*/}
                     <img
-                        src={require("D:\\JetBrains Projects\\WebstormProjects\\nicholas-cerisano-portfolio\\src\\media\\images\\glitch garden demo gif.gif")}
-                        alt={require("D:\\JetBrains Projects\\WebstormProjects\\nicholas-cerisano-portfolio\\src\\media\\images\\glitch garden demo gif.gif")}
+                        src={require("../../../../../src/media/images/glitch garden demo gif.gif")}
+                        alt={require("../../../../../src/media/images/glitch garden demo gif.gif")}
                     />
                 </div>
             </div>

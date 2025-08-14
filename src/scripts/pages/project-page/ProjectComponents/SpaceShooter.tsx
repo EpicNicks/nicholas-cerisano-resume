@@ -38,7 +38,7 @@ export class SpaceShooter extends Component{
                 </h1>
                 <p>
                     This is a project I worked on following the Udemy course: Complete Unity C# Developer: Learn to code by making games
-                    I later designed it around being played on a phone.
+                    I later designed it around being played on a phone and then ported it to web so it could be played here.
                     Feel free to give it a try below by clicking &lt;Start&gt;.<br/><br/>
                     Controls: Move the mouse; your ship (bottom) will move toward it along the horizontal axis.<br/>
                     (May take a few seconds to load)

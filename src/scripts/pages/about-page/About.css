@@ -1,7 +1,7 @@
 
 .About{
+    flex: 1 0 auto;
     padding-top: 5vh;
-    min-height: 65.5vh;
     color: #111;
     background-color: #e3fcff;
     font-size: 1.2em;
