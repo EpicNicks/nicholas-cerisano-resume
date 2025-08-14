@@ -1,8 +1,7 @@
 {
   "files": {
-    "main.css": "/nicholas-cerisano-resume/static/css/main.ae0c4c61.css",
-    "main.js": "/nicholas-cerisano-resume/static/js/main.73f904f4.js",
-    "static/media/glitch garden demo gif.gif": "/nicholas-cerisano-resume/static/media/glitch garden demo gif.f8355b49775c9824e231.gif",
+    "main.css": "/nicholas-cerisano-resume/static/css/main.46419d02.css",
+    "main.js": "/nicholas-cerisano-resume/static/js/main.164e2f26.js",
     "static/media/infinite-runner clip.gif": "/nicholas-cerisano-resume/static/media/infinite-runner clip.3188786ac9482cf9b48c.gif",
     "static/media/starfield_alpha.png": "/nicholas-cerisano-resume/static/media/starfield_alpha.7331cc03860702d4f962.png",
     "static/media/sample coding clip.mp4": "/nicholas-cerisano-resume/static/media/sample coding clip.b6dc3c93846742939d2e.mp4",
@@ -14,11 +13,11 @@
     "static/media/DevConsole.png": "/nicholas-cerisano-resume/static/media/DevConsole.bbb41e63ec347f489994.png",
     "static/media/typescript-logo.png": "/nicholas-cerisano-resume/static/media/typescript-logo.7b64d9ca208b9c3f7055.png",
     "index.html": "/nicholas-cerisano-resume/index.html",
-    "main.ae0c4c61.css.map": "/nicholas-cerisano-resume/static/css/main.ae0c4c61.css.map",
-    "main.73f904f4.js.map": "/nicholas-cerisano-resume/static/js/main.73f904f4.js.map"
+    "main.46419d02.css.map": "/nicholas-cerisano-resume/static/css/main.46419d02.css.map",
+    "main.164e2f26.js.map": "/nicholas-cerisano-resume/static/js/main.164e2f26.js.map"
   },
   "entrypoints": [
-    "static/css/main.ae0c4c61.css",
-    "static/js/main.73f904f4.js"
+    "static/css/main.46419d02.css",
+    "static/js/main.164e2f26.js"
   ]
 }
