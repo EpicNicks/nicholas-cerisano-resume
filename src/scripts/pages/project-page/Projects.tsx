@@ -1,55 +1,65 @@
-
-import React, { Component } from 'react';
-import { Route, Switch,} from 'react-router-dom';
-import { createBrowserHistory } from 'history'
-
-import './Projects.css';
-
-///#region Component imports
+import React, { useState } from "react";
+import "./Projects.css";
 import { Sidebar } from "./Sidebar/Sidebar";
-
 import { SpaceShooter } from "./ProjectComponents/SpaceShooter";
 import { GlitchGarden } from "./ProjectComponents/GlitchGarden";
 import { GameDay } from "./ProjectComponents/GameDay";
 import { InfiniteRunner } from "./ProjectComponents/Infinite Runner";
 import { Portfolio } from "./ProjectComponents/Portfolio";
-///#endregion
-
-const history = createBrowserHistory();
+import { CaloriesIn } from "./ProjectComponents/CaloriesIn";
 
 function DefaultPage() {
-    return(
-        <div className="ProjectDefault">
-            <h1>
-                Welcome to the Project Page
-            </h1>
-            <h3>
-                Feel free to click on the sidebar buttons to get a look at some of my
-                personal projects.
-            </h3>
-        </div>
-    );
+  return (
+    <div className="ProjectDefault">
+      <h1>Welcome to the Project Page</h1>
+      <h3>
+        Feel free to click on the sidebar buttons to get a look at some of my
+        personal projects.
+      </h3>
+    </div>
+  );
 }
 
-export class Projects extends Component{
+export const projectIds = [
+  "default",
+  "space-shooter",
+  "glitch-garden",
+  "game-day",
+  "infinite-runner",
+  "calories-in",
+  "portfolio",
+] as const;
+export type ProjectId = (typeof projectIds)[number];
 
-    //add in a scrolling sidebar to navigate different project-page
-    render(){
-        return(
-            <div className="Projects">
-                {/*<Router history={history}>*/}
-                    <Sidebar/>
-                    <Switch>
-                        <Route exact path="/projects/space-shooter" component={SpaceShooter}/>
-                        <Route exact path="/projects/glitch-garden" component={GlitchGarden}/>
-                        <Route exact path="/projects/game-day" component={GameDay}/>
-                        <Route exact path="/projects/infinite-runner" component={InfiniteRunner}/>
-                        <Route exact path="/projects/portfolio" component={Portfolio}/>
-                        <Route exact path="/projects" component={DefaultPage}/>
-                        <Route component={DefaultPage}/>
-                    </Switch>
-                {/*</Router>*/}
-            </div>
-        );
+export function Projects() {
+  const [currentProject, setCurrentProject] = useState<ProjectId>("default");
+  const renderCurrentProject = () => {
+    switch (currentProject) {
+      case "space-shooter":
+        return <SpaceShooter />;
+      case "glitch-garden":
+        return <GlitchGarden />;
+      case "game-day":
+        return <GameDay />;
+      case "infinite-runner":
+        return <InfiniteRunner />;
+      case "portfolio":
+        return <Portfolio />;
+      case "calories-in":
+        return <CaloriesIn />;
+      case "default":
+      default:
+        return <DefaultPage />;
     }
+  };
+
+  return (
+    <div className="Projects">
+      <Sidebar
+        currentProject={currentProject}
+        onProjectChange={(curProj) => setCurrentProject(curProj)}
+      />
+      <div className="project-content">{renderCurrentProject()}</div>
+    </div>
+  );
 }

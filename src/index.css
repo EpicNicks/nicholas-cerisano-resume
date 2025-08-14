@@ -1,55 +1,75 @@
-/*  FOR DEBUGGING  */
-/** { background-color: rgba(255,0,0,.2); }*/
-/** * { background-color: rgba(0,255,0,.2); }*/
-/** * * { background-color: rgba(0,0,255,.2); }*/
-/** * * * { background-color: rgba(255,0,255,.2); }*/
-/** * * * * { background-color: rgba(0,255,255,.2); }*/
-/** * * * * * { background-color: rgba(255,255,0,.2); }*/
-/** * * * * * * { background-color: rgba(255,0,0,.2); }*/
-/** * * * * * * * { background-color: rgba(0,255,0,.2); }*/
-/** * * * * * * * * { background-color: rgba(0,0,255,.2); }*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&family=Open+Sans&display=swap");
+
+/* Add smooth scrolling */
+html {
+  scroll-behavior: smooth;
+  background-color: rgb(38, 38, 38);
+  scroll-snap-type: y mandatory;
+  transition: scroll-snap-type 0.1s ease;
+}
 
 body {
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  /*Default bg color*/
-  background-color: #555555;
-  color: lightgray;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.App h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--subtitle-font);
 }
 
-/*::-webkit-scrollbar{*/
-/*  display: none;*/
-/*}*/
-
-/* width */
-::-webkit-scrollbar {
-  width: 10px;
-  background: #333;
+:root {
+  /* Font Colors */
+  --blue: #00ceff;
+  /* Fonts */
+  --title-font: "Open Sans", sans-serif;
+  --subtitle-font: Montserrat, sans-serif;
 }
 
-/* Track */
-::-webkit-scrollbar-track {
-  background: transparent;
-  box-shadow: inset 0 0 5px black;
-  border-radius: 10px;
+@font-face {
+  font-family: "Montserrat", sans-serif;
+  src: url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 }
 
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: lightslategray;
-  border-radius: 10px;
+@font-face {
+  font-family: "Open Sans", sans-serif;
+  src: url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,500&family=Open+Sans:wght@600&display=swap");
 }
 
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: slategray;
+.main-content {
+  width: 100%;
+  flex: 1;
+  margin-top: 0;
 }
+
+.page-section {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  scroll-margin-top: 80px;
+}
+
+@supports not (scroll-margin-top: 80px) {
+  .page-section::before {
+    content: "";
+    display: block;
+    height: 80px; /* Same as navbar height */
+    margin-top: -80px;
+    visibility: hidden;
+  }
+}
+
+.page-section:not(:last-child) {
+  border-bottom: 1px solid rgba(0, 206, 255, 0.1);
+}
+
+/*DEBUGGING PURPOSES 
+* { 
+  outline: solid 0.25rem hsla(210, 100%, 100%, 0.5); 
+} */
