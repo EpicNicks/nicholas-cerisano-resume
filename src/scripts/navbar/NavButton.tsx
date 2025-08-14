@@ -1,37 +1,44 @@
-import { Component } from "react";
 import React from "react";
-import { NavBar } from "./NavBar";
+
+interface NavBarMethods {
+  setActiveStateId: (id: string) => void;
+  getActiveStateId: () => string | null;
+  getCurrentSection: () => string;
+  setActiveButtonIndex: (index: number) => void;
+  handleNavClick: (sectionId: string, event?: React.MouseEvent) => void;
+}
 
 interface IProps {
   text: string;
-  navBar: NavBar;
+  navBar: NavBarMethods;
   id: Array<string>;
+  buttonIndex: number;
   onClick: () => void;
 }
 
-interface IState {}
+export const NavButton: React.FC<IProps> = ({
+  text,
+  navBar,
+  id,
+  buttonIndex,
+  onClick,
+}) => {
+  const currentSection = navBar.getCurrentSection();
+  const isActive =
+    id.includes(currentSection) ||
+    (currentSection === "home" && id.includes(""));
 
-export class NavButton extends Component<IProps, IState> {
-  render() {
-    // Check if current section matches this button's ID
-    const currentSection = this.props.navBar.getCurrentSection();
-    const isActive =
-      this.props.id.includes(currentSection) ||
-      (currentSection === "home" && this.props.id.includes(""));
+  const className = isActive ? "ActiveNavBtn" : "NavButton";
 
-    const className = isActive ? "ActiveNavBtn" : "NavButton";
+  const handleClick = () => {
+    navBar.setActiveStateId(id[0] || "home");
+    navBar.setActiveButtonIndex(buttonIndex);
+    onClick();
+  };
 
-    return (
-      <div
-        className={className}
-        onClick={() => {
-          this.props.navBar.setActiveStateId(this.props.id[0] || "home");
-          this.props.navBar.setState({ activeBtn: this });
-          this.props.onClick();
-        }}
-      >
-        {this.props.text}
-      </div>
-    );
-  }
-}
+  return (
+    <div className={className} onClick={handleClick}>
+      {text}
+    </div>
+  );
+};

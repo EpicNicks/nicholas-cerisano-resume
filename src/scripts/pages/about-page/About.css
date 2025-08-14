@@ -1,60 +1,51 @@
-
-.About{
-    flex: 1 0 auto;
-    padding-top: 5vh;
-    color: #111;
-    background-color: #e3fcff;
-    font-size: 1.2em;
+.About {
+  flex: 1 0 auto;
+  padding-top: 10vh;
+  color: #111;
+  background-color: #e3fcff;
+  font-size: 1.2em;
 }
 
-.About h1{
-    padding: 0;
-    margin: 0;
+.About h1 {
+  padding: 0;
+  margin: 0;
 }
 
-.About-Main{
-    --gap: 100px;
-    padding: 0;
-    overflow: hidden;
-    display: inline-flex;
-    flex-direction: row;
-    margin: calc(-1 * var(--gap)) 0 0 calc(-1 * var(--gap));
-    width: calc(60% + var(--gap));
+.About-Main {
+  --gap: 100px;
+  padding: 0;
+  overflow: hidden;
+  display: inline-flex;
+  flex-direction: row;
+  margin: calc(-1 * var(--gap)) 0 0 calc(-1 * var(--gap));
+  width: calc(60% + var(--gap));
 }
 
-.About-Image{
-    vertical-align: top;
-    flex: 1;
-    padding-top: 7vh;
-    margin: 0 0 0 var(--gap);
+.About-Image {
+  vertical-align: top;
+  flex: 1;
+  padding-top: 7vh;
+  margin: 0 0 0 var(--gap);
 }
 
-.About-Image img{
-    max-width: 25vw;
-    height: auto;
+.About-Image img {
+  max-width: 25vw;
+  height: auto;
 }
 
-.About-Body{
-    margin: 0 0 0 var(--gap);
-    vertical-align: top;
-    text-align: left;
-    width: 30vw;
-    flex: 2;
+.About-Body {
+  margin: 0 0 0 var(--gap);
+  vertical-align: top;
+  text-align: left;
+  width: 30vw;
+  flex: 2;
 }
 
-.About-Body h2{
-
+.About-Body ul {
+  list-style-type: none;
+  padding-left: 0;
 }
 
-.About-Body p{
-    /*white-space: pre;*/
-}
-
-.About-Body ul{
-    list-style-type: none;
-    padding-left: 0;
-}
-
-.About-Body li{
-    margin: 0 0 20px 0;
+.About-Body li {
+  margin: 0 0 20px 0;
 }

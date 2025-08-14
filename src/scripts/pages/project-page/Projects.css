@@ -53,30 +53,52 @@
 }
 
 .SpaceShooter {
-  display: inline-block;
-  /*background-color: black;*/
+  display: flex;
+  flex-direction: column;
   width: 100%;
   min-height: 71.9vh;
-
   background-position: 0 0;
   background-image: url("../../../media/images/starfield_alpha.png");
   background-size: 100% 100%;
   background-repeat: repeat-y;
-
   animation: spaceShooterAnimatedBG 40s infinite linear;
+}
+
+.SpaceShooter h1 {
+  text-align: center;
+  color: white;
+  margin: 20px 0;
+}
+
+.SpaceShooter-content {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  padding: 20px;
+  position: relative;
+}
+
+.SpaceShooter-description {
+  position: absolute;
+  left: 100px;
+  top: 50%;
+  transform: translateY(-50%);
+  max-width: 400px;
+  z-index: 1;
 }
 
 .SpaceShooter p {
   font-size: 1.2em;
-  width: 60%;
-  margin: auto;
-  text-align: center;
+  color: white;
+  text-align: left;
+  margin: 0;
 }
 
-.Unity_SpaceShooter {
-  margin: auto !important;
-  width: 450px !important;
-  height: 800px !important;
+.SpaceShooter-game {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .GlitchGarden {
@@ -184,9 +206,6 @@
   justify-content: center;
   color: darkturquoise;
   min-height: 71.9vh;
-}
-
-.PortfolioProject h1 {
 }
 
 .PortfolioProject h3 {

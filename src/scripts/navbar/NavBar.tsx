@@ -1,61 +1,82 @@
 import { NavButton } from "./NavButton";
 import "./NavBar.css";
-import { Component } from "react";
-import React from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 
 interface IProps {
   onNavigate: (sectionId: string) => void;
 }
 
-interface IState {
-  activeBtn: NavButton | null;
-  navBtns: Array<NavButton>;
-  currentSection: string;
+interface NavButtonConfig {
+  text: string;
+  id: string[];
+  sectionId: string;
 }
 
+// Move activeStateId outside component to maintain global state
 let activeStateId: string | null = null;
 
-export class NavBar extends Component<IProps, IState> {
-  private intersectionObserver: IntersectionObserver | null = null;
+export const NavBar: React.FC<IProps> = ({ onNavigate }) => {
+  const [activeBtnIndex, setActiveBtnIndex] = useState<number>(0);
+  const [currentSection, setCurrentSection] = useState<string>("home");
+  const intersectionObserverRef = useRef<IntersectionObserver | null>(null);
 
-  state = {
-    activeBtn: null,
-    navBtns: [] as NavButton[],
-    currentSection: "home",
-  };
+  const navButtons: NavButtonConfig[] = [
+    { text: "Home", id: ["", "home"], sectionId: "home" },
+    { text: "About Me", id: ["about"], sectionId: "about" },
+    { text: "Resume", id: ["resume"], sectionId: "resume" },
+    { text: "My Projects", id: ["projects"], sectionId: "projects" },
+  ];
 
-  constructor(props: Readonly<IProps>) {
-    super(props);
+  // Initialize activeStateId on first render
+  useEffect(() => {
     if (activeStateId === null) {
       activeStateId = "home";
     }
-  }
+  }, []);
 
-  setActiveStateId = (id: string): void => {
+  const setActiveStateId = useCallback((id: string): void => {
     activeStateId = id;
-    this.setState({ currentSection: id });
-  };
+    setCurrentSection(id);
 
-  getActiveStateId = (): string | null => activeStateId;
-
-  getCurrentSection = (): string => this.state.currentSection;
-
-  handleNavClick = (sectionId: string, event?: React.MouseEvent): void => {
-    if (event) {
-      event.preventDefault();
+    // Update active button index
+    const index = navButtons.findIndex(
+      (btn) => btn.id.includes(id) || (id === "home" && btn.id.includes(""))
+    );
+    if (index !== -1) {
+      setActiveBtnIndex(index);
     }
+  }, []);
 
-    // Update URL hash without page reload
-    window.history.pushState(null, "", `#${sectionId}`);
+  const getActiveStateId = useCallback((): string | null => activeStateId, []);
 
-    // Update active state
-    this.setActiveStateId(sectionId);
+  const getCurrentSection = useCallback(
+    (): string => currentSection,
+    [currentSection]
+  );
 
-    // Scroll to section
-    this.props.onNavigate(sectionId);
-  };
+  const setActiveButtonIndex = useCallback((index: number): void => {
+    setActiveBtnIndex(index);
+  }, []);
 
-  componentDidMount(): void {
+  const handleNavClick = useCallback(
+    (sectionId: string, event?: React.MouseEvent): void => {
+      if (event) {
+        event.preventDefault();
+      }
+
+      // Update URL hash without page reload
+      window.history.pushState(null, "", `#${sectionId}`);
+
+      // Update active state
+      setActiveStateId(sectionId);
+
+      // Scroll to section
+      onNavigate(sectionId);
+    },
+    [onNavigate, setActiveStateId]
+  );
+
+  useEffect(() => {
     // Set up intersection observer to track which section is in view
     const options = {
       root: null,
@@ -63,12 +84,12 @@ export class NavBar extends Component<IProps, IState> {
       threshold: 0,
     };
 
-    this.intersectionObserver = new IntersectionObserver((entries) => {
+    intersectionObserverRef.current = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           const sectionId = entry.target.id;
-          if (sectionId && sectionId !== this.state.currentSection) {
-            this.setActiveStateId(sectionId);
+          if (sectionId && sectionId !== currentSection) {
+            setActiveStateId(sectionId);
             // Update URL hash
             window.history.replaceState(null, "", `#${sectionId}`);
           }
@@ -80,74 +101,49 @@ export class NavBar extends Component<IProps, IState> {
     const sections = ["home", "about", "resume", "projects"];
     sections.forEach((sectionId) => {
       const element = document.getElementById(sectionId);
-      if (element && this.intersectionObserver) {
-        this.intersectionObserver.observe(element);
+      if (element && intersectionObserverRef.current) {
+        intersectionObserverRef.current.observe(element);
       }
     });
 
-    if (this.state.activeBtn === null) {
-      this.setState({
-        activeBtn: this.state.navBtns[0],
-        navBtns: this.state.navBtns,
-      });
+    if (activeBtnIndex === null) {
+      setActiveBtnIndex(0);
     }
-  }
 
-  componentWillUnmount(): void {
-    if (this.intersectionObserver) {
-      this.intersectionObserver.disconnect();
-    }
-  }
+    // Cleanup function
+    return () => {
+      if (intersectionObserverRef.current) {
+        intersectionObserverRef.current.disconnect();
+      }
+    };
+  }, [currentSection, setActiveStateId]);
 
-  render() {
-    return (
-      <div className="NavBar">
-        <ul>
-          <li>
-            <a href="#home" onClick={(e) => this.handleNavClick("home", e)}>
-              <NavButton
-                text="Home"
-                id={["", "home"]}
-                navBar={this}
-                onClick={() => this.handleNavClick("home")}
-              />
-            </a>
-          </li>
-          <li>
-            <a href="#about" onClick={(e) => this.handleNavClick("about", e)}>
-              <NavButton
-                text="About Me"
-                id={["about"]}
-                navBar={this}
-                onClick={() => this.handleNavClick("about")}
-              />
-            </a>
-          </li>
-          <li>
-            <a href="#resume" onClick={(e) => this.handleNavClick("resume", e)}>
-              <NavButton
-                text="Resume"
-                id={["resume"]}
-                navBar={this}
-                onClick={() => this.handleNavClick("resume")}
-              />
-            </a>
-          </li>
-          <li>
+  return (
+    <div className="NavBar">
+      <ul>
+        {navButtons.map((button, index) => (
+          <li key={button.sectionId}>
             <a
-              href="#projects"
-              onClick={(e) => this.handleNavClick("projects", e)}
+              href={`#${button.sectionId}`}
+              onClick={(e) => handleNavClick(button.sectionId, e)}
             >
               <NavButton
-                text="My Projects"
-                id={["projects"]}
-                navBar={this}
-                onClick={() => this.handleNavClick("projects")}
+                text={button.text}
+                id={button.id}
+                buttonIndex={index}
+                navBar={{
+                  setActiveStateId,
+                  getActiveStateId,
+                  getCurrentSection,
+                  setActiveButtonIndex,
+                  handleNavClick,
+                }}
+                onClick={() => handleNavClick(button.sectionId)}
               />
             </a>
           </li>
-        </ul>
-      </div>
-    );
-  }
-}
+        ))}
+      </ul>
+    </div>
+  );
+};

@@ -1,21 +1,11 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import "./Projects.css";
-
-///#region Component imports
 import { Sidebar } from "./Sidebar/Sidebar";
-
 import { SpaceShooter } from "./ProjectComponents/SpaceShooter";
 import { GlitchGarden } from "./ProjectComponents/GlitchGarden";
 import { GameDay } from "./ProjectComponents/GameDay";
 import { InfiniteRunner } from "./ProjectComponents/Infinite Runner";
 import { Portfolio } from "./ProjectComponents/Portfolio";
-///#endregion
-
-interface IProps {}
-
-interface IState {
-  currentProject: string;
-}
 
 function DefaultPage() {
   return (
@@ -29,19 +19,10 @@ function DefaultPage() {
   );
 }
 
-export class Projects extends Component<IProps, IState> {
-  state = {
-    currentProject: "default",
-  };
-
-  // Method to change the current project
-  setCurrentProject = (projectId: string): void => {
-    this.setState({ currentProject: projectId });
-  };
-
-  // Method to render the current project component
-  renderCurrentProject = () => {
-    switch (this.state.currentProject) {
+export function Projects() {
+  const [currentProject, setCurrentProject] = useState("default");
+  const renderCurrentProject = () => {
+    switch (currentProject) {
       case "space-shooter":
         return <SpaceShooter />;
       case "glitch-garden":
@@ -58,15 +39,13 @@ export class Projects extends Component<IProps, IState> {
     }
   };
 
-  render() {
-    return (
-      <div className="Projects">
-        <Sidebar
-          currentProject={this.state.currentProject}
-          onProjectChange={this.setCurrentProject}
-        />
-        <div className="project-content">{this.renderCurrentProject()}</div>
-      </div>
-    );
-  }
+  return (
+    <div className="Projects">
+      <Sidebar
+        currentProject={currentProject}
+        onProjectChange={(curProj) => setCurrentProject(curProj)}
+      />
+      <div className="project-content">{renderCurrentProject()}</div>
+    </div>
+  );
 }
