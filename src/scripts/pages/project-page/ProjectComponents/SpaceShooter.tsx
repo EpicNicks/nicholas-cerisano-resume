@@ -1,17 +1,16 @@
-import React, { Component } from "react";
+import React from "react";
 import { Unity, useUnityContext } from "react-unity-webgl";
 
 const unityBuildDirPath =
   process.env.PUBLIC_URL + "/unity/space-shooter/Build/";
 
 export function SpaceShooter() {
-  const { unityProvider, loadingProgression, isLoaded, sendMessage } =
-    useUnityContext({
-      loaderUrl: unityBuildDirPath + "Web.loader.js",
-      dataUrl: unityBuildDirPath + "Web.data",
-      frameworkUrl: unityBuildDirPath + "Web.framework.js",
-      codeUrl: unityBuildDirPath + "Web.wasm",
-    });
+  const { unityProvider, loadingProgression, isLoaded } = useUnityContext({
+    loaderUrl: unityBuildDirPath + "Web.loader.js",
+    dataUrl: unityBuildDirPath + "Web.data",
+    frameworkUrl: unityBuildDirPath + "Web.framework.js",
+    codeUrl: unityBuildDirPath + "Web.wasm",
+  });
 
   if (window.navigator.userAgent.indexOf("MSIE ") > -1) {
     alert(
@@ -39,6 +38,9 @@ export function SpaceShooter() {
           </p>
         </div>
         <div className="SpaceShooter-game">
+          {!isLoaded && (
+            <p>Loading... {Math.round(loadingProgression * 100)}%</p>
+          )}
           <Unity
             unityProvider={unityProvider}
             style={{ width: "600px", height: "900px" }}
