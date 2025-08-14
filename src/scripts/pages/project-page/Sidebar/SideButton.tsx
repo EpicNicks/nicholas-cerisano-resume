@@ -1,11 +1,12 @@
 import React, { Component } from "react";
 import { Sidebar } from "./Sidebar";
 import "./Sidebar.css";
+import { ProjectId } from "../Projects";
 
 interface IProps {
   text: string;
   navBar: Sidebar;
-  id: string;
+  id: ProjectId;
 }
 
 interface IState {}

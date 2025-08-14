@@ -6,6 +6,7 @@ import { GlitchGarden } from "./ProjectComponents/GlitchGarden";
 import { GameDay } from "./ProjectComponents/GameDay";
 import { InfiniteRunner } from "./ProjectComponents/Infinite Runner";
 import { Portfolio } from "./ProjectComponents/Portfolio";
+import { CaloriesIn } from "./ProjectComponents/CaloriesIn";
 
 function DefaultPage() {
   return (
@@ -19,8 +20,19 @@ function DefaultPage() {
   );
 }
 
+export const projectIds = [
+  "default",
+  "space-shooter",
+  "glitch-garden",
+  "game-day",
+  "infinite-runner",
+  "calories-in",
+  "portfolio",
+] as const;
+export type ProjectId = (typeof projectIds)[number];
+
 export function Projects() {
-  const [currentProject, setCurrentProject] = useState("default");
+  const [currentProject, setCurrentProject] = useState<ProjectId>("default");
   const renderCurrentProject = () => {
     switch (currentProject) {
       case "space-shooter":
@@ -33,6 +45,8 @@ export function Projects() {
         return <InfiniteRunner />;
       case "portfolio":
         return <Portfolio />;
+      case "calories-in":
+        return <CaloriesIn />;
       case "default":
       default:
         return <DefaultPage />;

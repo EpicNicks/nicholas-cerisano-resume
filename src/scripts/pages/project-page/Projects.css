@@ -243,3 +243,19 @@
 .PortfolioProject a:hover {
   color: darkturquoise;
 }
+
+.CaloriesIn {
+  width: 80vw;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ff6a00;
+  color: white;
+  min-height: 71.9vh;
+}
+
+.CaloriesIn p {
+  width: 30vw;
+}

@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import { SideButton } from "./SideButton";
 import "./Sidebar.css";
+import { ProjectId } from "../Projects";
 
 interface IProps {
   currentProject: string;
-  onProjectChange: (projectId: string) => void;
+  onProjectChange: (projectId: ProjectId) => void;
 }
 
 interface IState {
@@ -18,7 +19,7 @@ export class Sidebar extends Component<IProps, IState> {
     sideBtns: [] as SideButton[],
   };
 
-  setActiveStateId = (id: string): void => {
+  setActiveStateId = (id: ProjectId): void => {
     this.props.onProjectChange(id);
   };
 
@@ -40,12 +41,25 @@ export class Sidebar extends Component<IProps, IState> {
       <div className="sidebar">
         <div className="sidebar-content">
           <SideButton text="Overview" id="default" navBar={this} />
-          <SideButton text="Space Shooter" id="space-shooter" navBar={this} />
-          <SideButton text="Glitch Garden" id="glitch-garden" navBar={this} />
-          <SideButton text="Game Day" id="game-day" navBar={this} />
           <SideButton
-            text="Infinite Runner"
+            text="Space Shooter (2018)"
+            id="space-shooter"
+            navBar={this}
+          />
+          <SideButton
+            text="Glitch Garden (2019)"
+            id="glitch-garden"
+            navBar={this}
+          />
+          <SideButton text="Game Day (2016)" id="game-day" navBar={this} />
+          <SideButton
+            text="Infinite Runner (2019)"
             id="infinite-runner"
+            navBar={this}
+          />
+          <SideButton
+            text="Calories In (2023-2025)"
+            id="calories-in"
             navBar={this}
           />
           <SideButton text="Portfolio" id="portfolio" navBar={this} />

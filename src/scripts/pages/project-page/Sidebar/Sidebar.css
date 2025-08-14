@@ -69,12 +69,27 @@ a:visited .SideButton {
   cursor: pointer;
 }
 
-.glitch-garden.SideButton {
-  background-color: #8b570a;
+/* Overview CSS */
+.default.SideButton {
+  background-color: #444;
+}
+.default.ActiveSideButton {
+  background-color: #7f7f7f;
+}
+a:link .default,
+a:visited .default {
+  text-decoration: none;
+  color: #ddd;
+}
+.default.SideButton:hover {
+  background-color: #7f7f7f;
+  color: aqua;
 }
 
 /*GLITCH GARDEN CSS*/
-
+.glitch-garden.SideButton {
+  background-color: #8b570a;
+}
 .ActiveSideButton.glitch-garden {
   background-color: saddlebrown;
 }
@@ -85,6 +100,7 @@ a:visited .glitch-garden {
 }
 .glitch-garden.SideButton:hover {
   background-color: saddlebrown;
+  color: #00d600;
 }
 
 /*SPACE SHOOTER CSS*/
@@ -103,6 +119,14 @@ a:visited .space-shooter.SideButton {
 }
 a:hover .space-shooter.SideButton {
   background-color: #111;
+}
+.space-shooter.SideButton {
+  background-color: #333;
+  color: whitesmoke;
+}
+.space-shooter.SideButton:hover {
+  background-color: #111;
+  color: rgb(20, 173, 255);
 }
 
 /*GAME DAY CSS*/
@@ -143,12 +167,71 @@ a:visited .infinite-runner.ActiveSideButton {
   background-color: turquoise;
   color: #111;
 }
+.infinite-runner.SideButton:hover {
+  background-color: rgb(187, 0, 255);
+  color: #00ff33fd;
+}
 a:link .infinite-runner.SideButton,
 a:visited .infinite-runner.SideButton {
   background-color: turquoise;
   color: #111;
 }
 a:hover .infinite-runner.SideButton {
+  background-color: paleturquoise;
+  color: #111;
+}
+
+/* CaloriesIn CSS */
+
+.calories-in.ActiveSideButton {
+  background-color: orange;
+  color: black;
+}
+a:link .calories-in.ActiveSideButton,
+a:visited .calories-in.ActiveSideButton {
+  color: black;
+}
+.calories-in.SideButton {
+  background-color: rgb(255, 197, 88);
+  color: #111;
+}
+.calories-in.SideButton:hover {
+  background-color: rgb(255, 219, 128);
+  color: #ff6200;
+}
+a:link .calories-in.SideButton,
+a:visited .calories-in.SideButton {
+  background-color: rgb(255, 197, 88);
+  color: #111;
+}
+a:hover .calories-in.SideButton {
+  background-color: rgb(255, 219, 128);
+  color: #111;
+}
+
+/* PORTFOLIO CSS */
+.portfolio.ActiveSideButton {
+  background-color: darkturquoise;
+  color: black;
+}
+a:link .portfolio.ActiveSideButton,
+a:visited .portfolio.ActiveSideButton {
+  color: black;
+}
+.portfolio.SideButton {
+  background-color: turquoise;
+  color: #111;
+}
+.portfolio.SideButton:hover {
+  background-color: paleturquoise;
+  color: #111;
+}
+a:link .portfolio.SideButton,
+a:visited .portfolio.SideButton {
+  background-color: turquoise;
+  color: #111;
+}
+a:hover .portfolio.SideButton {
   background-color: paleturquoise;
   color: #111;
 }
