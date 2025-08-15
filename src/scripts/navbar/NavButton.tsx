@@ -16,13 +16,7 @@ interface IProps {
   onClick: () => void;
 }
 
-export const NavButton: React.FC<IProps> = ({
-  text,
-  navBar,
-  id,
-  buttonIndex,
-  onClick,
-}) => {
+export function NavButton({ text, navBar, id, buttonIndex, onClick }: IProps) {
   const currentSection = navBar.getCurrentSection();
   const isActive =
     id.includes(currentSection) ||
@@ -41,4 +35,4 @@ export const NavButton: React.FC<IProps> = ({
       {text}
     </div>
   );
-};
+}
