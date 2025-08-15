@@ -1,70 +1,50 @@
-import React, { Component } from "react";
+import React, { useState, useEffect } from "react";
 import { SideButton } from "./SideButton";
 import "./Sidebar.css";
 import { ProjectId } from "../Projects";
 
-interface IProps {
+interface SidebarProps {
   currentProject: string;
   onProjectChange: (projectId: ProjectId) => void;
 }
 
-interface IState {
-  activeBtn: SideButton | null;
-  sideBtns: Array<SideButton>;
-}
+export function Sidebar({ currentProject, onProjectChange }: SidebarProps) {
+  const [activeProject, setActiveProject] = useState<ProjectId>(
+    (currentProject as ProjectId) || "default"
+  );
 
-export class Sidebar extends Component<IProps, IState> {
-  state = {
-    activeBtn: null,
-    sideBtns: [] as SideButton[],
+  useEffect(() => {
+    setActiveProject(currentProject as ProjectId);
+  }, [currentProject]);
+
+  const handleButtonClick = (projectId: ProjectId) => {
+    setActiveProject(projectId);
+    onProjectChange(projectId);
   };
 
-  setActiveStateId = (id: ProjectId): void => {
-    this.props.onProjectChange(id);
-  };
+  const buttons: { title: string; id: ProjectId }[] = [
+    { title: "Overview", id: "default" },
+    { title: "Calories In (2023-2025)", id: "calories-in" },
+    { title: "Infinite Runner (2019)", id: "infinite-runner" },
+    { title: "Glitch Garden (2019)", id: "glitch-garden" },
+    { title: "Space Shooter (2018)", id: "space-shooter" },
+    { title: "Game Day (2016)", id: "game-day" },
+    { title: "Portfolio", id: "portfolio" },
+  ];
 
-  getCurrentProject = (): string => {
-    return this.props.currentProject;
-  };
-
-  componentDidMount(): void {
-    if (this.state.activeBtn === null) {
-      this.setState({
-        activeBtn: this.state.sideBtns[0],
-        sideBtns: this.state.sideBtns,
-      });
-    }
-  }
-
-  render() {
-    return (
-      <div className="sidebar">
-        <div className="sidebar-content">
-          <SideButton text="Overview" id="default" navBar={this} />
+  return (
+    <div className="sidebar">
+      <div className="sidebar-content">
+        {buttons.map((button) => (
           <SideButton
-            text="Space Shooter (2018)"
-            id="space-shooter"
-            navBar={this}
+            key={button.id}
+            text={button.title}
+            id={button.id}
+            isActive={activeProject === button.id}
+            onClick={handleButtonClick}
           />
-          <SideButton
-            text="Glitch Garden (2019)"
-            id="glitch-garden"
-            navBar={this}
-          />
-          <SideButton text="Game Day (2016)" id="game-day" navBar={this} />
-          <SideButton
-            text="Infinite Runner (2019)"
-            id="infinite-runner"
-            navBar={this}
-          />
-          <SideButton
-            text="Calories In (2023-2025)"
-            id="calories-in"
-            navBar={this}
-          />
-          <SideButton text="Portfolio" id="portfolio" navBar={this} />
-        </div>
+        ))}
       </div>
-    );
-  }
+    </div>
+  );
 }
