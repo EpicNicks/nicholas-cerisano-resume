@@ -26,18 +26,14 @@ function App() {
   }, [scrollToSection]);
 
   useEffect(() => {
-    // componentDidMount equivalent
     const hash = window.location.hash.replace("#", "");
     if (hash) {
-      // Small delay to ensure DOM is ready
       setTimeout(() => {
         scrollToSection(hash);
       }, 100);
     }
 
     window.addEventListener("hashchange", handleHashChange);
-
-    // componentWillUnmount equivalent (cleanup function)
     return () => {
       window.removeEventListener("hashchange", handleHashChange);
     };

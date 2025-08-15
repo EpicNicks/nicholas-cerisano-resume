@@ -12,20 +12,18 @@ interface NavButtonConfig {
   sectionId: string;
 }
 
-// Move activeStateId outside component to maintain global state
 let activeStateId: string | null = null;
+const navButtons: NavButtonConfig[] = [
+  { text: "Home", id: ["", "home"], sectionId: "home" },
+  { text: "About Me", id: ["about"], sectionId: "about" },
+  { text: "Resume", id: ["resume"], sectionId: "resume" },
+  { text: "My Projects", id: ["projects"], sectionId: "projects" },
+];
 
-export const NavBar: React.FC<IProps> = ({ onNavigate }) => {
+export function NavBar({ onNavigate }: IProps) {
   const [activeBtnIndex, setActiveBtnIndex] = useState<number>(0);
   const [currentSection, setCurrentSection] = useState<string>("home");
   const intersectionObserverRef = useRef<IntersectionObserver | null>(null);
-
-  const navButtons: NavButtonConfig[] = [
-    { text: "Home", id: ["", "home"], sectionId: "home" },
-    { text: "About Me", id: ["about"], sectionId: "about" },
-    { text: "Resume", id: ["resume"], sectionId: "resume" },
-    { text: "My Projects", id: ["projects"], sectionId: "projects" },
-  ];
 
   // Initialize activeStateId on first render
   useEffect(() => {
@@ -116,7 +114,7 @@ export const NavBar: React.FC<IProps> = ({ onNavigate }) => {
         intersectionObserverRef.current.disconnect();
       }
     };
-  }, [currentSection, setActiveStateId]);
+  }, [currentSection, setActiveStateId, activeBtnIndex]);
 
   return (
     <div className="NavBar">
@@ -146,4 +144,4 @@ export const NavBar: React.FC<IProps> = ({ onNavigate }) => {
       </ul>
     </div>
   );
-};
+}
