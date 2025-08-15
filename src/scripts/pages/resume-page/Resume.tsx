@@ -6,7 +6,7 @@ const resumeLink = require("../../../media/documents/Nicholas Cerisano Resume.pd
 export function Resume() {
   return (
     <div className="Resume">
-      <iframe src={resumeLink + "#zoom=125"} />
+      <iframe title="resume" src={resumeLink + "#zoom=125"} />
     </div>
   );
 }

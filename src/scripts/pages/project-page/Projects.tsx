@@ -7,18 +7,7 @@ import { GameDay } from "./ProjectComponents/GameDay";
 import { InfiniteRunner } from "./ProjectComponents/Infinite Runner";
 import { Portfolio } from "./ProjectComponents/Portfolio";
 import { CaloriesIn } from "./ProjectComponents/CaloriesIn";
-
-function DefaultPage() {
-  return (
-    <div className="ProjectDefault">
-      <h1>Welcome to the Project Page</h1>
-      <h3>
-        Feel free to click on the sidebar buttons to get a look at some of my
-        personal projects.
-      </h3>
-    </div>
-  );
-}
+import { DefaultPage } from "./ProjectComponents/DefaultPage";
 
 export const projectIds = [
   "default",

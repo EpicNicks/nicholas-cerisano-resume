@@ -1,23 +1,22 @@
 {
   "files": {
-    "main.css": "/nicholas-cerisano-resume/static/css/main.46419d02.css",
-    "main.js": "/nicholas-cerisano-resume/static/js/main.164e2f26.js",
-    "static/media/infinite-runner clip.gif": "/nicholas-cerisano-resume/static/media/infinite-runner clip.3188786ac9482cf9b48c.gif",
-    "static/media/starfield_alpha.png": "/nicholas-cerisano-resume/static/media/starfield_alpha.7331cc03860702d4f962.png",
-    "static/media/sample coding clip.mp4": "/nicholas-cerisano-resume/static/media/sample coding clip.b6dc3c93846742939d2e.mp4",
-    "static/media/MyPhoto.jpg": "/nicholas-cerisano-resume/static/media/MyPhoto.01f5d962b58b76db2d38.jpg",
-    "static/media/grass bg.jpg": "/nicholas-cerisano-resume/static/media/grass bg.1fdcba8c04ca6f3230fa.jpg",
-    "static/media/react-logo.png": "/nicholas-cerisano-resume/static/media/react-logo.f153eb9f28437192c6a0.png",
-    "static/media/Nicholas Cerisano Resume.pdf": "/nicholas-cerisano-resume/static/media/Nicholas Cerisano Resume.fb3006f5145fee181d80.pdf",
-    "static/media/Team2Capture.png": "/nicholas-cerisano-resume/static/media/Team2Capture.3c45dee5dae7b7161800.png",
-    "static/media/DevConsole.png": "/nicholas-cerisano-resume/static/media/DevConsole.bbb41e63ec347f489994.png",
-    "static/media/typescript-logo.png": "/nicholas-cerisano-resume/static/media/typescript-logo.7b64d9ca208b9c3f7055.png",
-    "index.html": "/nicholas-cerisano-resume/index.html",
-    "main.46419d02.css.map": "/nicholas-cerisano-resume/static/css/main.46419d02.css.map",
-    "main.164e2f26.js.map": "/nicholas-cerisano-resume/static/js/main.164e2f26.js.map"
+    "main.css": "/static/css/main.8a35c099.css",
+    "main.js": "/static/js/main.7ff7a64a.js",
+    "static/media/starfield_alpha.png": "/static/media/starfield_alpha.7331cc03860702d4f962.png",
+    "static/media/sample coding clip.mp4": "/static/media/sample coding clip.b6dc3c93846742939d2e.mp4",
+    "static/media/MyPhoto.jpg": "/static/media/MyPhoto.01f5d962b58b76db2d38.jpg",
+    "static/media/grass bg.jpg": "/static/media/grass bg.1fdcba8c04ca6f3230fa.jpg",
+    "static/media/react-logo.png": "/static/media/react-logo.f153eb9f28437192c6a0.png",
+    "static/media/Nicholas Cerisano Resume.pdf": "/static/media/Nicholas Cerisano Resume.fb3006f5145fee181d80.pdf",
+    "static/media/Team2Capture.png": "/static/media/Team2Capture.3c45dee5dae7b7161800.png",
+    "static/media/DevConsole.png": "/static/media/DevConsole.bbb41e63ec347f489994.png",
+    "static/media/typescript-logo.png": "/static/media/typescript-logo.7b64d9ca208b9c3f7055.png",
+    "index.html": "/index.html",
+    "main.8a35c099.css.map": "/static/css/main.8a35c099.css.map",
+    "main.7ff7a64a.js.map": "/static/js/main.7ff7a64a.js.map"
   },
   "entrypoints": [
-    "static/css/main.46419d02.css",
-    "static/js/main.164e2f26.js"
+    "static/css/main.8a35c099.css",
+    "static/js/main.7ff7a64a.js"
   ]
 }
