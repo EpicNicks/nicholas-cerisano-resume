@@ -1,5 +1,6 @@
 import React from "react";
-import { FaLinkedin, FaGithub, MdContactMail } from "react-icons/all";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { MdContactMail } from "react-icons/md";
 import "./BottomBar.css";
 
 export function BottomBar() {
