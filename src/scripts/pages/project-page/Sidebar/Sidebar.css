@@ -47,6 +47,7 @@ a:visited .SideButton {
   display: block;
   text-align: center;
   padding: 16px;
+  margin-left: 16px;
   /*padding: 1vw;*/
 }
 
@@ -105,13 +106,6 @@ a:visited .glitch-garden {
 
 /*SPACE SHOOTER CSS*/
 
-.space-shooter.ActiveSideButton {
-  background-color: black;
-}
-a:link .space-shooter,
-a:visited .space-shooter.ActiveSideButton {
-  color: aliceblue;
-}
 a:link .space-shooter,
 a:visited .space-shooter.SideButton {
   background-color: #333;
@@ -136,7 +130,7 @@ a:hover .space-shooter.SideButton {
 }
 a:link .game-day.ActiveSideButton,
 a:visited .game-day.ActiveSideButton {
-  color: black;
+  color: aliceblue;
 }
 .game-day.SideButton {
   background-color: aliceblue;
@@ -156,12 +150,11 @@ a:hover .game-day.SideButton {
 /*GAME DAY CSS*/
 
 .infinite-runner.ActiveSideButton {
-  background-color: darkturquoise;
-  color: black;
+  background-color: rgb(187, 0, 255);
 }
 a:link .infinite-runner.ActiveSideButton,
 a:visited .infinite-runner.ActiveSideButton {
-  color: black;
+  color: aliceblue;
 }
 .infinite-runner.SideButton {
   background-color: turquoise;
@@ -185,11 +178,11 @@ a:hover .infinite-runner.SideButton {
 
 .calories-in.ActiveSideButton {
   background-color: orange;
-  color: black;
+  color: aliceblue;
 }
 a:link .calories-in.ActiveSideButton,
 a:visited .calories-in.ActiveSideButton {
-  color: black;
+  color: aliceblue;
 }
 .calories-in.SideButton {
   background-color: rgb(255, 197, 88);
@@ -212,11 +205,11 @@ a:hover .calories-in.SideButton {
 /* PORTFOLIO CSS */
 .portfolio.ActiveSideButton {
   background-color: darkturquoise;
-  color: black;
+  color: aliceblue;
 }
 a:link .portfolio.ActiveSideButton,
 a:visited .portfolio.ActiveSideButton {
-  color: black;
+  color: aliceblue;
 }
 .portfolio.SideButton {
   background-color: turquoise;
@@ -234,4 +227,27 @@ a:visited .portfolio.SideButton {
 a:hover .portfolio.SideButton {
   background-color: paleturquoise;
   color: #111;
+}
+
+.nengine-editor.SideButton,
+a:link .nengine-editor.SideButton,
+a:visited .nengine-editor.SideButton {
+  background-color: rgb(102, 126, 234);
+  color: #111;
+}
+
+.nengine-editor.SideButton:hover,
+a:hover .nengine-editor.SideButton {
+  background-color: rgb(117, 142, 251);
+  color: #eee;
+}
+
+.nengine-editor.ActiveSideButton {
+  background-color: rgb(72, 90, 168);
+  color: aliceblue;
+}
+
+a:link .nengine-editor.ActiveSideButton,
+a:visited .nengine-editor.ActiveSideButton {
+  color: aliceblue;
 }
