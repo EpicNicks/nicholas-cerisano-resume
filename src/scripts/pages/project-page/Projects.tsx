@@ -8,6 +8,7 @@ import { InfiniteRunner } from "./ProjectComponents/Infinite Runner";
 import { Portfolio } from "./ProjectComponents/Portfolio";
 import { CaloriesIn } from "./ProjectComponents/CaloriesIn";
 import { DefaultPage } from "./ProjectComponents/DefaultPage";
+import { NEngineEditor } from "./ProjectComponents/NEngineEditor";
 
 export const projectIds = [
   "default",
@@ -17,6 +18,7 @@ export const projectIds = [
   "infinite-runner",
   "calories-in",
   "portfolio",
+  "nengine-editor",
 ] as const;
 export type ProjectId = (typeof projectIds)[number];
 
@@ -36,6 +38,8 @@ export function Projects() {
         return <Portfolio />;
       case "calories-in":
         return <CaloriesIn />;
+      case "nengine-editor":
+        return <NEngineEditor />;
       case "default":
       default:
         return <DefaultPage />;

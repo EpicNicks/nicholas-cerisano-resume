@@ -246,7 +246,6 @@
 }
 
 .CaloriesIn {
-  width: 80vw;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -264,4 +263,174 @@
 .CaloriesIn img:hover {
   transform: scale(1.05);
   transition: transform 0.3s ease-in-out;
+}
+
+.NEngineEditor {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 71.9vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Header Section */
+.NEngineEditorHeader {
+  margin-bottom: 1rem;
+}
+.NEngineEditor h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin: 2rem 0 1rem 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  font-weight: 600;
+}
+
+.NEngineEditor h3 {
+  text-align: center;
+  font-size: 1.4rem;
+  opacity: 0.9;
+  font-weight: 300;
+}
+
+/* Content Container */
+.NEngineEditorText {
+  max-width: 800px; /* Better readability */
+  width: 90%; /* Responsive */
+  margin: 0 auto;
+  padding: 0 2rem;
+  backdrop-filter: blur(10px);
+  text-align: left;
+}
+
+.NEngineEditorText p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+/* Features List Styling */
+.NEngineEditor-features {
+  padding: 1.5rem;
+  margin: 2rem 0;
+}
+
+.NEngineEditor-features h4 {
+  color: #fff;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.NEngineEditor-features ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.NEngineEditor-features li {
+  padding: 0.75rem 0;
+  padding-left: 2rem;
+  position: relative;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.5;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.NEngineEditor-features li:last-child {
+  border-bottom: none;
+}
+
+/* Custom bullet points */
+.NEngineEditor-features li::before {
+  content: "▶";
+  position: absolute;
+  left: 0;
+  color: #667eea;
+  font-size: 0.8rem;
+}
+
+/* Media Container */
+.NEngineEditorMedia {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 2rem auto 0;
+  width: 90%;
+}
+
+.NEngineEditorMedia img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.NEngineEditorMedia img:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Decorative Elements */
+.NEngineEditor::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -50px;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(
+    circle,
+    rgba(102, 126, 234, 0.3) 0%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.NEngineEditor::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -50px;
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(
+    circle,
+    rgba(118, 75, 162, 0.3) 0%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .NEngineEditor h1 {
+    font-size: 2.5rem;
+  }
+
+  .NEngineEditor h3 {
+    font-size: 1.2rem;
+  }
+
+  .NEngineEditorText {
+    width: 95%;
+    padding: 1.5rem;
+  }
+
+  .NEngineEditorMedia {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+
+  .NEngineEditorMedia img {
+    min-height: 200px;
+    object-fit: cover;
+  }
 }
