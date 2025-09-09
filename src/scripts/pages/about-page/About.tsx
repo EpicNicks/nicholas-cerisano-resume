@@ -7,34 +7,30 @@ export function About() {
       <div className="About-Main">
         <div className="About-Body">
           <h1>About Me</h1>
-          {/*<h2>*/}
-          {/*    Bio*/}
-          {/*</h2>*/}
           <p>
-            I'm a graduate from the Specialized Honors Bachelor of Computer
-            Science program at York University. I'm a proactive pragmatic
-            logical thinker. I spend most of my spare time programming for fun.
+            I'm a software developer with over 3 years of experience building
+            applications across different areas of the software space. I
+            graduated from the Specialized Honors Bachelor of Computer Science
+            program at York University, and I approach problems with a pragmatic
+            and logical mindset. Beyond work, I enjoy exploring new technologies
+            and experimenting with projects that push me to grow as a developer.
           </p>
-          {/*<h2>*/}
-          {/*    Hobbies*/}
-          {/*</h2>*/}
-          <h3>My hobbies include:</h3>
+          <h3>My interests and hobbies include:</h3>
           <ul>
             <li>
-              Trying new frameworks and programming languages to see different
-              ways of reasoning problems
+              Exploring new frameworks, programming languages, and design
+              patterns to gain fresh perspectives on problem solving
             </li>
-            <li>Making games in Unity Engine</li>
+            <li>Designing and developing games in Unity Engine</li>
             <li>Practicing Brazilian Jiu-Jitsu</li>
             <li>Playing chess</li>
-            <li>Reading fantasy novels and programming textbooks</li>
+            <li>Reading fantasy novels</li>
           </ul>
         </div>
         <div className="About-Image">
           <img
-            //placeholder photo
             src={require("../../../../src/media/images/MyPhoto.jpg")}
-            alt={require("../../../../src/media/images/MyPhoto.jpg")}
+            alt="My profile"
           />
         </div>
       </div>
