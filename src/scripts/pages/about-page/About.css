@@ -1,7 +1,7 @@
 .About {
   flex: 1 0 auto;
   padding-top: 10vh;
-  color: #111;
+  color: #0a0a0a;
   background-color: #e3fcff;
   font-size: 1.2em;
 }
@@ -9,6 +9,7 @@
 .About h1 {
   padding: 0;
   margin: 0;
+  font-size: 2.2em;
 }
 
 .About-Main {
@@ -31,6 +32,8 @@
 .About-Image img {
   max-width: 25vw;
   height: auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
 }
 
 .About-Body {
@@ -48,4 +51,21 @@
 
 .About-Body li {
   margin: 0 0 20px 0;
+}
+
+@media (max-width: 768px) {
+  .About-Main {
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+  }
+
+  .About-Body {
+    width: 100%;
+    margin: 2rem 0 0 0;
+  }
+
+  .About-Image img {
+    max-width: 60vw;
+  }
 }
