@@ -4,7 +4,7 @@ import { MdContactMail } from "react-icons/md";
 import "./BottomBar.css";
 
 export function BottomBar() {
-  const iconSize = 50;
+  const iconSize = window.innerWidth <= 768 ? 30 : 50; // Smaller icons on mobile
 
   return (
     <div className="BottomBar">

@@ -1,79 +1,156 @@
-
-.VideoPlayer{
-    filter: blur(2px);
-    -webkit-filter: blur(10px);
-    -moz-filter: blur(10px);
-    -o-filter: blur(10px);
-    -ms-filter: blur(10px);
-    filter: blur(12px);
-    height: 80vh;
-    width: 80vw;
+.VideoPlayer {
+  filter: blur(2px);
+  -webkit-filter: blur(10px);
+  -moz-filter: blur(10px);
+  -o-filter: blur(10px);
+  -ms-filter: blur(10px);
+  filter: blur(12px);
+  height: 80vh;
+  width: 80vw;
 }
 
-.VideoPlayer video{
-    height: 80vh;
-    width: 80vw;
+.VideoPlayer video {
+  height: 80vh;
+  width: 80vw;
+  object-fit: cover; /* Ensures video covers the container properly */
 }
 
-.Home{
-    display: flex;
-    justify-content: center;
+.Home {
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  margin: 0;
+  background-color: #555555;
+  padding: 0;
+  min-height: 100%;
 
-    box-sizing: border-box;
-    margin: 0;
-    background-color: #555555;
-    padding: 0;
-    min-height: 100%;
-
-    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
-    -moz-animation: fadein 2s; /* Firefox < 16 */
-    -o-animation: fadein 2s; /* Opera < 12.1 */
-    animation: fadein 2s;
+  -webkit-animation: fadein 2s;
+  -moz-animation: fadein 2s;
+  -o-animation: fadein 2s;
+  animation: fadein 2s;
 }
 
-
-.VideoContainer h1{
-    text-shadow: 2px 2px 40px #777;
-    color: aquamarine;
-    position: absolute;
-    font-size: 4vw;
-    top: 30vh;
-    left: 25vw;
+.VideoContainer h1 {
+  text-shadow: 2px 2px 40px #777;
+  color: aquamarine;
+  position: absolute;
+  /* Use clamp() for responsive font sizing */
+  font-size: clamp(24px, 4vw, 60px);
+  top: 30vh;
+  left: 25vw;
 }
 
-.VideoContainer h2{
-    text-shadow: 1px 1px 10px #00ffff;
-    position: absolute;
-    font-size: 2.5vw;
-    top: 40vh;
-    left: 30vw;
+.VideoContainer h2 {
+  text-shadow: 1px 1px 10px #00ffff;
+  position: absolute;
+  /* Use clamp() for responsive font sizing */
+  font-size: clamp(16px, 2.5vw, 40px);
+  top: 40vh;
+  left: 30vw;
+}
+
+/* Mobile-specific styles */
+@media screen and (max-width: 768px) {
+  .VideoPlayer {
+    width: 100vw; /* Full width on mobile */
+    height: 60vh; /* Adjust height for mobile */
+  }
+
+  .VideoPlayer video {
+    width: 100vw;
+    height: 60vh;
+    object-fit: cover;
+  }
+
+  .VideoContainer h1 {
+    font-size: clamp(28px, 8vw, 48px); /* Larger on mobile */
+    top: 25vh;
+    left: 10vw; /* Adjust positioning */
+    right: 10vw; /* Add right constraint */
+    text-align: center;
+  }
+
+  .VideoContainer h2 {
+    font-size: clamp(18px, 6vw, 32px); /* Larger on mobile */
+    top: 35vh;
+    left: 10vw;
+    right: 10vw;
+    text-align: center;
+  }
+}
+
+/* Extra small screens (phones in portrait) */
+@media screen and (max-width: 480px) {
+  .VideoPlayer {
+    width: 100vw;
+    height: 50vh;
+  }
+
+  .VideoPlayer video {
+    width: 100vw;
+    height: 50vh;
+  }
+
+  .VideoContainer h1 {
+    font-size: clamp(24px, 10vw, 40px);
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90vw;
+    text-align: center;
+  }
+
+  .VideoContainer h2 {
+    font-size: clamp(16px, 7vw, 28px);
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90vw;
+    text-align: center;
+  }
 }
 
 @keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-/* Firefox < 16 */
 @-moz-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-/* Safari, Chrome and Opera > 12.1 */
 @-webkit-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-/* Internet Explorer */
 @-ms-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-/* Opera < 12.1 */
 @-o-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
