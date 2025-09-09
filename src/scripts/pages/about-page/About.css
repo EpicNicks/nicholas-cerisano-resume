@@ -69,3 +69,23 @@
     max-width: 60vw;
   }
 }
+@media (max-width: 480px) {
+  .About {
+    font-size: 1em;
+    padding: 5vh 2vw 0 2vw;
+  }
+  .About h1 {
+    font-size: 1.8em;
+  }
+  .About-Image img {
+    max-width: 80vw;
+  }
+  .About-Body {
+    width: 100%;
+    margin: 1.5rem 0 0 0;
+  }
+
+  .About-Main {
+    --gap: 0;
+  }
+}

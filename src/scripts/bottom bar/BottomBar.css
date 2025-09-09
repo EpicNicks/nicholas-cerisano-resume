@@ -4,21 +4,49 @@
   bottom: 0;
   right: 0;
   z-index: 1000;
-
   width: 100%;
   text-align: center;
-  padding: 0;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  /*margin: 0;*/
+  padding: 12px 8px; /* Reduced padding */
   background-color: #222;
 }
 
 .BottomBarTitle {
-  padding-bottom: 1vw;
-  font-size: 1.8em;
+  padding-bottom: 8px; /* Fixed padding instead of vw */
+  font-size: 1.2em; /* Smaller on mobile */
   text-align: center;
   color: white;
+}
+
+.BottomBarLink {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.7em; /* Smaller text */
+  flex: 1; /* Remove fixed width */
+  text-align: center;
+  color: white;
+  min-width: 0; /* Allow shrinking */
+}
+
+/* Mobile-specific adjustments */
+@media screen and (max-width: 480px) {
+  .BottomBarTitle {
+    font-size: 1em;
+    padding-bottom: 6px;
+  }
+
+  .BottomBarLink {
+    font-size: 0.6em;
+  }
+
+  .BottomBar {
+    padding: 8px 4px;
+  }
+}
+
+@media (max-height: 480px) {
+  .BottomBar {
+    visibility: hidden;
+  }
 }
 
 .BottomBarIcons {
@@ -27,15 +55,6 @@
   align-items: center;
   max-width: 600px; /* optional: limit the spread */
   margin: 0 auto; /* optional: center the container */
-}
-
-.BottomBarLink {
-  display: flex;
-  flex-direction: column;
-  font-size: 0.8em;
-  width: 200px;
-  text-align: center;
-  color: white;
 }
 
 .BottomBarIcons a:link {
