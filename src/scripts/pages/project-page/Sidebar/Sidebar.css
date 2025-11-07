@@ -40,7 +40,7 @@ a:visited .SideButton {
   display: block;
   text-align: center;
   padding: 16px;
-  margin-right: 0;
+  margin-right: 16px;
 }
 
 .ActiveSideButton {
@@ -54,7 +54,7 @@ a:visited .SideButton {
   display: block;
   text-align: center;
   padding: 16px;
-  margin-right: 16px;
+  margin-right: 0px;
 }
 
 .ActiveSideButton:hover {

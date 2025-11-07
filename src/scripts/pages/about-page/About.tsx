@@ -8,7 +8,7 @@ export function About() {
         <div className="About-Body">
           <h1>About Me</h1>
           <p>
-            I'm a software developer with over 3 years of experience building
+            I'm a software developer with over 4 years of experience building
             applications across different areas of the software space. I
             graduated from the Specialized Honors Bachelor of Computer Science
             program at York University, and I approach problems with a pragmatic
