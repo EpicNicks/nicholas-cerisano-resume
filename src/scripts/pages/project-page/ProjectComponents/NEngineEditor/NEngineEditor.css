@@ -9,20 +9,19 @@
   overflow-x: hidden;
 }
 
-/* Header Section */
 .NEngineEditorHeader {
   margin-bottom: 1rem;
 }
 
 .NEngineEditorHeader a {
-  color: #4FC3F7; /* Cyan */
+  color: #4FC3F7;
   text-decoration: none;
   border-bottom: 1px solid rgba(79, 195, 247, 0.3);
   transition: all 0.2s ease;
 }
 
 .NEngineEditorHeader a:hover {
-  color: #00D9FF; /* Brighter cyan */
+  color: #00D9FF;
   border-bottom-color: #00D9FF;
 }
 
@@ -41,10 +40,9 @@
   font-weight: 300;
 }
 
-/* Content Container */
 .NEngineEditorText {
-  max-width: 800px; /* Better readability */
-  width: 90%; /* Responsive */
+  max-width: 800px;
+  width: 90%;
   margin: 0 auto;
   padding: 0 2rem;
   backdrop-filter: blur(10px);
@@ -58,7 +56,6 @@
   color: rgba(255, 255, 255, 0.95);
 }
 
-/* Features List Styling */
 .NEngineEditor-features {
   padding: 1.5rem;
   margin: 2rem 0;
@@ -89,7 +86,6 @@
   border-bottom: none;
 }
 
-/* Custom bullet points */
 .NEngineEditor-features li::before {
   content: "▶";
   position: absolute;
@@ -98,7 +94,6 @@
   font-size: 0.8rem;
 }
 
-/* Media Container */
 .NEngineEditorMedia {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -122,7 +117,6 @@
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3);
 }
 
-/* Decorative Elements */
 .NEngineEditor::before {
   content: "";
   position: absolute;
@@ -155,7 +149,6 @@
   pointer-events: none;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .NEngineEditor h1 {
     font-size: 2.5rem;

@@ -4,6 +4,7 @@ import "./ProjectCards.css";
 import { CaloriesIn } from "./ProjectComponents/CaloriesIn/CaloriesIn";
 import { NEngineEditor } from "./ProjectComponents/NEngineEditor/NEngineEditor";
 import { UniversityProjects } from "./ProjectComponents/UniversityProjects/UniversityProjects";
+import { N2Engine } from "./ProjectComponents/N2Engine/N2Engine";
 
 export type CardInfo = {
   id: number;
@@ -16,11 +17,11 @@ export type CardInfo = {
 
 const cards: CardInfo[] = [
   {
-    id: 0,
+    id: 1,
     title: "N2Engine",
     description:
       "A WIP C++ Game Engine using low-level Graphics and Physics APIs",
-    component: () => <></>,
+    component: N2Engine,
     background: "#667eea",
     cardMiddle: () => (
       <div style={{ alignSelf: "center" }}>
@@ -33,7 +34,7 @@ const cards: CardInfo[] = [
     ),
   },
   {
-    id: 1,
+    id: 2,
     title: "NEngine Editor",
     description:
       "A C# Game Engine built on SFML and Visual Editor built on WPF",
@@ -55,7 +56,7 @@ const cards: CardInfo[] = [
     ),
   },
   {
-    id: 2,
+    id: 3,
     title: "Calories In",
     description: "A Flutter/Dart Calorie Tracking App targeting Android",
     component: CaloriesIn,
@@ -71,11 +72,12 @@ const cards: CardInfo[] = [
     ),
   },
   {
-    id: 3,
+    id: 4,
     title: "University Projects",
     description:
       "Projects completed at York University for Game Design classes",
     component: UniversityProjects,
+    background: "#EEE",
   },
 ];
 

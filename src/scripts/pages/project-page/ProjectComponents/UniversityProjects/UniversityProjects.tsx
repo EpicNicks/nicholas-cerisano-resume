@@ -2,16 +2,54 @@ import React, { useState } from "react";
 import { CardInfo } from "../../ProjectCards";
 import { AnimatePresence, motion } from "framer-motion";
 import "./UniversityProjects.css";
-import { InfiniteRunner } from "../Infinite Runner";
-import { NeonBreakGame } from "./NeonBreakGame";
+import { InfiniteRunner } from "./InfiniteRunner/Infinite Runner";
+import { NeonBreakGame } from "./NeonBreakGame/NeonBreakGame";
+import { DummyInsomnia } from "./DummyInsomnia/DummyInsomnia";
 
 const cards: CardInfo[] = [
   {
     id: 10,
     title: "Neon Break",
-    description: "A 2D Vector Art Style Top-Down Shooter made in Unity",
+    description: "A 2D Vectorheart Style Top-Down Shooter made in Unity",
     component: NeonBreakGame,
-    background: "#43cea2",
+    background: "#43ceb7",
+    cardMiddle: () => (
+      <video
+        src="/media/videos/neon break title screen.mkv"
+        autoPlay
+        loop
+        muted
+        playsInline
+        style={{
+          width: "100%",
+          height: "auto",
+          borderRadius: "4px",
+          marginBottom: "12px",
+        }}
+      />
+    ),
+  },
+  {
+    id: 11,
+    title: "Dummy Insomnia",
+    description: "A 3D PG Survival Horror Game Prototype made in Unity",
+    component: DummyInsomnia,
+    background: "#001100",
+    cardMiddle: () => (
+      <video
+        src="/media/videos/Dummy Insomnia clip.mkv"
+        autoPlay
+        loop
+        muted
+        playsInline
+        style={{
+          width: "100%",
+          height: "auto",
+          borderRadius: "4px",
+          marginBottom: "12px",
+        }}
+      />
+    ),
   },
   {
     id: 14,
@@ -19,6 +57,21 @@ const cards: CardInfo[] = [
     description: "A 2D Infinite Runner game made in Unity using C#",
     component: InfiniteRunner,
     background: "#ff7e5f",
+    cardMiddle: () => (
+      <video
+        src="/media/videos/Infinite Runner clip.mp4"
+        autoPlay
+        loop
+        muted
+        playsInline
+        style={{
+          width: "100%",
+          height: "auto",
+          borderRadius: "4px",
+          marginBottom: "12px",
+        }}
+      />
+    ),
   },
 ];
 

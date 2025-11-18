@@ -16,8 +16,8 @@ let activeStateId: string | null = null;
 const navButtons: NavButtonConfig[] = [
   { text: "Home", id: ["", "home"], sectionId: "home" },
   { text: "About Me", id: ["about"], sectionId: "about" },
-  { text: "Resume", id: ["resume"], sectionId: "resume" },
   { text: "My Projects", id: ["projects"], sectionId: "projects" },
+  { text: "Resume", id: ["resume"], sectionId: "resume" },
 ];
 
 export function NavBar({ onNavigate }: IProps) {
