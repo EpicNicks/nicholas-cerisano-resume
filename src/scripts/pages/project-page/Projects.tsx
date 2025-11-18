@@ -4,21 +4,21 @@ import { Sidebar } from "./Sidebar/Sidebar";
 import { SpaceShooter } from "./ProjectComponents/SpaceShooter";
 import { GlitchGarden } from "./ProjectComponents/GlitchGarden";
 import { GameDay } from "./ProjectComponents/GameDay";
-import { InfiniteRunner } from "./ProjectComponents/Infinite Runner";
 import { Portfolio } from "./ProjectComponents/Portfolio";
-import { CaloriesIn } from "./ProjectComponents/CaloriesIn";
+import { CaloriesIn } from "./ProjectComponents/CaloriesIn/CaloriesIn";
 import { DefaultPage } from "./ProjectComponents/DefaultPage";
-import { NEngineEditor } from "./ProjectComponents/NEngineEditor";
+import { NEngineEditor } from "./ProjectComponents/NEngineEditor/NEngineEditor";
+import { UniversityProjects } from "./ProjectComponents/UniversityProjects/UniversityProjects";
 
 export const projectIds = [
   "default",
   "space-shooter",
   "glitch-garden",
   "game-day",
-  "infinite-runner",
   "calories-in",
   "portfolio",
   "nengine-editor",
+  "university-projects",
 ] as const;
 export type ProjectId = (typeof projectIds)[number];
 
@@ -32,8 +32,8 @@ export function Projects() {
         return <GlitchGarden />;
       case "game-day":
         return <GameDay />;
-      case "infinite-runner":
-        return <InfiniteRunner />;
+      case "university-projects":
+        return <UniversityProjects />;
       case "portfolio":
         return <Portfolio />;
       case "calories-in":

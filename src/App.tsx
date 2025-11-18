@@ -4,8 +4,8 @@ import { NavBar } from "./scripts/navbar/NavBar";
 import { BottomBar } from "./scripts/bottom bar/BottomBar";
 import { Home } from "./scripts/pages/home-page/Home";
 import { Resume } from "./scripts/pages/resume-page/Resume";
-import { Projects } from "./scripts/pages/project-page/Projects";
 import { About } from "./scripts/pages/about-page/About";
+import ProjectCards from "./scripts/pages/project-page/ProjectCards"
 
 function App() {
   const scrollToSection = useCallback((sectionId: string): void => {
@@ -53,7 +53,7 @@ function App() {
           <Resume />
         </section>
         <section id="projects" className="page-section">
-          <Projects />
+          <ProjectCards />
         </section>
       </main>
       <BottomBar />
