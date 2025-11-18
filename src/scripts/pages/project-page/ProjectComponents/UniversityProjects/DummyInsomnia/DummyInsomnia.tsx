@@ -1,17 +1,7 @@
 import React from "react";
-import { Unity, useUnityContext } from "react-unity-webgl";
 import "./DummyInsomnia.css";
 
-const unityBuildDirPath =
-  process.env.PUBLIC_URL + "/unity/dummy-insomnia/Build/";
-
 export function DummyInsomnia() {
-  const { unityProvider, loadingProgression, isLoaded } = useUnityContext({
-    loaderUrl: unityBuildDirPath + "Web.loader.js",
-    dataUrl: unityBuildDirPath + "Web.data",
-    frameworkUrl: unityBuildDirPath + "Web.framework.js",
-    codeUrl: unityBuildDirPath + "Web.wasm",
-  });
   return (
     <div className="DummyInsomnia">
       <div className="TextContent">
@@ -21,17 +11,27 @@ export function DummyInsomnia() {
           my University game design class DATT 4300
         </h4>
       </div>
-      {!isLoaded && <p>Loading... {Math.round(loadingProgression * 100)}%</p>}
-      <Unity
-        unityProvider={unityProvider}
-        style={{ width: "960px", height: "600px" }}
+      <video
+        src="/media/videos/Dummy Insomnia clip.mkv"
+        autoPlay
+        loop
+        muted
+        playsInline
+        style={{
+          width: "100%",
+          height: "auto",
+          borderRadius: "4px",
+          marginBottom: "12px",
+        }}
       />
       <div className="TextContent">
         <p>
           This game was created with the limitation of following the theme of
           "Snooze"
           <br />
-          Try your best to escape the factory!
+          Unfortunately, the project was built for the HD Render Pipeline (HDRP)
+          and cannot be built for WebGL, so I am unable to provide a playable
+          version
         </p>
       </div>
     </div>

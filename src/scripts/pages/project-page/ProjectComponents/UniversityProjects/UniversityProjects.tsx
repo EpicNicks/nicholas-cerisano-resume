@@ -5,6 +5,7 @@ import "./UniversityProjects.css";
 import { InfiniteRunner } from "./InfiniteRunner/Infinite Runner";
 import { NeonBreakGame } from "./NeonBreakGame/NeonBreakGame";
 import { DummyInsomnia } from "./DummyInsomnia/DummyInsomnia";
+import { ToyMania } from "./ToyMania/ToyMania";
 
 const cards: CardInfo[] = [
   {
@@ -52,7 +53,15 @@ const cards: CardInfo[] = [
     ),
   },
   {
-    id: 14,
+    id: 12,
+    title: "Toy Mania",
+    description:
+      'A puzzle builder game prototype modeled after classic game "The Incredible Machine"',
+    component: ToyMania,
+    background: "#ffff08",
+  },
+  {
+    id: 13,
     title: "Infinity Run",
     description: "A 2D Infinite Runner game made in Unity using C#",
     component: InfiniteRunner,
