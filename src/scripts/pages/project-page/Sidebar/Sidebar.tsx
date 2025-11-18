@@ -8,6 +8,10 @@ interface SidebarProps {
   onProjectChange: (projectId: ProjectId) => void;
 }
 
+// todo: instead of a sidebar, lets do cards layed out that
+//  when hovered, highlight in a flashy way
+//  when clicked, animate to expand to fill the screen with the info + demo if available
+
 export function Sidebar({ currentProject, onProjectChange }: SidebarProps) {
   const [activeProject, setActiveProject] = useState<ProjectId>(
     (currentProject as ProjectId) || "default"
@@ -24,9 +28,10 @@ export function Sidebar({ currentProject, onProjectChange }: SidebarProps) {
 
   const buttons: { title: string; id: ProjectId }[] = [
     { title: "Overview", id: "default" },
-    { title: "Calories In (2023-2025)", id: "calories-in" },
-    { title: "NEngine Editor (2024-2025)", id: "nengine-editor" },
-    { title: "Infinite Runner (2019)", id: "infinite-runner" },
+    { title: "N2Engine (2025)", id: "default" },
+    { title: "NEngine Editor (2024)", id: "nengine-editor" },
+    { title: "Calories In (2023)", id: "calories-in" },
+    { title: "University Projects (2019-2021)", id: "university-projects"},
     { title: "Glitch Garden (2019)", id: "glitch-garden" },
     { title: "Space Shooter (2018)", id: "space-shooter" },
     { title: "Game Day (2016)", id: "game-day" },

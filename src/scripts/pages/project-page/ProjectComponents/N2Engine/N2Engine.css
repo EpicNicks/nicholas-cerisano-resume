@@ -1,0 +1,143 @@
+.N2Engine {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 71.9vh;
+  background: #203ec608;
+  color: white;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.N2EngineHeader {
+  margin-bottom: 1rem;
+}
+
+.N2EngineHeader a {
+  color: #4FC3F7;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(79, 195, 247, 0.3);
+  transition: all 0.2s ease;
+}
+
+.N2EngineHeader a:hover {
+  color: #00D9FF;
+  border-bottom-color: #00D9FF;
+}
+
+.N2Engine h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin: 2rem 0 1rem 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  font-weight: 600;
+}
+
+.N2Engine h3 {
+  text-align: center;
+  font-size: 1.4rem;
+  opacity: 0.9;
+  font-weight: 300;
+}
+
+.N2EngineText {
+  max-width: 800px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 0 2rem;
+  backdrop-filter: blur(10px);
+  text-align: left;
+}
+
+.N2EngineText p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.N2Engine-features {
+  padding: 1.5rem;
+  margin: 2rem 0;
+}
+
+.N2Engine-features h4 {
+  color: #fff;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.N2Engine-features ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.N2Engine-features li {
+  padding: 0.75rem 0;
+  padding-left: 2rem;
+  position: relative;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.5;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.N2Engine-features li:last-child {
+  border-bottom: none;
+}
+
+.N2Engine-features li::before {
+  content: "▶";
+  position: absolute;
+  left: 0;
+  color: #5bc8ec;
+  font-size: 0.8rem;
+}
+
+.N2EngineMedia {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 2rem auto 0;
+  width: 90%;
+}
+
+.N2EngineMedia img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.N2EngineMedia img:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  .N2Engine h1 {
+    font-size: 2.5rem;
+  }
+
+  .N2Engine h3 {
+    font-size: 1.2rem;
+  }
+
+  .N2EngineText {
+    width: 95%;
+    padding: 1.5rem;
+  }
+
+  .N2EngineMedia {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+
+  .N2EngineMedia img {
+    min-height: 200px;
+    object-fit: cover;
+  }
+}

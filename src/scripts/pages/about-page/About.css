@@ -1,32 +1,35 @@
 .About {
   flex: 1 0 auto;
-  padding-top: 10vh;
-  color: #0a0a0a;
-  background-color: #e3fcff;
+  padding: 10vh 5vw 5vh 5vw;
+  color: #111;
+  background: linear-gradient(135deg, #e3fcff 0%, #ffffff 100%);
+  font-family: 'Inter', 'Roboto', 'Helvetica Neue', sans-serif;
   font-size: 1.2em;
+  line-height: 1.6;
 }
 
 .About h1 {
   padding: 0;
-  margin: 0;
+  margin: 0 0 1rem 0;
   font-size: 2.2em;
+  font-weight: 700;
+  color: #0a4c5c;
 }
 
 .About-Main {
   --gap: 100px;
-  padding: 0;
-  overflow: hidden;
   display: inline-flex;
   flex-direction: row;
+  overflow: hidden;
   margin: calc(-1 * var(--gap)) 0 0 calc(-1 * var(--gap));
   width: calc(60% + var(--gap));
 }
 
 .About-Image {
-  vertical-align: top;
   flex: 1;
   padding-top: 7vh;
   margin: 0 0 0 var(--gap);
+  vertical-align: top;
 }
 
 .About-Image img {
@@ -34,23 +37,51 @@
   height: auto;
   border-radius: 12px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.About-Image img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }
 
 .About-Body {
-  margin: 0 0 0 var(--gap);
-  vertical-align: top;
-  text-align: left;
-  width: 30vw;
   flex: 2;
+  width: 30vw;
+  margin: 0 0 0 var(--gap);
+  text-align: left;
+  vertical-align: top;
+}
+
+.About-Body h2 {
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  font-size: 1.4em;
+  font-weight: 600;
+  border-bottom: 2px solid #0a8f9f;
+  display: inline-block;
+  padding-bottom: 4px;
+  color: #0a4c5c;
 }
 
 .About-Body ul {
-  list-style-type: none;
+  list-style: none;
   padding-left: 0;
+  margin: 0;
 }
 
 .About-Body li {
-  margin: 0 0 20px 0;
+  margin-bottom: 0.8em;
+  padding-left: 0.5em;
+  position: relative;
+}
+
+.About-Body li::before {
+  content: "•";
+  color: #0a8f9f;
+  position: absolute;
+  left: 0;
+  font-weight: bold;
 }
 
 @media (max-width: 768px) {
@@ -69,23 +100,30 @@
     max-width: 60vw;
   }
 }
+
 @media (max-width: 480px) {
   .About {
     font-size: 1em;
     padding: 5vh 2vw 0 2vw;
   }
+
   .About h1 {
     font-size: 1.8em;
   }
-  .About-Image img {
-    max-width: 80vw;
+
+  .About-Main {
+    --gap: 0;
+    flex-direction: column-reverse; /* text first for small screens */
+    align-items: center;
+    width: 90%;
   }
+
   .About-Body {
     width: 100%;
     margin: 1.5rem 0 0 0;
   }
 
-  .About-Main {
-    --gap: 0;
+  .About-Image img {
+    max-width: 80vw;
   }
 }
