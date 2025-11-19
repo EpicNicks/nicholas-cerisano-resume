@@ -11,27 +11,26 @@ export function DummyInsomnia() {
           my University game design class DATT 4300
         </h4>
       </div>
-      <video
-        src="/media/videos/Dummy Insomnia clip.mkv"
-        autoPlay
-        loop
-        muted
-        playsInline
-        style={{
-          width: "100%",
-          height: "auto",
-          borderRadius: "4px",
-          marginBottom: "12px",
-        }}
-      />
+      <div className="video-container">
+        <iframe
+          src="https://www.youtube.com/embed/VJyeTu9Kdzc"
+          title="Dummy Insomnia Gameplay"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerPolicy="strict-origin-when-cross-origin"
+          allowFullScreen
+        ></iframe>
+      </div>
       <div className="TextContent">
         <p>
           This game was created with the limitation of following the theme of
           "Snooze"
           <br />
+          <br />
           Unfortunately, the project was built for the HD Render Pipeline (HDRP)
           and cannot be built for WebGL, so I am unable to provide a playable
-          version
+          version. Above is a link to another group member's YouTube video of
+          the game being played.
+          <br />
         </p>
       </div>
     </div>

@@ -28,8 +28,45 @@
 }
 
 .DummyInsomnia .TextContent p {
-  text-align: center;
+  text-align: left;
   opacity: 0.9;
   font-weight: 300;
   color: #fff;
+}
+
+.DummyInsomnia .video-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 1.5rem auto;
+  border-radius: 12px;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  background: #000;
+}
+
+.DummyInsomnia .video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+@media (max-width: 768px) {
+  .DummyInsomnia .TextContent h1 {
+    font-size: 2rem;
+    margin: 1rem 0 0.5rem 0;
+  }
+
+  .DummyInsomnia .TextContent h4 {
+    font-size: 1.2rem;
+  }
+
+  .DummyInsomnia .video-container {
+    max-width: 100%;
+    min-height: auto;
+    aspect-ratio: 16 / 9;
+  }
 }

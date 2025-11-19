@@ -3,7 +3,7 @@
   padding: 10vh 5vw 5vh 5vw;
   color: #111;
   background: linear-gradient(135deg, #e3fcff 0%, #ffffff 100%);
-  font-family: 'Inter', 'Roboto', 'Helvetica Neue', sans-serif;
+  font-family: "Inter", "Roboto", "Helvetica Neue", sans-serif;
   font-size: 1.2em;
   line-height: 1.6;
 }
@@ -33,7 +33,7 @@
 }
 
 .About-Image img {
-  max-width: 25vw;
+  max-width: 20vw;
   height: auto;
   border-radius: 12px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
@@ -43,6 +43,21 @@
 .About-Image img:hover {
   transform: scale(1.03);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.About-Body .About-Interests {
+  display: flex;
+  flex-direction: row;
+  font-size: 0.9em;
+}
+
+.AboutSoftwareInterests {
+  flex: 1;
+  margin-right: 2rem;
+}
+
+.AboutPersonalInterests {
+  flex: 1;
 }
 
 .About-Body {

@@ -1,16 +1,14 @@
 import React from "react";
-import { Unity, useUnityContext } from "react-unity-webgl";
+import { Unity } from "react-unity-webgl";
 import "./InfiniteRunner.css";
+import { useUnityGame } from "scripts/hooks/useUnityGame";
 
 const unityBuildDirPath =
   process.env.PUBLIC_URL + "/unity/infinite-skater/Build/";
 
 export function InfiniteRunner() {
-  const { unityProvider, loadingProgression, isLoaded } = useUnityContext({
-    loaderUrl: unityBuildDirPath + "Web.loader.js",
-    dataUrl: unityBuildDirPath + "Web.data",
-    frameworkUrl: unityBuildDirPath + "Web.framework.js",
-    codeUrl: unityBuildDirPath + "Web.wasm",
+  const { unityProvider, loadingProgression, isLoaded } = useUnityGame({
+    buildDirPath: unityBuildDirPath,
   });
 
   return (
@@ -25,9 +23,12 @@ export function InfiniteRunner() {
       {!isLoaded && <p>Loading... {Math.round(loadingProgression * 100)}%</p>}
       <Unity
         unityProvider={unityProvider}
-        style={{ width: "960px", height: "600px" }}
+        style={{ width: "960px", height: "600px", maxWidth: "100%" }}
       />
       <div className="TextContent">
+        <p style={{ textAlign: "center" }}>
+          <b>Press "F" to toggle fullscreen mode for a better experience!</b>
+        </p>
         <p>
           <b>
             Hover your mouse over the screen to charge up and remove it to jump.

@@ -24,11 +24,17 @@ const cards: CardInfo[] = [
     component: N2Engine,
     background: "#667eea",
     cardMiddle: () => (
-      <div style={{ alignSelf: "center" }}>
+      <div
+        style={{
+          alignSelf: "center",
+          backgroundColor: "#667eea1b",
+          width: "100%",
+        }}
+      >
         <img
           src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg"
           alt="N2Engine logo"
-          height="100"
+          className="card-image"
         />
       </div>
     ),
@@ -41,17 +47,27 @@ const cards: CardInfo[] = [
     component: NEngineEditor,
     background: "#764ba2",
     cardMiddle: () => (
-      <div style={{ alignSelf: "center" }}>
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Logo_C_sharp.png"
-          alt="NEngine logo"
-          height="100"
-        />
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/a/a0/SFML_Logo.svg"
-          alt="SFML logo"
-          height="100"
-        />
+      <div
+        style={{
+          alignSelf: "center",
+          backgroundColor: "#764ba21b",
+          width: "100%",
+        }}
+      >
+        <div>
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Logo_C_sharp.png"
+            alt="NEngine logo"
+            className="card-image"
+          />
+        </div>
+        <div>
+          <img
+            src="https://www.sfml-dev.org/download/goodies/sfml-icon-big.png"
+            alt="SFML logo"
+            className="card-image"
+          />
+        </div>
       </div>
     ),
   },
@@ -62,11 +78,17 @@ const cards: CardInfo[] = [
     component: CaloriesIn,
     background: "#ff6a00",
     cardMiddle: () => (
-      <div style={{ alignSelf: "center" }}>
+      <div
+        style={{
+          alignSelf: "center",
+          backgroundColor: "#ff6a001b",
+          width: "100%",
+        }}
+      >
         <img
           src="https://caloriesin.49385219.xyz/images/calories-in-logo.webp"
           alt="calories in logo"
-          height="100"
+          className="card-image"
         />
       </div>
     ),
@@ -78,6 +100,21 @@ const cards: CardInfo[] = [
       "Projects completed at York University for Game Design classes",
     component: UniversityProjects,
     background: "#EEE",
+    cardMiddle: () => (
+      <div
+        style={{
+          alignSelf: "center",
+          backgroundColor: "#ffffff1b",
+          width: "100%",
+        }}
+      >
+        <img
+          src="media/images/unity logo.png"
+          alt="Unity logo"
+          className="card-image"
+        />
+      </div>
+    ),
   },
 ];
 

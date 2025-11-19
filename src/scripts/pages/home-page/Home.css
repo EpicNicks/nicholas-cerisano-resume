@@ -46,6 +46,15 @@
   /* Use clamp() for responsive font sizing */
   font-size: clamp(16px, 2.5vw, 80px);
   top: 40vh;
+  left: 40vw;
+}
+
+.VideoContainer h3 {
+  text-shadow: 1px 1px 10px #00ffff;
+  position: absolute;
+  /* Use clamp() for responsive font sizing */
+  font-size: clamp(16px, 2.5vw, 80px);
+  top: 25vh;
   left: 30vw;
 }
 
@@ -72,18 +81,25 @@
 
   .VideoContainer h2 {
     font-size: clamp(18px, 6vw, 32px); /* Larger on mobile */
-    top: 35vh;
-    left: 10vw;
-    right: 10vw;
-    text-align: center;
+    top: 30vh;
+    right: 20vw;
+    position: absolute;
+  }
+
+  .VideoContainer h3 {
+    text-shadow: 1px 1px 10px #00ffff;
+    position: absolute;
+    font-size: clamp(18px, 6vw, 32px);
+    top: 40vh;
+    left: 20vw;
   }
 }
 
 /* Extra small screens (phones in portrait) */
 @media screen and (max-width: 480px) {
   .VideoPlayer {
-    width: 100vw;
-    height: 50vh;
+    width: auto;
+    height: 100vh;
   }
 
   .VideoPlayer video {
@@ -102,11 +118,17 @@
 
   .VideoContainer h2 {
     font-size: clamp(16px, 7vw, 28px);
-    top: 55%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 90vw;
-    text-align: center;
+    top: 48vh;
+    right: 10vw;
+    position: absolute;
+  }
+
+  .VideoContainer h3 {
+    text-shadow: 1px 1px 10px #00ffff;
+    position: absolute;
+    font-size: clamp(18px, 6vw, 32px);
+    top: 40vh;
+    left: 20vw;
   }
 }
 
