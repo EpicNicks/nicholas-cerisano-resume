@@ -8,12 +8,13 @@ export function About() {
         <div className="About-Body">
           <h1>About Me</h1>
           <p>
-            I'm a software developer with over 4 years of experience building
-            applications across different areas of the software space. I
-            graduated from the Specialized Honors Bachelor of Computer Science
-            program at York University, and I approach problems with a pragmatic
-            and logical mindset. Beyond work, I enjoy exploring new technologies
-            and experimenting with projects that push me to grow as a developer.
+            I'm a software developer with over 4 years of professional
+            experience building fullstack and cloud applications - and many more
+            years across different areas of the software space. I graduated from
+            the Specialized Honors Bachelor of Computer Science program at York
+            University, and I approach problems with a pragmatic and logical
+            mindset. Beyond work, I enjoy exploring new technologies and
+            experimenting with projects that push me to grow as a developer.
           </p>
           <div className="About-Interests">
             <div className="AboutSoftwareInterests">
