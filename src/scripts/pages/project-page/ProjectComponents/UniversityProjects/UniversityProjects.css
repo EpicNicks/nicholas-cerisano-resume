@@ -8,8 +8,9 @@
 
 .nested-card-grid {
   display: grid;
+  grid-template-columns: repeat(2, 20rem);
+  grid-auto-rows: 1fr;
   gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(20%, 1fr));
   padding: 32px;
   justify-content: center;
   max-width: 1200px;
@@ -18,11 +19,11 @@
 
 .nested-card-grid .card {
   background: #1d1f23;
-
   border-radius: 20px;
   padding: 40px;
   max-width: 1000px;
   width: auto;
+  max-height: fit-content;
   min-height: 300px;
 
   box-shadow: 0 8px 28px rgba(0, 0, 0, 0.14);
@@ -31,4 +32,10 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
+}
+
+@media (max-width: 768px) {
+  .nested-card-grid {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 360px));
+  }
 }
