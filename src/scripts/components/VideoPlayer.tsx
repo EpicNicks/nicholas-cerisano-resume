@@ -20,7 +20,8 @@ export function VideoPlayer() {
           <source type="video/mp4" data-reactid=".0.1.0.0.0" src={url} />
         </video>
       </div>
-      <h1>About Nicholas Cerisano</h1>
+      <h3>About</h3>
+      <h1>Nicholas Cerisano</h1>
       <h2>Software Developer</h2>
     </div>
   );
