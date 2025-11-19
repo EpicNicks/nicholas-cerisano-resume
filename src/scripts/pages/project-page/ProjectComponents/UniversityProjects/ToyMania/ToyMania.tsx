@@ -24,7 +24,7 @@ export function ToyMania() {
       {!isLoaded && <p>Loading... {Math.round(loadingProgression * 100)}%</p>}
       <Unity
         unityProvider={unityProvider}
-        style={{ width: "960px", height: "600px" }}
+        style={{ width: "960px", height: "600px", maxWidth: "100%" }}
       />
       <div className="TextContent">
         <p style={{ textAlign: "center" }}>

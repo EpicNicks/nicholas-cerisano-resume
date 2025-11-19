@@ -65,3 +65,12 @@
   background-color: #555555;
   color: aqua;
 }
+
+@media (max-width: 768px) {
+  .NavButton {
+    font-size: 0.6em;
+  }
+  .ActiveNavBtn {
+    font-size: 0.6em;
+  }
+}

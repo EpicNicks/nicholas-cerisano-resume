@@ -1,15 +1,15 @@
 .UniversityProjects {
-  color: #EEE;
+  color: #eee;
 }
 
 .UniversityProjectCard p {
-    color: #EEE;
+  color: #eee;
 }
 
 .nested-card-grid {
   display: grid;
   gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 360px));
+  grid-template-columns: repeat(auto-fit, minmax(20%, 1fr));
   padding: 32px;
   justify-content: center;
   max-width: 1200px;
