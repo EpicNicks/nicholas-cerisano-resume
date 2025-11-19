@@ -28,7 +28,7 @@ const cards: CardInfo[] = [
         <img
           src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg"
           alt="N2Engine logo"
-          height="100"
+          className="card-image"
         />
       </div>
     ),
@@ -41,17 +41,21 @@ const cards: CardInfo[] = [
     component: NEngineEditor,
     background: "#764ba2",
     cardMiddle: () => (
-      <div style={{ alignSelf: "center" }}>
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Logo_C_sharp.png"
-          alt="NEngine logo"
-          height="100"
-        />
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/a/a0/SFML_Logo.svg"
-          alt="SFML logo"
-          height="100"
-        />
+      <div>
+        <div>
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Logo_C_sharp.png"
+            alt="NEngine logo"
+            className="card-image"
+          />
+        </div>
+        <div>
+          <img
+            src="https://www.sfml-dev.org/download/goodies/sfml-icon-big.png"
+            alt="SFML logo"
+            className="card-image"
+          />
+        </div>
       </div>
     ),
   },
@@ -66,7 +70,7 @@ const cards: CardInfo[] = [
         <img
           src="https://caloriesin.49385219.xyz/images/calories-in-logo.webp"
           alt="calories in logo"
-          height="100"
+          className="card-image"
         />
       </div>
     ),

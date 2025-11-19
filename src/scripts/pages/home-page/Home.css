@@ -82,8 +82,8 @@
 /* Extra small screens (phones in portrait) */
 @media screen and (max-width: 480px) {
   .VideoPlayer {
-    width: 100vw;
-    height: 50vh;
+    width: auto;
+    height: 100vh;
   }
 
   .VideoPlayer video {

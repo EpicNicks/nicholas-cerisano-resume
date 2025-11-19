@@ -7,6 +7,7 @@
   background: none;
   color: white;
   min-height: 71.9vh;
+  max-height: 100%;
 
   background-color: #ff6a0008;
   padding-left: 100px;
@@ -19,7 +20,7 @@
 }
 
 .CaloriesIn h3 {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .CaloriesIn img:hover {
@@ -30,7 +31,23 @@
 .CaloriesIn .IconLinksGrid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 2rem; /* Adjust this value for spacing */
+  gap: 2rem;
   margin-top: 3em;
   justify-items: center;
+}
+
+@media (max-width: 768px) {
+  .CaloriesIn {
+    padding-left: 20px;
+    padding-right: 20px;
+    overflow-y: auto;
+  }
+
+  .CaloriesIn p {
+    width: 80vw;
+  }
+
+  .CaloriesIn .IconLinksGrid {
+    grid-template-columns: 1fr;
+  }
 }

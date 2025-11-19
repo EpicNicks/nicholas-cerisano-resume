@@ -1,6 +1,7 @@
 import React from "react";
-import { Unity, useUnityContext } from "react-unity-webgl";
+import { Unity } from "react-unity-webgl";
 import "./NeonBreakGame.css";
+import { useUnityGame } from "scripts/hooks/useUnityGame";
 
 // todo:
 // a stack of cards or otherwise array of cards that display the project
@@ -10,11 +11,9 @@ const unityBuildDirPath =
   process.env.PUBLIC_URL + "/unity/vectorheart-game/Build/";
 
 export function NeonBreakGame() {
-  const { unityProvider, loadingProgression, isLoaded } = useUnityContext({
-    loaderUrl: unityBuildDirPath + "Builds.loader.js",
-    dataUrl: unityBuildDirPath + "Builds.data",
-    frameworkUrl: unityBuildDirPath + "Builds.framework.js",
-    codeUrl: unityBuildDirPath + "Builds.wasm",
+  const { unityProvider, loadingProgression, isLoaded } = useUnityGame({
+    buildDirPath: unityBuildDirPath,
+    buildName: "Builds",
   });
   return (
     <div className="NeonBreakGame">
@@ -31,6 +30,9 @@ export function NeonBreakGame() {
         style={{ width: "960px", height: "600px" }}
       />
       <div className="TextContent">
+        <p style={{ textAlign: "center" }}>
+          <b>Press "F" to toggle fullscreen mode for a better experience!</b>
+        </p>
         <p>
           <b>Controls are in the options menu accessible from the main menu.</b>
           <br />

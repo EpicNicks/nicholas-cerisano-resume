@@ -1,5 +1,16 @@
 import React from "react";
+import { Unity } from "react-unity-webgl";
+import { useUnityGame } from "../../../../../hooks/useUnityGame";
+import "./ToyMania.css";
+
+const unityBuildDirPath = process.env.PUBLIC_URL + "/unity/toy-mania/Build/";
+
 export function ToyMania() {
+  const { unityProvider, loadingProgression, isLoaded } = useUnityGame({
+    buildDirPath: unityBuildDirPath,
+    buildName: "Web",
+  });
+
   return (
     <div className="ToyMania">
       <div className="TextContent">
@@ -9,6 +20,16 @@ export function ToyMania() {
           University game design class DATT 4300 modeled after classic game "The
           Incredible Machine"
         </h4>
+      </div>
+      {!isLoaded && <p>Loading... {Math.round(loadingProgression * 100)}%</p>}
+      <Unity
+        unityProvider={unityProvider}
+        style={{ width: "960px", height: "600px" }}
+      />
+      <div className="TextContent">
+        <p style={{ textAlign: "center" }}>
+          <b>Press "F" to toggle fullscreen mode for a better experience!</b>
+        </p>
       </div>
     </div>
   );
