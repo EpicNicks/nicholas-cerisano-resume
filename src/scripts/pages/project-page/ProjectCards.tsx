@@ -1,23 +1,50 @@
-import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import React from "react";
 import "./ProjectCards.css";
 import { CaloriesIn } from "./ProjectComponents/CaloriesIn/CaloriesIn";
 import { NEngineEditor } from "./ProjectComponents/NEngineEditor/NEngineEditor";
 import { UniversityProjects } from "./ProjectComponents/UniversityProjects/UniversityProjects";
 import { N2Engine } from "./ProjectComponents/N2Engine/N2Engine";
+import {
+  CardInfo,
+  ExpandableCardGrid,
+} from "./ProjectComponents/ExpandingCardGrid/ExpandingCardGrid";
 
-export type CardInfo = {
-  id: number;
-  title: string;
-  description: string;
-  component: React.FC;
-  background?: string;
-  cardMiddle?: React.FC;
-};
-
-const cards: CardInfo[] = [
+const professionalProjectCards: CardInfo[] = [
   {
-    id: 1,
+    title: "Internal Disputes Management System",
+    description: "A fullstack web application for managing internal disputes",
+    component: () => <div>Internal Case Management System Project Details</div>,
+    background: "#ff4b1f",
+  },
+  {
+    title: "Azure Cloud Functions for Internal Batch Jobs",
+    description:
+      "Serverless Azure Cloud Functions for automating internal batch jobs",
+    component: () => (
+      <div>Azure Cloud Functions for Internal Batch Jobs Project Details</div>
+    ),
+    background: "#f9d423",
+  },
+  {
+    title: "Internal Fraud Management System",
+    description:
+      "A fullstack web application for managing internal fraud cases",
+    component: () => (
+      <div>Internal Fraud Management System Project Details</div>
+    ),
+    background: "#1fddff",
+  },
+  {
+    title: "End-to-End Automated Testing",
+    description:
+      "An end-to-end automated testing suite for web applications using Puppeteer.js",
+    component: () => <div>End-to-End Automated Testing Project Details</div>,
+    background: "#11998e",
+  },
+];
+
+const personalProjectCards: CardInfo[] = [
+  {
     title: "N2Engine",
     description:
       "A WIP C++ Game Engine using low-level Graphics and Physics APIs",
@@ -40,7 +67,6 @@ const cards: CardInfo[] = [
     ),
   },
   {
-    id: 2,
     title: "NEngine Editor",
     description:
       "A C# Game Engine built on SFML and Visual Editor built on WPF",
@@ -72,7 +98,6 @@ const cards: CardInfo[] = [
     ),
   },
   {
-    id: 3,
     title: "Calories In",
     description: "A Flutter/Dart Calorie Tracking App targeting Android",
     component: CaloriesIn,
@@ -94,7 +119,6 @@ const cards: CardInfo[] = [
     ),
   },
   {
-    id: 4,
     title: "University Projects",
     description:
       "Projects completed at York University for Game Design classes",
@@ -118,62 +142,23 @@ const cards: CardInfo[] = [
   },
 ];
 
-export default function ExpandingCardGrid() {
-  const [expandedId, setExpandedId] = useState<number | null>(null);
-
-  const ExpandedComponent =
-    expandedId !== null
-      ? cards.find((c) => c.id === expandedId)!.component
-      : null;
-
+export default function ProjectCards() {
   return (
-    <div className="card-grid">
-      {cards.map((card) => (
-        <motion.div
-          key={card.id}
-          layoutId={`card-${card.id}`}
-          className="card"
-          style={{ borderColor: card.background, textAlign: "left" }}
-          onClick={() => setExpandedId(card.id)}
-          whileHover={{
-            scale: expandedId ? 1 : 1.05,
-            boxShadow: `inset 0 0 8px 6px ${card.background ?? "transparent"}`,
-            transition: {
-              scale: { duration: 0.15, ease: "easeOut" },
-              boxShadow: { duration: 0.08, ease: "linear" },
-            },
-          }}
-        >
-          <h3>{card.title}</h3>
-          {card.cardMiddle &&
-            (() => {
-              const CardMiddle = card.cardMiddle;
-              return <CardMiddle />;
-            })()}
-          <p>{card.description}</p>
-        </motion.div>
-      ))}
-
-      {/* EXPANDED OVERLAY */}
-      <AnimatePresence initial={false}>
-        {expandedId && (
-          <motion.div
-            className="expanded-frame"
-            onClick={() => setExpandedId(null)}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-          >
-            <motion.div
-              className="expanded-content"
-              layoutId={`card-${expandedId}`}
-              onClick={(e) => e.stopPropagation()}
-            >
-              {ExpandedComponent && <ExpandedComponent />}
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+    <div className="ProjectCards">
+      <div className="ProfessionalProjects">
+        <h1>Professional Projects</h1>
+        <ExpandableCardGrid
+          cards={professionalProjectCards}
+          className="professional-projects-card-grid"
+        />
+      </div>
+      <div className="PersonalProjects">
+        <h1>Personal Projects</h1>
+        <ExpandableCardGrid
+          cards={personalProjectCards}
+          className="personal-projects-card-grid"
+        />
+      </div>
     </div>
   );
 }
