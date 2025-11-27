@@ -1,0 +1,132 @@
+.EndToEndTesting {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  color: white;
+  background: linear-gradient(135deg, #1c99112e 0%, #38ef7e1b 100%);
+  padding: 2rem 0;
+  overflow-x: hidden;
+}
+
+.EndToEndTestingHeader {
+  margin-bottom: 1rem;
+}
+
+.EndToEndTestingHeader h1 {
+  text-align: left;
+  padding-left: 2rem;
+  font-size: 3rem;
+  margin: 2rem 0 1rem 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  font-weight: 600;
+}
+
+.EndToEndTestingHeader h3 {
+  text-align: left;
+  padding-left: 2rem;
+  font-size: 1.4rem;
+  opacity: 0.9;
+  font-weight: 300;
+}
+
+.EndToEndTestingText {
+  max-width: 800px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 0 2rem;
+  text-align: left;
+}
+
+.EndToEndTestingText p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.EndToEndTesting-features,
+.EndToEndTesting-tech {
+  padding: 1.5rem;
+  margin: 1rem 0;
+}
+
+.EndToEndTesting-features h4,
+.EndToEndTesting-tech h4 {
+  color: #fff;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.EndToEndTesting-features ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.EndToEndTesting-features li {
+  padding: 0.75rem 0;
+  padding-left: 2rem;
+  position: relative;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.5;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.EndToEndTesting-features li:last-child {
+  border-bottom: none;
+}
+
+.EndToEndTesting-features li::before {
+  content: "▶";
+  position: absolute;
+  left: 0;
+  color: #00ff0d;
+  font-size: 0.8rem;
+}
+
+.EndToEndTesting-tech p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.1rem;
+}
+
+.EndToEndTesting-tech p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.EndToEndTesting-tech p .tech-badge {
+  display: inline-block;
+  background: rgba(17, 153, 142, 0.2);
+  border: 1px solid rgba(17, 153, 142, 0.5);
+  color: #fff;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .EndToEndTesting {
+    padding: 1.5rem 0;
+  }
+
+  .EndToEndTestingHeader h1 {
+    font-size: 2.5rem;
+    padding-left: 1rem;
+  }
+
+  .EndToEndTestingHeader h3 {
+    font-size: 1.2rem;
+    padding-left: 1rem;
+  }
+
+  .EndToEndTestingText {
+    width: 95%;
+    padding: 0 1.5rem;
+  }
+}

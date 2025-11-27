@@ -2,11 +2,7 @@
   color: #eee;
 }
 
-.UniversityProjectCard p {
-  color: #eee;
-}
-
-.nested-card-grid {
+.nested-card-grid.card-grid {
   display: grid;
   grid-template-columns: repeat(2, 20rem);
   grid-auto-rows: 1fr;
@@ -15,6 +11,10 @@
   justify-content: center;
   max-width: 1200px;
   margin: auto;
+}
+
+.nested-card-grid p {
+  color: #eee;
 }
 
 .nested-card-grid .card {
@@ -34,8 +34,9 @@
   gap: 16px;
 }
 
-@media (max-width: 768px) {
-  .nested-card-grid {
-    grid-template-columns: repeat(auto-fit, minmax(260px, 360px));
+@media (max-width: 1500px) {
+  .nested-card-grid.card-grid {
+    grid-template-columns: 1fr !important;
+    max-width: 500px;
   }
 }

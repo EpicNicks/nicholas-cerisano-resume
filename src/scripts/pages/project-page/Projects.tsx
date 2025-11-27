@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import "./Projects.css";
 import { Sidebar } from "./Sidebar/Sidebar";
-import { SpaceShooter } from "./ProjectComponents/SpaceShooter";
-import { GlitchGarden } from "./ProjectComponents/GlitchGarden";
-import { GameDay } from "./ProjectComponents/GameDay";
-import { Portfolio } from "./ProjectComponents/Portfolio";
-import { CaloriesIn } from "./ProjectComponents/CaloriesIn/CaloriesIn";
-import { DefaultPage } from "./ProjectComponents/DefaultPage";
-import { NEngineEditor } from "./ProjectComponents/NEngineEditor/NEngineEditor";
+import { SpaceShooter } from "./ProjectComponents/UnusedProjects/SpaceShooter";
+import { GlitchGarden } from "./ProjectComponents/UnusedProjects/GlitchGarden";
+import { GameDay } from "./ProjectComponents/UnusedProjects/GameDay";
+import { Portfolio } from "./ProjectComponents/UnusedProjects/Portfolio";
+import { CaloriesIn } from "./ProjectComponents/PersonalProjects/CaloriesIn/CaloriesIn";
+import { DefaultPage } from "./ProjectComponents/UnusedProjects/DefaultPage";
+import { NEngineEditor } from "./ProjectComponents/PersonalProjects/NEngineEditor/NEngineEditor";
 import { UniversityProjects } from "./ProjectComponents/UniversityProjects/UniversityProjects";
 
 export const projectIds = [
