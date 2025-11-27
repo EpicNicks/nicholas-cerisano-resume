@@ -1,21 +1,23 @@
 import React from "react";
 import "./ProjectCards.css";
-import { CaloriesIn } from "./ProjectComponents/CaloriesIn/CaloriesIn";
-import { NEngineEditor } from "./ProjectComponents/NEngineEditor/NEngineEditor";
+import { CaloriesIn } from "./ProjectComponents/PersonalProjects/CaloriesIn/CaloriesIn";
+import { NEngineEditor } from "./ProjectComponents/PersonalProjects/NEngineEditor/NEngineEditor";
 import { UniversityProjects } from "./ProjectComponents/UniversityProjects/UniversityProjects";
-import { N2Engine } from "./ProjectComponents/N2Engine/N2Engine";
+import { N2Engine } from "./ProjectComponents/PersonalProjects/N2Engine/N2Engine";
 import {
   CardInfo,
   ExpandableCardGrid,
 } from "./ProjectComponents/ExpandingCardGrid/ExpandingCardGrid";
+import { InternalDisputesManagement } from "./ProjectComponents/ProfessionalProjects/InternalDisputesManagement/InternalDisputesManagement";
+import { AzureBatchFunctions } from "./ProjectComponents/ProfessionalProjects/AzureBatchFunctions/AzureBatchFunctions";
+import { InternalFraudManagement } from "./ProjectComponents/ProfessionalProjects/InternalFraudManagement/InternalFraudManagement";
+import { EndToEndTesting } from "./ProjectComponents/ProfessionalProjects/EndToEndTesting/EndToEndTesting";
 
 const professionalProjectCards: CardInfo[] = [
   {
     title: "Internal Disputes Management System",
     description: "A fullstack web application for managing internal disputes",
-    component: () => (
-      <div>Internal Disputes Management System Project Details</div>
-    ),
+    component: InternalDisputesManagement,
     cardMiddle: () => (
       <div
         style={{
@@ -60,14 +62,12 @@ const professionalProjectCards: CardInfo[] = [
     title: "Azure Cloud Functions for Internal Batch Jobs",
     description:
       "Serverless Azure Cloud Functions for automating internal batch jobs",
-    component: () => (
-      <div>Azure Cloud Functions for Internal Batch Jobs Project Details</div>
-    ),
+    component: AzureBatchFunctions,
     cardMiddle: () => (
       <div
         style={{
           alignSelf: "center",
-          backgroundColor: "#ff4b1f1b",
+          backgroundColor: "#00ddff44",
           width: "100%",
         }}
       >
@@ -93,14 +93,12 @@ const professionalProjectCards: CardInfo[] = [
     title: "Internal Fraud Management System",
     description:
       "A fullstack web application for managing internal fraud cases",
-    component: () => (
-      <div>Internal Fraud Management System Project Details</div>
-    ),
+    component: InternalFraudManagement,
     cardMiddle: () => (
       <div
         style={{
           alignSelf: "center",
-          backgroundColor: "#ff1f1f63",
+          backgroundColor: "#0022ff6f",
           width: "100%",
         }}
       >
@@ -140,12 +138,12 @@ const professionalProjectCards: CardInfo[] = [
     title: "End-to-End Automated Testing",
     description:
       "An end-to-end automated testing suite for web applications using Puppeteer.js",
-    component: () => <div>End-to-End Automated Testing Project Details</div>,
+    component: EndToEndTesting,
     cardMiddle: () => (
       <div
         style={{
           alignSelf: "center",
-          backgroundColor: "#ff9102",
+          backgroundColor: "#17ff02b5",
           width: "100%",
         }}
       >

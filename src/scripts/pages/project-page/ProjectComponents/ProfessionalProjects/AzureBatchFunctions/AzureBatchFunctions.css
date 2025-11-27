@@ -1,0 +1,127 @@
+.AzureBatchFunctions {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  color: white;
+  background: linear-gradient(135deg, #00ffea31 0%, #23f9e008 100%);
+  padding: 2rem 0;
+  overflow-x: hidden;
+}
+
+.AzureBatchFunctionsHeader {
+  margin-bottom: 1rem;
+}
+
+.AzureBatchFunctionsHeader h1 {
+  text-align: left;
+  padding-left: 2rem;
+  font-size: 3rem;
+  margin: 2rem 0 1rem 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  font-weight: 600;
+}
+
+.AzureBatchFunctionsHeader h3 {
+  text-align: left;
+  padding-left: 2rem;
+  font-size: 1.4rem;
+  opacity: 0.9;
+  font-weight: 300;
+}
+
+.AzureBatchFunctionsText {
+  max-width: 800px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 0 2rem;
+  text-align: left;
+}
+
+.AzureBatchFunctionsText p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.AzureBatchFunctions-features,
+.AzureBatchFunctions-tech {
+  padding: 1.5rem;
+  margin: 1rem 0;
+}
+
+.AzureBatchFunctions-features h4,
+.AzureBatchFunctions-tech h4 {
+  color: #fff;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.AzureBatchFunctions-features ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.AzureBatchFunctions-features li {
+  padding: 0.75rem 0;
+  padding-left: 2rem;
+  position: relative;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.5;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.AzureBatchFunctions-features li:last-child {
+  border-bottom: none;
+}
+
+.AzureBatchFunctions-features li::before {
+  content: "▶";
+  position: absolute;
+  left: 0;
+  color: #00ddff;
+  font-size: 0.8rem;
+}
+
+.AzureBatchFunctions-tech p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.AzureBatchFunctions-tech p .tech-badge {
+  display: inline-block;
+  background: #0062ff;
+  border: 1px solid #00ddff88;
+  color: #fff;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .AzureBatchFunctions {
+    padding: 1.5rem 0;
+  }
+
+  .AzureBatchFunctionsHeader h1 {
+    font-size: 2.5rem;
+    padding-left: 1rem;
+  }
+
+  .AzureBatchFunctionsHeader h3 {
+    font-size: 1.2rem;
+    padding-left: 1rem;
+  }
+
+  .AzureBatchFunctionsText {
+    width: 95%;
+    padding: 0 1.5rem;
+  }
+}

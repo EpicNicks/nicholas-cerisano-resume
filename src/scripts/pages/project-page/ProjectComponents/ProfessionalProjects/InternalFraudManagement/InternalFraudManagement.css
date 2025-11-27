@@ -1,0 +1,127 @@
+.InternalFraudManagement {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  color: white;
+  background: linear-gradient(135deg, #1fddff44 0%, #1fddff0a 100%);
+  padding: 2rem 0;
+  overflow-x: hidden;
+}
+
+.InternalFraudManagementHeader {
+  margin-bottom: 1rem;
+}
+
+.InternalFraudManagementHeader h1 {
+  text-align: left;
+  padding-left: 2rem;
+  font-size: 3rem;
+  margin: 2rem 0 1rem 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  font-weight: 600;
+}
+
+.InternalFraudManagementHeader h3 {
+  text-align: left;
+  padding-left: 2rem;
+  font-size: 1.4rem;
+  opacity: 0.9;
+  font-weight: 300;
+}
+
+.InternalFraudManagementText {
+  max-width: 800px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 0 2rem;
+  text-align: left;
+}
+
+.InternalFraudManagementText p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.InternalFraudManagement-features,
+.InternalFraudManagement-tech {
+  padding: 1.5rem;
+  margin: 1rem 0;
+}
+
+.InternalFraudManagement-features h4,
+.InternalFraudManagement-tech h4 {
+  color: #fff;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.InternalFraudManagement-features ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.InternalFraudManagement-features li {
+  padding: 0.75rem 0;
+  padding-left: 2rem;
+  position: relative;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.5;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.InternalFraudManagement-features li:last-child {
+  border-bottom: none;
+}
+
+.InternalFraudManagement-features li::before {
+  content: "▶";
+  position: absolute;
+  left: 0;
+  color: #1fddff;
+  font-size: 0.8rem;
+}
+
+.InternalFraudManagement-tech p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.InternalFraudManagement-tech p .tech-badge {
+  display: inline-block;
+  background: rgba(31, 221, 255, 0.2);
+  border: 1px solid rgba(31, 221, 255, 0.5);
+  color: #fff;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .InternalFraudManagement {
+    padding: 1.5rem 0;
+  }
+
+  .InternalFraudManagementHeader h1 {
+    font-size: 2.5rem;
+    padding-left: 1rem;
+  }
+
+  .InternalFraudManagementHeader h3 {
+    font-size: 1.2rem;
+    padding-left: 1rem;
+  }
+
+  .InternalFraudManagementText {
+    width: 95%;
+    padding: 0 1.5rem;
+  }
+}
