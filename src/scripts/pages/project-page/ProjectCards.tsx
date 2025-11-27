@@ -13,8 +13,48 @@ const professionalProjectCards: CardInfo[] = [
   {
     title: "Internal Disputes Management System",
     description: "A fullstack web application for managing internal disputes",
-    component: () => <div>Internal Case Management System Project Details</div>,
-    background: "#ff4b1f",
+    component: () => (
+      <div>Internal Disputes Management System Project Details</div>
+    ),
+    cardMiddle: () => (
+      <div
+        style={{
+          alignSelf: "center",
+          backgroundColor: "#ff1f417b",
+          width: "100%",
+        }}
+      >
+        <div>
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/640px-Typescript_logo_2020.svg.png"
+            alt="TS logo"
+            className="card-image"
+          />
+        </div>
+        <div>
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"
+            alt="React logo"
+            className="card-image"
+          />
+        </div>
+        <div>
+          <img
+            src="https://upload.wikimedia.org/wikipedia/fr/thumb/2/2e/Java_Logo.svg/330px-Java_Logo.svg.png?20061227215918"
+            alt="Java logo"
+            className="card-image"
+          />
+        </div>
+        <div>
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/7/79/Spring_Boot.svg"
+            alt="Spring logo"
+            className="card-image"
+          />
+        </div>
+      </div>
+    ),
+    borderOutlineColor: "#ff4b1f",
   },
   {
     title: "Azure Cloud Functions for Internal Batch Jobs",
@@ -23,7 +63,31 @@ const professionalProjectCards: CardInfo[] = [
     component: () => (
       <div>Azure Cloud Functions for Internal Batch Jobs Project Details</div>
     ),
-    background: "#f9d423",
+    cardMiddle: () => (
+      <div
+        style={{
+          alignSelf: "center",
+          backgroundColor: "#ff4b1f1b",
+          width: "100%",
+        }}
+      >
+        <div>
+          <img
+            src="https://upload.wikimedia.org/wikipedia/fr/thumb/2/2e/Java_Logo.svg/330px-Java_Logo.svg.png?20061227215918"
+            alt="Java logo"
+            className="card-image"
+          />
+        </div>
+        <div>
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Spring_Framework_Logo_2018.svg/640px-Spring_Framework_Logo_2018.svg.png"
+            alt="Spring logo"
+            className="card-image"
+          />
+        </div>
+      </div>
+    ),
+    borderOutlineColor: "#00ddff",
   },
   {
     title: "Internal Fraud Management System",
@@ -32,14 +96,83 @@ const professionalProjectCards: CardInfo[] = [
     component: () => (
       <div>Internal Fraud Management System Project Details</div>
     ),
-    background: "#1fddff",
+    cardMiddle: () => (
+      <div
+        style={{
+          alignSelf: "center",
+          backgroundColor: "#ff1f1f63",
+          width: "100%",
+        }}
+      >
+        <div>
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/640px-Typescript_logo_2020.svg.png"
+            alt="TS logo"
+            className="card-image"
+          />
+        </div>
+        <div>
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"
+            alt="React logo"
+            className="card-image"
+          />
+        </div>
+        <div>
+          <img
+            src="https://upload.wikimedia.org/wikipedia/fr/thumb/2/2e/Java_Logo.svg/330px-Java_Logo.svg.png?20061227215918"
+            alt="Java logo"
+            className="card-image"
+          />
+        </div>
+        <div>
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/7/79/Spring_Boot.svg"
+            alt="Spring logo"
+            className="card-image"
+          />
+        </div>
+      </div>
+    ),
+    borderOutlineColor: "#1f53ff",
   },
   {
     title: "End-to-End Automated Testing",
     description:
       "An end-to-end automated testing suite for web applications using Puppeteer.js",
     component: () => <div>End-to-End Automated Testing Project Details</div>,
-    background: "#11998e",
+    cardMiddle: () => (
+      <div
+        style={{
+          alignSelf: "center",
+          backgroundColor: "#ff9102",
+          width: "100%",
+        }}
+      >
+        <div>
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Javascript_Logo.png/640px-Javascript_Logo.png"
+            alt="JavaScript logo"
+            className="card-image"
+          />
+        </div>
+        <div>
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/2560px-Node.js_logo.svg.png"
+            alt="NodeJS logo"
+            className="card-image"
+          />
+        </div>
+        <div>
+          <img
+            src="https://user-images.githubusercontent.com/10379601/29446482-04f7036a-841f-11e7-9872-91d1fc2ea683.png"
+            alt="Puppeteer logo"
+            className="card-image"
+          />
+        </div>
+      </div>
+    ),
+    borderOutlineColor: "#00ff0d",
   },
 ];
 
@@ -49,7 +182,7 @@ const personalProjectCards: CardInfo[] = [
     description:
       "A WIP C++ Game Engine using low-level Graphics and Physics APIs",
     component: N2Engine,
-    background: "#667eea",
+    borderOutlineColor: "#667eea",
     cardMiddle: () => (
       <div
         style={{
@@ -71,7 +204,7 @@ const personalProjectCards: CardInfo[] = [
     description:
       "A C# Game Engine built on SFML and Visual Editor built on WPF",
     component: NEngineEditor,
-    background: "#764ba2",
+    borderOutlineColor: "#764ba2",
     cardMiddle: () => (
       <div
         style={{
@@ -101,7 +234,7 @@ const personalProjectCards: CardInfo[] = [
     title: "Calories In",
     description: "A Flutter/Dart Calorie Tracking App targeting Android",
     component: CaloriesIn,
-    background: "#ff6a00",
+    borderOutlineColor: "#ff6a00",
     cardMiddle: () => (
       <div
         style={{
@@ -123,7 +256,7 @@ const personalProjectCards: CardInfo[] = [
     description:
       "Projects completed at York University for Game Design classes",
     component: UniversityProjects,
-    background: "#EEE",
+    borderOutlineColor: "#EEE",
     cardMiddle: () => (
       <div
         style={{

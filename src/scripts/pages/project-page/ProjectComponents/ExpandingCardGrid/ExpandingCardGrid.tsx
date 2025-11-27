@@ -6,7 +6,7 @@ export type CardInfo = {
   title: string;
   description: string;
   component: React.FC;
-  background?: string;
+  borderOutlineColor?: string;
   cardMiddle?: React.FC;
 };
 
@@ -37,11 +37,13 @@ export function ExpandableCardGrid({
           key={`${className}-${index}`}
           layoutId={idFromCard(card, index)}
           className="card"
-          style={{ borderColor: card.background, textAlign: "left" }}
+          style={{ borderColor: card.borderOutlineColor, textAlign: "left" }}
           onClick={() => setExpandedId(idFromCard(card, index))}
           whileHover={{
             scale: expandedId ? 1 : 1.05,
-            boxShadow: `inset 0 0 8px 6px ${card.background ?? "transparent"}`,
+            boxShadow: `inset 0 0 8px 6px ${
+              card.borderOutlineColor ?? "transparent"
+            }`,
             transition: {
               scale: { duration: 0.15, ease: "easeOut" },
               boxShadow: { duration: 0.08, ease: "linear" },

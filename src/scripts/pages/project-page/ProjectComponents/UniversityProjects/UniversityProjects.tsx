@@ -14,7 +14,7 @@ const cards: CardInfo[] = [
     title: "Neon Break",
     description: "A 2D Vectorheart Style Top-Down Shooter made in Unity",
     component: NeonBreakGame,
-    background: "#43ceb7",
+    borderOutlineColor: "#43ceb7",
     cardMiddle: () => (
       <video
         src="/media/videos/neon break title screen.mkv"
@@ -35,7 +35,7 @@ const cards: CardInfo[] = [
     title: "Dummy Insomnia",
     description: "A 3D PG Survival Horror Game Prototype made in Unity",
     component: DummyInsomnia,
-    background: "#001100",
+    borderOutlineColor: "#001100",
     cardMiddle: () => (
       <video
         src="/media/videos/Dummy Insomnia clip.mkv"
@@ -57,7 +57,7 @@ const cards: CardInfo[] = [
     description:
       'A puzzle builder game prototype modeled after classic game "The Incredible Machine"',
     component: ToyMania,
-    background: "#ffff08",
+    borderOutlineColor: "#ffff08",
     cardMiddle: () => (
       <video
         src="/media/videos/Toy Mania clip.mkv"
@@ -78,7 +78,7 @@ const cards: CardInfo[] = [
     title: "Infinity Run",
     description: "A 2D Infinite Runner game made in Unity using C#",
     component: InfiniteRunner,
-    background: "#ff7e5f",
+    borderOutlineColor: "#ff7e5f",
     cardMiddle: () => (
       <video
         src="/media/videos/Infinite Runner clip.mp4"
