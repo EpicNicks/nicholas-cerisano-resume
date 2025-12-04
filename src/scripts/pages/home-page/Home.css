@@ -1,134 +1,191 @@
 .VideoPlayer {
-  filter: blur(2px);
-  -webkit-filter: blur(10px);
-  -moz-filter: blur(10px);
-  -o-filter: blur(10px);
-  -ms-filter: blur(10px);
+  position: relative;
+  -webkit-filter: blur(12px);
+  -moz-filter: blur(12px);
+  -o-filter: blur(12px);
+  -ms-filter: blur(12px);
   filter: blur(12px);
   height: 80vh;
   width: 80vw;
+  overflow: hidden;
 }
 
 .VideoPlayer video {
-  height: 80vh;
-  width: 80vw;
-  object-fit: cover; /* Ensures video covers the container properly */
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.VideoOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  background: transparent;
 }
 
 .Home {
   display: flex;
   justify-content: center;
+  align-items: center;
   box-sizing: border-box;
   margin: 0;
   background-color: #555555;
   padding: 0;
-  min-height: 100%;
+  min-height: 100vh;
 
   -webkit-animation: fadein 2s;
   -moz-animation: fadein 2s;
   -o-animation: fadein 2s;
+  -ms-animation: fadein 2s;
   animation: fadein 2s;
 }
 
-.VideoContainer h1 {
+#home {
+  position: relative;
+}
+
+#home::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0.7) 5%,
+    rgba(85, 85, 85, 0.4) 10%,
+    rgba(85, 85, 85, 0.2) 15%,
+    transparent 25%,
+    transparent 75%,
+    rgba(85, 85, 85, 0.2) 85%,
+    rgba(85, 85, 85, 0.4) 90%,
+    rgba(0, 0, 0, 0.7) 95%,
+    rgba(0, 0, 0, 0.9) 100%
+  );
+  z-index: 10;
+  pointer-events: none;
+}
+
+.VideoContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.VideoOverlayText {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 11;
+}
+
+.VideoOverlayText > * {
+  pointer-events: auto;
+}
+
+.VideoOverlayText h1 {
   text-shadow: 2px 2px 40px #777;
   color: rgb(127, 246, 255);
   position: absolute;
-  /* Use clamp() for responsive font sizing */
-  font-size: clamp(24px, 4vw, 120px);
-  top: 30vh;
-  left: 25vw;
+  font-size: clamp(2rem, 4vw, 7.5rem);
+  top: 30%;
+  left: 22%;
+  margin: 0;
 }
 
-.VideoContainer h2 {
+.VideoOverlayText h2 {
   text-shadow: 1px 1px 10px #00ffff;
   position: absolute;
-  /* Use clamp() for responsive font sizing */
-  font-size: clamp(16px, 2.5vw, 80px);
-  top: 40vh;
-  left: 40vw;
+  font-size: clamp(1.25rem, 2.5vw, 5rem);
+  top: 40%;
+  left: 38%;
+  margin: 0;
+  color: #000;
 }
 
-.VideoContainer h3 {
-  text-shadow: 1px 1px 10px #00ffff;
+.SocialLinks {
   position: absolute;
-  /* Use clamp() for responsive font sizing */
-  font-size: clamp(16px, 2.5vw, 80px);
-  top: 25vh;
-  left: 30vw;
+  top: 55%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
 }
 
-/* Mobile-specific styles */
+.SocialLinks a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(127, 246, 255);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.SocialLinks a:hover {
+  color: white;
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 10px rgba(127, 246, 255, 0.8));
+}
+
 @media screen and (max-width: 768px) {
   .VideoPlayer {
-    width: 100vw; /* Full width on mobile */
-    height: 60vh; /* Adjust height for mobile */
-  }
-
-  .VideoPlayer video {
     width: 100vw;
     height: 60vh;
-    object-fit: cover;
   }
 
-  .VideoContainer h1 {
-    font-size: clamp(28px, 8vw, 48px); /* Larger on mobile */
-    top: 25vh;
-    left: 10vw; /* Adjust positioning */
-    right: 10vw; /* Add right constraint */
-    text-align: center;
+  .VideoOverlayText h1 {
+    font-size: clamp(1.75rem, 8vw, 3rem);
+    top: 25%;
+    left: 15%;
   }
 
-  .VideoContainer h2 {
-    font-size: clamp(18px, 6vw, 32px); /* Larger on mobile */
-    top: 30vh;
-    right: 20vw;
-    position: absolute;
+  .VideoOverlayText h2 {
+    font-size: clamp(1rem, 6vw, 1.75rem);
+    top: 34%;
+    left: 32%;
   }
 
-  .VideoContainer h3 {
-    text-shadow: 1px 1px 10px #00ffff;
-    position: absolute;
-    font-size: clamp(18px, 6vw, 32px);
-    top: 40vh;
-    left: 20vw;
+  .SocialLinks {
+    top: 50%;
+    gap: 1rem;
   }
 }
 
-/* Extra small screens (phones in portrait) */
 @media screen and (max-width: 480px) {
   .VideoPlayer {
-    width: auto;
-    height: 100vh;
-  }
-
-  .VideoPlayer video {
     width: 100vw;
     height: 50vh;
   }
 
-  .VideoContainer h1 {
-    font-size: clamp(24px, 10vw, 40px);
-    top: 45%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 90vw;
-    text-align: center;
+  .VideoOverlayText h1 {
+    font-size: clamp(1.5rem, 10vw, 2.5rem);
+    top: 20%;
+    left: 10%;
   }
 
-  .VideoContainer h2 {
-    font-size: clamp(16px, 7vw, 28px);
-    top: 48vh;
-    right: 10vw;
-    position: absolute;
+  .VideoOverlayText h2 {
+    font-size: clamp(0.875rem, 7vw, 1.5rem);
+    top: 30%;
+    left: 28%;
   }
 
-  .VideoContainer h3 {
-    text-shadow: 1px 1px 10px #00ffff;
-    position: absolute;
-    font-size: clamp(18px, 6vw, 32px);
-    top: 40vh;
-    left: 20vw;
+  .SocialLinks {
+    top: 48%;
   }
 }
 

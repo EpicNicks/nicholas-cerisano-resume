@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 export function VideoPlayer() {
   useEffect(() => {
@@ -7,6 +8,13 @@ export function VideoPlayer() {
   }, []);
 
   const url = require("../../../src/media/videos/sample coding clip.mp4");
+  const iconSize = window.innerWidth <= 768 ? 32 : 48;
+
+  const preventContextMenu = (e: React.MouseEvent) => {
+    e.preventDefault();
+    return false;
+  };
+
   return (
     <div className="VideoContainer">
       <div className="VideoPlayer">
@@ -14,19 +22,41 @@ export function VideoPlayer() {
           className="video-container video-container-overlay"
           loop={true}
           muted={true}
-          data-reactid=".0.1.0.0"
           autoPlay={true}
-          playsInline // for iOS Safari
-          webkit-playsinline="true" // for older iOS versions
+          playsInline
           preload="auto"
           disablePictureInPicture
+          controlsList="nodownload nofullscreen noremoteplayback"
+          onContextMenu={preventContextMenu}
         >
-          <source type="video/mp4" data-reactid=".0.1.0.0.0" src={url} />
+          <source type="video/mp4" src={url} />
         </video>
+        <div className="VideoOverlay" onContextMenu={preventContextMenu}></div>
       </div>
-      {/* <h3>About</h3> */}
-      <h1>Nicholas Cerisano</h1>
-      <h2>Software Developer</h2>
+      <div className="VideoOverlayText">
+        <h1>Nicholas Cerisano</h1>
+        <h2>Software Developer</h2>
+
+        <div className="SocialLinks">
+          <a
+            href="https://github.com/epicnicks"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+          >
+            <FaGithub size={iconSize} />
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/nicholas-cerisano/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+          >
+            <FaLinkedin size={iconSize} />
+          </a>
+        </div>
+      </div>
     </div>
   );
 }
