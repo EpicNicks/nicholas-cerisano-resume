@@ -18,23 +18,25 @@
 
 .About-Main {
   --gap: 100px;
-  display: inline-flex;
+  display: flex;
   flex-direction: row;
   overflow: hidden;
-  margin: calc(-1 * var(--gap)) 0 0 calc(-1 * var(--gap));
-  width: calc(60% + var(--gap));
+  margin: 0;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .About-Image {
-  flex: 1;
+  flex: 0 0 auto;
   padding-top: 7vh;
-  margin: 0 0 0 var(--gap);
-  vertical-align: top;
+  margin-left: var(--gap);
   cursor: pointer;
 }
 
 .About-Image img {
-  max-width: 20vw;
+  width: 500px;
+  max-width: 100%;
   height: auto;
   border-radius: 12px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
@@ -49,24 +51,25 @@
 .About-Body .About-Interests {
   display: flex;
   flex-direction: row;
+  gap: 2rem;
   font-size: 0.9em;
+  margin-top: 2rem;
 }
 
 .AboutSoftwareInterests {
   flex: 1;
-  margin-right: 2rem;
+  min-width: 0;
 }
 
 .AboutPersonalInterests {
   flex: 1;
+  min-width: 0;
 }
 
 .About-Body {
-  flex: 2;
-  width: 30vw;
-  margin: 0 0 0 var(--gap);
+  flex: 1;
+  margin: 0;
   text-align: left;
-  vertical-align: top;
 }
 
 .About-Body h2 {
@@ -80,6 +83,12 @@
   color: #0a4c5c;
 }
 
+.About-Body h3 {
+  font-size: 1.2em;
+  margin-bottom: 0.8em;
+  color: #0a4c5c;
+}
+
 .About-Body ul {
   list-style: none;
   padding-left: 0;
@@ -88,7 +97,7 @@
 
 .About-Body li {
   margin-bottom: 0.8em;
-  padding-left: 0.5em;
+  padding-left: 1.5em;
   position: relative;
 }
 
@@ -100,27 +109,68 @@
   font-weight: bold;
 }
 
+/* Tablet: 1024px and below */
+@media (max-width: 1024px) {
+  .About-Main {
+    --gap: 60px;
+  }
+
+  .About-Image img {
+    width: 320px;
+  }
+}
+
+/* Medium tablet: Stack content */
 @media (max-width: 768px) {
+  .About {
+    padding: 8vh 4vw 4vh 4vw;
+  }
+
   .About-Main {
     flex-direction: column;
     align-items: center;
-    width: 90%;
+    --gap: 0;
+  }
+
+  .About-Image {
+    order: 1;
+    padding-top: 0;
+    margin: 3rem 0 0 0;
+    text-align: center;
+  }
+
+  .About-Image img {
+    width: 350px;
+    max-width: 70vw;
   }
 
   .About-Body {
     width: 100%;
-    margin: 2rem 0 0 0;
+    max-width: 600px;
   }
 
-  .About-Image img {
-    max-width: 60vw;
+  .About-Body .About-Interests {
+    gap: 1.5rem;
+  }
+}
+
+/* Mobile: Stack interests vertically */
+@media (max-width: 600px) {
+  .About-Body .About-Interests {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .AboutSoftwareInterests,
+  .AboutPersonalInterests {
+    margin: 0;
   }
 }
 
 @media (max-width: 480px) {
   .About {
     font-size: 1em;
-    padding: 5vh 2vw 0 2vw;
+    padding: 5vh 5vw 3vh 5vw;
   }
 
   .About h1 {
@@ -128,19 +178,30 @@
   }
 
   .About-Main {
-    --gap: 0;
-    flex-direction: column-reverse;
+    flex-direction: column;
     align-items: center;
-    width: 90%;
+  }
+
+  .About-Image {
+    order: 1;
+    margin: 2rem 0 0 0;
+  }
+
+  .About-Image img {
+    width: 300px;
+    max-width: 85vw;
   }
 
   .About-Body {
     width: 100%;
-    margin: 1.5rem 0 0 0;
   }
 
-  .About-Image img {
-    max-width: 80vw;
+  .About-Body h3 {
+    font-size: 1.1em;
+  }
+
+  .About-Body li {
+    font-size: 0.95em;
   }
 }
 
