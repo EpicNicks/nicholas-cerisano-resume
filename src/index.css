@@ -6,6 +6,15 @@ html {
   background-color: rgb(38, 38, 38);
   scroll-snap-type: y mandatory;
   transition: scroll-snap-type 0.1s ease;
+
+  overflow-x: hidden;
+}
+
+/* iOS safari */
+@supports (-webkit-touch-callout: none) {
+  html {
+    scroll-snap-type: y proximity;
+  }
 }
 
 body {
@@ -53,14 +62,14 @@ h6 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  scroll-margin-top: 80px;
+  /* scroll-margin-top: 80px; */
 }
 
 @supports not (scroll-margin-top: 80px) {
   .page-section::before {
     content: "";
     display: block;
-    height: 80px; /* Same as navbar height */
+    /* height: 80px; Same as navbar height */
     margin-top: -80px;
     visibility: hidden;
   }

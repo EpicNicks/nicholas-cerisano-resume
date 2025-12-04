@@ -120,6 +120,7 @@
 }
 
 .expanded-content {
+  position: relative;
   background: #1d1f23;
   border-radius: 1em;
   padding: 2em;
@@ -135,6 +136,9 @@
   flex-direction: column;
   gap: 16px;
   overflow-y: auto;
+
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.2) rgba(255, 255, 255, 0.05);
 }
 
 .expanded-content .TextContent {
@@ -178,10 +182,37 @@
   background: rgba(255, 255, 255, 0.3);
 }
 
-/* Firefox scrollbar styling */
-.expanded-content {
-  scrollbar-width: thin;
-  scrollbar-color: rgba(255, 255, 255, 0.2) rgba(255, 255, 255, 0.05);
+.close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 28px;
+  line-height: 1;
+  color: white;
+  transition: all 0.2s ease;
+  z-index: 10;
+  padding: 0;
+}
+
+.close-button:hover {
+  background: rgba(220, 38, 38, 0.8);
+  border-color: rgba(255, 59, 59, 0.9);
+  color: white;
+  transform: scale(1.1);
+}
+
+.close-button:active {
+  background: rgba(185, 28, 28, 0.9);
+  transform: scale(0.95);
 }
 
 @media (max-width: 768px) {

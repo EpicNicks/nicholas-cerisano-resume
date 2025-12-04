@@ -16,11 +16,15 @@ export function VideoPlayer() {
           muted={true}
           data-reactid=".0.1.0.0"
           autoPlay={true}
+          playsInline // for iOS Safari
+          webkit-playsinline="true" // for older iOS versions
+          preload="auto"
+          disablePictureInPicture
         >
           <source type="video/mp4" data-reactid=".0.1.0.0.0" src={url} />
         </video>
       </div>
-      <h3>About</h3>
+      {/* <h3>About</h3> */}
       <h1>Nicholas Cerisano</h1>
       <h2>Software Developer</h2>
     </div>

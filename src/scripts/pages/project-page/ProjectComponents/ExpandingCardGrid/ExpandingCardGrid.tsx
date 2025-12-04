@@ -71,9 +71,22 @@ export function ExpandableCardGrid({
           >
             <motion.div
               className="expanded-content"
-              layoutId={`card-${expandedId}`}
+              layoutId={expandedId}
               onClick={(e) => e.stopPropagation()}
             >
+              <motion.button
+                className="close-button"
+                onClick={() => setExpandedId(null)}
+                aria-label="Close"
+                initial={{ opacity: 0, rotate: -90 }}
+                animate={{ opacity: 1, rotate: 0 }}
+                exit={{ opacity: 0, rotate: 90 }}
+                whileHover={{ scale: 1.1, rotate: 90 }}
+                whileTap={{ scale: 0.9 }}
+                transition={{ duration: 0.2 }}
+              >
+                ×
+              </motion.button>
               {ExpandedComponent && <ExpandedComponent />}
             </motion.div>
           </motion.div>

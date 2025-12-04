@@ -32,7 +32,7 @@
 
 .VideoContainer h1 {
   text-shadow: 2px 2px 40px #777;
-  color: aquamarine;
+  color: rgb(127, 246, 255);
   position: absolute;
   /* Use clamp() for responsive font sizing */
   font-size: clamp(24px, 4vw, 120px);
