@@ -62,14 +62,16 @@
   background: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 0.9) 0%,
-    rgba(0, 0, 0, 0.7) 5%,
-    rgba(85, 85, 85, 0.4) 10%,
-    rgba(85, 85, 85, 0.2) 15%,
-    transparent 25%,
-    transparent 75%,
-    rgba(85, 85, 85, 0.2) 85%,
-    rgba(85, 85, 85, 0.4) 90%,
-    rgba(0, 0, 0, 0.7) 95%,
+    rgba(0, 0, 0, 0.85) 5%,
+    rgba(0, 0, 0, 0.7) 10%,
+    rgba(85, 85, 85, 0.3) 25%,
+    rgba(85, 85, 85, 0.1) 35%,
+    transparent 40%,
+    transparent 60%,
+    rgba(85, 85, 85, 0.1) 65%,
+    rgba(85, 85, 85, 0.3) 75%,
+    rgba(0, 0, 0, 0.7) 90%,
+    rgba(0, 0, 0, 0.85) 95%,
     rgba(0, 0, 0, 0.9) 100%
   );
   z-index: 10;
@@ -148,6 +150,24 @@
     height: 60vh;
   }
 
+  #home::before {
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.95) 0%,
+      rgba(0, 0, 0, 0.8) 5%,
+      rgba(85, 85, 85, 0.6) 15%,
+      rgba(85, 85, 85, 0.4) 25%,
+      rgba(85, 85, 85, 0.2) 35%,
+      transparent 40%,
+      transparent 50%,
+      rgba(85, 85, 85, 0.2) 60%,
+      rgba(85, 85, 85, 0.4) 70%,
+      rgba(85, 85, 85, 0.6) 80%,
+      rgba(0, 0, 0, 0.8) 90%,
+      rgba(0, 0, 0, 0.95) 100%
+    );
+  }
+
   .VideoOverlayText h1 {
     font-size: clamp(1.75rem, 8vw, 3rem);
     top: 25%;
@@ -170,6 +190,25 @@
   .VideoPlayer {
     width: 100vw;
     height: 50vh;
+  }
+
+  #home::before {
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.98) 0%,
+      rgba(0, 0, 0, 0.85) 5%,
+      rgba(85, 85, 85, 0.7) 15%,
+      rgba(85, 85, 85, 0.5) 25%,
+      rgba(85, 85, 85, 0.3) 35%,
+      rgba(85, 85, 85, 0.1) 40%,
+      transparent 45%,
+      transparent 50%,
+      rgba(85, 85, 85, 0.2) 60%,
+      rgba(85, 85, 85, 0.5) 70%,
+      rgba(85, 85, 85, 0.7) 80%,
+      rgba(0, 0, 0, 0.85) 90%,
+      rgba(0, 0, 0, 0.98) 100%
+    );
   }
 
   .VideoOverlayText h1 {
