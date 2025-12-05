@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { usePreventBodyScroll } from "../../../../hooks/useModalPreventBodyScrolling";
 import "./ExpandingCardGrid.css";
 
 export type CardInfo = {
@@ -20,6 +21,7 @@ export function ExpandableCardGrid({
   className,
 }: ExpandableCardGridProps) {
   const [expandedId, setExpandedId] = useState<string | null>(null);
+  const zIndex = usePreventBodyScroll(expandedId !== null);
 
   const idFromCard = (card: CardInfo, index: number) =>
     `${className}-${card.title}-${index}`;
@@ -69,6 +71,7 @@ export function ExpandableCardGrid({
         {expandedId && (
           <motion.div
             className="expanded-frame"
+            style={{ zIndex }}
             onClick={handleClose}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
