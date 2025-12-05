@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./Projects.css";
 import { Sidebar } from "./Sidebar/Sidebar";
 import { SpaceShooter } from "./ProjectComponents/UnusedProjects/SpaceShooter";
@@ -9,18 +9,7 @@ import { CaloriesIn } from "./ProjectComponents/PersonalProjects/CaloriesIn/Calo
 import { DefaultPage } from "./ProjectComponents/UnusedProjects/DefaultPage";
 import { NEngineEditor } from "./ProjectComponents/PersonalProjects/NEngineEditor/NEngineEditor";
 import { UniversityProjects } from "./ProjectComponents/UniversityProjects/UniversityProjects";
-
-export const projectIds = [
-  "default",
-  "space-shooter",
-  "glitch-garden",
-  "game-day",
-  "calories-in",
-  "portfolio",
-  "nengine-editor",
-  "university-projects",
-] as const;
-export type ProjectId = (typeof projectIds)[number];
+import type { ProjectId } from "./ProjectData";
 
 export function Projects() {
   const [currentProject, setCurrentProject] = useState<ProjectId>("default");

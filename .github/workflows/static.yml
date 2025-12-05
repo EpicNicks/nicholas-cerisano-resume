@@ -27,9 +27,10 @@ jobs:
 
       # 2. Set up Node.js
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: "18" # adjust if you need a different version
+          node-version: "25"
+          cache: 'npm'
 
       # 3. Install dependencies
       - name: Install dependencies
@@ -43,7 +44,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: build  # <-- deploy only the build folder
+          path: dist
 
       # 6. Deploy to GitHub Pages
       - name: Deploy to GitHub Pages

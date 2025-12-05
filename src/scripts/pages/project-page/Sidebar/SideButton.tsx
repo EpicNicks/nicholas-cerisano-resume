@@ -1,6 +1,5 @@
-import React from "react";
 import "./Sidebar.css";
-import { ProjectId } from "../Projects";
+import type { ProjectId } from "../ProjectData";
 
 interface SideButtonProps {
   text: string;

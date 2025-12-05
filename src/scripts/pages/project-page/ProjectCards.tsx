@@ -1,11 +1,10 @@
-import React from "react";
 import "./ProjectCards.css";
 import { CaloriesIn } from "./ProjectComponents/PersonalProjects/CaloriesIn/CaloriesIn";
 import { NEngineEditor } from "./ProjectComponents/PersonalProjects/NEngineEditor/NEngineEditor";
 import { UniversityProjects } from "./ProjectComponents/UniversityProjects/UniversityProjects";
 import { N2Engine } from "./ProjectComponents/PersonalProjects/N2Engine/N2Engine";
 import {
-  CardInfo,
+  type CardInfo,
   ExpandableCardGrid,
 } from "./ProjectComponents/ExpandingCardGrid/ExpandingCardGrid";
 import { InternalDisputesManagement } from "./ProjectComponents/ProfessionalProjects/InternalDisputesManagement/InternalDisputesManagement";
