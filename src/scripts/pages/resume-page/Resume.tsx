@@ -69,14 +69,6 @@ export const Resume = () => {
             >
               GitHub
             </a>
-            <span className="resume-separator">•</span>
-            <a
-              href="https://resume.nicholascerisano.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Portfolio
-            </a>
           </div>
         </header>
 
