@@ -105,6 +105,7 @@ export function NavBar({ onNavigate }: IProps) {
     });
 
     if (activeBtnIndex === null) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setActiveBtnIndex(0);
     }
 

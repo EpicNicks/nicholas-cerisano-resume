@@ -30,6 +30,11 @@ export function ExpandableCardGrid({
           .component
       : null;
 
+  const handleClose = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    setExpandedId(null);
+  };
+
   return (
     <div className={`card-grid ${className || ""}`}>
       {cards.map((card, index) => (
@@ -64,7 +69,7 @@ export function ExpandableCardGrid({
         {expandedId && (
           <motion.div
             className="expanded-frame"
-            onClick={() => setExpandedId(null)}
+            onClick={handleClose}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -74,19 +79,14 @@ export function ExpandableCardGrid({
               layoutId={expandedId}
               onClick={(e) => e.stopPropagation()}
             >
-              <motion.button
+              <button
                 className="close-button"
-                onClick={() => setExpandedId(null)}
+                onClick={handleClose}
                 aria-label="Close"
-                initial={{ opacity: 0, rotate: -90 }}
-                animate={{ opacity: 1, rotate: 0 }}
-                exit={{ opacity: 0, rotate: 90 }}
-                whileHover={{ scale: 1.1, rotate: 90 }}
-                whileTap={{ scale: 0.9 }}
-                transition={{ duration: 0.2 }}
+                type="button"
               >
                 ×
-              </motion.button>
+              </button>
               {ExpandedComponent && <ExpandedComponent />}
             </motion.div>
           </motion.div>
