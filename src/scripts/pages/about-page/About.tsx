@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import "./About.css";
 
+import nicholasHeadshot from "../../../../src/media/images/Nicholas Headshot 3.png";
+
 export function About() {
   const [isImageExpanded, setIsImageExpanded] = useState(false);
-  const imageSrc = require("../../../../src/media/images/Nicholas Headshot 3.png");
 
   return (
     <div className="About">
@@ -15,20 +16,21 @@ export function About() {
             I'm a software developer with over 4 years of professional
             experience building fullstack web and cloud applications - and many
             more years across different areas of the software space, such as:
-            <ul>
-              <li style={{ margin: 0 }}>Game Development</li>
-              <li style={{ margin: 0 }}>Android Development</li>
-              <li style={{ margin: 0 }}>Game Engine Development</li>
-              <li style={{ margin: 0 }}>
-                Unit Testing, Integration Testing, API Testing, E2E (End-to-End)
-                Testing
-              </li>
-            </ul>
-            <br />I graduated from the Specialized Honors Bachelor of Computer
-            Science program at York University, and I approach problems with a
-            pragmatic and logical mindset. Beyond work, I enjoy exploring new
-            technologies and experimenting with projects that push me to grow as
-            a developer.
+          </p>
+          <ul>
+            <li style={{ margin: 0 }}>Game Development</li>
+            <li style={{ margin: 0 }}>Android Development</li>
+            <li style={{ margin: 0 }}>Game Engine Development</li>
+            <li style={{ margin: 0 }}>
+              Unit Testing, Integration Testing, API Testing, E2E (End-to-End)
+              Testing
+            </li>
+          </ul>
+          <p>
+            I graduated from the Specialized Honors Bachelor of Computer Science
+            program at York University, and I approach problems with a pragmatic
+            and logical mindset. Beyond work, I enjoy exploring new technologies
+            and experimenting with projects that push me to grow as a developer.
           </p>
           <div className="About-Interests">
             <div className="AboutSoftwareInterests">
@@ -63,7 +65,7 @@ export function About() {
           whileHover={{ scale: 1.05 }}
           style={{ cursor: "pointer" }}
         >
-          <img src={imageSrc} alt="My profile" />
+          <img src={nicholasHeadshot} alt="My profile" />
         </motion.div>
       </div>
 
@@ -102,7 +104,7 @@ export function About() {
               >
                 ×
               </motion.button>
-              <img src={imageSrc} alt="My profile expanded" />
+              <img src={nicholasHeadshot} alt="My profile expanded" />
             </motion.div>
           </motion.div>
         )}

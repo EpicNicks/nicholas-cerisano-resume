@@ -1,4 +1,3 @@
-import React from "react";
 import "./InternalDisputesManagement.css";
 
 export function InternalDisputesManagement() {

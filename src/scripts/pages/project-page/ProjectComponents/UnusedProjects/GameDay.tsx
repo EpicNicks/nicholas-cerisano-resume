@@ -1,4 +1,5 @@
-import React from "react";
+import team2Capture from "../../../../media/images/Team2Capture.png";
+import devConsole from "../../../../media/images/DevConsole.png";
 
 export function GameDay() {
   return (
@@ -18,14 +19,8 @@ export function GameDay() {
         [Right] The dev console, for forcing outcomes
       </p>
       <div className="GameDayImages">
-        <img
-          src={require("../../../../media/images/Team2Capture.png")}
-          alt={require("../../../../media/images/Team2Capture.png")}
-        />
-        <img
-          src={require("../../../../media/images/DevConsole.png")}
-          alt={require("../../../../media/images/DevConsole.png")}
-        />
+        <img src={team2Capture} alt="Team 2 gameplay capture" />
+        <img src={devConsole} alt="Developer console" />
       </div>
     </div>
   );

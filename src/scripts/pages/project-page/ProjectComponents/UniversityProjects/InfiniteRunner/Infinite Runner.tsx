@@ -1,10 +1,8 @@
-import React from "react";
 import { Unity } from "react-unity-webgl";
 import "./InfiniteRunner.css";
-import { useUnityGame } from "scripts/hooks/useUnityGame";
+import { useUnityGame } from "../../../../../hooks/useUnityGame";
 
-const unityBuildDirPath =
-  process.env.PUBLIC_URL + "/unity/infinite-skater/Build/";
+const unityBuildDirPath = "/unity/infinite-skater/Build/";
 
 export function InfiniteRunner() {
   const { unityProvider, loadingProgression, isLoaded } = useUnityGame({

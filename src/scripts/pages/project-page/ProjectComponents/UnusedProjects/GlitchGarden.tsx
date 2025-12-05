@@ -1,8 +1,6 @@
-import React from "react";
 import { Unity, useUnityContext } from "react-unity-webgl";
 
-const unityBuildDirPath =
-  process.env.PUBLIC_URL + "/unity/glitch-garden/Build/";
+const unityBuildDirPath = "/unity/glitch-garden/Build/";
 
 export function GlitchGarden() {
   const { unityProvider, loadingProgression, isLoaded } = useUnityContext({

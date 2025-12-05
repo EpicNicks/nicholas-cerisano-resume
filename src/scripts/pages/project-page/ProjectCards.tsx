@@ -12,6 +12,8 @@ import { AzureBatchFunctions } from "./ProjectComponents/ProfessionalProjects/Az
 import { InternalFraudManagement } from "./ProjectComponents/ProfessionalProjects/InternalFraudManagement/InternalFraudManagement";
 import { EndToEndTesting } from "./ProjectComponents/ProfessionalProjects/EndToEndTesting/EndToEndTesting";
 
+import unityLogo from "../../../../src/media/images/unity logo.png";
+
 const professionalProjectCards: CardInfo[] = [
   {
     title: "Internal Disputes Management System",
@@ -262,11 +264,7 @@ const personalProjectCards: CardInfo[] = [
           width: "100%",
         }}
       >
-        <img
-          src="media/images/unity logo.png"
-          alt="Unity logo"
-          className="card-image"
-        />
+        <img src={unityLogo} alt="Unity logo" className="card-image" />
       </div>
     ),
   },

@@ -1,4 +1,3 @@
-import React from "react";
 import "./UniversityProjects.css";
 import { InfiniteRunner } from "./InfiniteRunner/Infinite Runner";
 import { NeonBreakGame } from "./NeonBreakGame/NeonBreakGame";
@@ -6,8 +5,13 @@ import { DummyInsomnia } from "./DummyInsomnia/DummyInsomnia";
 import { ToyMania } from "./ToyMania/ToyMania";
 import {
   ExpandableCardGrid,
-  CardInfo,
+  type CardInfo,
 } from "../ExpandingCardGrid/ExpandingCardGrid";
+
+import neonBreakTitleScreen from "../../../../../media/videos/neon break title screen.mp4";
+import dummyInsomniaClip from "../../../../../media/videos/Dummy Insomnia clip.mp4";
+import infiniteRunnerClip from "../../../../../media/videos/Infinite Runner clip.mp4";
+import toyManiaClip from "../../../../../media/videos/Toy Mania clip.mp4";
 
 const cards: CardInfo[] = [
   {
@@ -17,7 +21,7 @@ const cards: CardInfo[] = [
     borderOutlineColor: "#43ceb7",
     cardMiddle: () => (
       <video
-        src="/media/videos/neon break title screen.mkv"
+        src={neonBreakTitleScreen}
         autoPlay
         loop
         muted
@@ -38,7 +42,7 @@ const cards: CardInfo[] = [
     borderOutlineColor: "#001100",
     cardMiddle: () => (
       <video
-        src="/media/videos/Dummy Insomnia clip.mkv"
+        src={dummyInsomniaClip}
         autoPlay
         loop
         muted
@@ -60,7 +64,7 @@ const cards: CardInfo[] = [
     borderOutlineColor: "#ffff08",
     cardMiddle: () => (
       <video
-        src="/media/videos/Toy Mania clip.mkv"
+        src={toyManiaClip}
         autoPlay
         loop
         muted
@@ -81,7 +85,7 @@ const cards: CardInfo[] = [
     borderOutlineColor: "#ff7e5f",
     cardMiddle: () => (
       <video
-        src="/media/videos/Infinite Runner clip.mp4"
+        src={infiniteRunnerClip}
         autoPlay
         loop
         muted

@@ -1,4 +1,3 @@
-import React from "react";
 import "./DummyInsomnia.css";
 
 export function DummyInsomnia() {
