@@ -50,10 +50,6 @@ export const Resume = () => {
         <header className="resume-header">
           <h1 className="resume-name">Nicholas Cerisano</h1>
           <div className="resume-contact-info">
-            <a href="mailto:cerisano.nicholas@gmail.com">
-              cerisano.nicholas@gmail.com
-            </a>
-            <span className="resume-separator">•</span>
             <a
               href="https://www.linkedin.com/in/nicholas-cerisano"
               target="_blank"
@@ -77,11 +73,6 @@ export const Resume = () => {
             <div className="resume-section">
               <h2 className="resume-section-title">Contact</h2>
               <div className="resume-contact-details">
-                <p>
-                  <a href="mailto:cerisano.nicholas@gmail.com">
-                    cerisano.nicholas@gmail.com
-                  </a>
-                </p>
                 <p>Toronto, ON</p>
               </div>
             </div>

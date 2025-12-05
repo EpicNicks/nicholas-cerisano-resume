@@ -1,5 +1,4 @@
 import { FaLinkedin, FaGithub } from "react-icons/fa";
-import { MdContactMail } from "react-icons/md";
 import "./BottomBar.css";
 
 export function BottomBar() {
@@ -9,14 +8,6 @@ export function BottomBar() {
     <div className="BottomBar">
       <div className="BottomBarTitle">Contact Me</div>
       <div className="BottomBarIcons">
-        <div className="BottomBarLink">
-          <div className="EmailOuter">
-            <a href="mailto:cerisano.nicholas@gmail.com">
-              <MdContactMail className="Email" size={iconSize} />
-            </a>
-          </div>
-          cerisano.nicholas@gmail.com
-        </div>
         <div className="BottomBarLink">
           <div className="LinkedInOuter">
             <a
