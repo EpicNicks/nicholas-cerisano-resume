@@ -39,24 +39,28 @@ function App() {
     };
   }, [handleHashChange, scrollToSection]);
 
+  const pageSectionClassName = "page-section";
+
   return (
     <div className="App">
       <NavBar onNavigate={scrollToSection} />
       <main className="main-content">
-        <section id="home" className="page-section">
+        <section id="home" className={pageSectionClassName}>
           <Home />
         </section>
-        <section id="about" className="page-section">
+        <section id="about" className={pageSectionClassName}>
           <About />
         </section>
-        <section id="projects" className="page-section">
+        <section id="projects" className={pageSectionClassName}>
           <ProjectCards />
         </section>
-        <section id="resume" className="page-section">
+        <section id="resume" className={pageSectionClassName}>
           <Resume />
         </section>
+        <section id="contact-bar">
+          <BottomBar />
+        </section>
       </main>
-      <BottomBar />
     </div>
   );
 }
