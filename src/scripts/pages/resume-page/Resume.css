@@ -7,8 +7,6 @@
   position: relative;
 }
 
-/* Theme Colors */
-
 /* Dark Mode (Default) */
 .resume-container.dark-mode {
   background-color: rgb(38, 38, 38);
@@ -96,8 +94,6 @@
   background-color: rgba(0, 0, 0, 0.06);
   border-color: rgba(0, 0, 0, 0.12);
 }
-
-/* Controls */
 
 .resume-controls {
   position: absolute;
@@ -215,8 +211,6 @@ input:not(:checked) + .slider {
   font-family: var(--subtitle-font);
 }
 
-/* Header */
-
 .resume-header {
   text-align: center;
   margin-bottom: 3rem;
@@ -250,8 +244,6 @@ input:not(:checked) + .slider {
   font-size: 0.75rem;
 }
 
-/* Layout */
-
 .resume-layout {
   display: grid;
   grid-template-columns: 300px 1fr;
@@ -262,10 +254,12 @@ input:not(:checked) + .slider {
 .resume-sidebar {
   padding: 2rem 1.5rem;
   border-radius: 8px;
+  text-align: left;
 }
 
 .resume-main {
   padding-top: 0;
+  text-align: left;
 }
 
 .resume-section {
@@ -284,6 +278,7 @@ input:not(:checked) + .slider {
   font-family: var(--subtitle-font);
   text-transform: uppercase;
   letter-spacing: 1.5px;
+  text-align: left;
 }
 
 .resume-job-title,
@@ -293,29 +288,36 @@ input:not(:checked) + .slider {
   margin: 0;
   font-family: var(--subtitle-font);
   letter-spacing: -0.25px;
+  text-align: left;
 }
 
 .resume-container p {
   line-height: 1.7;
   margin: 0.5rem 0;
   font-size: 0.95rem;
+  text-align: left;
 }
 
-/* Sidebar */
+.resume-contact-details {
+  text-align: left;
+}
 
 .resume-contact-details p {
   margin: 0.5rem 0;
   font-size: 0.9rem;
+  text-align: left;
 }
 
 .resume-skills-list {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
+  text-align: left;
 }
 
 .resume-skill-category {
   line-height: 1.6;
+  text-align: left;
 }
 
 .resume-skill-category strong {
@@ -324,6 +326,7 @@ input:not(:checked) + .slider {
   font-size: 0.875rem;
   font-family: var(--subtitle-font);
   letter-spacing: 0.5px;
+  text-align: left;
 }
 
 .resume-skill-category p {
@@ -331,12 +334,18 @@ input:not(:checked) + .slider {
   font-size: 0.875rem;
   line-height: 1.6;
   opacity: 0.9;
+  text-align: left;
+}
+
+.resume-education {
+  text-align: left;
 }
 
 .resume-education strong {
   display: block;
   font-size: 0.95rem;
   margin-bottom: 0.25rem;
+  text-align: left;
 }
 
 .resume-degree-detail,
@@ -344,12 +353,14 @@ input:not(:checked) + .slider {
   font-size: 0.875rem;
   margin: 0.125rem 0;
   opacity: 0.85;
+  text-align: left;
 }
 
 .resume-education .resume-list {
   list-style: none;
   padding: 0;
   margin-top: 0.75rem;
+  text-align: left;
 }
 
 .resume-education .resume-list-item {
@@ -357,6 +368,7 @@ input:not(:checked) + .slider {
   position: relative;
   font-size: 0.85rem;
   line-height: 1.5;
+  text-align: left;
 }
 
 .resume-education .resume-list-item::before {
@@ -366,18 +378,22 @@ input:not(:checked) + .slider {
   opacity: 0.6;
 }
 
+.resume-certifications {
+  text-align: left;
+}
+
 .resume-certifications p {
   margin: 0.5rem 0;
   font-size: 0.9rem;
+  text-align: left;
 }
 
 .resume-cert-detail {
   font-size: 0.85rem;
   opacity: 0.75;
   margin: 0.125rem 0 0.75rem 0 !important;
+  text-align: left;
 }
-
-/* Main resume */
 
 .resume-job,
 .resume-project {
@@ -403,6 +419,7 @@ input:not(:checked) + .slider {
   margin: 0.25rem 0 0 0;
   opacity: 0.75;
   font-weight: 400;
+  text-align: left;
 }
 
 .resume-date {
@@ -410,6 +427,7 @@ input:not(:checked) + .slider {
   opacity: 0.65;
   white-space: nowrap;
   margin-top: 0.125rem;
+  text-align: left;
 }
 
 .resume-project-tech {
@@ -417,6 +435,7 @@ input:not(:checked) + .slider {
   opacity: 0.75;
   margin: -0.25rem 0 0.5rem 0;
   font-style: italic;
+  text-align: left;
 }
 
 .resume-project-header a {
@@ -430,8 +449,6 @@ input:not(:checked) + .slider {
 .resume-project-header a:hover {
   opacity: 1;
 }
-
-/* lists */
 
 .resume-list {
   list-style: none;
