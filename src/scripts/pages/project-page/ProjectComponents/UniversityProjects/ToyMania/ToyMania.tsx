@@ -1,9 +1,8 @@
-import React from "react";
 import { Unity } from "react-unity-webgl";
 import { useUnityGame } from "../../../../../hooks/useUnityGame";
 import "./ToyMania.css";
 
-const unityBuildDirPath = process.env.PUBLIC_URL + "/unity/toy-mania/Build/";
+const unityBuildDirPath = "/unity/toy-mania/Build/";
 
 export function ToyMania() {
   const { unityProvider, loadingProgression, isLoaded } = useUnityGame({

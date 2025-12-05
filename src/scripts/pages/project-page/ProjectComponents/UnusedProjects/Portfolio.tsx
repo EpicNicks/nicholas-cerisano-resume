@@ -1,4 +1,5 @@
-import React from "react";
+import reactLogo from "../../../../../../src/media/images/react-logo.png";
+import typescriptLogo from "../../../../../../src/media/images/typescript-logo.png";
 
 export function Portfolio() {
   return (
@@ -19,16 +20,8 @@ export function Portfolio() {
         .<br />
       </h3>
       <div className="PortfolioProjectLogos">
-        <img
-          className="ReactLogo"
-          src={require("../../../../../src/media/images/react-logo.png")}
-          alt={require("../../../../../src/media/images/react-logo.png")}
-        />
-        <img
-          className="TSLogo"
-          src={require("../../../../../src/media/images/typescript-logo.png")}
-          alt={require("../../../../../src/media/images/typescript-logo.png")}
-        />
+        <img className="ReactLogo" src={typescriptLogo} alt="typescript logo" />
+        <img className="TSLogo" src={reactLogo} alt="react logo" />
       </div>
     </div>
   );

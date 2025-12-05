@@ -1,4 +1,3 @@
-import React from "react";
 import "./AzureBatchFunctions.css";
 
 export function AzureBatchFunctions() {

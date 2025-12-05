@@ -1,17 +1,18 @@
-import React from "react";
 import "./ProjectCards.css";
 import { CaloriesIn } from "./ProjectComponents/PersonalProjects/CaloriesIn/CaloriesIn";
 import { NEngineEditor } from "./ProjectComponents/PersonalProjects/NEngineEditor/NEngineEditor";
 import { UniversityProjects } from "./ProjectComponents/UniversityProjects/UniversityProjects";
 import { N2Engine } from "./ProjectComponents/PersonalProjects/N2Engine/N2Engine";
 import {
-  CardInfo,
+  type CardInfo,
   ExpandableCardGrid,
 } from "./ProjectComponents/ExpandingCardGrid/ExpandingCardGrid";
 import { InternalDisputesManagement } from "./ProjectComponents/ProfessionalProjects/InternalDisputesManagement/InternalDisputesManagement";
 import { AzureBatchFunctions } from "./ProjectComponents/ProfessionalProjects/AzureBatchFunctions/AzureBatchFunctions";
 import { InternalFraudManagement } from "./ProjectComponents/ProfessionalProjects/InternalFraudManagement/InternalFraudManagement";
 import { EndToEndTesting } from "./ProjectComponents/ProfessionalProjects/EndToEndTesting/EndToEndTesting";
+
+import unityLogo from "../../../../src/media/images/unity logo.png";
 
 const professionalProjectCards: CardInfo[] = [
   {
@@ -263,11 +264,7 @@ const personalProjectCards: CardInfo[] = [
           width: "100%",
         }}
       >
-        <img
-          src="media/images/unity logo.png"
-          alt="Unity logo"
-          className="card-image"
-        />
+        <img src={unityLogo} alt="Unity logo" className="card-image" />
       </div>
     ),
   },

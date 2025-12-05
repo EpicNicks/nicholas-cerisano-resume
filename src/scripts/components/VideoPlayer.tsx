@@ -1,13 +1,14 @@
 import React, { useEffect } from "react";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 
+import codingClip from "../../../src/media/videos/sample coding clip.mp4";
+
 export function VideoPlayer() {
   useEffect(() => {
     const video = document.querySelector("video");
     if (video !== null) video.playbackRate = 10.0;
   }, []);
 
-  const url = require("../../../src/media/videos/sample coding clip.mp4");
   const iconSize = window.innerWidth <= 768 ? 32 : 48;
 
   const preventContextMenu = (e: React.MouseEvent) => {
@@ -29,7 +30,7 @@ export function VideoPlayer() {
           controlsList="nodownload nofullscreen noremoteplayback"
           onContextMenu={preventContextMenu}
         >
-          <source type="video/mp4" src={url} />
+          <source type="video/mp4" src={codingClip} />
         </video>
         <div className="VideoOverlay" onContextMenu={preventContextMenu}></div>
       </div>

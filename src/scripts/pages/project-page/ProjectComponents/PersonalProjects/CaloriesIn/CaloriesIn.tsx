@@ -1,4 +1,3 @@
-import React from "react";
 import "./CaloriesIn.css";
 import { FaGithub } from "react-icons/fa";
 

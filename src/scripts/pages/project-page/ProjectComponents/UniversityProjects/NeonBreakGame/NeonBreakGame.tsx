@@ -1,14 +1,8 @@
-import React from "react";
 import { Unity } from "react-unity-webgl";
 import "./NeonBreakGame.css";
-import { useUnityGame } from "scripts/hooks/useUnityGame";
+import { useUnityGame } from "../../../../../hooks/useUnityGame";
 
-// todo:
-// a stack of cards or otherwise array of cards that display the project
-// when hovered, flips the card
-// when clicked opens the unity component
-const unityBuildDirPath =
-  process.env.PUBLIC_URL + "/unity/vectorheart-game/Build/";
+const unityBuildDirPath = "/unity/vectorheart-game/Build/";
 
 export function NeonBreakGame() {
   const { unityProvider, loadingProgression, isLoaded } = useUnityGame({

@@ -17,7 +17,7 @@ export function useUnityGame({
   const buildPathStartFragment = `${buildDirPath}${buildName}`;
 
   const { 
-    unityProvider, 
+    unityProvider,
     loadingProgression, 
     isLoaded, 
     requestFullscreen,
@@ -56,7 +56,7 @@ export function useUnityGame({
 
   useEffect(() => {
     return () => {
-      unload().catch((error) => {
+      unload().catch((error: unknown) => {
         console.error("Failed to unload Unity instance:", error, " (safe to ignore)");
       });
     };

@@ -1,4 +1,3 @@
-import React from "react";
 import "./InternalFraudManagement.css";
 
 export function InternalFraudManagement() {

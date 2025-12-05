@@ -1,8 +1,6 @@
-import React from "react";
 import { Unity, useUnityContext } from "react-unity-webgl";
 
-const unityBuildDirPath =
-  process.env.PUBLIC_URL + "/unity/space-shooter/Build/";
+const unityBuildDirPath = "/unity/space-shooter/Build/";
 
 export function SpaceShooter() {
   const { unityProvider, loadingProgression, isLoaded } = useUnityContext({
