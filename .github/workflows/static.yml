@@ -36,8 +36,11 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      # 4. Build the project
+      # 4. Build the project with environment variables
       - name: Build project
+        env:
+          VITE_TURNSTILE_SITE_KEY: ${{ secrets.VITE_TURNSTILE_SITE_KEY }}
+          VITE_API_URL: ${{ secrets.VITE_API_URL }}
         run: npm run build
 
       # 5. Upload the build folder

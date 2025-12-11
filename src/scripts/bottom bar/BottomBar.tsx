@@ -6,7 +6,7 @@ export function BottomBar() {
 
   return (
     <div className="BottomBar">
-      <div className="BottomBarTitle">Contact Me</div>
+      <div className="BottomBarTitle">Socials</div>
       <div className="BottomBarIcons">
         <div className="BottomBarLink">
           <div className="LinkedInOuter">
