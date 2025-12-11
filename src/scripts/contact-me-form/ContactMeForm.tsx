@@ -1,10 +1,9 @@
 import { useState, type FormEvent, useEffect, useRef } from "react";
-import "./ContactForm.css";
+import "./ContactMeForm.css";
 
 declare global {
   interface Window {
     turnstile: {
-      ready: (callback: () => void) => void;
       render: (
         container: string | HTMLElement,
         options: {
@@ -18,12 +17,11 @@ declare global {
       ) => string;
       reset: (widgetId: string) => void;
       remove: (widgetId: string) => void;
-      getResponse: (widgetId: string) => string;
     };
   }
 }
 
-export function ContactForm() {
+export function ContactMeForm() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -40,48 +38,73 @@ export function ContactForm() {
   const turnstileRef = useRef<HTMLDivElement>(null);
   const widgetIdRef = useRef<string>("");
 
+  // Environment variables
+  const SITE_KEY =
+    import.meta.env.VITE_TURNSTILE_SITE_KEY || "1x00000000000000000000AA";
+  const API_URL = import.meta.env.VITE_API_URL || "http://localhost:3000";
+
+  /**
+   * Initialize Turnstile widget
+   * Uses retry logic since we're using async/defer in script tag
+   */
   useEffect(() => {
-    if (window.turnstile) {
-      window.turnstile.ready(() => {
-        if (turnstileRef.current && !widgetIdRef.current) {
-          try {
-            widgetIdRef.current = window.turnstile.render(
-              turnstileRef.current,
-              {
-                sitekey: "0x4AAAA_YOUR_SITE_KEY_HERE",
+    const initTurnstile = () => {
+      if (window.turnstile && turnstileRef.current && !widgetIdRef.current) {
+        try {
+          widgetIdRef.current = window.turnstile.render(turnstileRef.current, {
+            sitekey: SITE_KEY,
+            theme: "auto",
+            size: "normal",
+            callback: (token: string) => {
+              console.log("Turnstile challenge completed");
+              setTurnstileToken(token);
+            },
+            "error-callback": (errorCode: string) => {
+              console.error("Turnstile error:", errorCode);
+              setErrorMessage(
+                "CAPTCHA error occurred. Please refresh the page."
+              );
+            },
+            "expired-callback": () => {
+              console.warn("Turnstile token expired");
+              setTurnstileToken("");
+            },
+          });
 
-                theme: "auto",
-                size: "normal",
-
-                callback: (token: string) => {
-                  console.log("Turnstile challenge completed");
-                  setTurnstileToken(token);
-                },
-
-                "error-callback": (errorCode: string) => {
-                  console.error("Turnstile error:", errorCode);
-                  setErrorMessage(
-                    "CAPTCHA error occurred. Please refresh the page."
-                  );
-                },
-
-                "expired-callback": () => {
-                  console.warn("Turnstile token expired");
-                  setTurnstileToken("");
-                  setErrorMessage("CAPTCHA expired. Please complete it again.");
-                },
-              }
-            );
-
-            console.log("Turnstile widget initialized:", widgetIdRef.current);
-          } catch (error) {
-            console.error("Failed to initialize Turnstile:", error);
-            setErrorMessage("Failed to load CAPTCHA. Please refresh the page.");
-          }
+          console.log("Turnstile widget initialized:", widgetIdRef.current);
+          return true;
+        } catch (error) {
+          console.error("Failed to initialize Turnstile:", error);
+          return false;
         }
-      });
+      }
+      return false;
+    };
+
+    // Try to initialize immediately
+    if (initTurnstile()) {
+      return;
     }
-  }, []);
+
+    // If not ready, try again with intervals (handles async script loading)
+    let attempts = 0;
+    const maxAttempts = 20; // Try for 2 seconds
+
+    const interval = setInterval(() => {
+      attempts++;
+
+      if (initTurnstile() || attempts >= maxAttempts) {
+        clearInterval(interval);
+
+        if (attempts >= maxAttempts && !widgetIdRef.current) {
+          console.error("Turnstile failed to load after max attempts");
+          setErrorMessage("Failed to load CAPTCHA. Please refresh the page.");
+        }
+      }
+    }, 100);
+
+    return () => clearInterval(interval);
+  }, [SITE_KEY]);
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
@@ -102,7 +125,7 @@ export function ContactForm() {
     setErrorMessage("");
 
     try {
-      const response = await fetch("https://api.nicholascerisano.com/contact", {
+      const response = await fetch(`${API_URL}/contact`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -121,6 +144,7 @@ export function ContactForm() {
         throw new Error(error.error || "Failed to send message");
       }
 
+      // Success!
       setStatus("success");
       setFormData({
         name: "",
@@ -136,6 +160,7 @@ export function ContactForm() {
       }
       setTurnstileToken("");
 
+      // Auto-hide success message after 5 seconds
       setTimeout(() => setStatus("idle"), 5000);
     } catch (error) {
       setStatus("error");
@@ -163,28 +188,32 @@ export function ContactForm() {
   };
 
   return (
-    <div className="ContactForm">
-      <h2>Send Me a Message</h2>
-      <form onSubmit={handleSubmit}>
+    <div className="contact-form-container">
+      <h2 className="contact-form-title">Send Me a Message</h2>
+      <form className="contact-form" onSubmit={handleSubmit}>
+        {/* Honeypot field - hidden from users, catches bots */}
         <input
           type="text"
           name="honeypot"
           value={formData.honeypot}
           onChange={handleChange}
-          style={{ display: "none" }}
+          className="contact-form-honeypot"
           tabIndex={-1}
           autoComplete="off"
           aria-hidden="true"
         />
 
-        <div className="form-group">
-          <label htmlFor="name">Name</label>
+        <div className="contact-form-group">
+          <label htmlFor="contact-name" className="contact-form-label">
+            Name
+          </label>
           <input
             type="text"
-            id="name"
+            id="contact-name"
             name="name"
             value={formData.name}
             onChange={handleChange}
+            className="contact-form-input"
             required
             disabled={status === "sending"}
             maxLength={100}
@@ -192,28 +221,34 @@ export function ContactForm() {
           />
         </div>
 
-        <div className="form-group">
-          <label htmlFor="email">Email</label>
+        <div className="contact-form-group">
+          <label htmlFor="contact-email" className="contact-form-label">
+            Email
+          </label>
           <input
             type="email"
-            id="email"
+            id="contact-email"
             name="email"
             value={formData.email}
             onChange={handleChange}
+            className="contact-form-input"
             required
             disabled={status === "sending"}
             placeholder="your.email@example.com"
           />
         </div>
 
-        <div className="form-group">
-          <label htmlFor="subject">Subject</label>
+        <div className="contact-form-group">
+          <label htmlFor="contact-subject" className="contact-form-label">
+            Subject
+          </label>
           <input
             type="text"
-            id="subject"
+            id="contact-subject"
             name="subject"
             value={formData.subject}
             onChange={handleChange}
+            className="contact-form-input"
             required
             disabled={status === "sending"}
             maxLength={200}
@@ -221,14 +256,17 @@ export function ContactForm() {
           />
         </div>
 
-        <div className="form-group">
-          <label htmlFor="message">Message</label>
+        <div className="contact-form-group">
+          <label htmlFor="contact-message" className="contact-form-label">
+            Message
+          </label>
           <textarea
-            id="message"
+            id="contact-message"
             name="message"
             rows={5}
             value={formData.message}
             onChange={handleChange}
+            className="contact-form-textarea"
             required
             disabled={status === "sending"}
             maxLength={2000}
@@ -236,25 +274,29 @@ export function ContactForm() {
           />
         </div>
 
-        <div className="form-group">
-          <div ref={turnstileRef} id="turnstile-widget"></div>
+        {/* Turnstile CAPTCHA widget */}
+        <div className="contact-form-group">
+          <div ref={turnstileRef} className="contact-form-turnstile"></div>
         </div>
 
         <button
           type="submit"
+          className="contact-form-submit"
           disabled={status === "sending" || !turnstileToken}
         >
           {status === "sending" ? "Sending..." : "Send Message"}
         </button>
 
         {status === "success" && (
-          <div className="status-message success">
+          <div className="contact-form-status contact-form-status-success">
             ✓ Message sent successfully! I'll get back to you soon.
           </div>
         )}
 
         {status === "error" && (
-          <div className="status-message error">✗ {errorMessage}</div>
+          <div className="contact-form-status contact-form-status-error">
+            ✗ {errorMessage}
+          </div>
         )}
       </form>
     </div>

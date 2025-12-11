@@ -6,6 +6,7 @@ import { Home } from "./scripts/pages/home-page/Home";
 import { Resume } from "./scripts/pages/resume-page/Resume";
 import { About } from "./scripts/pages/about-page/About";
 import ProjectCards from "./scripts/pages/project-page/ProjectCards";
+import { ContactMeForm } from "./scripts/contact-me-form/ContactMeForm";
 
 function App() {
   const scrollToSection = useCallback((sectionId: string): void => {
@@ -56,6 +57,9 @@ function App() {
         </section>
         <section id="resume" className={pageSectionClassName}>
           <Resume />
+        </section>
+        <section id="contact-form" className={pageSectionClassName}>
+          <ContactMeForm />
         </section>
         <section id="contact-bar">
           <BottomBar />
