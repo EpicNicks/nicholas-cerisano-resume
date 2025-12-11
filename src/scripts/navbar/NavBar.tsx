@@ -18,6 +18,7 @@ const navButtons: NavButtonConfig[] = [
   { text: "About Me", id: ["about"], sectionId: "about" },
   { text: "My Projects", id: ["projects"], sectionId: "projects" },
   { text: "Resume", id: ["resume"], sectionId: "resume" },
+  { text: "Contact Me", id: ["contact-form"], sectionId: "contact-form" },
 ];
 
 export function NavBar({ onNavigate }: IProps) {
@@ -96,7 +97,7 @@ export function NavBar({ onNavigate }: IProps) {
     }, options);
 
     // Observe all sections
-    const sections = ["home", "about", "resume", "projects"];
+    const sections = ["home", "about", "resume", "projects", "contact-form"];
     sections.forEach((sectionId) => {
       const element = document.getElementById(sectionId);
       if (element && intersectionObserverRef.current) {
