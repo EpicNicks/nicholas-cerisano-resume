@@ -4,17 +4,9 @@
 html {
   scroll-behavior: smooth;
   background-color: rgb(38, 38, 38);
-  scroll-snap-type: y mandatory;
-  transition: scroll-snap-type 0.1s ease;
-
+  /* scroll-snap-type: y mandatory;
+  transition: scroll-snap-type 0.1s ease; */
   overflow-x: hidden;
-}
-
-/* iOS safari */
-@supports (-webkit-touch-callout: none) {
-  html {
-    scroll-snap-type: y proximity;
-  }
 }
 
 body {
@@ -48,12 +40,6 @@ h6 {
 @font-face {
   font-family: "Open Sans", sans-serif;
   src: url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,500&family=Open+Sans:wght@600&display=swap");
-}
-
-.main-content {
-  width: 100%;
-  flex: 1;
-  margin-top: 0;
 }
 
 .page-section {

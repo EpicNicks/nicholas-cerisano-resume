@@ -14,9 +14,24 @@
   min-height: 100vh;
 }
 
-.App section {
+.page-section {
+  min-height: 100vh;
   scroll-snap-align: start;
   scroll-snap-stop: always;
+}
+
+.main-content {
+  scroll-snap-type: y mandatory;
+  width: 100%;
+  flex: 1;
+  margin-top: 0;
+}
+
+/* iOS safari */
+@supports (-webkit-touch-callout: none) {
+  .main-content {
+    scroll-snap-type: y proximity;
+  }
 }
 
 .App h1,

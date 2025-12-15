@@ -191,7 +191,6 @@ export function ContactMeForm() {
     <div className="contact-form-container">
       <h2 className="contact-form-title">Send Me a Message</h2>
       <form className="contact-form" onSubmit={handleSubmit}>
-        {/* Honeypot field - hidden from users, catches bots */}
         <input
           type="text"
           name="honeypot"
@@ -217,7 +216,6 @@ export function ContactMeForm() {
             required
             disabled={status === "sending"}
             maxLength={100}
-            placeholder="Your name"
           />
         </div>
 
@@ -234,7 +232,6 @@ export function ContactMeForm() {
             className="contact-form-input"
             required
             disabled={status === "sending"}
-            placeholder="your.email@example.com"
           />
         </div>
 
@@ -252,7 +249,6 @@ export function ContactMeForm() {
             required
             disabled={status === "sending"}
             maxLength={200}
-            placeholder="What's this about?"
           />
         </div>
 
@@ -270,7 +266,7 @@ export function ContactMeForm() {
             required
             disabled={status === "sending"}
             maxLength={2000}
-            placeholder="Your message..."
+            placeholder="What will be build together?"
           />
         </div>
 
