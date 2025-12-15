@@ -274,11 +274,6 @@ export function ContactMeForm() {
           />
         </div>
 
-        {/* Turnstile CAPTCHA widget */}
-        <div className="contact-form-group">
-          <div ref={turnstileRef} className="contact-form-turnstile"></div>
-        </div>
-
         <button
           type="submit"
           className="contact-form-submit"
@@ -298,6 +293,11 @@ export function ContactMeForm() {
             ✗ {errorMessage}
           </div>
         )}
+
+        {/* Turnstile CAPTCHA widget */}
+        <div className="contact-form-group">
+          <div ref={turnstileRef} className="contact-form-turnstile"></div>
+        </div>
       </form>
     </div>
   );

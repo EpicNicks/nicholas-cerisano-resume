@@ -10,9 +10,8 @@ export const Resume = () => {
   };
 
   const handleDownload = () => {
-    // Create a link to download the PDF
     const link = document.createElement("a");
-    link.href = "/Nicholas_Cerisano_Resume.pdf"; // Update this path to match your PDF location
+    link.href = "/Nicholas_Cerisano_Resume.pdf";
     link.download = "Nicholas_Cerisano_Resume.pdf";
     document.body.appendChild(link);
     link.click();

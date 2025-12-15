@@ -49,14 +49,14 @@ function App() {
         <section id="home" className={pageSectionClassName}>
           <Home />
         </section>
-        <section id="about" className={pageSectionClassName}>
-          <About />
-        </section>
         <section id="projects" className={pageSectionClassName}>
           <ProjectCards />
         </section>
         <section id="resume" className={pageSectionClassName}>
           <Resume />
+        </section>
+        <section id="about" className={pageSectionClassName}>
+          <About />
         </section>
         <section id="contact-form" className={pageSectionClassName}>
           <ContactMeForm />

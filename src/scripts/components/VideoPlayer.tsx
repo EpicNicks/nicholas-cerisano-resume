@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { FiDownload } from "react-icons/fi";
 
 import codingClip from "../../../src/media/videos/sample coding clip.mp4";
 
@@ -14,6 +15,15 @@ export function VideoPlayer() {
   const preventContextMenu = (e: React.MouseEvent) => {
     e.preventDefault();
     return false;
+  };
+
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = "/Nicholas_Cerisano_Resume.pdf";
+    link.download = "Nicholas_Cerisano_Resume.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
@@ -38,6 +48,13 @@ export function VideoPlayer() {
         <h1>Nicholas Cerisano</h1>
         <h2>Software Developer</h2>
 
+        <div className="SubtitleContainer">
+          <h3>
+            4 Years Professionally Creating Fullstack Apps for Web and Cloud
+          </h3>
+          <h3>15 Years Curiously Exploring and Building in Software</h3>
+        </div>
+
         <div className="SocialLinks">
           <a
             href="https://github.com/epicnicks"
@@ -47,7 +64,6 @@ export function VideoPlayer() {
           >
             <FaGithub size={iconSize} />
           </a>
-
           <a
             href="https://www.linkedin.com/in/nicholas-cerisano/"
             target="_blank"
@@ -56,6 +72,14 @@ export function VideoPlayer() {
           >
             <FaLinkedin size={iconSize} />
           </a>
+          <button
+            className="homepage-resume-download-btn"
+            onClick={handleDownload}
+            aria-label="Download resume"
+          >
+            <FiDownload size={16} />
+            Download My Resume
+          </button>
         </div>
       </div>
     </div>
