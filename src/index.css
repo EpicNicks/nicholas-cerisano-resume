@@ -30,6 +30,9 @@ h6 {
   /* Fonts */
   --title-font: "Open Sans", sans-serif;
   --subtitle-font: Montserrat, sans-serif;
+
+  --home-blur: 12px;
+  --home-blur-mobile: 6px;
 }
 
 @font-face {

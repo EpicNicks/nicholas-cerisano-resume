@@ -1,10 +1,10 @@
 .VideoPlayer {
   position: relative;
-  -webkit-filter: blur(12px);
-  -moz-filter: blur(12px);
-  -o-filter: blur(12px);
-  -ms-filter: blur(12px);
-  filter: blur(12px);
+  -webkit-filter: blur(var(--home-blur));
+  -moz-filter: blur(var(--home-blur));
+  -o-filter: blur(var(--home-blur));
+  -ms-filter: blur(var(--home-blur));
+  filter: blur(var(--home-blur));
   height: 80vh;
   width: 80vw;
   overflow: hidden;
@@ -205,6 +205,11 @@
   .VideoPlayer {
     width: 100vw;
     height: 60vh;
+    -webkit-filter: blur(var(--home-blur-mobile));
+    -moz-filter: blur(var(--home-blur-mobile));
+    -o-filter: blur(var(--home-blur-mobile));
+    -ms-filter: blur(var(--home-blur-mobile));
+    filter: blur(var(--home-blur-mobile));
   }
 
   #home::before {
@@ -262,8 +267,17 @@
 
 @media screen and (max-width: 480px) {
   .VideoPlayer {
+    height: 100vh;
     width: 100vw;
-    height: 50vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+  }
+
+  .VideoPlayer video {
+    height: 80%;
+    width: auto;
+    transform: translateX(-5%);
   }
 
   #home::before {
