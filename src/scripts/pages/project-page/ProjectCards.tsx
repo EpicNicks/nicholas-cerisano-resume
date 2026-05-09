@@ -13,6 +13,17 @@ import { InternalFraudManagement } from "./ProjectComponents/ProfessionalProject
 import { EndToEndTesting } from "./ProjectComponents/ProfessionalProjects/EndToEndTesting/EndToEndTesting";
 
 import unityLogo from "../../../../src/media/images/unity logo.png";
+import typescriptIcon from "../../../../src/media/images/typescript_icon.svg";
+import reactIcon from "../../../../src/media/images/react_icon.svg";
+import javaIcon from "../../../../src/media/images/java_icon.svg";
+import springIcon from "../../../../src/media/images/spring_boot_icon.png";
+import nodeJsIcon from "../../../../src/media/images/nodejs_icon.png";
+import javascriptIcon from "../../../../src/media/images/javascript_icon.png";
+import puppeteerIcon from "../../../../src/media/images/puppeteer_icon.png";
+import cppIcon from "../../../../src/media/images/cpp_icon.svg";
+import csharpIcon from "../../../../src/media/images/csharp_icon.svg";
+import caloriesInLogo from "../../../../src/media/images/calories_in_icon.webp";
+import sfmlIcon from "../../../../src/media/images/sfml_icon.svg";
 
 const professionalProjectCards: CardInfo[] = [
   {
@@ -28,32 +39,16 @@ const professionalProjectCards: CardInfo[] = [
         }}
       >
         <div>
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/640px-Typescript_logo_2020.svg.png"
-            alt="TS logo"
-            className="card-image"
-          />
+          <img src={typescriptIcon} alt="TS logo" className="card-image" />
         </div>
         <div>
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"
-            alt="React logo"
-            className="card-image"
-          />
+          <img src={reactIcon} alt="React logo" className="card-image" />
         </div>
         <div>
-          <img
-            src="https://upload.wikimedia.org/wikipedia/fr/thumb/2/2e/Java_Logo.svg/330px-Java_Logo.svg.png?20061227215918"
-            alt="Java logo"
-            className="card-image"
-          />
+          <img src={javaIcon} alt="Java logo" className="card-image" />
         </div>
         <div>
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/7/79/Spring_Boot.svg"
-            alt="Spring logo"
-            className="card-image"
-          />
+          <img src={springIcon} alt="Spring logo" className="card-image" />
         </div>
       </div>
     ),
@@ -73,18 +68,10 @@ const professionalProjectCards: CardInfo[] = [
         }}
       >
         <div>
-          <img
-            src="https://upload.wikimedia.org/wikipedia/fr/thumb/2/2e/Java_Logo.svg/330px-Java_Logo.svg.png?20061227215918"
-            alt="Java logo"
-            className="card-image"
-          />
+          <img src={javaIcon} alt="Java logo" className="card-image" />
         </div>
         <div>
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Spring_Framework_Logo_2018.svg/640px-Spring_Framework_Logo_2018.svg.png"
-            alt="Spring logo"
-            className="card-image"
-          />
+          <img src={springIcon} alt="Spring logo" className="card-image" />
         </div>
       </div>
     ),
@@ -104,32 +91,16 @@ const professionalProjectCards: CardInfo[] = [
         }}
       >
         <div>
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/640px-Typescript_logo_2020.svg.png"
-            alt="TS logo"
-            className="card-image"
-          />
+          <img src={typescriptIcon} alt="TS logo" className="card-image" />
         </div>
         <div>
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"
-            alt="React logo"
-            className="card-image"
-          />
+          <img src={reactIcon} alt="React logo" className="card-image" />
         </div>
         <div>
-          <img
-            src="https://upload.wikimedia.org/wikipedia/fr/thumb/2/2e/Java_Logo.svg/330px-Java_Logo.svg.png?20061227215918"
-            alt="Java logo"
-            className="card-image"
-          />
+          <img src={javaIcon} alt="Java logo" className="card-image" />
         </div>
         <div>
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/7/79/Spring_Boot.svg"
-            alt="Spring logo"
-            className="card-image"
-          />
+          <img src={springIcon} alt="Spring logo" className="card-image" />
         </div>
       </div>
     ),
@@ -150,21 +121,17 @@ const professionalProjectCards: CardInfo[] = [
       >
         <div>
           <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Javascript_Logo.png/640px-Javascript_Logo.png"
+            src={javascriptIcon}
             alt="JavaScript logo"
             className="card-image"
           />
         </div>
         <div>
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/2560px-Node.js_logo.svg.png"
-            alt="NodeJS logo"
-            className="card-image"
-          />
+          <img src={nodeJsIcon} alt="NodeJS logo" className="card-image" />
         </div>
         <div>
           <img
-            src="https://user-images.githubusercontent.com/10379601/29446482-04f7036a-841f-11e7-9872-91d1fc2ea683.png"
+            src={puppeteerIcon}
             alt="Puppeteer logo"
             className="card-image"
           />
@@ -190,11 +157,7 @@ const personalProjectCards: CardInfo[] = [
           width: "100%",
         }}
       >
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg"
-          alt="N2Engine logo"
-          className="card-image"
-        />
+        <img src={cppIcon} alt="N2Engine logo" className="card-image" />
       </div>
     ),
   },
@@ -213,18 +176,10 @@ const personalProjectCards: CardInfo[] = [
         }}
       >
         <div>
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Logo_C_sharp.png"
-            alt="NEngine logo"
-            className="card-image"
-          />
+          <img src={csharpIcon} alt="NEngine logo" className="card-image" />
         </div>
         <div>
-          <img
-            src="https://www.sfml-dev.org/download/goodies/sfml-icon-big.png"
-            alt="SFML logo"
-            className="card-image"
-          />
+          <img src={sfmlIcon} alt="SFML logo" className="card-image" />
         </div>
       </div>
     ),
@@ -243,7 +198,7 @@ const personalProjectCards: CardInfo[] = [
         }}
       >
         <img
-          src="https://caloriesin.49385219.xyz/images/calories-in-logo.webp"
+          src={caloriesInLogo}
           alt="calories in logo"
           className="card-image"
         />

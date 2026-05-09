@@ -1,5 +1,7 @@
 import "./CaloriesIn.css";
 import { FaGithub } from "react-icons/fa";
+import dartIcon from "../../../../../../media/images/dart_icon.png";
+import flutterIcon from "../../../../../../media/images/flutter_icon.svg";
 
 export function CaloriesIn() {
   return (
@@ -62,16 +64,10 @@ export function CaloriesIn() {
               />
             </a>
             <a href="https://dart.dev/" target="_blank" rel="noreferrer">
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Dart_programming_language_logo_icon.svg/960px-Dart_programming_language_logo_icon.svg.png?20220708094811"
-                alt="dart logo"
-              />
+              <img src={dartIcon} alt="dart logo" />
             </a>
             <a href="https://flutter.dev/" target="_blank" rel="noreferrer">
-              <img
-                src="https://storage.googleapis.com/cms-storage-bucket/0dbfcc7a59cd1cf16282.png"
-                alt="flutter logo"
-              />
+              <img src={flutterIcon} alt="flutter logo" />
             </a>
           </div>
         </div>
