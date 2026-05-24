@@ -2,6 +2,8 @@ import { useState } from "react";
 import { FiSun, FiMoon, FiDownload } from "react-icons/fi";
 import "./Resume.css";
 
+import resumePdf from "../../../media/documents/Nicholas Cerisano Resume.pdf";
+
 export const Resume = () => {
   const [isDarkMode, setIsDarkMode] = useState(true);
 
@@ -11,8 +13,8 @@ export const Resume = () => {
 
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "/Nicholas_Cerisano_Resume.pdf";
-    link.download = "Nicholas_Cerisano_Resume.pdf";
+    link.href = resumePdf;
+    link.download = "Nicholas Cerisano Resume.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -128,10 +130,6 @@ export const Resume = () => {
                   <strong>Microsoft Azure Fundamentals</strong>
                 </p>
                 <p className="resume-cert-detail">AZ-900, 2022</p>
-                <p>
-                  <strong>Azure Administrator Associate</strong>
-                </p>
-                <p className="resume-cert-detail">AZ-104 (in progress)</p>
               </div>
             </div>
           </aside>
@@ -233,13 +231,55 @@ export const Resume = () => {
 
               <div className="resume-project">
                 <div className="resume-project-header">
+                  <h3 className="resume-project-title">Calories In</h3>
+                  <a
+                    href="https://play.google.com/store/apps/details?id=com.aspirant.calorie_tracker"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="github-link"
+                    style={{ color: "#3DDC84" }}
+                  >
+                    View on Google Play{" "}
+                    <span className="animated-arrow">→</span>
+                  </a>
+                  <a
+                    href="https://github.com/EpicNicks/Calories-In-SimpleCalorieCounter-"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="github-link"
+                  >
+                    View on GitHub <span className="animated-arrow">→</span>
+                  </a>
+                </div>
+                <p className="resume-project-tech">
+                  Dart + Flutter Mobile Calorie Tracker
+                </p>
+                <ul className="resume-list">
+                  <li className="resume-list-item">
+                    Mobile app for tracking caloric intake as well as setting
+                    goals and monitoring progress. Data is kept locally in a
+                    SQLite database with an option for the user to download
+                    their personal data in CSV format.
+                  </li>
+                  <li className="resume-list-item">
+                    Written in Dart using the Flutter framework, leveraging
+                    Kotlin for areas requiring native Android capabilities.
+                    Targeting Android devices with a clean and intuitive user
+                    interface.
+                  </li>
+                </ul>
+              </div>
+
+              <div className="resume-project">
+                <div className="resume-project-header">
                   <h3 className="resume-project-title">N2Engine</h3>
                   <a
                     href="https://github.com/EpicNicks/N2Engine"
                     target="_blank"
                     rel="noopener noreferrer"
+                    className="github-link"
                   >
-                    View on GitHub →
+                    View on GitHub <span className="animated-arrow">→</span>
                   </a>
                 </div>
                 <p className="resume-project-tech">C++ Game Engine</p>
@@ -262,8 +302,9 @@ export const Resume = () => {
                     href="https://github.com/EpicNicks/NEngineEditor"
                     target="_blank"
                     rel="noopener noreferrer"
+                    className="github-link"
                   >
-                    View on GitHub →
+                    View on GitHub <span className="animated-arrow">→</span>
                   </a>
                 </div>
                 <p className="resume-project-tech">C# Game Engine + Editor</p>

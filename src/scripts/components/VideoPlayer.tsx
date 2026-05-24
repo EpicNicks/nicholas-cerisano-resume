@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { FiDownload } from "react-icons/fi";
 
+import resumePdf from "../../media/documents/Nicholas Cerisano Resume.pdf";
 import codingClip from "../../../src/media/videos/sample coding clip.mp4";
 
 export function VideoPlayer() {
@@ -19,8 +20,8 @@ export function VideoPlayer() {
 
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "/Nicholas_Cerisano_Resume.pdf";
-    link.download = "Nicholas_Cerisano_Resume.pdf";
+    link.href = resumePdf;
+    link.download = "Nicholas Cerisano Resume.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
