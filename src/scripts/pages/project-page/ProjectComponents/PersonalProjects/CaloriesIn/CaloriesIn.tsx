@@ -2,6 +2,7 @@ import "./CaloriesIn.css";
 import { FaGithub } from "react-icons/fa";
 import dartIcon from "../../../../../../media/images/dart_icon.png";
 import flutterIcon from "../../../../../../media/images/flutter_icon.svg";
+import googlePlayBadge from "../../../../../../media/images/google_play_store_badge.svg";
 
 export function CaloriesIn() {
   return (
@@ -58,10 +59,7 @@ export function CaloriesIn() {
               target="_blank"
               rel="noreferrer"
             >
-              <img
-                src="https://raw.githubusercontent.com/pioug/google-play-badges/main/svg/English.svg"
-                alt="google play logo"
-              />
+              <img src={googlePlayBadge} alt="google play logo" />
             </a>
             <a href="https://dart.dev/" target="_blank" rel="noreferrer">
               <img src={dartIcon} alt="dart logo" />
