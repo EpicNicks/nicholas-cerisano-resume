@@ -84,25 +84,30 @@ export const Resume = () => {
                 <div className="resume-skill-category">
                   <strong>Languages</strong>
                   <p>
-                    C#, C++, Python, Java, JavaScript, TypeScript, Kotlin, SQL
+                    C#, C++, C, Dart, Python, Java, JavaScript, TypeScript,
+                    Kotlin, Go, SQL, MS SQL Server, PostgreSQL, GraphQL
                   </p>
                 </div>
                 <div className="resume-skill-category">
                   <strong>Frameworks</strong>
                   <p>
                     React, Redux Toolkit, Spring Boot, Kafka, Node.js, Unity,
-                    Flutter, WPF
+                    Flutter, WPF, Claude Code, Github Copilot
                   </p>
                 </div>
                 <div className="resume-skill-category">
                   <strong>Cloud & Tools</strong>
                   <p>
-                    Azure, AWS, Docker, Kubernetes, Git, CI/CD, JIRA, SonarQube
+                    Azure, AWS, Docker, Kubernetes, Git, CI/CD, JIRA, SonarQube,
+                    Puppeteer, ReadyAPI
                   </p>
                 </div>
                 <div className="resume-skill-category">
                   <strong>Testing</strong>
-                  <p>Unit, Integration, API, E2E, ReadyAPI, Puppeteer</p>
+                  <p>
+                    Unit, Integration, API, E2E, ReadyAPI, Puppeteer, JUnit,
+                    Mockito, NUnit, GoogleTest
+                  </p>
                 </div>
               </div>
             </div>
@@ -155,18 +160,39 @@ export const Resume = () => {
                     <h3 className="resume-job-title">Software Developer II</h3>
                     <p className="resume-company">Moneris</p>
                   </div>
-                  <span className="resume-date">Nov 2023 – Present</span>
+                  <span className="resume-date">Nov 2023 - Present</span>
+                </div>
+                <div className="resume-job-summary">
+                  Worked in a full-stack capacity with ownership and
+                  accountability over several business domains of technical
+                  subject matter expertise, including multiple Java Spring Azure
+                  cloud functions and two major full-stack web applications in a
+                  Java Spring, React Typescript, and MS SQL tech stack. Worked
+                  in an Agile environment with daily standups meeting with a
+                  scrum master and a bi-weekly sprint cycle - collaborating with
+                  senior developers and stakeholders to deliver evolving
+                  business requirements.
                 </div>
                 <ul className="resume-list">
                   <li className="resume-list-item">
                     Led a 4-person agile team to redesign and modernize a
-                    critical internal business application, improving uptime
-                    from 99.5% to 99.99% by migrating to Azure cloud
+                    full-stack critical internal business application, improving
+                    uptime from 99.5% to 99.99% by migrating to Azure cloud as a
+                    part of a greater cloud modernization.
                   </li>
                   <li className="resume-list-item">
-                    Contributed to large-scale enterprise applications in
-                    full-stack capacity, collaborating with senior developers
-                    and stakeholders to deliver evolving business requirements
+                    Worked on 5 modernization projects across legacy processes
+                    from EJB to Java Spring, moving them from our on-premises
+                    server to Azure cloud CI/CD deployment pipelines,
+                    prioritizing maintainability and reducing incidents by 60%
+                    per month on average.
+                  </li>
+                  <li className="resume-list-item">
+                    Worked with business users of internal disputes case
+                    management UI system to deliver features and more efficient
+                    user interfaces which allowed them to resolve 15% more cases
+                    per week on average compared with users on the legacy
+                    system.
                   </li>
                   <li className="resume-list-item">
                     Maintained 90%+ test coverage, reviewed code, and introduced
@@ -182,20 +208,33 @@ export const Resume = () => {
                     <h3 className="resume-job-title">Software Developer I</h3>
                     <p className="resume-company">Moneris</p>
                   </div>
-                  <span className="resume-date">Apr 2022 – Nov 2023</span>
+                  <span className="resume-date">Apr 2022 - Nov 2023</span>
+                </div>
+                <div className="resume-job-summary">
+                  Developed and maintained full-stack features for internal case
+                  management and fraud reporting applications for use by
+                  internal employees in a Java Spring backend interacting with a
+                  MS SQL database and a React frontend with TypeScript. Worked
+                  collaboratively in an Agile team environment with senior
+                  developers, product owners, and stakeholders to deliver
+                  evolving business requirements as well as lost technical
+                  specifications while maintaining high code quality and test
+                  coverage.
                 </div>
                 <ul className="resume-list">
                   <li className="resume-list-item">
-                    Sole developer of front-end rewrite project, creating a
-                    sustainable codebase with minimized technical debt
+                    Sole developer of self-pitched front-end rewrite project,
+                    creating a sustainable codebase with minimized technical
+                    debt
                   </li>
                   <li className="resume-list-item">
-                    Increased API reliability 25%, reduced manual testing 90%,
-                    and cut production defects 30% through automated API testing
+                    Increased API reliability by 25%, reduced manual testing by
+                    90%, and cut production defects by 30% through automated API
+                    testing
                   </li>
                   <li className="resume-list-item">
-                    Improved API performance 50% via Redux Toolkit integration;
-                    supported and mentored interns and new hires
+                    Improved API performance by 50% via Redux Toolkit
+                    integration; supported and mentored interns and new hires
                   </li>
                   <li className="resume-list-item">
                     Promoted to Developer II in 18 months (vs. 24-month average)
@@ -211,16 +250,56 @@ export const Resume = () => {
                     </h3>
                     <p className="resume-company">Moneris</p>
                   </div>
-                  <span className="resume-date">2019 & 2021</span>
+                  <span className="resume-date">May 2021 - Aug 2021</span>
+                </div>
+                <div className="resume-job-summary">
+                  Worked alongside senior developers and fellow interns to
+                  deliver features in a full-stack capacity in Java Spring and
+                  React with JavaScript - later replaced with TypeScript.
                 </div>
                 <ul className="resume-list">
                   <li className="resume-list-item">
-                    Built Puppeteer E2E automation covering 90% of flows,
+                    Advocated TypeScript adoption, preventing 5-10 potential
+                    issues per sprint; offered full-time role after internship.
+                  </li>
+                  <li className="resume-list-item">
+                    Created and delivered presentations on modernizing our
+                    codebases and convinced senior developers to learn
+                    TypeScript and pivot away from legacy JavaScript.
+                  </li>
+                  <li className="resume-list-item">
+                    Developed across the frontend and backend stacks, gaining
+                    valuable subject matter expertise which followed me into my
+                    full-time role which was offered at the conclusion of the
+                    internship.
+                  </li>
+                </ul>
+              </div>
+
+              <div className="resume-job">
+                <div className="resume-job-header">
+                  <div>
+                    <h3 className="resume-job-title">
+                      Software Developer Intern
+                    </h3>
+                    <p className="resume-company">Moneris</p>
+                  </div>
+                  <span className="resume-date">May 2019 - Aug 2019</span>
+                </div>
+                <div className="resume-job-summary">
+                  Learned pioneering library Puppeteer.js and applied it to
+                  create an end-to-end automated testing suite leveraging
+                  Jest.js for internal web applications.
+                </div>
+                <ul className="resume-list">
+                  <li className="resume-list-item">
+                    Built JavaScript E2E automation covering 90% of flows,
                     reducing regression testing from 2 days to 2 hours
                   </li>
                   <li className="resume-list-item">
-                    Advocated TypeScript adoption, preventing 5–10 potential
-                    issues per sprint; offered full-time role after internship
+                    Proactively programatically identified and reported edge
+                    cases in complex user flows to the development team,
+                    improving defect detection earlier in the release cycle.
                   </li>
                 </ul>
               </div>

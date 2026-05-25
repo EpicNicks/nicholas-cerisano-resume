@@ -321,6 +321,14 @@ input:not(:checked) + .slider {
   text-align: left;
 }
 
+.resume-job-summary {
+  margin: 0.5rem 0 1rem 0;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  opacity: 0.9;
+  text-align: left;
+}
+
 .resume-container p {
   line-height: 1.7;
   margin: 0.5rem 0;
