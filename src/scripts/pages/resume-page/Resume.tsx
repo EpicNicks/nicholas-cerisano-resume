@@ -84,29 +84,29 @@ export const Resume = () => {
                 <div className="resume-skill-category">
                   <strong>Languages</strong>
                   <p>
-                    C#, C++, C, Dart, Python, Java, JavaScript, TypeScript,
-                    Kotlin, Go, SQL, MS SQL Server, PostgreSQL, GraphQL
+                    C#, C++, C, Python, Java, JavaScript, TypeScript, Kotlin,
+                    Dart, Go, SQL, MS SQL Server, PostgreSQL, GraphQL
                   </p>
                 </div>
                 <div className="resume-skill-category">
                   <strong>Frameworks</strong>
                   <p>
                     React, Redux Toolkit, Spring Boot, Kafka, Node.js, Unity,
-                    Flutter, WPF, Claude Code, Github Copilot
+                    Flutter, WPF, OpenGL, NVIDIA PhysX, SFML.NET, GitHub
+                    Copilot, Claude Code
                   </p>
                 </div>
                 <div className="resume-skill-category">
                   <strong>Cloud & Tools</strong>
                   <p>
-                    Azure, AWS, Docker, Kubernetes, Git, CI/CD, JIRA, SonarQube,
-                    Puppeteer, ReadyAPI
+                    Azure, AWS, Docker, Kubernetes, Git, CI/CD, JIRA, SonarQube
                   </p>
                 </div>
                 <div className="resume-skill-category">
                   <strong>Testing</strong>
                   <p>
-                    Unit, Integration, API, E2E, ReadyAPI, Puppeteer, JUnit,
-                    Mockito, NUnit, GoogleTest
+                    Unit, Integration, API, E2E, ReadyAPI, Puppeteer, Jest,
+                    JUnit, Mockito, NUnit, GoogleTest
                   </p>
                 </div>
               </div>
@@ -124,6 +124,9 @@ export const Resume = () => {
                     Academic entrance scholarship
                   </li>
                   <li className="resume-list-item">Hackathon participant</li>
+                  <li className="resume-list-item">
+                    Returned as a Hackathon mentor
+                  </li>
                 </ul>
               </div>
             </div>
@@ -143,11 +146,12 @@ export const Resume = () => {
             <div className="resume-section">
               <h2 className="resume-section-title">Profile</h2>
               <p>
-                Full-stack software developer with 4+ years delivering
-                high-availability web applications in agile environments.
-                Skilled in React, Java Spring, and Azure, with a proven record
-                improving performance, reliability, and workflows. Recognized
-                for system design and collaborative leadership.
+                Full-stack software developer with 4+ years of delivering
+                high-availability web applications in Agile environments.
+                Skilled in React TypeScript and JavaScript, Java Spring, and
+                Azure, with a proven record of improving performance,
+                reliability, and workflows. Recognized for system design and
+                collaborative leadership.
               </p>
             </div>
 
@@ -167,37 +171,45 @@ export const Resume = () => {
                   accountability over several business domains of technical
                   subject matter expertise, including multiple Java Spring Azure
                   cloud functions and two major full-stack web applications in a
-                  Java Spring, React Typescript, and MS SQL tech stack. Worked
-                  in an Agile environment with daily standups meeting with a
-                  scrum master and a bi-weekly sprint cycle - collaborating with
-                  senior developers and stakeholders to deliver evolving
-                  business requirements.
+                  Java Spring, React TypeScript, and MS SQL tech stack. Worked
+                  in an Agile environment with daily standups and a bi-weekly
+                  sprint cycle, tracking work and managing delivery through
+                  JIRA, collaborating with senior developers and stakeholders to
+                  deliver evolving business requirements.
                 </div>
                 <ul className="resume-list">
                   <li className="resume-list-item">
                     Led a 4-person agile team to redesign and modernize a
                     full-stack critical internal business application, improving
-                    uptime from 99.5% to 99.99% by migrating to Azure cloud as a
-                    part of a greater cloud modernization.
+                    uptime from 99.5% to 99.99% by migrating to Azure cloud as
+                    part of a greater cloud modernization initiative.
                   </li>
                   <li className="resume-list-item">
-                    Worked on 5 modernization projects across legacy processes
-                    from EJB to Java Spring, moving them from our on-premises
-                    server to Azure cloud CI/CD deployment pipelines,
-                    prioritizing maintainability and reducing incidents by 60%
-                    per month on average.
+                    Drove 5 modernization projects migrating legacy EJB
+                    processes to Java Spring and Azure cloud CI/CD deployment
+                    pipelines, prioritizing maintainability and reducing
+                    incidents by 60% per month on average.
                   </li>
                   <li className="resume-list-item">
-                    Worked with business users of internal disputes case
-                    management UI system to deliver features and more efficient
-                    user interfaces which allowed them to resolve 15% more cases
-                    per week on average compared with users on the legacy
-                    system.
+                    Collaborated with business users of an internal disputes
+                    case management UI to deliver features and more efficient
+                    interfaces, enabling users to resolve 15% more cases per
+                    week compared to the legacy system.
                   </li>
                   <li className="resume-list-item">
-                    Maintained 90%+ test coverage, reviewed code, and introduced
-                    coding standards to enhance consistency and developer
-                    experience
+                    Maintained 90%+ full-stack test coverage as reported by
+                    SonarQube using JUnit and Mockito for Java services and Jest
+                    for the React frontend.
+                  </li>
+                  <li className="resume-list-item">
+                    Established coding standards and conducted code reviews,
+                    improving consistency and developer experience across the
+                    team.
+                  </li>
+                  <li className="resume-list-item">
+                    Mentored 2 summer interns on code quality practices and
+                    subject matter knowledge, accelerating their onboarding time
+                    by 2 weeks.
                   </li>
                 </ul>
               </div>
@@ -212,32 +224,34 @@ export const Resume = () => {
                 </div>
                 <div className="resume-job-summary">
                   Developed and maintained full-stack features for internal case
-                  management and fraud reporting applications for use by
-                  internal employees in a Java Spring backend interacting with a
-                  MS SQL database and a React frontend with TypeScript. Worked
-                  collaboratively in an Agile team environment with senior
+                  management and fraud reporting applications in a Java Spring
+                  backend with MS SQL database and React TypeScript frontend.
+                  Collaborated in an Agile team environment with senior
                   developers, product owners, and stakeholders to deliver
-                  evolving business requirements as well as lost technical
-                  specifications while maintaining high code quality and test
-                  coverage.
+                  evolving business requirements, managing work through JIRA
+                  from ticket creation to deployment, while maintaining high
+                  code quality and test coverage.
                 </div>
                 <ul className="resume-list">
                   <li className="resume-list-item">
-                    Sole developer of self-pitched front-end rewrite project,
-                    creating a sustainable codebase with minimized technical
-                    debt
+                    Self-pitched and led full-stack rewrite of a legacy
+                    application, initially collaborating with two backend
+                    developers on the Java Spring and MS SQL layer before taking
+                    sole ownership of the entire stack including the React
+                    TypeScript frontend, delivering new features end-to-end.
                   </li>
                   <li className="resume-list-item">
                     Increased API reliability by 25%, reduced manual testing by
                     90%, and cut production defects by 30% through automated API
-                    testing
+                    testing using ReadyAPI.
                   </li>
                   <li className="resume-list-item">
-                    Improved API performance by 50% via Redux Toolkit
-                    integration; supported and mentored interns and new hires
+                    Improved API performance by 50% by introducing RTK Query for
+                    client-side caching, reducing redundant API calls.
                   </li>
                   <li className="resume-list-item">
-                    Promoted to Developer II in 18 months (vs. 24-month average)
+                    Promoted to Developer II in 18 months vs. 24-month average,
+                    recognized for code quality and initiative.
                   </li>
                 </ul>
               </div>
@@ -254,8 +268,9 @@ export const Resume = () => {
                 </div>
                 <div className="resume-job-summary">
                   Worked alongside senior developers and fellow interns to
-                  deliver features in a full-stack capacity in Java Spring and
-                  React with JavaScript - later replaced with TypeScript.
+                  deliver features in a full-stack capacity in Java Spring for
+                  the backend and React with JavaScript, later replaced with
+                  TypeScript, for the frontend.
                 </div>
                 <ul className="resume-list">
                   <li className="resume-list-item">
@@ -263,15 +278,9 @@ export const Resume = () => {
                     issues per sprint; offered full-time role after internship.
                   </li>
                   <li className="resume-list-item">
-                    Created and delivered presentations on modernizing our
-                    codebases and convinced senior developers to learn
-                    TypeScript and pivot away from legacy JavaScript.
-                  </li>
-                  <li className="resume-list-item">
-                    Developed across the frontend and backend stacks, gaining
-                    valuable subject matter expertise which followed me into my
-                    full-time role which was offered at the conclusion of the
-                    internship.
+                    Created and delivered presentations on modernizing the
+                    team's frontend codebases, convincing senior developers to
+                    adopt TypeScript and pivot away from JavaScript.
                   </li>
                 </ul>
               </div>
@@ -287,19 +296,22 @@ export const Resume = () => {
                   <span className="resume-date">May 2019 - Aug 2019</span>
                 </div>
                 <div className="resume-job-summary">
-                  Learned pioneering library Puppeteer.js and applied it to
-                  create an end-to-end automated testing suite leveraging
-                  Jest.js for internal web applications.
+                  Learned and applied Puppeteer.js to create an end-to-end
+                  automated testing suite leveraging Jest.js for internal web
+                  applications.
                 </div>
                 <ul className="resume-list">
                   <li className="resume-list-item">
-                    Built JavaScript E2E automation covering 90% of flows,
-                    reducing regression testing from 2 days to 2 hours
+                    Sole developer of JavaScript E2E automation suite using
+                    Puppeteer and Jest, growing coverage from near-zero to 90%
+                    of critical OMS user flows and reducing regression testing
+                    from 2 days to 2 hours per release cycle.
                   </li>
                   <li className="resume-list-item">
-                    Proactively programatically identified and reported edge
-                    cases in complex user flows to the development team,
-                    improving defect detection earlier in the release cycle.
+                    Proactively identified and reported edge case defects in
+                    complex user flows to the development team, improving
+                    pre-release defect detection and reducing risk of issues
+                    reaching production.
                   </li>
                 </ul>
               </div>
@@ -310,7 +322,7 @@ export const Resume = () => {
 
               <div className="resume-project">
                 <div className="resume-project-header">
-                  <h3 className="resume-project-title">Calories In</h3>
+                  <h3 className="resume-project-title">CaloriesIn</h3>
                   <a
                     href="https://play.google.com/store/apps/details?id=com.aspirant.calorie_tracker"
                     target="_blank"
@@ -331,19 +343,19 @@ export const Resume = () => {
                   </a>
                 </div>
                 <p className="resume-project-tech">
-                  Dart + Flutter Mobile Calorie Tracker
+                  Flutter Mobile Calorie Tracker
                 </p>
                 <ul className="resume-list">
                   <li className="resume-list-item">
-                    Mobile app for tracking caloric intake as well as setting
-                    goals and monitoring progress. Data is kept locally in a
-                    SQLite database with an option for the user to download
-                    their personal data in CSV format.
+                    Mobile app for tracking caloric intake, setting goals, and
+                    monitoring progress. Data is stored locally in a SQLite
+                    database with an option to export personal data in CSV
+                    format.
                   </li>
                   <li className="resume-list-item">
                     Written in Dart using the Flutter framework, leveraging
-                    Kotlin for areas requiring native Android capabilities.
-                    Targeting Android devices with a clean and intuitive user
+                    Kotlin for areas requiring native Android capabilities,
+                    targeting Android devices with a clean and intuitive user
                     interface.
                   </li>
                 </ul>
@@ -365,11 +377,15 @@ export const Resume = () => {
                 <ul className="resume-list">
                   <li className="resume-list-item">
                     Integration with Nvidia PhysX and OpenGL for physics and
-                    graphics rendering systems
+                    graphics rendering systems.
                   </li>
                   <li className="resume-list-item">
                     Applied lessons from developing NEngine in C# to the
-                    architecture of N2Engine
+                    architecture of N2Engine.
+                  </li>
+                  <li className="resume-list-item">
+                    Modern C++23 design patterns for memory safety and
+                    performance.
                   </li>
                 </ul>
               </div>
@@ -390,15 +406,15 @@ export const Resume = () => {
                 <ul className="resume-list">
                   <li className="resume-list-item">
                     Designed Unity-inspired object/component system for
-                    flexible, maintainable architecture
+                    flexible, maintainable architecture.
                   </li>
                   <li className="resume-list-item">
                     Built event-driven MVVM architecture WPF editor with content
-                    browser, inspector, and scene tools for 2D games
+                    browser, inspector, and scene tools for games.
                   </li>
                   <li className="resume-list-item">
                     Enabled runtime property reflection; optimized update loop
-                    using SFML.NET
+                    using SFML.NET.
                   </li>
                 </ul>
               </div>
