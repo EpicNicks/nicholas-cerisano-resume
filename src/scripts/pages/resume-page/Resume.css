@@ -158,12 +158,12 @@ input:checked + .slider::before {
 }
 
 /* Resume link arrow nudge animation */
-.github-link .animated-arrow {
+.resume-link .animated-arrow {
   display: inline-block;
   transition: transform 0.2s ease;
 }
 
-.github-link:hover .animated-arrow {
+.resume-link:hover .animated-arrow {
   animation: nudgeRight 0.4s infinite linear;
 }
 

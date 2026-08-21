@@ -54,17 +54,19 @@ export const Resume = () => {
             <a
               href="https://www.linkedin.com/in/nicholas-cerisano"
               target="_blank"
+              className="resume-link"
               rel="noopener noreferrer"
             >
-              LinkedIn
+              LinkedIn <span className="animated-arrow">→</span>
             </a>
             <span className="resume-separator">•</span>
             <a
               href="https://github.com/EpicNicks"
               target="_blank"
+              className="resume-link"
               rel="noopener noreferrer"
             >
-              GitHub
+              GitHub <span className="animated-arrow">→</span>
             </a>
           </div>
         </header>
@@ -145,14 +147,14 @@ export const Resume = () => {
               <h2 className="resume-section-title">Profile</h2>
               <p>
                 Full-Stack Software Developer with 4+ years building and
-                maintaining high-availability web applications in the
-                payments and fintech industry. Works across React and
-                TypeScript front ends and Java Spring services on Azure, with
-                a focus on system performance, reliability, and developer
-                workflow. Led a cloud migration that raised application
-                uptime from 99.5% to 99.99% and mentored junior developers
-                while setting team-wide coding standards. Specialized Honours
-                B.CS. and Microsoft Certified Azure Fundamentals (AZ-900).
+                maintaining high-availability web applications in the payments
+                and fintech industry. Works across React and TypeScript front
+                ends and Java Spring services on Azure, with a focus on system
+                performance, reliability, and developer workflow. Led a cloud
+                migration that raised application uptime from 99.5% to 99.99%
+                and mentored junior developers while setting team-wide coding
+                standards. Specialized Honours B.CS. and Microsoft Certified
+                Azure Fundamentals (AZ-900).
               </p>
             </div>
 
@@ -182,14 +184,13 @@ export const Resume = () => {
                 </div>
                 <div className="resume-job-summary">
                   Full-stack developer on the Admin Tools development team,
-                  working in a .NET / IIS environment supporting a
-                  multitenant architecture where applications provision
-                  per-user MongoDB and MS SQL Server databases for
-                  customer-specific field customization. Uses agentic
-                  engineering practices (Claude Code) as part of the team's
-                  core workflow, with architectural responsibility across the
-                  admin tools platform and upcoming involvement in a URL
-                  shortener service.
+                  working in a .NET / IIS environment supporting a multitenant
+                  architecture where applications provision per-user MongoDB and
+                  MS SQL Server databases for customer-specific field
+                  customization. Uses agentic engineering practices (Claude
+                  Code) as part of the team's core workflow, with architectural
+                  responsibility across the admin tools platform and upcoming
+                  involvement in a URL shortener service.
                 </div>
                 <ul className="resume-list">
                   <li className="resume-list-item">
@@ -200,8 +201,8 @@ export const Resume = () => {
                   </li>
                   <li className="resume-list-item">
                     Apply agentic engineering practices using Claude Code to
-                    accelerate implementation and review, as part of a
-                    broader shift toward AI-assisted software development.
+                    accelerate implementation and review, as part of a broader
+                    shift toward AI-assisted software development.
                   </li>
                   <li className="resume-list-item">
                     Use Docker to containerize services for local development
@@ -382,7 +383,7 @@ export const Resume = () => {
                     href="https://play.google.com/store/apps/details?id=com.aspirant.calorie_tracker"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="github-link"
+                    className="resume-link"
                     style={{ color: "#3DDC84" }}
                   >
                     View on Google Play{" "}
@@ -392,7 +393,7 @@ export const Resume = () => {
                     href="https://github.com/EpicNicks/Calories-In-SimpleCalorieCounter-"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="github-link"
+                    className="resume-link"
                   >
                     View on GitHub <span className="animated-arrow">→</span>
                   </a>
@@ -423,7 +424,7 @@ export const Resume = () => {
                     href="https://github.com/EpicNicks/N2Engine"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="github-link"
+                    className="resume-link"
                   >
                     View on GitHub <span className="animated-arrow">→</span>
                   </a>
@@ -452,7 +453,7 @@ export const Resume = () => {
                     href="https://github.com/EpicNicks/NEngineEditor"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="github-link"
+                    className="resume-link"
                   >
                     View on GitHub <span className="animated-arrow">→</span>
                   </a>
