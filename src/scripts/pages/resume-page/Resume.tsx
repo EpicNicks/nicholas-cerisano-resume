@@ -85,28 +85,26 @@ export const Resume = () => {
                   <strong>Languages</strong>
                   <p>
                     C#, C++, C, Python, Java, JavaScript, TypeScript, Kotlin,
-                    Dart, Go, SQL, MS SQL Server, PostgreSQL, GraphQL
+                    Dart, Go, SQL, MS SQL Server, PostgreSQL, MongoDB, GraphQL
                   </p>
                 </div>
                 <div className="resume-skill-category">
-                  <strong>Frameworks</strong>
+                  <strong>Frameworks & Tools</strong>
                   <p>
-                    React, Redux Toolkit, Spring Boot, Kafka, Node.js, Unity,
-                    Flutter, WPF, OpenGL, NVIDIA PhysX, SFML.NET, GitHub
-                    Copilot, Claude Code
+                    React, Redux Toolkit, Spring Boot, REST, Kafka, Node.js,
+                    Docker, Kubernetes, Redis, Unity, Flutter, WPF, GitHub
+                    Copilot, Claude Code, OpenGL, NVIDIA PhysX, SFML.NET
                   </p>
                 </div>
                 <div className="resume-skill-category">
-                  <strong>Cloud & Tools</strong>
-                  <p>
-                    Azure, AWS, Docker, Kubernetes, Git, CI/CD, JIRA, SonarQube
-                  </p>
+                  <strong>Cloud & DevOps</strong>
+                  <p>Azure, AWS, IIS, Git, CI/CD, JIRA, SonarQube</p>
                 </div>
                 <div className="resume-skill-category">
                   <strong>Testing</strong>
                   <p>
-                    Unit, Integration, API, E2E, ReadyAPI, Puppeteer, Jest,
-                    JUnit, Mockito, NUnit, GoogleTest
+                    Unit, Integration, API, E2E, ReadyAPI, Postman, Puppeteer,
+                    Jest, JUnit, Mockito, NUnit, GoogleTest
                   </p>
                 </div>
               </div>
@@ -125,7 +123,7 @@ export const Resume = () => {
                   </li>
                   <li className="resume-list-item">Hackathon participant</li>
                   <li className="resume-list-item">
-                    Returned as a Hackathon mentor
+                    Returned as a Hackathon mentor (November 2025)
                   </li>
                 </ul>
               </div>
@@ -146,12 +144,26 @@ export const Resume = () => {
             <div className="resume-section">
               <h2 className="resume-section-title">Profile</h2>
               <p>
-                Full-stack software developer with 4+ years of delivering
-                high-availability web applications in Agile environments.
-                Skilled in React TypeScript and JavaScript, Java Spring, and
-                Azure, with a proven record of improving performance,
-                reliability, and workflows. Recognized for system design and
-                collaborative leadership.
+                Full-Stack Software Developer with 4+ years building and
+                maintaining high-availability web applications in the
+                payments and fintech industry. Works across React and
+                TypeScript front ends and Java Spring services on Azure, with
+                a focus on system performance, reliability, and developer
+                workflow. Led a cloud migration that raised application
+                uptime from 99.5% to 99.99% and mentored junior developers
+                while setting team-wide coding standards. Specialized Honours
+                B.CS. and Microsoft Certified Azure Fundamentals (AZ-900).
+              </p>
+            </div>
+
+            <div className="resume-section">
+              <h2 className="resume-section-title">Core Competencies</h2>
+              <p>
+                Agile team leadership and cross-functional collaboration •
+                Technical mentorship and onboarding • System design and
+                architecture • Stakeholder communication and presentation •
+                Code-quality standards and peer review • Analytical
+                problem-solving • Ownership and self-starter mindset
               </p>
             </div>
 
@@ -161,21 +173,61 @@ export const Resume = () => {
               <div className="resume-job">
                 <div className="resume-job-header">
                   <div>
+                    <h3 className="resume-job-title">
+                      Intermediate Full-Stack Developer II
+                    </h3>
+                    <p className="resume-company">Method CRM</p>
+                  </div>
+                  <span className="resume-date">Jul 2026 - Present</span>
+                </div>
+                <div className="resume-job-summary">
+                  Full-stack developer on the Admin Tools development team,
+                  working in a .NET / IIS environment supporting a
+                  multitenant architecture where applications provision
+                  per-user MongoDB and MS SQL Server databases for
+                  customer-specific field customization. Uses agentic
+                  engineering practices (Claude Code) as part of the team's
+                  core workflow, with architectural responsibility across the
+                  admin tools platform and upcoming involvement in a URL
+                  shortener service.
+                </div>
+                <ul className="resume-list">
+                  <li className="resume-list-item">
+                    Contribute to architectural decisions for a multi-tenant
+                    admin tools platform within a .NET / IIS stack, where
+                    applications provision per-user MongoDB and MS SQL Server
+                    databases to enable customer-specific field customization.
+                  </li>
+                  <li className="resume-list-item">
+                    Apply agentic engineering practices using Claude Code to
+                    accelerate implementation and review, as part of a
+                    broader shift toward AI-assisted software development.
+                  </li>
+                  <li className="resume-list-item">
+                    Use Docker to containerize services for local development
+                    and testing, and Postman for API testing and validation.
+                  </li>
+                </ul>
+              </div>
+
+              <div className="resume-job">
+                <div className="resume-job-header">
+                  <div>
                     <h3 className="resume-job-title">Software Developer II</h3>
                     <p className="resume-company">Moneris</p>
                   </div>
-                  <span className="resume-date">Nov 2023 - Present</span>
+                  <span className="resume-date">Nov 2023 - May 2026</span>
                 </div>
                 <div className="resume-job-summary">
                   Worked in a full-stack capacity with ownership and
                   accountability over several business domains of technical
                   subject matter expertise, including multiple Java Spring Azure
                   cloud functions and two major full-stack web applications in a
-                  Java Spring, React TypeScript, and MS SQL tech stack. Worked
-                  in an Agile environment with daily standups and a bi-weekly
-                  sprint cycle, tracking work and managing delivery through
-                  JIRA, collaborating with senior developers and stakeholders to
-                  deliver evolving business requirements.
+                  Java Spring, React TypeScript, Redis, and MS SQL tech stack.
+                  Worked in an Agile environment with daily standups and a
+                  bi-weekly sprint cycle, tracking work and managing delivery
+                  through JIRA, collaborating with senior developers and
+                  stakeholders to deliver evolving business requirements.
                 </div>
                 <ul className="resume-list">
                   <li className="resume-list-item">
@@ -250,6 +302,9 @@ export const Resume = () => {
                     client-side caching, reducing redundant API calls.
                   </li>
                   <li className="resume-list-item">
+                    Supported and mentored interns and new hires.
+                  </li>
+                  <li className="resume-list-item">
                     Promoted to Developer II in 18 months vs. 24-month average,
                     recognized for code quality and initiative.
                   </li>
@@ -298,13 +353,13 @@ export const Resume = () => {
                 <div className="resume-job-summary">
                   Learned and applied Puppeteer.js to create an end-to-end
                   automated testing suite leveraging Jest.js for internal web
-                  applications.
+                  applications such as Moneris Risk Database, MRD.
                 </div>
                 <ul className="resume-list">
                   <li className="resume-list-item">
                     Sole developer of JavaScript E2E automation suite using
                     Puppeteer and Jest, growing coverage from near-zero to 90%
-                    of critical OMS user flows and reducing regression testing
+                    of critical MRD user flows and reducing regression testing
                     from 2 days to 2 hours per release cycle.
                   </li>
                   <li className="resume-list-item">
