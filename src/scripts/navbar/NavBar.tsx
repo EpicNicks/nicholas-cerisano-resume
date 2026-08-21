@@ -39,7 +39,7 @@ export function NavBar({ onNavigate }: IProps) {
 
     // Update active button index
     const index = navButtons.findIndex(
-      (btn) => btn.id.includes(id) || (id === "home" && btn.id.includes(""))
+      (btn) => btn.id.includes(id) || (id === "home" && btn.id.includes("")),
     );
     if (index !== -1) {
       setActiveBtnIndex(index);
@@ -50,7 +50,7 @@ export function NavBar({ onNavigate }: IProps) {
 
   const getCurrentSection = useCallback(
     (): string => currentSection,
-    [currentSection]
+    [currentSection],
   );
 
   const setActiveButtonIndex = useCallback((index: number): void => {
@@ -72,7 +72,7 @@ export function NavBar({ onNavigate }: IProps) {
       // Scroll to section
       onNavigate(sectionId);
     },
-    [onNavigate, setActiveStateId]
+    [onNavigate, setActiveStateId],
   );
 
   useEffect(() => {
