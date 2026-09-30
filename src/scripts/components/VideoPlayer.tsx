@@ -51,7 +51,7 @@ export function VideoPlayer() {
 
         <div className="SubtitleContainer">
           <h3>
-            4 Years Professionally Creating Fullstack Apps for Web and Cloud
+            5 Years Professionally Creating Fullstack Apps for Web and Cloud
           </h3>
           <h3>15 Years Curiously Exploring and Building in Software</h3>
         </div>

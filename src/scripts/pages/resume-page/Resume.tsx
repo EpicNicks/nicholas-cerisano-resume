@@ -117,7 +117,9 @@ export const Resume = () => {
               <div className="resume-education">
                 <strong>Bachelor of Computer Science</strong>
                 <p className="resume-degree-detail">Specialized Honours</p>
-                <p className="resume-institution">York University</p>
+                <p className="resume-institution">
+                  York University, Lassonde School of Engineering
+                </p>
                 <p className="resume-date">2022</p>
                 <ul className="resume-list">
                   <li className="resume-list-item">
@@ -183,14 +185,15 @@ export const Resume = () => {
                   <span className="resume-date">Jul 2026 - Present</span>
                 </div>
                 <div className="resume-job-summary">
-                  Full-stack developer on the Admin Tools development team,
-                  working in a .NET / IIS environment supporting a multitenant
-                  architecture where applications provision per-user MongoDB and
-                  MS SQL Server databases for customer-specific field
-                  customization. Uses agentic engineering practices (Claude
-                  Code) as part of the team's core workflow, with architectural
-                  responsibility across the admin tools platform and upcoming
-                  involvement in a URL shortener service.
+                  Full-stack developer on the Admin Tools development team for a
+                  B2B SaaS CRM platform, working in a .NET / IIS environment
+                  supporting a multi-tenant architecture where applications
+                  provision per-user MongoDB and MS SQL Server databases for
+                  customer-specific field customization. Uses agentic
+                  engineering practices (Claude Code) as part of the team's core
+                  workflow, with architectural responsibility across the admin
+                  tools platform and upcoming involvement in a URL shortener
+                  service.
                 </div>
                 <ul className="resume-list">
                   <li className="resume-list-item">
