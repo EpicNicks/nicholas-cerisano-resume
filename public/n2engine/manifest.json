@@ -11,21 +11,21 @@
     },
     "index.html": {
       "raw": 4302,
-      "sha256": "692ecf39f20e3f203f70eb5b21202c602950a26a9573b363d5e210b23b5df5fb",
-      "gzip": 1958,
-      "brotli": 1590
+      "sha256": "a7d4b238edef9d58ba348578c9c5ee6bdd3f8d16cdfa7aff5d83a5b414a7a5ad",
+      "gzip": 1957,
+      "brotli": 1600
     },
     "index.js": {
-      "raw": 160496,
-      "sha256": "cca3819446c8f672160ea5c35b46b3731b2cd832885493293d76d7bb191f433d",
-      "gzip": 40657,
-      "brotli": 35556
+      "raw": 160632,
+      "sha256": "2c6bd03c77a275388035c7383d6014999ba4072869c59fcb078ec0539cfde116",
+      "gzip": 40708,
+      "brotli": 35621
     },
     "index.wasm": {
-      "raw": 6850877,
-      "sha256": "d4087a274dad8f434b18e26bdc3a6605df996d1732a1627efa573ca029822f82",
-      "gzip": 2249483,
-      "brotli": 1579130
+      "raw": 6851779,
+      "sha256": "91195f804d0c5fbfe72abcc393a89556a9d60d1094554ff74a1b6cda90c7dc6c",
+      "gzip": 2249614,
+      "brotli": 1579121
     },
     "n2-loader.js": {
       "raw": 25782,
