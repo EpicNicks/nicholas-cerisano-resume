@@ -1,0 +1,1996 @@
+{
+  "shading": "unlit",
+  "baseColorTexture": "res://textures/alpha_gradient.png",
+  "alphaMode": "blend",
+  "doubleSided": true
+}
+{
+  "shading": "unlit",
+  "baseColorTexture": "res://textures/alpha_gradient.png",
+  "alphaMode": "mask",
+  "alphaCutoff": 0.5,
+  "doubleSided": true
+}
+{
+  "shading": "unlit",
+  "baseColorTexture": "res://textures/alpha_gradient.png",
+  "alphaMode": "opaque",
+  "doubleSided": true
+}
+{
+  "shading": "lit",
+  "baseColor": {"r": 1, "g": 1, "b": 1, "a": 1},
+  "baseColorTexture": "res://textures/checker.png",
+  "smoothness": 0.6
+}
+{
+  "shading": "lit",
+  "baseColor": {"r": 1, "g": 1, "b": 1, "a": 1},
+  "smoothness": 0.85
+}
+{
+  "shading": "lit",
+  "baseColor": {"r": 0.25, "g": 0.45, "b": 0.95, "a": 1},
+  "smoothness": 0.6
+}
+{
+  "shading": "lit",
+  "baseColor": {"r": 0.2, "g": 0.8, "b": 0.85, "a": 1},
+  "smoothness": 0.6
+}
+{
+  "shading": "lit",
+  "baseColor": {"r": 0.3, "g": 0.8, "b": 0.35, "a": 1},
+  "smoothness": 0.6
+}
+{
+  "shading": "lit",
+  "baseColor": {"r": 0.9, "g": 0.25, "b": 0.25, "a": 1},
+  "smoothness": 0.6
+}
+{
+  "shading": "lit",
+  "baseColor": {"r": 0.95, "g": 0.8, "b": 0.2, "a": 1},
+  "smoothness": 0.6
+}
+{
+  "shading": "unlit",
+  "baseColor": {"r": 1, "g": 1, "b": 1, "a": 1}
+}
+{
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 24,
+      "max": [
+        0.6,
+        0.7,
+        0.4
+      ],
+      "min": [
+        -0.6,
+        -0.7,
+        -0.4
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 24,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 24,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5123,
+      "count": 36,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 4,
+      "componentType": 5126,
+      "count": 24,
+      "max": [
+        0.15,
+        0.5,
+        0.15
+      ],
+      "min": [
+        -0.15,
+        -0.5,
+        -0.15
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 5,
+      "componentType": 5126,
+      "count": 24,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 6,
+      "componentType": 5126,
+      "count": 24,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 7,
+      "componentType": 5123,
+      "count": 36,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 8,
+      "componentType": 5126,
+      "count": 16,
+      "max": [
+        0.45,
+        0.7,
+        0.45
+      ],
+      "min": [
+        -0.45,
+        0,
+        -0.45
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 9,
+      "componentType": 5126,
+      "count": 16,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 10,
+      "componentType": 5126,
+      "count": 16,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 11,
+      "componentType": 5123,
+      "count": 18,
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "generator": "N2Engine make_smoke_assets.py",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 288,
+      "byteOffset": 0,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 288,
+      "byteOffset": 288,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 192,
+      "byteOffset": 576,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 72,
+      "byteOffset": 768,
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 288,
+      "byteOffset": 840,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 288,
+      "byteOffset": 1128,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 192,
+      "byteOffset": 1416,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 72,
+      "byteOffset": 1608,
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 192,
+      "byteOffset": 1680,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 192,
+      "byteOffset": 1872,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 128,
+      "byteOffset": 2064,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 36,
+      "byteOffset": 2192,
+      "target": 34963
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 2228,
+      "uri": "data:application/octet-stream;base64,mpkZvzMzM7/NzMw+mpkZPzMzM7/NzMw+mpkZPzMzMz/NzMw+mpkZvzMzMz/NzMw+mpkZPzMzM7/NzMw+mpkZPzMzM7/NzMy+mpkZPzMzMz/NzMy+mpkZPzMzMz/NzMw+mpkZvzMzMz/NzMw+mpkZPzMzMz/NzMw+mpkZPzMzMz/NzMy+mpkZvzMzMz/NzMy+mpkZPzMzM7/NzMy+mpkZvzMzM7/NzMy+mpkZvzMzMz/NzMy+mpkZPzMzMz/NzMy+mpkZvzMzM7/NzMy+mpkZvzMzM7/NzMw+mpkZvzMzMz/NzMw+mpkZvzMzMz/NzMy+mpkZvzMzM7/NzMy+mpkZPzMzM7/NzMy+mpkZPzMzM7/NzMw+mpkZvzMzM7/NzMw+AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AACAPwAAAAAAAAAAAACAPwAAAAAAAAAAAACAPwAAAAAAAAAAAACAPwAAAAAAAAAAAAAAAAAAgD8AAAAAAAAAAAAAgD8AAAAAAAAAAAAAgD8AAAAAAAAAAAAAgD8AAAAAAAAAAAAAAAAAAIC/AAAAAAAAAAAAAIC/AAAAAAAAAAAAAIC/AAAAAAAAAAAAAIC/AACAvwAAAAAAAAAAAACAvwAAAAAAAAAAAACAvwAAAAAAAAAAAACAvwAAAAAAAAAAAAAAAAAAgL8AAAAAAAAAAAAAgL8AAAAAAAAAAAAAgL8AAAAAAAAAAAAAgL8AAAAAAAAAAAAAgD8AAIA/AACAPwAAgD8AAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAAAAAAAAAAAAAAAAAAAAAAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAgD8AAIA/AACAPwAAgD8AAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAAAAAAAAAAAAAAAAAAAAAAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAABAAIAAAACAAMABAAFAAYABAAGAAcACAAJAAoACAAKAAsADAANAA4ADAAOAA8AEAARABIAEAASABMAFAAVABYAFAAWABcAmpkZvgAAAL+amRk+mpkZPgAAAL+amRk+mpkZPgAAAD+amRk+mpkZvgAAAD+amRk+mpkZPgAAAL+amRk+mpkZPgAAAL+amRm+mpkZPgAAAD+amRm+mpkZPgAAAD+amRk+mpkZvgAAAD+amRk+mpkZPgAAAD+amRk+mpkZPgAAAD+amRm+mpkZvgAAAD+amRm+mpkZPgAAAL+amRm+mpkZvgAAAL+amRm+mpkZvgAAAD+amRm+mpkZPgAAAD+amRm+mpkZvgAAAL+amRm+mpkZvgAAAL+amRk+mpkZvgAAAD+amRk+mpkZvgAAAD+amRm+mpkZvgAAAL+amRm+mpkZPgAAAL+amRm+mpkZPgAAAL+amRk+mpkZvgAAAL+amRk+AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AACAPwAAAAAAAAAAAACAPwAAAAAAAAAAAACAPwAAAAAAAAAAAACAPwAAAAAAAAAAAAAAAAAAgD8AAAAAAAAAAAAAgD8AAAAAAAAAAAAAgD8AAAAAAAAAAAAAgD8AAAAAAAAAAAAAAAAAAIC/AAAAAAAAAAAAAIC/AAAAAAAAAAAAAIC/AAAAAAAAAAAAAIC/AACAvwAAAAAAAAAAAACAvwAAAAAAAAAAAACAvwAAAAAAAAAAAACAvwAAAAAAAAAAAAAAAAAAgL8AAAAAAAAAAAAAgL8AAAAAAAAAAAAAgL8AAAAAAAAAAAAAgL8AAAAAAAAAAAAAgD8AAIA/AACAPwAAgD8AAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAAAAAAAAAAAAAAAAAAAAAAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAgD8AAIA/AACAPwAAgD8AAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAAAAAAAAAAAAAAAAAAAAAAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAABAAIAAAACAAMABAAFAAYABAAGAAcACAAJAAoACAAKAAsADAANAA4ADAAOAA8AEAARABIAEAASABMAFAAVABYAFAAWABcAZmbmvgAAAABmZuY+ZmbmPgAAAABmZuY+AAAAADMzMz8AAAAAZmbmPgAAAABmZuY+ZmbmPgAAAABmZua+AAAAADMzMz8AAAAAZmbmPgAAAABmZua+ZmbmvgAAAABmZua+AAAAADMzMz8AAAAAZmbmvgAAAABmZua+ZmbmvgAAAABmZuY+AAAAADMzMz8AAAAAZmbmvgAAAABmZua+ZmbmPgAAAABmZua+ZmbmPgAAAABmZuY+ZmbmvgAAAABmZuY+AAAAgB5vCj9xV1c/AAAAgB5vCj9xV1c/AAAAgB5vCj9xV1c/cVdXPx5vCj8AAAAAcVdXPx5vCj8AAAAAcVdXPx5vCj8AAAAAAAAAAB5vCj9xV1e/AAAAAB5vCj9xV1e/AAAAAB5vCj9xV1e/cVdXvx5vCj8AAAAAcVdXvx5vCj8AAAAAcVdXvx5vCj8AAAAAAAAAAAAAgL8AAAAAAAAAAAAAgL8AAAAAAAAAAAAAgL8AAAAAAAAAAAAAgL8AAAAAAAAAAAAAgD8AAIA/AACAPwAAAD8AAAAAAAAAAAAAgD8AAIA/AACAPwAAAD8AAAAAAAAAAAAAgD8AAIA/AACAPwAAAD8AAAAAAAAAAAAAgD8AAIA/AACAPwAAAD8AAAAAAAAAAAAAAAAAAIA/AAAAAAAAgD8AAIA/AAAAAAAAgD8AAAEAAgADAAQABQAGAAcACAAJAAoACwAMAA0ADgAMAA4ADwA="
+    }
+  ],
+  "images": [
+    {
+      "name": "RobotFace",
+      "uri": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAjUlEQVR42u3boRHAIAwFUIZAMwm6s6PRDNENWokGrleRJ76IyeWeyUUk1Xo9kZMAAJhFaz1EAAAAAAAAAAAAAAAAAGAbII97KatDftkfAAAAAAAAAAAAAAAAjiEAAAAAAAAAAAAAAAAAALDTbJTyawAAAAAAgDUIAAAAAAAAAAAAAAAAAAcAfocBxAN4AU9Q2BLlGdgwAAAAAElFTkSuQmCC"
+    }
+  ],
+  "materials": [
+    {
+      "name": "Face",
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.6
+      }
+    },
+    {
+      "name": "Orange",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          1.0,
+          0.55,
+          0.1,
+          1.0
+        ],
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.4
+      }
+    },
+    {
+      "name": "Teal",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.1,
+          0.75,
+          0.7,
+          1.0
+        ],
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.3
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Body",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TEXCOORD_0": 2
+          },
+          "indices": 3,
+          "material": 0
+        }
+      ]
+    },
+    {
+      "name": "Limb",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 5,
+            "POSITION": 4,
+            "TEXCOORD_0": 6
+          },
+          "indices": 7,
+          "material": 1
+        }
+      ]
+    },
+    {
+      "name": "Head",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 9,
+            "POSITION": 8,
+            "TEXCOORD_0": 10
+          },
+          "indices": 11,
+          "material": 2
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "name": "Robot"
+    },
+    {
+      "children": [
+        2,
+        3,
+        4
+      ],
+      "mesh": 0,
+      "name": "Body",
+      "translation": [
+        0.0,
+        0.7,
+        0.0
+      ]
+    },
+    {
+      "mesh": 1,
+      "name": "Arm.L",
+      "translation": [
+        -0.85,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "mesh": 1,
+      "name": "Arm.R",
+      "rotation": [
+        0.0,
+        0.0,
+        -0.258819,
+        0.965926
+      ],
+      "translation": [
+        0.85,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "children": [
+        5
+      ],
+      "mesh": 2,
+      "name": "Head",
+      "translation": [
+        0.0,
+        0.7,
+        0.0
+      ]
+    },
+    {
+      "mesh": 1,
+      "name": "Antenna",
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "translation": [
+        0.0,
+        0.95,
+        0.0
+      ]
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9729,
+      "wrapS": 33071,
+      "wrapT": 33071
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    }
+  ]
+}
+-- The GPU smoke test (docs/testing.html, "GPU smoke test"): one scene that runs every rendering path CI can't see,
+-- as seven stations the camera jumps between with keys 1-7 (scripts/SmokeStations.lua). Each item has a caption saying
+-- what correct output looks like; the HUD (bottom-left, H hides it) says what to look for at each station. One
+-- directional light, the "Sun", shines into the scene from the front upper left, the side the cameras are on.
+--   1 Physics       the original test scene, as TestEngine() in test_project/src/Main.cpp builds it: a falling cube
+--                   and sphere over a static floor
+--   2 World text    TextRenderer at three sizes and a wrapped, centred paragraph
+--   3 Text effects  outline, shadow, glow, softness and all combined
+--   4 World canvas  a world-space Canvas with an Image, UIText and a Button clicked through the camera's ray
+--   5 Materials     a lit textured cube from a .mat file, lit and unlit spheres, opaque / blend / mask side by side
+--   6 glTF model    models/smoke_robot.gltf (lua_project/tools/make_smoke_assets.py) instantiated twice
+--   7 Screen UI     a screen-space Canvas on the right of the window (shown only here, or with U): a sprite Image,
+--                   UIText alignment and wrapping, Buttons with a counter
+-- and four demo stations after them, on keys 8, 9, 0 and - (scripts/DemoStations.lua):
+--   8 Particles     a water fountain, a sand burst and a smoke column, with the active backend on each sign
+--   9 World canvas  a world-space panel whose buttons sit behind a trigger volume and behind a solid collider
+--  10 Text passes   TextRenderer:AddEffectPass: outline, shadow, glow, and pass order before and after
+--  11 Soft bodies   SoftBody: cubes of three stiffnesses, two dampings and a robot body dropped on a floor, with the
+--                   backend asked for and the backend RUNNING on each sign
+
+local Stations = require("scripts.SmokeStations")
+local DemoStations = require("scripts.DemoStations")
+local Emitters = require("scripts.ParticleEmitters")
+local SoftBodies = require("scripts.SoftBodies")
+
+local scene = SceneManager.GetCurrentScene()
+if scene == nil then
+    error("scene.lua needs a loaded scene")
+end
+
+Window.SetClearColor(Color.new(0.12, 0.13, 0.17, 1.0))
+Window.SetMode(WindowMode.Windowed)
+
+-- Input: created before the behaviour scripts attach, since they subscribe to these actions.
+-- Binding fields and names follow the action map JSON format (keys like "W", axes like "LeftX").
+local actions = {
+    ["Camera Move"] = {
+        { type = "Vector2Composite", up = "W", down = "S", left = "A", right = "D" },
+        { type = "GamepadStick", xAxis = "LeftX", yAxis = "LeftY", deadzone = 0.25, invertY = true },
+    },
+    ["Camera Rotate"] = {
+        { type = "Vector2Composite", up = "Up", down = "Down", left = "Left", right = "Right" },
+        { type = "GamepadStick", xAxis = "RightX", yAxis = "RightY", deadzone = 0.25 },
+    },
+    ["Quit"] = {
+        { type = "KeyboardButton", key = "Escape" },
+    },
+    ["Toggle UI Panel"] = {
+        { type = "KeyboardButton", key = "U" },
+    },
+    ["Toggle HUD"] = {
+        { type = "KeyboardButton", key = "H" },
+    },
+    -- The particle station (scripts/ParticleStation.lua)
+    ["Particles Burst"] = { { type = "KeyboardButton", key = "B" } },
+    ["Particles Toggle"] = { { type = "KeyboardButton", key = "P" } },
+    ["Particles Clear"] = { { type = "KeyboardButton", key = "C" } },
+    ["Particles Backend"] = { { type = "KeyboardButton", key = "K" } },
+    -- The soft-body station (scripts/SoftBodyStation.lua)
+    ["Soft Bodies Reset"] = { { type = "KeyboardButton", key = "R" } },
+    ["Soft Bodies Backend"] = { { type = "KeyboardButton", key = "J" } },
+    ["Soft Bodies Push"] = { { type = "KeyboardButton", key = "V" } },
+}
+for index = 1, #Stations do
+    actions["Station " .. index] = { { type = "KeyboardButton", key = "Key" .. index } }
+end
+for index, station in ipairs(DemoStations) do
+    actions["Demo Station " .. index] = { { type = "KeyboardButton", key = station.key } }
+end
+local controls = Input.CreateActionMap("Main Controls", actions)
+if controls ~= nil then
+    Input.LoadActionMap("Main Controls")
+end
+
+local roots = {}
+
+-- Gives the object a Positionable at `position` (and `scale`, when given)
+local function Place(gameObject, position, scale)
+    gameObject:CreatePositionable()
+    local positionable = gameObject:GetPositionable()
+    positionable:SetPosition(position)
+    if scale ~= nil then
+        positionable:SetScale(scale)
+    end
+    return gameObject
+end
+
+-- A root object with a TextRenderer, its first line's top-left at `position`; returns the TextRenderer
+local function WorldText(name, text, position, fontSize, color, maxWidth)
+    local gameObject = GameObject.Create(name)
+    local renderer = gameObject:AddComponent("TextRenderer")
+    renderer:SetText(text)
+    renderer:SetFontSize(fontSize)
+    renderer:SetColor(color or Color.White)
+    if maxWidth ~= nil then
+        renderer:SetMaxWidth(maxWidth)
+    end
+    Place(gameObject, position)
+    table.insert(roots, gameObject)
+    return renderer
+end
+
+local CAPTION = Color.new(1.0, 0.92, 0.55, 1.0)
+local DARK_CAPTION = Color.new(0.05, 0.05, 0.08, 1.0)
+
+-- A station's title sign, "N  Name", at the top-left of its view
+local function StationTitle(index, position)
+    WorldText("Station " .. index .. " Title", index .. "  " .. Stations[index].name, position, 0.45, Color.White)
+end
+
+-- A root object drawing a built-in mesh with a .mat material
+local function MeshObject(name, mesh, materialPath, position, scale)
+    local gameObject = GameObject.Create(name)
+    local renderer = gameObject:AddComponent("MeshRenderer")
+    renderer:SetMesh(mesh)
+    renderer:SetMaterial(1, materialPath)
+    Place(gameObject, position, scale)
+    table.insert(roots, gameObject)
+    return gameObject
+end
+
+-- A root object with an unlit, coloured CubeRenderer
+local function ColouredCube(name, color, position, size)
+    local gameObject = GameObject.Create(name)
+    local renderer = gameObject:AddComponent("CubeRenderer")
+    renderer:SetColor(color)
+    renderer:SetSize(size)
+    Place(gameObject, position)
+    table.insert(roots, gameObject)
+    return gameObject
+end
+
+-- ===== UI helpers =====
+
+-- Places a UI element by its top-left corner, measured from its parent's top-left (x right, yTop down)
+local function Layout(element, x, yTop, width, height)
+    local rect = element:GetComponent("RectTransform")
+    rect:SetAnchorMin(Vector2(0, 1))
+    rect:SetAnchorMax(Vector2(0, 1))
+    rect:SetPivot(Vector2(0, 1))
+    rect:SetAnchoredPosition(Vector2(x, -yTop))
+    rect:SetSizeDelta(Vector2(width, height))
+    return element
+end
+
+-- An element under `parent` with an Image of `color` (raycastTarget off unless `raycast`)
+local function Panel(parent, name, color, raycast)
+    local element = UI.CreateElement(name)
+    parent:AddChild(element)
+    local image = element:AddComponent("Image")
+    image:SetColor(color)
+    image:SetRaycastTarget(raycast == true)
+    return element, image
+end
+
+-- A UIText under `parent`; options: size, color, h, v (alignment), wrap
+local function Label(parent, name, text, options)
+    local element = UI.CreateText(name, text)
+    parent:AddChild(element)
+    local uiText = element:GetComponent("UIText")
+    uiText:SetFontSize(options.size or 16)
+    uiText:SetColor(options.color or Color.White)
+    uiText:SetAlignment(options.h or "Left", options.v or "Top")
+    uiText:SetWrap(options.wrap ~= false)
+    return element, uiText
+end
+
+-- A Button under `parent` whose Image is `color` and that gets darker when hovered and darker still when pressed
+local function TintedButton(parent, name, label, color, labelSize)
+    local element = UI.CreateButton(name, label)
+    parent:AddChild(element)
+    element:GetComponent("Image"):SetColor(color)
+    local button = element:GetComponent("Button")
+    button:SetNormalColor(Color.White)
+    button:SetHighlightedColor(Color.new(0.75, 0.75, 0.75, 1.0))
+    button:SetPressedColor(Color.new(0.45, 0.45, 0.45, 1.0))
+    button:SetDisabledColor(Color.new(0.6, 0.6, 0.6, 0.4))
+    button:SetFadeDuration(0.1)
+    element:FindChild("Label"):GetComponent("UIText"):SetFontSize(labelSize or 20)
+    return element, button
+end
+
+-- ===== Lighting =====
+
+-- Without a Light the engine's default directional light shines from behind the stations (direction (0.5, -1, 0.3),
+-- +z), so the faces the cameras see would get ambient light only. This one travels down, right and away from the
+-- cameras: it lights the front, top and left faces.
+local sun = GameObject.Create("Sun")
+local sunLight = sun:AddComponent("Light")
+sunLight:SetType("Directional")
+sunLight:SetDirection(Vector3(0.4, -0.6, -0.7))
+sunLight:SetIntensity(0.9)
+table.insert(roots, sun)
+
+-- ===== Station 1: physics (the original test scene) =====
+
+-- Falling cube
+local cube = GameObject.Create("TestCube")
+cube:AddComponent("CubeRenderer"):SetColor(Color.Blue)
+cube:AddComponent("BoxCollider"):SetSize(Vector3.One)
+local cubeBody = cube:AddComponent("Rigidbody")
+cubeBody:SetBodyType(BodyType.Dynamic)
+cubeBody:SetGravityEnabled(true)
+
+-- Falling sphere, offset so it lands on the cube's edge
+local SPHERE_RADIUS = 1.0
+local sphere = GameObject.Create("TestSphere")
+sphere:CreatePositionable()
+sphere:GetPositionable():SetPosition(Vector3(0.5, 4.0, 0.0))
+local sphereRenderer = sphere:AddComponent("SphereRenderer")
+sphereRenderer:SetRadius(SPHERE_RADIUS)
+sphereRenderer:SetColor(Color.Red)
+sphere:AddComponent("SphereCollider"):SetRadius(SPHERE_RADIUS)
+local sphereBody = sphere:AddComponent("Rigidbody")
+sphereBody:SetGravityEnabled(true)
+sphereBody:SetBodyType(BodyType.Dynamic)
+
+-- Static floor (a collider without a Rigidbody doesn't move)
+local FLOOR_SIZE = Vector3(30.0, 1.0, 30.0)
+local floor = GameObject.Create("TestFloor")
+floor:CreatePositionable()
+floor:GetPositionable():SetPosition(Vector3(0.0, -5.0, 0.0))
+floor:AddComponent("CubeRenderer"):SetSize(FLOOR_SIZE)
+floor:AddComponent("BoxCollider"):SetSize(FLOOR_SIZE)
+
+for _, gameObject in ipairs({ cube, sphere, floor }) do
+    table.insert(roots, gameObject)
+end
+
+StationTitle(1, Vector3(-9.0, 7.0, 0.0))
+WorldText("Physics Caption", "The blue cube and the red sphere fall onto the grey floor and settle; the sphere "
+    .. "rolls off the cube's edge.", Vector3(-9.0, 6.2, 0.0), 0.3, CAPTION, 8.0)
+
+-- ===== Station 2: world text (TextRenderer) =====
+
+do
+    local x = -35.3
+    StationTitle(2, Vector3(x, 3.9, 0.0))
+    WorldText("Text Large", "SDF text 1.0", Vector3(x, 3.2, 0.0), 1.0)
+    WorldText("Text Medium", "Medium, 0.5 units per em", Vector3(x, 1.7, 0.0), 0.5)
+    WorldText("Text Small", "Small, 0.25 units per em: the quick brown fox jumps over the lazy dog 0123456789",
+        Vector3(x, 0.9, 0.0), 0.25, Color.White, 8.0)
+    local paragraph = WorldText("Text Paragraph", "This paragraph has a 6 unit wrap width and centre alignment, so "
+        .. "it breaks onto several lines, each centred under the one above.", Vector3(-31.3, -0.2, 0.0), 0.3,
+        Color.new(0.55, 0.75, 1.0, 1.0), 6.0)
+    paragraph:SetAlignment("Center", "Top")
+    WorldText("Text Caption", "Look for: crisp letters with smooth edges at every size (fly closer with W: they "
+        .. "stay sharp), no boxes, blocks or stray marks around them, even spacing; the blue paragraph on several "
+        .. "centred lines.", Vector3(x, -2.5, 0.0), 0.2, CAPTION, 9.0)
+end
+
+-- ===== Station 3: text effects =====
+
+do
+    local board = GameObject.Create("Effects Board")
+    local boardRenderer = board:AddComponent("QuadRenderer")
+    boardRenderer:SetColor(Color.new(0.5, 0.5, 0.55, 1.0))
+    boardRenderer:SetSize(Vector3(10.6, 8.2, 1.0))
+    Place(board, Vector3(-60.6, 0.4, -0.05))
+    table.insert(roots, board)
+
+    local x = -65.4
+    StationTitle(3, Vector3(x, 4.1, 0.0))
+
+    local function Effect(name, y, caption)
+        local renderer = WorldText("Effect " .. name, name, Vector3(x, y, 0.0), 0.7)
+        WorldText("Effect " .. name .. " Caption", caption, Vector3(-61.6, y - 0.05, 0.0), 0.2, DARK_CAPTION, 5.0)
+        return renderer
+    end
+
+    Effect("Outline", 3.2, "White letters with an even red rim, about 0.08 em, all round."):SetOutline(0.08, Color.Red)
+    Effect("Shadow", 1.9, "A hard black copy of each letter, offset down and to the right.")
+        :SetShadow(0.08, -0.08, Color.Black)
+    Effect("Glow", 0.6, "A soft cyan halo fading out around the letters (OpenGL; none on software)."):SetShadow(0.0,
+        0.0, Color.Cyan, 0.12)
+    Effect("Softness", -0.7, "Blurred letter edges, fading over about 0.1 em (OpenGL; hard on software).")
+        :SetSoftness(0.12)
+    local combined = Effect("Combined", -2.0, "Yellow letters, thin black outline, soft shadow down-right, "
+        .. "slightly soft edges.")
+    combined:SetColor(Color.Yellow)
+    combined:SetOutline(0.05, Color.Black)
+    combined:SetShadow(0.06, -0.06, Color.new(0.0, 0.0, 0.0, 0.7), 0.04)
+    combined:SetSoftness(0.03)
+end
+
+-- ===== Station 4: world-space canvas =====
+
+local worldClicks = 0
+do
+    local canvas = UI.CreateCanvas("Smoke World Canvas", "WorldSpace") -- scale 0.01: 600 x 400 is 6 x 4 units
+    canvas:GetComponent("Canvas"):SetSize(Vector2(600, 400))
+    canvas:GetPositionable():SetPosition(Vector3(30.0, 0.3, 0.0))
+    table.insert(roots, canvas)
+
+    local background = Panel(canvas, "World Background", Color.new(0.1, 0.25, 0.55, 0.75))
+    background:GetComponent("RectTransform"):StretchToParent()
+
+    Layout(Label(canvas, "World Title", "4  World-space canvas", { size = 36, h = "Center" }), 20, 16, 560, 48)
+
+    local icon = Layout(UI.CreateElement("World Icon"), 30, 110, 140, 140)
+    canvas:AddChild(icon)
+    icon:AddComponent("Image"):SetSprite("res://ui/icon.png")
+
+    local buttonObject, button = TintedButton(canvas, "World Button", "Click me", Color.new(1.0, 0.6, 0.15, 1.0), 30)
+    Layout(buttonObject, 230, 120, 300, 80)
+    local counter, counterText = Label(canvas, "World Counter", "World clicks: 0",
+        { size = 28, h = "Center", v = "Middle", wrap = false })
+    Layout(counter, 230, 215, 300, 44)
+    button:AddOnClick(function()
+        worldClicks = worldClicks + 1
+        counterText:SetText("World clicks: " .. worldClicks)
+    end)
+
+    Layout(Label(canvas, "World Caption", "Hover: darker. Hold: darker still. Release over it: +1. The red cube "
+        .. "behind shows through; the green cube in front hides the lower-left corner.", { size = 20 }),
+        110, 290, 470, 100)
+
+    ColouredCube("World Canvas Behind", Color.Red, Vector3(32.6, 1.3, -1.5), Vector3(1.2, 1.2, 1.2))
+    ColouredCube("World Canvas In Front", Color.Green, Vector3(27.3, -1.4, 0.8), Vector3(0.8, 0.8, 0.8))
+end
+
+-- ===== Station 5: meshes and materials =====
+
+do
+    StationTitle(5, Vector3(55.5, 4.0, 0.0))
+
+    local texturedCube = MeshObject("Material Textured Cube", "Cube", "res://materials/checker_lit.mat",
+        Vector3(56.8, 2.2, 0.0), Vector3(1.4, 1.4, 1.4))
+    texturedCube:GetPositionable():SetRotation(Quaternion.FromEulerAngles(0.45, 0.6, 0.0))
+    texturedCube:AddComponent("LuaComponent"):SetScript("res://scripts/Spin.lua")
+    MeshObject("Material Lit Sphere", "Sphere", "res://materials/lit_white.mat", Vector3(59.6, 2.2, 0.0),
+        Vector3(1.5, 1.5, 1.5))
+    MeshObject("Material Unlit Sphere", "Sphere", "res://materials/unlit_white.mat", Vector3(62.2, 2.2, 0.0),
+        Vector3(1.5, 1.5, 1.5))
+    WorldText("Material Cube Caption", "Lit, textured (.mat): checker upright on each face (red top-left); faces "
+        .. "toward you or the upper left bright, faces turning away to the right dim.", Vector3(55.6, 1.1, 0.0), 0.15,
+        CAPTION, 2.5)
+    WorldText("Material Lit Caption", "Lit from the front upper left: brightest there, with a highlight, darker "
+        .. "toward the lower right edge.", Vector3(58.5, 1.1, 0.0), 0.15, CAPTION, 2.3)
+    WorldText("Material Unlit Caption", "Unlit: a flat white disc, no shading.", Vector3(61.1, 1.1, 0.0), 0.15,
+        CAPTION, 2.3)
+
+    ColouredCube("Material Bar", Color.Yellow, Vector3(59.4, -1.3, -0.6), Vector3(8.2, 0.5, 0.2))
+    local quadScale = Vector3(2.0, 2.0, 1.0)
+    MeshObject("Material Opaque Quad", "Quad", "res://materials/alpha_opaque.mat", Vector3(56.8, -1.3, 0.0), quadScale)
+    MeshObject("Material Blend Quad", "Quad", "res://materials/alpha_blend.mat", Vector3(59.4, -1.3, 0.0), quadScale)
+    MeshObject("Material Mask Quad", "Quad", "res://materials/alpha_mask.mat", Vector3(62.0, -1.3, 0.0), quadScale)
+    WorldText("Material Opaque Caption", "Opaque: the whole striped square; the yellow bar is hidden behind it.",
+        Vector3(55.8, -2.45, 0.0), 0.15, CAPTION, 2.3)
+    WorldText("Material Blend Caption", "Blend: invisible at the left, fading in to solid at the right; the bar "
+        .. "shows through on the left.", Vector3(58.4, -2.45, 0.0), 0.15, CAPTION, 2.3)
+    WorldText("Material Mask Caption", "Mask 0.5: the left half cut away at a hard vertical edge, the right half "
+        .. "solid.", Vector3(61.0, -2.45, 0.0), 0.15, CAPTION, 2.3)
+end
+
+-- ===== Station 6: a glTF model =====
+
+do
+    StationTitle(6, Vector3(86.5, 3.2, 0.0))
+    WorldText("Model Caption", "Left: as imported. Right: the same model, spinning as one piece. Lit from the front: "
+        .. "a grey body with a bright face (cyan eyes above a red mouth, upright), orange arms (the right one tilted out), a teal pyramid head, "
+        .. "an orange antenna.", Vector3(86.5, 2.6, 0.0), 0.16, CAPTION, 6.5)
+
+    local static = Place(GameObject.Create("Robot Static"), Vector3(87.8, -1.9, 0.0), Vector3(1.2, 1.2, 1.2))
+    Model.Instantiate("res://models/smoke_robot.gltf", static)
+    table.insert(roots, static)
+
+    local spinning = Place(GameObject.Create("Robot Spinning"), Vector3(91.2, -1.9, 0.0), Vector3(1.2, 1.2, 1.2))
+    Model.Instantiate("res://models/smoke_robot.gltf", spinning)
+    spinning:AddComponent("LuaComponent"):SetScript("res://scripts/Spin.lua")
+    table.insert(roots, spinning)
+end
+
+-- ===== Station 7: screen-space UI panel (shown only at station 7, or with U; SmokeHud.lua) =====
+
+local uiClicks = 0
+do
+    local canvas = UI.CreateCanvas("Smoke UI Panel")
+    canvas:GetComponent("Canvas"):SetSortOrder(1)
+    table.insert(roots, canvas)
+
+    -- A dark glass column on the right of the window
+    local panel = Panel(canvas, "UI Panel Background", Color.new(0.05, 0.05, 0.08, 0.7), true)
+    local rect = panel:GetComponent("RectTransform")
+    rect:SetAnchorMin(Vector2(1, 1))
+    rect:SetAnchorMax(Vector2(1, 1))
+    rect:SetPivot(Vector2(1, 1))
+    rect:SetAnchoredPosition(Vector2(-8, -8))
+    rect:SetSizeDelta(Vector2(300, 470))
+
+    Layout(Label(panel, "UI Title", "7  Screen-space UI (U toggles)", { size = 18, wrap = false }), 10, 8, 280, 24)
+
+    local icon = Layout(UI.CreateElement("UI Icon"), 10, 38, 64, 64)
+    panel:AddChild(icon)
+    icon:AddComponent("Image"):SetSprite("res://ui/icon.png")
+    Layout(Label(panel, "UI Icon Caption", "Sprite: red square top-left, white arrow pointing up, square and "
+        .. "sharp-edged.", { size = 13, color = CAPTION }), 84, 38, 206, 64)
+
+    local alignments = {
+        { "Left / Top", "Left", "Top" },
+        { "Center / Middle", "Center", "Middle" },
+        { "Right / Bottom", "Right", "Bottom" },
+    }
+    for index, alignment in ipairs(alignments) do
+        local box = Layout(Panel(panel, "UI Align Box " .. index, Color.new(0.25, 0.25, 0.3, 1.0)), 10,
+            110 + (index - 1) * 34, 280, 30)
+        local text = Label(box, "UI Align " .. alignment[1], alignment[1],
+            { size = 14, h = alignment[2], v = alignment[3], wrap = false })
+        text:GetComponent("RectTransform"):StretchToParent()
+    end
+    Layout(Label(panel, "UI Align Caption", "Each label hugs its box's left-top, centre, right-bottom.",
+        { size = 12, color = CAPTION }), 10, 212, 280, 18)
+
+    local wrapBox = Layout(Panel(panel, "UI Wrap Box", Color.new(0.25, 0.25, 0.3, 1.0)), 10, 234, 280, 58)
+    local wrapText = Label(wrapBox, "UI Wrap Text", "UIText wraps this long sentence at the box's width, so it "
+        .. "runs onto three lines without spilling out of the box.", { size = 14 })
+    wrapText:GetComponent("RectTransform"):StretchToParent()
+    Layout(Label(panel, "UI Wrap Caption", "The wrapped text stays inside its box.", { size = 12, color = CAPTION }),
+        10, 296, 280, 18)
+
+    local buttonObject, button = TintedButton(panel, "UI Button", "Click me", Color.new(0.35, 0.65, 1.0, 1.0), 18)
+    Layout(buttonObject, 10, 320, 140, 40)
+    local counter, counterText = Label(panel, "UI Counter", "Clicks: 0",
+        { size = 18, v = "Middle", wrap = false })
+    Layout(counter, 160, 320, 130, 40)
+    button:AddOnClick(function()
+        uiClicks = uiClicks + 1
+        counterText:SetText("Clicks: " .. uiClicks)
+    end)
+
+    local toggleObject, toggle = TintedButton(panel, "UI Toggle", "Disable it", Color.new(0.85, 0.85, 0.85, 1.0), 16)
+    Layout(toggleObject, 10, 366, 140, 32)
+    local toggleLabel = toggleObject:FindChild("Label"):GetComponent("UIText")
+    toggle:AddOnClick(function()
+        local enable = not button:IsInteractable()
+        button:SetInteractable(enable)
+        toggleLabel:SetText(enable and "Disable it" or "Enable it")
+    end)
+
+    Layout(Label(panel, "UI Button Caption", "Hover Click me: darker. Hold: darker still. Release: Clicks +1. "
+        .. "Disabled: greyed and see-through, clicks ignored. The panel is dark glass: the world shows through.",
+        { size = 12, color = CAPTION }), 10, 404, 280, 60)
+end
+
+-- ===== Demo stations 8-0 and - (scripts/DemoStations.lua): particles, world canvas vs colliders, text effect passes,
+-- soft bodies =====
+
+-- A demo station's title sign, "8  Name", at the top-left of its view
+local function DemoTitle(index, position)
+    local label = tostring(#Stations + index) -- the 8th station on key 8, the 10th on key 0, the 11th on key -
+    WorldText("Demo " .. label .. " Title", label .. "  " .. DemoStations[index].name, position, 0.45, Color.White)
+end
+
+-- ===== Demo station 8: particles (ParticleSystem; scripts/ParticleEmitters.lua, ParticleStation.lua) =====
+
+do
+    local x0 = Emitters.CENTER_X
+    DemoTitle(1, Vector3(x0 - 8.0, 6.9, 0.0))
+    -- What the keys do and which backend is asked for; ParticleStation.lua rewrites it
+    WorldText("Particles Info", "B burst   P play / stop   C clear   K backend: Auto, CPU, PhysX",
+        Vector3(x0 - 8.0, 6.2, 0.0), 0.2, CAPTION)
+    local ground = ColouredCube("Particles Ground", Color.new(0.35, 0.35, 0.4, 1.0),
+        Vector3(x0, Emitters.GROUND_Y - 0.17, 0.0), Vector3(17.0, 0.3, 3.0))
+    -- The PhysX backend ignores the ground plane field: its particles collide with the scene's colliders
+    ground:AddComponent("BoxCollider"):SetSize(Vector3(17.0, 0.3, 3.0))
+
+    for _, spec in ipairs(Emitters.Specs) do
+        local title = WorldText("Particles Title " .. spec.key, spec.key .. "\n" .. spec.detail,
+            Vector3(x0 + spec.x, 4.6, 0.0), 0.3, Color.White)
+        title:SetAlignment("Center", "Top")
+        local status = WorldText("Particles Status " .. spec.key, "asked: Auto\nrunning: starting\nalive: 0",
+            Vector3(x0 + spec.x, 3.5, 0.0), 0.2, CAPTION)
+        status:SetAlignment("Center", "Top")
+        local emitter, ps = Emitters.Create(spec, Emitters.BACKENDS[1], true)
+        table.insert(roots, emitter)
+    end
+end
+
+-- ===== Demo station 9: a world canvas with a trigger and a solid collider in front of its buttons =====
+
+local triggerDemoClicks = { A = 0, B = 0 }
+do
+    local cx, cy = 150.0, 0.3
+    local canvas = UI.CreateCanvas("Trigger Demo Canvas", "WorldSpace") -- scale 0.01: 600 x 400 is 6 x 4 units
+    canvas:GetComponent("Canvas"):SetSize(Vector2(600, 400))
+    canvas:GetPositionable():SetPosition(Vector3(cx, cy, 0.0))
+    table.insert(roots, canvas)
+
+    local background = Panel(canvas, "Trigger Demo Background", Color.new(0.1, 0.25, 0.55, 0.75))
+    background:GetComponent("RectTransform"):StretchToParent()
+    Layout(Label(canvas, "Trigger Demo Title", "9  World canvas and colliders", { size = 34, h = "Center" }), 20, 16,
+        560, 48)
+
+    -- A button, a counter under it, and `triggerDemoClicks[id]` counting its clicks
+    local function ClickTarget(id, x, label, color)
+        local buttonObject, button = TintedButton(canvas, "Trigger Demo " .. id .. " Button", label, color, 24)
+        Layout(buttonObject, x, 90, 260, 70)
+        local counter, counterText = Label(canvas, "Trigger Demo " .. id .. " Counter", "Clicks: 0",
+            { size = 24, h = "Center", v = "Middle", wrap = false })
+        Layout(counter, x, 168, 260, 36)
+        button:AddOnClick(function()
+            triggerDemoClicks[id] = triggerDemoClicks[id] + 1
+            counterText:SetText("Clicks: " .. triggerDemoClicks[id])
+        end)
+    end
+    ClickTarget("A", 30, "A: trigger in front", Color.new(1.0, 0.6, 0.15, 1.0))
+    ClickTarget("B", 310, "B: solid block in front", Color.new(0.35, 0.8, 0.45, 1.0))
+
+    Layout(Label(canvas, "Trigger Demo Caption", "The pointer's ray is tested against the colliders in front of the "
+        .. "panel. A trigger volume (the yellow frame) never blocks it: A counts clicks. A solid collider (the green "
+        .. "block) does: the click lands on the block and B stays at 0.", { size = 20 }), 30, 225, 540, 165)
+
+    -- Button centres in the world: the canvas is centred on (cx, cy), 6 x 4 units, with 100 canvas px to the unit
+    local aX, bX, buttonY = cx - 3.0 + 1.6, cx - 3.0 + 4.4, cy + 2.0 - 1.25
+
+    -- A: a trigger box 0.5 to 1.5 in front of the panel, drawn as a yellow frame
+    local trigger = Place(GameObject.Create("Trigger Demo Volume"), Vector3(aX, buttonY, 1.0))
+    local triggerBox = trigger:AddComponent("BoxCollider")
+    triggerBox:SetSize(Vector3(3.0, 1.1, 1.0))
+    triggerBox:SetIsTrigger(true)
+    table.insert(roots, trigger)
+    local frame = Color.Yellow
+    ColouredCube("Trigger Demo Frame Top", frame, Vector3(aX, buttonY + 0.55, 1.0), Vector3(3.0, 0.06, 0.06))
+    ColouredCube("Trigger Demo Frame Bottom", frame, Vector3(aX, buttonY - 0.55, 1.0), Vector3(3.0, 0.06, 0.06))
+    ColouredCube("Trigger Demo Frame Left", frame, Vector3(aX - 1.5, buttonY, 1.0), Vector3(0.06, 1.1, 0.06))
+    ColouredCube("Trigger Demo Frame Right", frame, Vector3(aX + 1.5, buttonY, 1.0), Vector3(0.06, 1.1, 0.06))
+
+    -- B: a solid block just in front of the panel (a collider without a Rigidbody doesn't move)
+    local blockSize = Vector3(2.8, 0.9, 0.4)
+    local block = Place(GameObject.Create("Trigger Demo Block"), Vector3(bX, buttonY, 0.8))
+    block:AddComponent("CubeRenderer"):SetColor(Color.new(0.2, 0.65, 0.3, 1.0))
+    block:GetComponent("CubeRenderer"):SetSize(blockSize)
+    block:AddComponent("BoxCollider"):SetSize(blockSize)
+    table.insert(roots, block)
+end
+
+-- ===== Demo station 10: text effect passes (TextRenderer:AddEffectPass) =====
+
+do
+    local board = GameObject.Create("Passes Board")
+    local boardRenderer = board:AddComponent("QuadRenderer")
+    boardRenderer:SetColor(Color.new(0.5, 0.5, 0.55, 1.0))
+    boardRenderer:SetSize(Vector3(12.4, 8.9, 1.0))
+    Place(board, Vector3(180.0, 0.45, -0.05))
+    table.insert(roots, board)
+
+    local x = 174.2
+    DemoTitle(3, Vector3(x, 4.5, 0.0))
+
+    -- A sample word and, to its right, what its passes do
+    local function Row(name, y, caption)
+        local renderer = WorldText("Pass " .. name, name, Vector3(x, y, 0.0), 0.6)
+        WorldText("Pass " .. name .. " Caption", caption, Vector3(179.4, y - 0.05, 0.0), 0.17, DARK_CAPTION, 5.6)
+        return renderer
+    end
+
+    Row("Outline", 3.5, "AddEffectPass(0, 0, red, 0.08): a width and no offset is an outline."):AddEffectPass(0.0,
+        0.0, Color.Red, 0.08)
+    Row("Shadow", 2.35, "(0.08, -0.08, black): an offset and no width is a hard shadow."):AddEffectPass(0.08, -0.08,
+        Color.Black)
+    Row("Glow", 1.2, "(0, 0, cyan, 0, 0.12): softness and no offset is a glow (OpenGL; hard on software)."):
+        AddEffectPass(0.0, 0.0, Color.Cyan, 0.0, 0.12)
+
+    -- The same two passes twice: a narrow yellow ring and a wide red one
+    local before = Row("Before", 0.05, "Narrow yellow added first, wide red second: later passes draw in front, so "
+        .. "the red hides the yellow.")
+    before:AddEffectPass(0.0, 0.0, Color.Yellow, 0.05)
+    before:AddEffectPass(0.0, 0.0, Color.Red, 0.11)
+    local after = Row("After", -1.1, "The same two passes with orders: red -10, yellow 0. Lower orders draw further "
+        .. "back, so the yellow is in front again.")
+    after:AddEffectPass(0.0, 0.0, Color.Yellow, 0.05, 0.0, 0)
+    after:AddEffectPass(0.0, 0.0, Color.Red, 0.11, 0.0, -10)
+
+    local behind = Row("Behind", -2.25, "The settings shadow sits at order -200: a red pass at -300 draws behind it, "
+        .. "peeking out past the black.")
+    behind:SetShadow(0.08, -0.08, Color.Black)
+    behind:AddEffectPass(0.16, -0.16, Color.Red, 0.03, 0.0, -300)
+end
+
+-- ===== Demo station 11: soft bodies (SoftBody; scripts/SoftBodies.lua, SoftBodyStation.lua) =====
+
+do
+    local x0 = SoftBodies.CENTER_X
+    DemoTitle(4, Vector3(x0 - 9.0, 8.2, 0.0))
+    -- What the keys do and which backend is asked for; SoftBodyStation.lua rewrites it
+    WorldText("Soft Bodies Info", "R drop again   J backend: Auto, CPU, PhysX   V push up",
+        Vector3(x0 - 9.0, 7.5, 0.0), 0.2, CAPTION)
+    -- The floor top is the plane the CPU backend rests on (SetGround); the PhysX backend collides with the scene's
+    -- colliders instead, so the floor is a static collider too
+    local floorSize = Vector3(21.0, 0.3, 4.0)
+    local floor = ColouredCube("Soft Bodies Floor", Color.new(0.35, 0.35, 0.4, 1.0),
+        Vector3(x0, SoftBodies.FLOOR_TOP - 0.15, 0.0), floorSize)
+    floor:AddComponent("BoxCollider"):SetSize(floorSize)
+
+    for _, spec in ipairs(SoftBodies.Specs) do
+        -- The resolution is shown because the Lua API has no tetrahedron count
+        local title = WorldText("Soft Body Title " .. spec.key, string.format("%s\nE %s Pa\ndamping %s\nresolution %d",
+            spec.title, SoftBodies.Short(spec.stiffness), tostring(spec.damping), spec.resolution),
+            Vector3(x0 + spec.x, 6.5, 0.0), 0.18, Color.White, 2.8)
+        title:SetAlignment("Center", "Top")
+        local status = WorldText("Soft Body Status " .. spec.key, "asked: Auto\nrunning: starting",
+            Vector3(x0 + spec.x, 5.4, 0.0), 0.16, CAPTION, 2.8)
+        status:SetAlignment("Center", "Top")
+        local body = SoftBodies.Create(spec, SoftBodies.BACKENDS[1])
+        table.insert(roots, body)
+    end
+end
+
+-- ===== HUD: the current station and what to look for (scripts/SmokeHud.lua) =====
+
+do
+    local hud = UI.CreateCanvas("Smoke HUD")
+    table.insert(roots, hud)
+
+    -- Bottom-left, 580 x 112: the stations' cameras keep everything that matters in the top four fifths of the window
+    local background = Panel(hud, "HUD Background", Color.new(0.0, 0.0, 0.0, 0.6))
+    local rect = background:GetComponent("RectTransform")
+    rect:SetAnchorMin(Vector2(0, 0))
+    rect:SetAnchorMax(Vector2(0, 0))
+    rect:SetPivot(Vector2(0, 0))
+    rect:SetAnchoredPosition(Vector2(8, 8))
+    rect:SetSizeDelta(Vector2(580, 112))
+
+    Layout(Label(background, "HUD Title", "", { size = 18, wrap = false }), 10, 4, 560, 22)
+    Layout(Label(background, "HUD Keys", "Keys 1-7, 8 9 0 -: stations   WASD: move   Arrows: look   U: UI panel   "
+        .. "H: this HUD   Esc: quit", { size = 12, color = Color.new(0.8, 0.8, 0.85, 1.0), wrap = false }),
+        10, 28, 560, 16)
+    Layout(Label(background, "HUD Caption", "", { size = 12, color = CAPTION }), 10, 46, 560, 62)
+
+    hud:AddComponent("LuaComponent"):SetScript("res://scripts/SmokeHud.lua")
+end
+
+-- ===== Behaviours =====
+
+local cameraController = GameObject.Create("Camera Controller")
+cameraController:AddComponent("LuaComponent"):SetScript("res://scripts/CameraController.lua")
+table.insert(roots, cameraController)
+
+-- Behind the particle signs and emitters above: it finds them by name and rebuilds the emitters on a backend change
+local particleStation = GameObject.Create("Particle Station")
+particleStation:AddComponent("LuaComponent"):SetScript("res://scripts/ParticleStation.lua")
+table.insert(roots, particleStation)
+
+-- The same for the soft bodies and their signs
+local softBodyStation = GameObject.Create("Soft Body Station")
+softBodyStation:AddComponent("LuaComponent"):SetScript("res://scripts/SoftBodyStation.lua")
+table.insert(roots, softBodyStation)
+
+local quitHandler = GameObject.Create("Quit Handler")
+quitHandler:AddComponent("LuaComponent"):SetScript("res://scripts/QuitHandler.lua")
+table.insert(roots, quitHandler)
+
+for _, gameObject in ipairs(roots) do
+    scene:AddRootGameObject(gameObject)
+end
+
+Debug.Log("scene.lua: scene built (GPU smoke test: keys 1-" .. #Stations .. " visit the stations)")
+-- Fly camera: "Camera Move" moves relative to where the camera faces, "Camera Rotate" turns and looks.
+-- Port of test_project/src/CameraController.cpp.
+-- "Station 1" ... "Station N" (keys 1-7 in scene.lua) jump to the smoke test's stations (SmokeStations.lua), looking
+-- straight down -Z; it starts at station 1. "Demo Station 1" ... "Demo Station 4" (keys 8, 9, 0, Minus) jump to the demo
+-- stations (DemoStations.lua) the same way.
+
+local Stations = require("scripts.SmokeStations")
+local DemoStations = require("scripts.DemoStations")
+
+local CameraController = {}
+CameraController.__index = CameraController
+
+local SPEED = 10.0
+local SENSITIVITY = 2.0
+local MAX_PITCH = 89.0 * Math.DEG_TO_RAD
+
+function CameraController:OnAttach()
+    self.move = Vector2(0, 0)
+    self.look = Vector2(0, 0)
+    self.pitch = 0.0
+    self.yaw = 0.0
+
+    self:GoToStation(1)
+
+    local controls = Input.LoadActionMap("Main Controls")
+    if controls == nil then
+        Debug.Warn("CameraController: 'Main Controls' action map not found")
+        return
+    end
+
+    controls:Get("Camera Move"):Subscribe(function(action)
+        self.move = action:GetVector2Value()
+    end)
+    controls:Get("Camera Rotate"):Subscribe(function(action)
+        self.look = action:GetVector2Value()
+    end)
+
+    for index = 1, #(Stations or {}) do
+        local station = controls:Get("Station " .. index)
+        if station ~= nil then
+            station:Subscribe(function(action)
+                if action:GetPhase() == ActionPhase.Started then
+                    self:GoToStation(index)
+                end
+            end)
+        end
+    end
+
+    for index = 1, #(DemoStations or {}) do
+        local station = controls:Get("Demo Station " .. index)
+        if station ~= nil then
+            station:Subscribe(function(action)
+                if action:GetPhase() == ActionPhase.Started then
+                    self:GoToStation(index, DemoStations)
+                end
+            end)
+        end
+    end
+end
+
+-- Puts the camera at station `index`'s viewpoint (of `list`, the smoke test's stations by default), looking down -Z.
+-- Nothing without a camera or such a station.
+function CameraController:GoToStation(index, list)
+    local station = (list or Stations or {})[index]
+    local camera = Camera.Main()
+    if station == nil or camera == nil then
+        return
+    end
+    self.pitch = 0.0
+    self.yaw = 0.0
+    camera:SetPosition(station.camera)
+    camera:SetRotation(Quaternion.FromEulerAngles(self.pitch, self.yaw, 0.0))
+end
+
+function CameraController:OnUpdate()
+    local camera = Camera.Main()
+    if camera == nil then
+        return
+    end
+
+    local dt = Time.deltaTime
+
+    -- Movement
+    local moveDir = Vector3(self.move.x, 0.0, -self.move.y)
+    camera:SetPosition(camera:GetPosition() + camera:GetRotation() * (moveDir * (SPEED * dt)))
+
+    -- Rotation
+    if self.look.x ~= 0 or self.look.y ~= 0 then
+        self.yaw = self.yaw - self.look.x * SENSITIVITY * dt
+        self.pitch = math.max(-MAX_PITCH, math.min(MAX_PITCH, self.pitch + self.look.y * SENSITIVITY * dt))
+    end
+
+    camera:SetRotation(Quaternion.FromEulerAngles(self.pitch, self.yaw, 0.0))
+end
+
+return CameraController
+-- The demo stations that follow the smoke test's seven (SmokeStations.lua): where the camera goes for each (keys 8, 9,
+-- 0 and Minus, in CameraController.lua) and what the HUD says there (SmokeHud.lua). They are a separate list so the smoke
+-- test keeps its seven stations ("Station 1/7") and its checklist (docs/testing.html). Every camera looks straight
+-- down -Z, placed so the station sits in the top four fifths of the window, clear of the HUD.
+-- require("scripts.DemoStations") returns the list; entry i is on the key named by its `key` field.
+
+return {
+    {
+        name = "Particles",
+        key = "Key8",
+        camera = Vector3(120.0, 1.6, 16.0),
+        look = "Three ParticleSystems: a blue water fountain, a sand burst that lands and lies on the ground, a grey "
+            .. "smoke column that rises. Each sign says which backend it asked for and which is RUNNING (CPU, or PhysX "
+            .. "GPU) and its live particle count. B: burst. P: play / stop. C: clear. K: backend Auto, CPU, PhysX. "
+            .. "PhysX with no GPU particle backend runs on the CPU, and the sign says so.",
+    },
+    {
+        name = "World canvas and colliders",
+        key = "Key9",
+        camera = Vector3(150.0, -1.0, 9.0),
+        look = "A world-space panel with two buttons. Button A has a yellow trigger volume in front of it: it still "
+            .. "clicks, because triggers never block a world canvas. Button B has a solid green block in front: "
+            .. "clicking it hits the block, so its counter stays 0. Hover: darker. Hold: darker still.",
+    },
+    {
+        name = "Text effect passes",
+        key = "Key0",
+        camera = Vector3(180.0, -0.6, 14.5),
+        look = "TextRenderer:AddEffectPass on a grey board: an outline, a shadow and a glow, each one pass; then the "
+            .. "same yellow and red passes twice. Before: added order puts red in front and hides the yellow. "
+            .. "After: explicit orders bring the yellow back in front. Last: a pass at order -300 behind the "
+            .. "settings shadow. The glow needs OpenGL.",
+    },
+    {
+        name = "Soft bodies",
+        key = "Minus",
+        camera = Vector3(210.0, 1.6, 19.0),
+        look = "SoftBody: cubes of 1e4, 1e5 and 1e6 Pa (soft squashes most), two spheres (damping 0.1, 3) and a "
+            .. "robot body drop and wobble. Each sign says which backend it asked for and which is RUNNING (CPU or "
+            .. "PhysX GPU). R: drop again. J: backend Auto, CPU, PhysX. V: push up. PhysX with no GPU soft-body "
+            .. "backend runs on the CPU, and the sign says so.",
+    },
+}
+-- The particle station's emitters (scene.lua builds them, ParticleStation.lua rebuilds them when the backend changes:
+-- the backend is read when a system starts, so a new backend means a new system). Water, sand and smoke are tuned
+-- with the ParticleSystem fields (rate, shape, speed, size, colour, gravity scale, drag, the ground plane) for the CPU
+-- backend, and with pbdMaterial (Water, Sand, Smoke: the PBD preset the PhysX GPU backend uses; the CPU ignores it).
+
+local Emitters = {}
+
+Emitters.CENTER_X = 120.0
+Emitters.GROUND_Y = -1.9
+-- What K cycles through, as ParticleSystem:SetBackend names them
+Emitters.BACKENDS = { "Auto", "CPU", "PhysX" }
+
+Emitters.Specs = {
+    {
+        key = "Water",
+        detail = "fountain, continuous",
+        x = -5.5,
+        y = Emitters.GROUND_Y + 0.05,
+        continuous = true,
+        burst = 120,
+        configure = function(ps)
+            ps:SetPbdMaterial("Water")
+            ps:SetShape("Cone")
+            ps:SetShapeRadius(0.15)
+            ps:SetConeAngle(10.0)
+            ps:SetSpeed(7.0, 9.0)
+            ps:SetLifetime(1.8, 2.4)
+            ps:SetSize(0.14, 0.1)
+            ps:SetStartColor(Color.new(0.35, 0.6, 1.0, 0.9))
+            ps:SetEndColor(Color.new(0.2, 0.4, 1.0, 0.2))
+            ps:SetEmissionRate(150.0)
+            ps:SetMaxParticles(2000)
+            ps:SetGravityScale(1.0)
+            ps:SetDrag(0.0)
+            ps:SetGround(true, Emitters.GROUND_Y, 0.25)
+        end,
+    },
+    {
+        key = "Sand",
+        detail = "burst, lands and lies",
+        x = 0.0,
+        y = 1.0,
+        continuous = false,
+        burst = 400,
+        configure = function(ps)
+            ps:SetPbdMaterial("Sand")
+            ps:SetShape("Cone")
+            ps:SetShapeRadius(0.3)
+            ps:SetConeAngle(40.0)
+            ps:SetSpeed(3.0, 6.0)
+            ps:SetLifetime(7.0, 9.0)
+            ps:SetSize(0.1, 0.1)
+            ps:SetStartColor(Color.new(0.86, 0.7, 0.35, 1.0))
+            ps:SetEndColor(Color.new(0.86, 0.7, 0.35, 1.0))
+            ps:SetEmissionRate(0.0)
+            ps:SetMaxParticles(1500)
+            ps:SetGravityScale(1.0)
+            ps:SetDrag(0.4)
+            ps:SetGround(true, Emitters.GROUND_Y, 0.05)
+        end,
+    },
+    {
+        key = "Smoke",
+        detail = "column, rises and fades",
+        x = 5.5,
+        y = Emitters.GROUND_Y + 0.05,
+        continuous = true,
+        burst = 40,
+        configure = function(ps)
+            ps:SetPbdMaterial("Smoke")
+            ps:SetShape("Cone")
+            ps:SetShapeRadius(0.3)
+            ps:SetConeAngle(8.0)
+            ps:SetSpeed(0.8, 1.4)
+            ps:SetLifetime(3.5, 5.0)
+            ps:SetSize(0.35, 1.3)
+            ps:SetStartColor(Color.new(0.55, 0.55, 0.58, 0.55))
+            ps:SetEndColor(Color.new(0.3, 0.3, 0.32, 0.0))
+            ps:SetEmissionRate(30.0)
+            ps:SetMaxParticles(600)
+            ps:SetGravityScale(-0.12)
+            ps:SetDrag(0.3)
+            ps:SetGround(false, 0.0, 0.0)
+        end,
+    },
+}
+
+-- A new emitter object (in no scene yet: the caller adds it, which starts the system with `backend`) and its
+-- ParticleSystem. `playing` false leaves a continuous emitter stopped, as after P.
+function Emitters.Create(spec, backend, playing)
+    local gameObject = GameObject.Create("Particles " .. spec.key)
+    gameObject:CreatePositionable()
+    gameObject:GetPositionable():SetPosition(Vector3(Emitters.CENTER_X + spec.x, spec.y, 0.0))
+    local ps = gameObject:AddComponent("ParticleSystem")
+    ps:SetBackend(backend)
+    spec.configure(ps)
+    ps:SetPlayOnAwake(spec.continuous and playing)
+    -- Emitted when the system starts: the sand's only particles, and a first puff for the others
+    ps:EmitBurst(spec.burst)
+    return gameObject, ps
+end
+
+return Emitters
+-- The particle station's behaviour (demo station 8): keys B (burst), P (play / stop), C (clear) and K (cycle the
+-- requested backend Auto -> CPU -> PhysX) act only while the camera is at the station, and the signs above the emitters
+-- show live which backend each ParticleSystem asked for, which is RUNNING and how many particles are alive.
+-- Changing the backend replaces the emitters, since a system reads its backend when it starts.
+
+local Emitters = require("scripts.ParticleEmitters")
+
+local ParticleStation = {}
+ParticleStation.__index = ParticleStation
+
+local REFRESH_SECONDS = 0.2 -- the signs are rewritten five times a second, not every frame
+local RANGE = 15.0          -- how far from the station's centre the camera still counts as being at it
+
+-- Calls fn when the named action starts, if the map has it
+local function OnStarted(controls, name, fn)
+    local action = controls:Get(name)
+    if action ~= nil then
+        action:Subscribe(function(changed)
+            if changed:GetPhase() == ActionPhase.Started then
+                fn()
+            end
+        end)
+    end
+end
+
+-- What the status sign says is running, from what was asked for and what the system reports
+local function Running(asked, active)
+    if active == nil then
+        return "starting"
+    elseif active == "PhysX" then
+        return "PhysX GPU"
+    elseif asked == "PhysX" then
+        return "CPU (PhysX asked: fell back)"
+    end
+    return "CPU"
+end
+
+function ParticleStation:OnAttach()
+    self.backendIndex = 1
+    self.playing = true
+    self.elapsed = REFRESH_SECONDS
+    self.items = nil
+    self.info = nil
+    self.infoText = nil
+
+    local controls = Input.LoadActionMap("Main Controls")
+    if controls == nil then
+        Debug.Warn("ParticleStation: 'Main Controls' action map not found")
+        return
+    end
+    OnStarted(controls, "Particles Burst", function()
+        self:ForEach(function(item) item.ps:EmitBurst(item.spec.burst) end)
+    end)
+    OnStarted(controls, "Particles Toggle", function() self:TogglePlaying() end)
+    OnStarted(controls, "Particles Clear", function()
+        self:ForEach(function(item) item.ps:Clear() end)
+    end)
+    OnStarted(controls, "Particles Backend", function() self:CycleBackend() end)
+end
+
+-- The emitters and signs scene.lua built, found once
+function ParticleStation:Items()
+    if self.items ~= nil then
+        return self.items
+    end
+    local items = {}
+    local scene = SceneManager.GetCurrentScene()
+    if scene ~= nil then
+        for _, spec in ipairs(Emitters.Specs) do
+            local emitter = scene:FindGameObject("Particles " .. spec.key)
+            local status = scene:FindGameObject("Particles Status " .. spec.key)
+            if emitter ~= nil and status ~= nil then
+                table.insert(items, {
+                    spec = spec,
+                    gameObject = emitter,
+                    ps = emitter:GetComponent("ParticleSystem"),
+                    status = status:GetComponent("TextRenderer"),
+                    statusText = "",
+                })
+            end
+        end
+        local info = scene:FindGameObject("Particles Info")
+        self.info = info and info:GetComponent("TextRenderer")
+    end
+    self.items = items
+    return items
+end
+
+function ParticleStation:AtStation()
+    local camera = Camera.Main()
+    return camera ~= nil and math.abs(camera:GetPosition().x - Emitters.CENTER_X) < RANGE
+end
+
+function ParticleStation:Backend()
+    return Emitters.BACKENDS[self.backendIndex]
+end
+
+-- Runs fn(item) for every emitter, when the camera is at the station
+function ParticleStation:ForEach(fn)
+    if not self:AtStation() then
+        return
+    end
+    for _, item in ipairs(self:Items()) do
+        fn(item)
+    end
+end
+
+function ParticleStation:TogglePlaying()
+    if not self:AtStation() then
+        return
+    end
+    self.playing = not self.playing
+    for _, item in ipairs(self:Items()) do
+        if item.spec.continuous then
+            if self.playing then
+                item.ps:Play()
+            else
+                item.ps:Stop()
+            end
+        end
+    end
+end
+
+-- Replaces every emitter with a new one asking for the next backend (the old ones go at the end of the frame)
+function ParticleStation:CycleBackend()
+    if not self:AtStation() then
+        return
+    end
+    local scene = SceneManager.GetCurrentScene()
+    if scene == nil then
+        return
+    end
+    self.backendIndex = self.backendIndex % #Emitters.BACKENDS + 1
+    for _, item in ipairs(self:Items()) do
+        scene:DestroyGameObject(item.gameObject)
+        item.gameObject, item.ps = Emitters.Create(item.spec, self:Backend(), self.playing)
+        scene:AddRootGameObject(item.gameObject)
+    end
+    self.elapsed = REFRESH_SECONDS
+end
+
+function ParticleStation:OnUpdate()
+    self.elapsed = self.elapsed + Time.deltaTime
+    if self.elapsed < REFRESH_SECONDS then
+        return
+    end
+    self.elapsed = 0.0
+
+    local asked = self:Backend()
+    local fellBack = false
+    for _, item in ipairs(self:Items()) do
+        local active = item.ps:GetActiveBackend()
+        if asked == "PhysX" and active ~= nil and active ~= "PhysX" then
+            fellBack = true
+        end
+        local text = string.format("asked: %s\nrunning: %s\nalive: %d", asked, Running(asked, active),
+            item.ps:GetAliveCount())
+        if text ~= item.statusText then
+            item.statusText = text
+            item.status:SetText(text)
+        end
+    end
+
+    if self.info ~= nil then
+        local text = string.format("Physics.IsGpuAvailable(): %s   backend asked: %s\n"
+            .. "B burst   P play / stop   C clear   K backend: Auto, CPU, PhysX",
+            tostring(Physics.IsGpuAvailable()), asked)
+        if fellBack then
+            text = text .. "\nPhysX asked but CPU is running: no GPU particle backend here (the log has one warning "
+                .. "per emitter)."
+        end
+        if text ~= self.infoText then
+            self.infoText = text
+            self.info:SetText(text)
+        end
+    end
+end
+
+return ParticleStation
+-- Quits when the "Quit" action starts. Port of test_project/src/StandardInputHandler.cpp.
+
+local QuitHandler = {}
+QuitHandler.__index = QuitHandler
+
+function QuitHandler:OnAttach()
+    local controls = Input.LoadActionMap("Main Controls")
+    if controls == nil then
+        Debug.Warn("QuitHandler: 'Main Controls' action map not found")
+        return
+    end
+
+    controls:Get("Quit"):Subscribe(function(action)
+        if action:GetPhase() == ActionPhase.Started then
+            Application.Quit()
+        end
+    end)
+end
+
+return QuitHandler
+-- The smoke test's heads-up display (on the "Smoke HUD" canvas, bottom-left): which station the camera is at and
+-- what to look for there, also written to the log in case text doesn't draw. Keys 1-7 ("Station N") change station,
+-- as in CameraController.lua, and show the screen-space UI panel only at the station that tests it; U ("Toggle UI
+-- Panel") shows or hides the panel anyway, and H ("Toggle HUD") the HUD. Keys 8, 9, 0 and Minus ("Demo Station N") show
+-- the demo stations (DemoStations.lua), headed "Demo N/4" so the smoke test stays "Station N/7".
+
+local Stations = require("scripts.SmokeStations")
+local DemoStations = require("scripts.DemoStations")
+
+local SmokeHud = {}
+SmokeHud.__index = SmokeHud
+
+-- Calls fn when the named action starts, if the map has it
+local function OnStarted(controls, name, fn)
+    local action = controls:Get(name)
+    if action ~= nil then
+        action:Subscribe(function(changed)
+            if changed:GetPhase() == ActionPhase.Started then
+                fn()
+            end
+        end)
+    end
+end
+
+function SmokeHud:OnAttach()
+    self:ShowStation(1)
+
+    local controls = Input.LoadActionMap("Main Controls")
+    if controls == nil then
+        Debug.Warn("SmokeHud: 'Main Controls' action map not found")
+        return
+    end
+
+    for index = 1, #(Stations or {}) do
+        OnStarted(controls, "Station " .. index, function() self:ShowStation(index) end)
+    end
+    for index = 1, #(DemoStations or {}) do
+        OnStarted(controls, "Demo Station " .. index, function() self:ShowDemoStation(index) end)
+    end
+    OnStarted(controls, "Toggle UI Panel", function() self:TogglePanel() end)
+    OnStarted(controls, "Toggle HUD", function() self:ToggleHud() end)
+end
+
+-- The UIText on the HUD's child called `name`, or nil
+function SmokeHud:Text(name)
+    local child = self.gameObject:FindChildRecursive(name)
+    return child and child:GetComponent("UIText")
+end
+
+function SmokeHud:ShowStation(index)
+    local station = Stations and Stations[index]
+    if station == nil then
+        return
+    end
+    local heading = string.format("Station %d/%d: %s", index, #Stations, station.name)
+    local title = self:Text("HUD Title")
+    if title ~= nil then
+        title:SetText(heading)
+    end
+    local caption = self:Text("HUD Caption")
+    if caption ~= nil then
+        caption:SetText(station.look)
+    end
+    local panel = self:Panel()
+    if panel ~= nil then
+        panel:SetActive(station.uiPanel == true)
+    end
+    Debug.Log("GPU smoke test, " .. heading .. ". Look for: " .. station.look)
+end
+
+-- Like ShowStation, for the demo stations (which have no screen-space panel)
+function SmokeHud:ShowDemoStation(index)
+    local station = DemoStations and DemoStations[index]
+    if station == nil then
+        return
+    end
+    local heading = string.format("Demo %d/%d: %s", index, #DemoStations, station.name)
+    local title = self:Text("HUD Title")
+    if title ~= nil then
+        title:SetText(heading)
+    end
+    local caption = self:Text("HUD Caption")
+    if caption ~= nil then
+        caption:SetText(station.look)
+    end
+    local panel = self:Panel()
+    if panel ~= nil then
+        panel:SetActive(false)
+    end
+    Debug.Log("GPU smoke test, " .. heading .. ". Look for: " .. station.look)
+end
+
+-- The screen-space UI station's canvas, or nil
+function SmokeHud:Panel()
+    local scene = SceneManager.GetCurrentScene()
+    return scene and scene:FindGameObject("Smoke UI Panel")
+end
+
+function SmokeHud:TogglePanel()
+    local panel = self:Panel()
+    if panel ~= nil then
+        panel:SetActive(not panel:IsActive())
+    end
+end
+
+function SmokeHud:ToggleHud()
+    local background = self.gameObject:FindChild("HUD Background")
+    if background ~= nil then
+        background:SetActive(not background:IsActive())
+    end
+end
+
+return SmokeHud
+-- The GPU smoke test's stations: where the camera goes for each (keys 1-7, in CameraController.lua) and what the HUD
+-- says to look for there (SmokeHud.lua). Every camera looks straight down -Z. The cameras are placed so each station
+-- sits in the top four fifths of a 16:9 (or 4:3) window, clear of the HUD in the bottom-left corner. The screen-space
+-- UI panel, which covers the right of the window, is shown only at station 7 (or with U).
+-- require("scripts.SmokeStations") returns the list; the station on key i is entry i.
+
+return {
+    {
+        name = "Physics",
+        camera = Vector3(-3.5, 0.0, 20.0),
+        look = "The blue cube and the red sphere fall onto the grey floor and come to rest; the sphere rolls off "
+            .. "the cube's edge. Nothing passes through the floor.",
+    },
+    {
+        name = "World text",
+        camera = Vector3(-30.8, -0.6, 12.0),
+        look = "TextRenderer through the SDF text shader: white text at 1.0, 0.5 and 0.25 units per em, all crisp "
+            .. "with smooth edges, no boxes or stray marks around the glyphs; the blue paragraph wraps onto "
+            .. "several centred lines.",
+    },
+    {
+        name = "Text effects",
+        camera = Vector3(-60.6, -0.6, 13.5),
+        look = "On the grey board: a red outline, a hard black drop shadow, a cyan glow, blurred edges and all of "
+            .. "them combined, each as its caption says. No rectangles around glyphs. Glow and softness need "
+            .. "OpenGL; the software renderer draws them hard-edged.",
+    },
+    {
+        name = "World canvas",
+        camera = Vector3(30.0, -1.0, 9.0),
+        look = "A see-through blue panel in the world with a title, the arrow icon and an orange button. Hover "
+            .. "the button: darker; hold the left button: darker still; release over it: World clicks +1. The red "
+            .. "cube behind shows dimly through the panel; the green cube in front hides its lower-left corner.",
+    },
+    {
+        name = "Materials",
+        camera = Vector3(59.4, -0.5, 12.0),
+        look = "Lit from the front upper left. Top: a spinning checker cube (red top-left on each face; faces "
+            .. "toward you and the upper left bright, faces turned away to the right dim), a lit white sphere "
+            .. "(bright upper left, darker lower right, a highlight) and a flat unlit white disc. Bottom: one "
+            .. "striped texture opaque, blended and alpha-tested in front of a yellow bar.",
+    },
+    {
+        name = "glTF model",
+        camera = Vector3(89.75, -0.2, 9.0),
+        look = "Two robots from smoke_robot.gltf, lit from the front upper left: a grey body with a bright face "
+            .. "(cyan eyes above a red mouth, upright), orange arms (the right one tilted out), a teal pyramid head "
+            .. "and an orange antenna. The right one spins as one piece: nothing comes apart.",
+    },
+    {
+        name = "Screen UI",
+        camera = Vector3(-3.5, 0.0, 20.0),
+        uiPanel = true,
+        look = "The panel on the right: the arrow icon upright, labels at left-top, centre and right-bottom of "
+            .. "their boxes, the sentence wrapped inside its box. Click me: darker on hover, darker still pressed, "
+            .. "Clicks +1 on release; Disable it greys it out. The world shows through the dark panel.",
+    },
+}
+-- The soft-body station's bodies (scene.lua builds them, SoftBodyStation.lua rebuilds them when the backend changes:
+-- a SoftBody reads its backend and resolution when it starts, so a new backend means a new body). Each is a
+-- MeshRenderer plus a SoftBody on one object, with no Rigidbody. The CPU backend collides only with the plane
+-- y = FLOOR_TOP (SetGround); the PhysX backend collides with the scene's colliders, so scene.lua gives the floor a
+-- static BoxCollider at the same height.
+
+local SoftBodies = {}
+
+SoftBodies.CENTER_X = 210.0
+SoftBodies.FLOOR_TOP = -1.9
+-- What J cycles through, as SoftBody:SetBackend names them
+SoftBodies.BACKENDS = { "Auto", "CPU", "PhysX" }
+
+local ROBOT = "res://models/smoke_robot.gltf"
+local TILT = Quaternion.FromEulerAngles(0.35, 0.0, 0.3) -- the cubes land on a corner, all the same way
+
+-- Three cubes (soft, medium, stiff), two spheres (low and high damping) and the robot's body, side by side. A body
+-- is dropped from `y` (its centre), `scale` times the mesh's size. stiffness is Young's modulus in pascals (rubber
+-- is about 1e6), damping the velocity decay in 1/s; resolution is the voxels along the longest axis (the Lua API
+-- has no tetrahedron count, so the signs show this).
+SoftBodies.Specs = {
+    {
+        key = "Soft Cube", title = "Soft cube", mesh = "Cube", material = "res://materials/softbody_red.mat",
+        x = -7.5, y = 3.2, scale = 1.6, tilt = TILT, stiffness = 1.0e4, damping = 0.1, resolution = 8,
+    },
+    {
+        key = "Medium Cube", title = "Medium cube", mesh = "Cube", material = "res://materials/softbody_yellow.mat",
+        x = -4.5, y = 3.2, scale = 1.6, tilt = TILT, stiffness = 1.0e5, damping = 0.1, resolution = 8,
+    },
+    {
+        key = "Stiff Cube", title = "Stiff cube", mesh = "Cube", material = "res://materials/softbody_blue.mat",
+        x = -1.5, y = 3.2, scale = 1.6, tilt = TILT, stiffness = 1.0e6, damping = 0.1, resolution = 8,
+    },
+    {
+        key = "Low Damping", title = "Low damping", mesh = "Sphere", material = "res://materials/softbody_green.mat",
+        x = 1.5, y = 3.2, scale = 1.6, stiffness = 3.0e4, damping = 0.1, resolution = 8,
+    },
+    {
+        key = "High Damping", title = "High damping", mesh = "Sphere",
+        material = "res://materials/softbody_cyan.mat",
+        x = 4.5, y = 3.2, scale = 1.6, stiffness = 3.0e4, damping = 3.0, resolution = 8,
+    },
+    {
+        -- The robot's body mesh and face material, on their own object (the robot's other nodes are not part of it)
+        key = "Robot", title = "Robot body", mesh = ROBOT .. "#mesh/Body", material = ROBOT .. "#material/Face",
+        x = 7.5, y = 3.2, scale = 1.0, stiffness = 5.0e4, damping = 0.3, resolution = 8,
+    },
+}
+
+-- "1e+04" -> "1e4": a short stiffness for a sign
+function SoftBodies.Short(number)
+    return (string.format("%.0e", number):gsub("e%+?0*(%d)", "e%1"))
+end
+
+-- A new body object (in no scene yet: the caller adds it, which starts the body with `backend`) and its SoftBody
+function SoftBodies.Create(spec, backend)
+    local gameObject = GameObject.Create("Soft Body " .. spec.key)
+    gameObject:CreatePositionable()
+    local positionable = gameObject:GetPositionable()
+    positionable:SetPosition(Vector3(SoftBodies.CENTER_X + spec.x, spec.y, 0.0))
+    positionable:SetScale(Vector3(spec.scale, spec.scale, spec.scale))
+    if spec.tilt ~= nil then
+        positionable:SetRotation(spec.tilt)
+    end
+    local renderer = gameObject:AddComponent("MeshRenderer")
+    renderer:SetMesh(spec.mesh)
+    renderer:SetMaterial(1, spec.material)
+    local body = gameObject:AddComponent("SoftBody")
+    body:SetBackend(backend)
+    body:SetResolution(spec.resolution)
+    body:SetStiffness(spec.stiffness)
+    body:SetDamping(spec.damping)
+    body:SetGround(true, SoftBodies.FLOOR_TOP)
+    return gameObject, body
+end
+
+return SoftBodies
+-- The soft-body station's behaviour (demo station 11, key Minus): keys R (drop every body again), J (cycle the
+-- requested backend Auto -> CPU -> PhysX) and V (push every body upwards) act only while the camera is at the station,
+-- and the signs under the bodies' titles show live which backend each SoftBody asked for and which is RUNNING.
+-- Changing the backend replaces the bodies, since a SoftBody reads its backend only when it starts.
+
+local Bodies = require("scripts.SoftBodies")
+
+local SoftBodyStation = {}
+SoftBodyStation.__index = SoftBodyStation
+
+local REFRESH_SECONDS = 0.2 -- the signs are rewritten five times a second, not every frame
+local RANGE = 15.0          -- how far from the station's centre the camera still counts as being at it
+local START_SECONDS = 1.0   -- a body with no backend yet is "starting" for this long, then "inert"
+local PUSH = Vector3(0.0, 6.0, 0.0) -- what V adds to every body's velocity, in world units per second
+
+-- Calls fn when the named action starts, if the map has it
+local function OnStarted(controls, name, fn)
+    local action = controls:Get(name)
+    if action ~= nil then
+        action:Subscribe(function(changed)
+            if changed:GetPhase() == ActionPhase.Started then
+                fn()
+            end
+        end)
+    end
+end
+
+-- What the status sign says is running, from what was asked for and what GetActiveBackendName reports ("" before
+-- the body started, or when it is inert: no mesh, a Rigidbody, or a mesh it cannot tetrahedralise)
+local function Running(asked, active, age)
+    if active == "" then
+        return age < START_SECONDS and "starting" or "inert"
+    elseif active == "PhysX" then
+        return "PhysX GPU"
+    elseif asked == "PhysX" then
+        return "CPU (PhysX asked: fell back)"
+    end
+    return "CPU"
+end
+
+function SoftBodyStation:OnAttach()
+    self.backendIndex = 1
+    self.clock = 0.0
+    self.elapsed = REFRESH_SECONDS
+    self.items = nil
+    self.info = nil
+    self.infoText = nil
+
+    local controls = Input.LoadActionMap("Main Controls")
+    if controls == nil then
+        Debug.Warn("SoftBodyStation: 'Main Controls' action map not found")
+        return
+    end
+    OnStarted(controls, "Soft Bodies Reset", function()
+        self:ForEach(function(item)
+            item.body:Reset()
+            item.created = self.clock
+        end)
+    end)
+    OnStarted(controls, "Soft Bodies Backend", function() self:CycleBackend() end)
+    OnStarted(controls, "Soft Bodies Push", function()
+        self:ForEach(function(item) item.body:AddVelocity(PUSH) end)
+    end)
+end
+
+-- The bodies and signs scene.lua built, found once
+function SoftBodyStation:Items()
+    if self.items ~= nil then
+        return self.items
+    end
+    local items = {}
+    local scene = SceneManager.GetCurrentScene()
+    if scene ~= nil then
+        for _, spec in ipairs(Bodies.Specs) do
+            local object = scene:FindGameObject("Soft Body " .. spec.key)
+            local status = scene:FindGameObject("Soft Body Status " .. spec.key)
+            if object ~= nil and status ~= nil then
+                table.insert(items, {
+                    spec = spec,
+                    gameObject = object,
+                    body = object:GetComponent("SoftBody"),
+                    status = status:GetComponent("TextRenderer"),
+                    statusText = "",
+                    created = 0.0,
+                })
+            end
+        end
+        local info = scene:FindGameObject("Soft Bodies Info")
+        self.info = info and info:GetComponent("TextRenderer")
+    end
+    self.items = items
+    return items
+end
+
+function SoftBodyStation:AtStation()
+    local camera = Camera.Main()
+    return camera ~= nil and math.abs(camera:GetPosition().x - Bodies.CENTER_X) < RANGE
+end
+
+function SoftBodyStation:Backend()
+    return Bodies.BACKENDS[self.backendIndex]
+end
+
+-- Runs fn(item) for every body, when the camera is at the station
+function SoftBodyStation:ForEach(fn)
+    if not self:AtStation() then
+        return
+    end
+    for _, item in ipairs(self:Items()) do
+        fn(item)
+    end
+end
+
+-- Replaces every body with a new one asking for the next backend (the old ones go at the end of the frame), each
+-- back at its start pose above the floor
+function SoftBodyStation:CycleBackend()
+    if not self:AtStation() then
+        return
+    end
+    local scene = SceneManager.GetCurrentScene()
+    if scene == nil then
+        return
+    end
+    self.backendIndex = self.backendIndex % #Bodies.BACKENDS + 1
+    for _, item in ipairs(self:Items()) do
+        scene:DestroyGameObject(item.gameObject)
+        item.gameObject, item.body = Bodies.Create(item.spec, self:Backend())
+        item.created = self.clock
+        scene:AddRootGameObject(item.gameObject)
+    end
+    self.elapsed = REFRESH_SECONDS
+end
+
+function SoftBodyStation:OnUpdate()
+    self.clock = self.clock + Time.deltaTime
+    self.elapsed = self.elapsed + Time.deltaTime
+    if self.elapsed < REFRESH_SECONDS then
+        return
+    end
+    self.elapsed = 0.0
+
+    local asked = self:Backend()
+    local fellBack = false
+    for _, item in ipairs(self:Items()) do
+        local active = item.body:GetActiveBackendName()
+        if asked == "PhysX" and active == "CPU" then
+            fellBack = true
+        end
+        local text = string.format("asked: %s\nrunning: %s", asked, Running(asked, active, self.clock - item.created))
+        if text ~= item.statusText then
+            item.statusText = text
+            item.status:SetText(text)
+        end
+    end
+
+    if self.info ~= nil then
+        local text = string.format("Physics.IsGpuAvailable(): %s   backend asked: %s\n"
+            .. "R drop again   J backend: Auto, CPU, PhysX   V push up",
+            tostring(Physics.IsGpuAvailable()), asked)
+        if fellBack then
+            text = text .. "\nPhysX asked but CPU is running: there is no PhysX GPU soft-body backend here (the log "
+                .. "has one warning per body)."
+        end
+        if text ~= self.infoText then
+            self.infoText = text
+            self.info:SetText(text)
+        end
+    end
+end
+
+return SoftBodyStation
+-- Turns its object about the world's Y axis, on top of the rotation it started with (the smoke test's textured cube
+-- and robot).
+
+local Spin = {}
+Spin.__index = Spin
+
+local RADIANS_PER_SECOND = 0.6
+
+function Spin:OnAttach()
+    self.angle = 0.0
+    local positionable = self.gameObject:GetPositionable()
+    self.startRotation = positionable and positionable:GetRotation() or Quaternion.FromEulerAngles(0.0, 0.0, 0.0)
+end
+
+function Spin:OnUpdate()
+    local positionable = self.gameObject:GetPositionable()
+    if positionable == nil then
+        return
+    end
+    self.angle = self.angle + RADIANS_PER_SECOND * Time.deltaTime
+    positionable:SetRotation(Quaternion.FromAxisAngle(Vector3.Up, self.angle) * self.startRotation)
+end
+
+return Spin
+âPNG
+
+   IHDR   Ä   Ä   √>aÀ  ∫IDATx⁄Ì€QmE≈Ò+Ií$ü$Ií$Ií$Ií$Ií$Ií$Ií$â$I_í$Ií$Ií$Ií$Ií$Ií$Ií$IVk∏ì›nfˆ,˜<Ù∞÷„~:øócæˇ {∏˝∏˝π∏πÉ∏ÉπC∏Cπ√∏‡G∆‹ë‹Q‹—‹1‹±‹q‹Ò‹	‹â‹I‹…¸ÊÓTÓ4ÓtÓÓLÓ,ÓlÓÓ\Ó<Ó|~sw!ww1w	w)ww9ww%ww5øπÜªñªéªûªÅªëªâªôªÖªïªçªùﬂ‹¡›…›≈›Õ›√›À›«›œ=¿=»=ƒ=Ão·Â„Áû‡û‰û‚ûÊû·ûÂû„ûÁ7/p/r/q/sØpØrØqØsoporoqoÛõw∏wπ˜∏˜π∏πè∏èπO∏Oπœ∏œ˘Õ‹ó‹W‹◊‹7‹∑‹w‹˜‹‹è‹O‹œ¸ÊÓWÓ7ÓwÓÓOÓ/Ï˝ÒÁdh  @Ü – dh  @Ü – dh Ä»–  Ä †»–  Ä †»–  ;ê° 4  @ê° 4  @ê° v C h 24 Ä C h 24 Ä C Ï@Ü – dh  @Ü – dh  @Ü – d dh  @Ü – dh  @Ü – dh  @∆ @Ü – dh  @Ü – dh  @Ü – d dh  @Ü – dh  @Ü – dh  @∆ @Ü – dh  @Ü – dh  @Ü – d dh  @Ü – dh  @Ü – dh  @∆ @Ü – dh  @Ü – dh  @Ü – d dh  @Ü – dh  @Ü – dh  @∆î« @yR î« @yR î« @yR î« @yR î« @y⁄Ä˙8†æŒ®ØÅ≥ Ík‡,Ä˙8†æŒ®ØÅ≥ Ík‡,Ä˙8†æÓ¿Ú9x¿Ú9x¿Ú9x¿Ú9x¿Ú9x¿Ú9x¿Ú9x¿Ú9x¿Ú9x¿Ú9xü¨Ô∂ ¨Ô∂ ¨Ô∂ ¨Ô∂ ¨Ô∂ ¨Ô∂ ¨Ô∂ ¨Ô∂ ¨Ô∂ ¨Ôˆ	@Î d†u2–:hÑå ¥BF Z!# ≠ÉêÄ÷A»@Î d†u2∞˜/`@Ô"®†w‘–ªÍË]ı Ù.Çz zA= Ωã†ÄﬁEP@Ô"®†w‘œk`¿Ë$¨`t÷0:	kùÑµ åN¬Z F'a- £ì∞Ä—IX¿Ë$¨`t÷ØÁ‡5Ä≠õ¿5Ä≠õ¿5Ä≠õ¿5Ä≠õ¿5Ä≠õ¿5Ä≠õ¿5Ä≠õ¿5Ä≠õ¿5Ä≠õ¿5Ä≠õ¿5Äˇ‹,ÃÖ.ÃÖ.ÃÖ.ÃÖ.ÃÖ.ÃÖ.ÃÖ.ÃÖ.ÃÖ.ÃÖ.4B*ÄŸ´‡
+`ˆ*∏òΩ
+Æ fØÇ+ÄŸ´‡
+`ˆ*∏òΩ
+Æ fØÇ+ÄŸ´‡
+`ˆ*∏Ë^  Yx†úÖ  Yx†úÖ  Yx†úÖ  Yx†úÖ  Yx†úÖ ;;w‡.¿]Äª wÓ‹∏p‡.¿]Äª wÓ‹∏p‡.¿]Äª wÓ‹∏p‡.¿]Äª wÓ‹∏p‡.¿]Äª wÓ‹∏p‡.¿]Äª wÓ‹∏p‡.¿]Äª wÓ‹∏p‡.¿]Äª wÓ‹∏p‡.¿]Äª wÓ‹∏p‡.¿]Äª wÓ‹∏p‡.¿]Äª wÓ‹∏p‡.¿]Äª wÓ‹∏p‡.¿]Äª wÓ‹∏p‡.¿]Äª wÓ‹∏p‡.¿]Äª wÓ‹∏p‡.¿]Äª wÓ‹∏p‡.¿]Äª wÓ‹∏p‡.¿]Äª wÓ‹∏p‡.¿]Äª wÓ‹∏p‡.¿]Äª wÓ‹∏p‡.¿]Äª wÓ‹∏p‡.¿]Äª wÓ‹∏p‡.¿]Äª wÓ‹∏p‡.¿]Äª wÓ‹∏p‡.¿]Äª wÓ‹∏p‡.¿]Äª wÓ˛ﬂ]¿ﬂXé
+a91    IENDÆB`ÇâPNG
+
+   IHDR   Ä   Ä   √>aÀ  jIDATx⁄Ì“1 !DAî¸˙Dúd#‚jD–Hv^≤6”~E◊\ Ä  @ úfUƒjº                                                                                                                                            ‡ Oü[_E                                                                                                                                            Ä[ (#   @ (∞æœ^Œ»ê    IENDÆB`ÇâPNG
+
+   IHDR   @   @   ™iqﬁ   ¨IDATx⁄Ì⁄Ω	√@ÄQO‚:3y‚Lí5‚ M $˛;IwÔ’Ç◊	4ΩÊ˘}fÀ≥ÙL               @[Ä≠PÄ®≈ü≠! ~’5¿øË`o]≠Ä≥ï∏™í WW
+‡ÆJ ‹]jÄV•hÄL Q• à. KÆA                     §ˇKÛ'        0*¿
+ÿ=πŸyÚ6    IENDÆB`Ç{
+  "engineVersion": "1.0.0",
+  "formatVersion": 1,
+  "name": "lua_project",
+  "projectId": "a01472da-2084-4520-94d2-834aa42201d3",
+  "scenes": [],
+  "settings": {},
+  "startupScene": ""
+}

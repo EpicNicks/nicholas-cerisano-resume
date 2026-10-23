@@ -1,0 +1,37 @@
+{
+  "format": 1,
+  "profile": "size",
+  "precompressed": true,
+  "files": {
+    "index.data": {
+      "raw": 82141,
+      "sha256": "b48a2cac99c141b9b2b31edcbba1f38272b75716a0832b456a641a6a39b65a31",
+      "gzip": 20389,
+      "brotli": 17282
+    },
+    "index.html": {
+      "raw": 4302,
+      "sha256": "692ecf39f20e3f203f70eb5b21202c602950a26a9573b363d5e210b23b5df5fb",
+      "gzip": 1958,
+      "brotli": 1590
+    },
+    "index.js": {
+      "raw": 160496,
+      "sha256": "cca3819446c8f672160ea5c35b46b3731b2cd832885493293d76d7bb191f433d",
+      "gzip": 40657,
+      "brotli": 35556
+    },
+    "index.wasm": {
+      "raw": 6850877,
+      "sha256": "d4087a274dad8f434b18e26bdc3a6605df996d1732a1627efa573ca029822f82",
+      "gzip": 2249483,
+      "brotli": 1579130
+    },
+    "n2-loader.js": {
+      "raw": 25782,
+      "sha256": "1f35046550f3aa20ed6ed0dc310309b2c62564f39c00c26966849c4fae0682e0",
+      "gzip": 7586,
+      "brotli": 6600
+    }
+  }
+}

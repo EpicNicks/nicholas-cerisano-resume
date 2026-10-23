@@ -18,6 +18,20 @@ export function N2Engine() {
           </h3>
         </a>
       </div>
+      <div className="N2EnginePlayer">
+        <h2>Play the Lua demo</h2>
+        <p>
+          The engine compiled to WebAssembly (Emscripten) running a demo scene
+          scripted in Lua on its software renderer, with PhysX physics.
+        </p>
+        <iframe
+          title="N2Engine web demo"
+          src="/n2engine/index.html"
+          allow="autoplay; fullscreen"
+          allowFullScreen
+          className="N2EngineFrame"
+        />
+      </div>
       <div className="N2EngineText">
         <p>
           N2Engine is a game engine that I am currently developing using C++. It
