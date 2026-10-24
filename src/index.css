@@ -105,6 +105,10 @@ body {
   }
 }
 
+#contact-form {
+  padding: 56px 0 72px;
+}
+
 .App h1,
 h2,
 h3,
@@ -136,7 +140,6 @@ h6 {
 }
 
 .page-section {
-  min-height: 100vh;
   position: relative;
   display: flex;
   flex-direction: column;

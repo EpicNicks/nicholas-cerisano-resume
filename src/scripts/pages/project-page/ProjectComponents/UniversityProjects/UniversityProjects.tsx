@@ -1,4 +1,5 @@
 import "./UniversityProjects.css";
+import { ProjectDetail } from "../ProjectDetail/ProjectDetail";
 import { InfiniteRunner } from "./InfiniteRunner/Infinite Runner";
 import { NeonBreakGame } from "./NeonBreakGame/NeonBreakGame";
 import { DummyInsomnia } from "./DummyInsomnia/DummyInsomnia";
@@ -16,7 +17,7 @@ import toyManiaClip from "../../../../../media/videos/Toy Mania clip.mp4";
 const cards: CardInfo[] = [
   {
     title: "Neon Break",
-    description: "A 2D Vectorheart Style Top-Down Shooter made in Unity",
+    description: "A 2D Vectorheart-style top-down shooter made in Unity.",
     component: NeonBreakGame,
     borderOutlineColor: "#43ceb7",
     languages: ["C#"],
@@ -26,7 +27,7 @@ const cards: CardInfo[] = [
   },
   {
     title: "Dummy Insomnia",
-    description: "A 3D PG Survival Horror Game Prototype made in Unity",
+    description: "A 3D PG survival horror game prototype made in Unity.",
     component: DummyInsomnia,
     // A dark green: the original #001100 disappeared against the dark panel.
     borderOutlineColor: "#3f8f4a",
@@ -37,10 +38,10 @@ const cards: CardInfo[] = [
   },
   {
     title: "Toy Mania",
-    description:
-      'A puzzle builder game prototype modeled after classic game "The Incredible Machine"',
+    description: "A puzzle builder prototype modeled after the classic “The Incredible Machine”.",
     component: ToyMania,
     borderOutlineColor: "#ffff08",
+    lightOutlineColor: "#c9b800",
     languages: ["C#"],
     tools: ["Unity"],
     footer: "Playable in the browser",
@@ -48,7 +49,7 @@ const cards: CardInfo[] = [
   },
   {
     title: "Infinity Run",
-    description: "A 2D Infinite Runner game made in Unity using C#",
+    description: "A 2D infinite runner game made in Unity using C#.",
     component: InfiniteRunner,
     borderOutlineColor: "#ff7e5f",
     languages: ["C#"],
@@ -60,9 +61,13 @@ const cards: CardInfo[] = [
 
 export function UniversityProjects() {
   return (
-    <div className="UniversityProjects">
-      <h1>University Projects</h1>
-      <ExpandableCardGrid cards={cards} className="nested-card-grid" />
-    </div>
+    <ProjectDetail
+      title="University Projects"
+      subtitle="Four games built for York University's game design classes"
+      tech={["C#", "Unity"]}
+      footer={<ExpandableCardGrid cards={cards} className="nested-card-grid" />}
+    >
+      <p>Open a game to see it in action.</p>
+    </ProjectDetail>
   );
 }

@@ -15,6 +15,8 @@ export type CardInfo = {
   tools?: string[];
   /** Short line at the foot of the card: a headline result or the project's status. */
   footer?: string;
+  /** Opens in a wider panel, for details that hold their own card grid. */
+  wide?: boolean;
   /** Shown at the top of the card in place of the language and tool chips. */
   media?: { video?: string; image?: string };
 };
@@ -124,9 +126,9 @@ export function ExpandableCardGrid({
             exit={{ opacity: 0 }}
           >
             <motion.div
-              className="expanded-content"
+              className={`expanded-content${expandedCard?.wide ? " expanded-content-wide" : ""}`}
               layoutId={expandedId}
-              style={{ "--c": expandedCard?.borderOutlineColor ?? "#888" } as React.CSSProperties}
+              style={{ "--c": (expandedCard && outlineColor(expandedCard)) ?? "#888" } as React.CSSProperties}
               onClick={(e) => e.stopPropagation()}
             >
               <button

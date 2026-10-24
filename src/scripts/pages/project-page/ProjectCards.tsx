@@ -21,7 +21,7 @@ import persianImeSite from "../../../../src/media/images/persian_phonetic_ime_si
 const professionalProjectCards: CardInfo[] = [
   {
     title: "Internal Disputes Management System",
-    description: "A fullstack web application for managing internal disputes",
+    description: "A full-stack web application for managing internal disputes.",
     component: InternalDisputesManagement,
     borderOutlineColor: "#ff4b1f",
     languages: ["TypeScript", "Java"],
@@ -30,7 +30,7 @@ const professionalProjectCards: CardInfo[] = [
   },
   {
     title: "Azure Cloud Functions for Internal Batch Jobs",
-    description: "Serverless Azure Cloud Functions for automating internal batch jobs",
+    description: "Serverless Azure Cloud Functions for automating internal batch jobs.",
     component: AzureBatchFunctions,
     borderOutlineColor: "#00ddff",
     lightOutlineColor: "#00a6c7",
@@ -40,7 +40,7 @@ const professionalProjectCards: CardInfo[] = [
   },
   {
     title: "Internal Fraud Management System",
-    description: "A fullstack web application for managing internal fraud cases",
+    description: "A full-stack web application for managing internal fraud cases.",
     component: InternalFraudManagement,
     borderOutlineColor: "#1f53ff",
     languages: ["TypeScript", "Java"],
@@ -49,7 +49,7 @@ const professionalProjectCards: CardInfo[] = [
   },
   {
     title: "End-to-End Automated Testing",
-    description: "An end-to-end automated testing suite for web applications using Puppeteer.js",
+    description: "An end-to-end automated testing suite for web applications using Puppeteer.js.",
     component: EndToEndTesting,
     borderOutlineColor: "#00ff0d",
     lightOutlineColor: "#16b322",
@@ -62,7 +62,7 @@ const professionalProjectCards: CardInfo[] = [
 const personalProjectCards: CardInfo[] = [
   {
     title: "N2Engine",
-    description: "A WIP C++ Game Engine using low-level Graphics and Physics APIs",
+    description: "A WIP C++ game engine using low-level graphics and physics APIs.",
     component: N2Engine,
     borderOutlineColor: "#667eea",
     languages: ["C++", "Lua"],
@@ -71,7 +71,7 @@ const personalProjectCards: CardInfo[] = [
   },
   {
     title: "NEngine Editor",
-    description: "A C# Game Engine built on SFML and Visual Editor built on WPF",
+    description: "A C# game engine built on SFML and a visual editor built on WPF.",
     component: NEngineEditor,
     borderOutlineColor: "#764ba2",
     languages: ["C#"],
@@ -79,7 +79,7 @@ const personalProjectCards: CardInfo[] = [
   },
   {
     title: "Calories In",
-    description: "A Flutter/Dart Calorie Tracking App targeting Android",
+    description: "A Flutter/Dart calorie tracking app targeting Android.",
     component: CaloriesIn,
     borderOutlineColor: "#ff6a00",
     languages: ["Dart", "Kotlin"],
@@ -89,7 +89,7 @@ const personalProjectCards: CardInfo[] = [
   },
   {
     title: "Persian Phonetic IME",
-    description: "A Windows input method that turns Latin letters into Persian script as you type",
+    description: "A Windows input method that turns Latin letters into Persian script as you type.",
     component: PersianPhoneticIME,
     borderOutlineColor: "#e8a317",
     lightOutlineColor: "#c98a06",
@@ -100,8 +100,9 @@ const personalProjectCards: CardInfo[] = [
   },
   {
     title: "University Projects",
-    description: "Projects completed at York University for Game Design classes",
+    description: "Projects completed at York University for game design classes.",
     component: UniversityProjects,
+    wide: true,
     borderOutlineColor: "#EEE",
     lightOutlineColor: "#8a8f98",
     // The four games inside share this stack, so the filter finds them through this card.

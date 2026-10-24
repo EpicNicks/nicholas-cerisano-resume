@@ -1,22 +1,23 @@
 .resume-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 3rem 2rem;
+  padding: 80px 2rem 72px;
   transition:
     background-color 0.3s ease,
     color 0.3s ease;
-  min-height: 100vh;
   position: relative;
 }
 
 /* Dark Mode (Default) */
 .resume-container.dark-mode {
+  --resume-accent: #00ceff;
+  --resume-accent-hover: #6fe3ff;
   background-color: var(--bg);
   color: #e8e8e8;
 }
 
 .resume-container.dark-mode .resume-section-title {
-  color: #f5f5f5;
+  color: var(--resume-accent);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -26,11 +27,11 @@
 }
 
 .resume-container.dark-mode a {
-  color: #7eb8d6;
+  color: var(--resume-accent);
 }
 
 .resume-container.dark-mode a:hover {
-  color: #a0d0e8;
+  color: var(--resume-accent-hover);
 }
 
 .resume-container.dark-mode .resume-sidebar {
@@ -55,12 +56,14 @@
 
 /* Light Mode */
 .resume-container.light-mode {
+  --resume-accent: #0a7d9a;
+  --resume-accent-hover: #075a70;
   background-color: var(--bg);
   color: #2c2c2c;
 }
 
 .resume-container.light-mode .resume-section-title {
-  color: #1a1a1a;
+  color: var(--resume-accent);
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
@@ -70,11 +73,11 @@
 }
 
 .resume-container.light-mode a {
-  color: #4a7c9e;
+  color: var(--resume-accent);
 }
 
 .resume-container.light-mode a:hover {
-  color: #2d5a7a;
+  color: var(--resume-accent-hover);
 }
 
 .resume-container.light-mode .resume-sidebar {
@@ -344,8 +347,8 @@
 .resume-company {
   font-size: 0.9rem;
   margin: 0.25rem 0 0 0;
-  opacity: 0.75;
-  font-weight: 400;
+  color: var(--resume-accent);
+  font-weight: 600;
   text-align: left;
 }
 

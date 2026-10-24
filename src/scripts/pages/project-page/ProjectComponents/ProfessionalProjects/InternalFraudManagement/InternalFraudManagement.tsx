@@ -1,64 +1,30 @@
-import "./InternalFraudManagement.css";
+import { ProjectDetail } from "../../ProjectDetail/ProjectDetail";
 
 export function InternalFraudManagement() {
   return (
-    <div className="InternalFraudManagement">
-      <div className="InternalFraudManagementHeader">
-        <h1>Internal Fraud Management System</h1>
-        <h3>Enterprise application for tracking and managing fraud cases</h3>
-      </div>
-      <div className="InternalFraudManagementText">
-        <p>
-          I led a 4-person agile team to redesign and modernize a critical
-          internal business application, transforming it from a legacy system to
-          a cloud-native solution running on Azure.
-        </p>
-        <p>
-          As the sole front-end developer on this project, I rewrote the entire
-          client-side application using React and TypeScript, creating a
-          sustainable codebase with minimized technical debt. The migration to
-          Azure cloud infrastructure dramatically improved system reliability.
-        </p>
-
-        <div className="InternalFraudManagement-features">
-          <h4>Key Achievements</h4>
-          <ul>
-            <li>
-              <strong>Improved Uptime:</strong> Increased system availability
-              from 99.5% to 99.99% through Azure cloud migration
-            </li>
-            <li>
-              <strong>API Performance:</strong> Enhanced API performance by 50%
-              via Redux Toolkit integration
-            </li>
-            <li>
-              <strong>Code Quality:</strong> Maintained 90%+ test coverage and
-              introduced coding standards to improve developer experience
-            </li>
-            <li>
-              <strong>Technical Leadership:</strong> Reviewed code and
-              collaborated with senior developers to deliver evolving business
-              requirements
-            </li>
-          </ul>
-        </div>
-
-        <div className="InternalFraudManagement-tech">
-          <h4>Technologies Used</h4>
-          <p>
-            <span className="tech-badge">React</span>
-            <span className="tech-badge">TypeScript</span>
-            <span className="tech-badge">Jest</span>
-            <span className="tech-badge">Redux Toolkit</span>
-            <span className="tech-badge">Java</span>
-            <span className="tech-badge">Spring Boot</span>
-            <span className="tech-badge">REST API</span>
-            <span className="tech-badge">JUnit</span>
-            <span className="tech-badge">Azure</span>
-            <span className="tech-badge">MS SQL Server</span>
-          </p>
-        </div>
-      </div>
-    </div>
+    <ProjectDetail
+      title="Internal Fraud Management System"
+      subtitle="Enterprise application for tracking and managing fraud cases"
+      metric={["99.99%", "uptime, up from 99.5%"]}
+      pointsHeading="Key Achievements"
+      points={[
+        ["Improved uptime", "System availability raised from 99.5% to 99.99% through the Azure migration"],
+        ["API performance", "50% faster through Redux Toolkit (RTK Query) caching"],
+        ["Code quality", "90%+ test coverage and new team coding standards"],
+        ["Technical leadership", "Reviewed code and worked with senior developers on evolving requirements"],
+      ]}
+      tech={["React", "TypeScript", "Jest", "Redux Toolkit", "Java", "Spring Boot", "REST API", "JUnit", "Azure", "MS SQL Server"]}
+    >
+      <p>
+        Led a 4-person agile team to redesign and modernize a critical internal
+        business application, moving it from a legacy system to a cloud-native
+        solution on Azure.
+      </p>
+      <p>
+        As the sole front-end developer, I rewrote the entire client-side
+        application in React and TypeScript, leaving a sustainable codebase
+        with minimal technical debt.
+      </p>
+    </ProjectDetail>
   );
 }
