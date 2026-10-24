@@ -19,42 +19,21 @@ const cards: CardInfo[] = [
     description: "A 2D Vectorheart Style Top-Down Shooter made in Unity",
     component: NeonBreakGame,
     borderOutlineColor: "#43ceb7",
-    cardMiddle: () => (
-      <video
-        src={neonBreakTitleScreen}
-        autoPlay
-        loop
-        muted
-        playsInline
-        style={{
-          width: "100%",
-          height: "auto",
-          borderRadius: "4px",
-          marginBottom: "12px",
-        }}
-      />
-    ),
+    languages: ["C#"],
+    tools: ["Unity"],
+    footer: "Playable in the browser",
+    media: { video: neonBreakTitleScreen },
   },
   {
     title: "Dummy Insomnia",
     description: "A 3D PG Survival Horror Game Prototype made in Unity",
     component: DummyInsomnia,
-    borderOutlineColor: "#001100",
-    cardMiddle: () => (
-      <video
-        src={dummyInsomniaClip}
-        autoPlay
-        loop
-        muted
-        playsInline
-        style={{
-          width: "100%",
-          height: "auto",
-          borderRadius: "4px",
-          marginBottom: "12px",
-        }}
-      />
-    ),
+    // A dark green: the original #001100 disappeared against the dark panel.
+    borderOutlineColor: "#3f8f4a",
+    languages: ["C#"],
+    tools: ["Unity"],
+    footer: "Gameplay video",
+    media: { video: dummyInsomniaClip },
   },
   {
     title: "Toy Mania",
@@ -62,42 +41,20 @@ const cards: CardInfo[] = [
       'A puzzle builder game prototype modeled after classic game "The Incredible Machine"',
     component: ToyMania,
     borderOutlineColor: "#ffff08",
-    cardMiddle: () => (
-      <video
-        src={toyManiaClip}
-        autoPlay
-        loop
-        muted
-        playsInline
-        style={{
-          width: "100%",
-          height: "auto",
-          borderRadius: "4px",
-          marginBottom: "12px",
-        }}
-      />
-    ),
+    languages: ["C#"],
+    tools: ["Unity"],
+    footer: "Playable in the browser",
+    media: { video: toyManiaClip },
   },
   {
     title: "Infinity Run",
     description: "A 2D Infinite Runner game made in Unity using C#",
     component: InfiniteRunner,
     borderOutlineColor: "#ff7e5f",
-    cardMiddle: () => (
-      <video
-        src={infiniteRunnerClip}
-        autoPlay
-        loop
-        muted
-        playsInline
-        style={{
-          width: "100%",
-          height: "auto",
-          borderRadius: "4px",
-          marginBottom: "12px",
-        }}
-      />
-    ),
+    languages: ["C#"],
+    tools: ["Unity"],
+    footer: "Playable in the browser",
+    media: { video: infiniteRunnerClip },
   },
 ];
 

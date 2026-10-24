@@ -1,6 +1,6 @@
-import { NavButton } from "./NavButton";
 import "./NavBar.css";
-import React, { useState, useEffect, useRef, useCallback } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
+import { useTheme } from "../theme/ThemeContext";
 
 interface IProps {
   onNavigate: (sectionId: string) => void;
@@ -8,142 +8,149 @@ interface IProps {
 
 interface NavButtonConfig {
   text: string;
-  id: string[];
+  /** Label on phones, where the full labels don't fit across the bar. */
+  shortText: string;
   sectionId: string;
 }
 
-let activeStateId: string | null = null;
 const navButtons: NavButtonConfig[] = [
-  { text: "Home", id: ["", "home"], sectionId: "home" },
-  { text: "My Projects", id: ["projects"], sectionId: "projects" },
-  { text: "Resume", id: ["resume"], sectionId: "resume" },
-  { text: "About Me", id: ["about"], sectionId: "about" },
-  { text: "Contact Me", id: ["contact-form"], sectionId: "contact-form" },
+  { text: "Home", shortText: "Home", sectionId: "home" },
+  { text: "My Projects", shortText: "Projects", sectionId: "projects" },
+  { text: "Resume", shortText: "Resume", sectionId: "resume" },
+  { text: "About Me", shortText: "About", sectionId: "about" },
+  { text: "Contact Me", shortText: "Contact", sectionId: "contact-form" },
 ];
 
+// Browsers without a scrollend event treat a clicked scroll as finished once scrolling pauses this long.
+const SETTLE_MS = 150;
+const hasScrollEnd = "onscrollend" in window;
+
+// The section crossing the middle of the viewport, or the last section once the page is scrolled
+// to the bottom (the contact form is too short to ever reach the middle).
+function sectionInView(): string {
+  const doc = document.documentElement;
+  if (window.scrollY + window.innerHeight >= doc.scrollHeight - 2) {
+    return navButtons[navButtons.length - 1].sectionId;
+  }
+  const middle = window.innerHeight / 2;
+  let current = navButtons[0].sectionId;
+  for (const { sectionId } of navButtons) {
+    const el = document.getElementById(sectionId);
+    if (el && el.getBoundingClientRect().top <= middle) current = sectionId;
+  }
+  return current;
+}
+
 export function NavBar({ onNavigate }: IProps) {
-  const [activeBtnIndex, setActiveBtnIndex] = useState<number>(0);
-  const [currentSection, setCurrentSection] = useState<string>("home");
-  const intersectionObserverRef = useRef<IntersectionObserver | null>(null);
+  const [activeSection, setActiveSection] = useState<string>("home");
+  const { theme, toggleTheme } = useTheme();
+  // The section a nav click is scrolling to. The highlight still sweeps through the sections passed
+  // on the way, then lands here once scrolling settles. A second click replaces it.
+  const clickTarget = useRef<string | null>(null);
+  const settleTimer = useRef<number | undefined>(undefined);
 
-  // Initialize activeStateId on first render
-  useEffect(() => {
-    if (activeStateId === null) {
-      activeStateId = "home";
-    }
+  const land = useCallback(() => {
+    window.clearTimeout(settleTimer.current);
+    if (clickTarget.current) setActiveSection(clickTarget.current);
+    clickTarget.current = null;
   }, []);
 
-  const setActiveStateId = useCallback((id: string): void => {
-    activeStateId = id;
-    setCurrentSection(id);
-
-    // Update active button index
-    const index = navButtons.findIndex(
-      (btn) => btn.id.includes(id) || (id === "home" && btn.id.includes("")),
-    );
-    if (index !== -1) {
-      setActiveBtnIndex(index);
-    }
-  }, []);
-
-  const getActiveStateId = useCallback((): string | null => activeStateId, []);
-
-  const getCurrentSection = useCallback(
-    (): string => currentSection,
-    [currentSection],
-  );
-
-  const setActiveButtonIndex = useCallback((index: number): void => {
-    setActiveBtnIndex(index);
-  }, []);
-
-  const handleNavClick = useCallback(
-    (sectionId: string, event?: React.MouseEvent): void => {
-      if (event) {
-        event.preventDefault();
-      }
-
-      // Update URL hash without page reload
-      window.history.pushState(null, "", `#${sectionId}`);
-
-      // Update active state
-      setActiveStateId(sectionId);
-
-      // Scroll to section
-      onNavigate(sectionId);
+  const landAfter = useCallback(
+    (ms: number) => {
+      window.clearTimeout(settleTimer.current);
+      settleTimer.current = window.setTimeout(land, ms);
     },
-    [onNavigate, setActiveStateId],
+    [land],
   );
 
   useEffect(() => {
-    // Set up intersection observer to track which section is in view
-    const options = {
-      root: null,
-      rootMargin: "-50% 0px -50% 0px", // Trigger when section is in the middle of viewport
-      threshold: 0,
+    let frame = 0;
+    let lastHash = "";
+    const update = () => {
+      frame = 0;
+      const id = sectionInView();
+      setActiveSection(id);
+      if (!clickTarget.current && id !== lastHash) {
+        lastHash = id;
+        window.history.replaceState(null, "", `#${id}`);
+      }
+    };
+    const handleScroll = () => {
+      if (clickTarget.current) {
+        // The scroll is under way: wait for scrollend, or for a pause where scrollend isn't supported.
+        if (hasScrollEnd) window.clearTimeout(settleTimer.current);
+        else landAfter(SETTLE_MS);
+      }
+      if (!frame) frame = requestAnimationFrame(update);
+    };
+    const handleScrollEnd = () => {
+      if (clickTarget.current) land();
     };
 
-    intersectionObserverRef.current = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const sectionId = entry.target.id;
-          if (sectionId && sectionId !== currentSection) {
-            setActiveStateId(sectionId);
-            // Update URL hash
-            window.history.replaceState(null, "", `#${sectionId}`);
-          }
-        }
-      });
-    }, options);
-
-    // Observe all sections
-    const sections = ["home", "resume", "projects", "about", "contact-form"];
-    sections.forEach((sectionId) => {
-      const element = document.getElementById(sectionId);
-      if (element && intersectionObserverRef.current) {
-        intersectionObserverRef.current.observe(element);
-      }
-    });
-
-    if (activeBtnIndex === null) {
-      // eslint-disable-next-line react-hooks/set-state-in-effect
-      setActiveBtnIndex(0);
-    }
-
-    // Cleanup function
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener("scrollend", handleScrollEnd);
     return () => {
-      if (intersectionObserverRef.current) {
-        intersectionObserverRef.current.disconnect();
-      }
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("scrollend", handleScrollEnd);
+      cancelAnimationFrame(frame);
+      window.clearTimeout(settleTimer.current);
     };
-  }, [currentSection, setActiveStateId, activeBtnIndex]);
+  }, [land, landAfter]);
+
+  const handleNavClick = (sectionId: string, event: React.MouseEvent): void => {
+    event.preventDefault();
+    clickTarget.current = sectionId;
+    window.history.pushState(null, "", `#${sectionId}`);
+    onNavigate(sectionId);
+    // Lands straight away if the section is already in place and nothing scrolls; the first scroll
+    // event cancels this and the scroll's end lands it instead.
+    landAfter(SETTLE_MS);
+  };
+
+  const isLight = theme === "light";
 
   return (
-    <div className="NavBar">
+    <nav className="NavBar" aria-label="Sections">
       <ul>
-        {navButtons.map((button, index) => (
-          <li key={button.sectionId}>
-            <a
-              href={`#${button.sectionId}`}
-              onClick={(e) => handleNavClick(button.sectionId, e)}
-            >
-              <NavButton
-                text={button.text}
-                id={button.id}
-                buttonIndex={index}
-                navBar={{
-                  setActiveStateId,
-                  getActiveStateId,
-                  getCurrentSection,
-                  setActiveButtonIndex,
-                  handleNavClick,
-                }}
-                onClick={() => handleNavClick(button.sectionId)}
-              />
-            </a>
-          </li>
-        ))}
+        {navButtons.map((button) => {
+          const isActive = button.sectionId === activeSection;
+          return (
+            <li key={button.sectionId}>
+              <a
+                href={`#${button.sectionId}`}
+                className={isActive ? "ActiveNavBtn" : "NavButton"}
+                aria-current={isActive ? "true" : undefined}
+                onClick={(e) => handleNavClick(button.sectionId, e)}
+              >
+                <span className="NavLabelFull">{button.text}</span>
+                <span className="NavLabelShort" aria-hidden="true">
+                  {button.shortText}
+                </span>
+              </a>
+            </li>
+          );
+        })}
       </ul>
-    </div>
+      <button
+        type="button"
+        className="LightSwitch"
+        aria-pressed={isLight}
+        aria-label="Light mode"
+        title={isLight ? "Switch to dark mode" : "Switch to light mode"}
+        onClick={toggleTheme}
+      >
+        {/* The bulb outline is always drawn; the glass fills and the rays appear when it's on. */}
+        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+          <g className="LightSwitchRays" strokeLinecap="round">
+            <path d="M12 1.6v1.6M4.6 4.6l1.1 1.1M19.4 4.6l-1.1 1.1M2.2 11.4h1.6M20.2 11.4h1.6" />
+          </g>
+          <path
+            className="LightSwitchGlass"
+            d="M12 5.2a6 6 0 0 0-3.6 10.8c.6.5 1 1.2 1 2V18.4h5.2V18c0-.8.4-1.5 1-2A6 6 0 0 0 12 5.2z"
+          />
+          <path d="M9.6 20.2h4.8M10.2 22.2h3.6" strokeLinecap="round" />
+        </svg>
+      </button>
+    </nav>
   );
 }

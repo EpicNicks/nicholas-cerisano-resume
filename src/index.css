@@ -1,18 +1,108 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300..800&family=Roboto&family=Open+Sans:wght@400..600&display=swap");
 
 /* Add smooth scrolling */
 html {
   scroll-behavior: smooth;
-  background-color: rgb(38, 38, 38);
+  background-color: var(--bg);
+  color: var(--ink);
   /* scroll-snap-type: y mandatory;
   transition: scroll-snap-type 0.1s ease; */
   overflow-x: hidden;
+  transition: background-color 0.25s ease, color 0.25s ease;
 }
 
 body {
   padding: 0;
   margin: 0;
   width: 100vw;
+}
+
+/* ---------- Theme tokens ----------
+   Dark is the default; the light switch next to the nav bar sets <html data-theme="light">. */
+:root {
+  --bg: rgb(38, 38, 38);
+  --bg-2: #1e1f22;
+  --surface: #2f2f2f;
+  --line: #424242;
+  --ink: #f0f0f0;
+  --muted: #ababab;
+  --accent: #00ceff;
+  --on-accent: #052530;
+  /* Text in a project's own colour: keep this much of the colour, mixed toward --mix. */
+  --cp: 40%;
+  --mix: #fff;
+
+  /* Home */
+  --name: rgb(127, 246, 255);
+  --name-shadow: 2px 2px 40px #777;
+  --role-ink: #000;
+  --role-glow: 1px 1px 10px #00ffff;
+  --fact: rgba(127, 246, 255, 0.8);
+  --fact-glow: 1px 1px 8px rgba(0, 255, 255, 0.5);
+  --video-opacity: 1;
+  --video-filter: blur(var(--home-blur));
+  --vignette: linear-gradient(to bottom, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.7) 10%, rgba(85, 85, 85, 0.3) 25%, transparent 40%, transparent 60%, rgba(85, 85, 85, 0.3) 75%, rgba(0, 0, 0, 0.7) 90%, var(--bg) 100%);
+
+  /* Nav */
+  --nav-bg: #333333dd;
+  --nav-ink: aliceblue;
+  --nav-hover: #555555;
+  --nav-active-bg: #7f7f7fdd;
+  --nav-active-ink: aqua;
+
+  /* About: a light band on the dark page */
+  --ab-band: linear-gradient(135deg, #e3fcff 0%, #ffffff 70%);
+  --ab-ink: #14262b;
+  --ab-head: #0a4c5c;
+  --ab-muted: #4d6469;
+  --ab-accent: #0a8f9f;
+  --ab-line: #c9e3e8;
+
+  --foot-bg: #1b1b1b;
+}
+
+:root[data-theme="light"] {
+  --bg: #f3f5f7;
+  --bg-2: #e5eaef;
+  --surface: #ffffff;
+  --line: #d5dbe2;
+  --ink: #171a1f;
+  --muted: #59616c;
+  --accent: #0089ad;
+  --on-accent: #ffffff;
+  --cp: 72%;
+  --mix: #000;
+
+  --name: #007f9f;
+  --name-shadow: 0 0 34px rgba(0, 206, 255, 0.45);
+  --fact: #1f6676;
+  --fact-glow: none;
+  /* The clip is a dark editor; inverted, it becomes a pale blurred texture. */
+  --video-opacity: 0.7;
+  --video-filter: blur(var(--home-blur)) invert(1) hue-rotate(180deg);
+  --vignette: linear-gradient(to bottom, rgba(243, 245, 247, 0.92) 0%, rgba(243, 245, 247, 0.6) 14%, rgba(243, 245, 247, 0.25) 35%, rgba(243, 245, 247, 0.25) 65%, rgba(243, 245, 247, 0.7) 88%, var(--bg) 100%);
+
+  --nav-bg: #ffffffe6;
+  --nav-ink: #22262c;
+  --nav-hover: #e9eef3;
+  --nav-active-bg: #d9f4fb;
+  --nav-active-ink: #007a99;
+
+  /* About: a dark band on the light page */
+  --ab-band: linear-gradient(140deg, #0d3a46 0%, #12262c 70%);
+  --ab-ink: #e7f4f7;
+  --ab-head: #ffffff;
+  --ab-muted: #a2c2ca;
+  --ab-accent: #3fd6f5;
+  --ab-line: #2b4f59;
+
+  --foot-bg: #e5eaef;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    transition: none;
+  }
 }
 
 .App h1,

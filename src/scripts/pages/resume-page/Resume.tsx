@@ -1,15 +1,13 @@
-import { useState } from "react";
-import { FiSun, FiMoon, FiDownload } from "react-icons/fi";
+import { FiDownload } from "react-icons/fi";
 import "./Resume.css";
+import { useTheme } from "../../theme/ThemeContext";
 
 import resumePdf from "../../../media/documents/Nicholas Cerisano Resume.pdf";
 
 export const Resume = () => {
-  const [isDarkMode, setIsDarkMode] = useState(true);
-
-  const toggleTheme = () => {
-    setIsDarkMode(!isDarkMode);
-  };
+  // The light switch beside the nav bar themes the whole page, the resume included.
+  const { theme } = useTheme();
+  const isDarkMode = theme === "dark";
 
   const handleDownload = () => {
     const link = document.createElement("a");
@@ -25,18 +23,6 @@ export const Resume = () => {
       className={`resume-container ${isDarkMode ? "dark-mode" : "light-mode"}`}
     >
       <div className="resume-controls">
-        <label className="theme-toggle-switch">
-          <input
-            type="checkbox"
-            checked={isDarkMode}
-            onChange={toggleTheme}
-            aria-label="Toggle theme"
-          />
-          <span className="slider">
-            <FiMoon className="moon-icon" size={14} />
-            <FiSun className="sun-icon" size={14} />
-          </span>
-        </label>
         <button
           className="download-btn"
           onClick={handleDownload}
@@ -148,7 +134,7 @@ export const Resume = () => {
             <div className="resume-section">
               <h2 className="resume-section-title">Profile</h2>
               <p>
-                Full-Stack Software Developer with 4+ years building and
+                Full-Stack Software Developer with 5+ years building and
                 maintaining high-availability web applications in the payments
                 and fintech industry. Works across React and TypeScript front
                 ends and Java Spring services on Azure, with a focus on system

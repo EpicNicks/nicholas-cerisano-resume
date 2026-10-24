@@ -1,0 +1,137 @@
+.PersianPhoneticIME {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  color: white;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.PersianPhoneticIMEHeader {
+  margin-bottom: 1rem;
+}
+
+.PersianPhoneticIMEHeader a {
+  color: #f5b93a;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(245, 185, 58, 0.3);
+  transition: all 0.2s ease;
+}
+
+.PersianPhoneticIMEHeader a:hover {
+  color: #ffd27a;
+  border-bottom-color: #ffd27a;
+}
+
+.PersianPhoneticIME h1 {
+  text-align: left;
+  padding-left: 2rem;
+  font-size: 3rem;
+  margin: 2rem 0 1rem 0;
+  font-weight: 600;
+}
+
+.PersianPhoneticIME h3 {
+  text-align: left;
+  padding-left: 2rem;
+  font-size: 1.4rem;
+  opacity: 0.9;
+  font-weight: 300;
+}
+
+.PersianPhoneticIMEShot {
+  display: block;
+  max-width: 800px;
+  width: 90%;
+  margin: 0 auto 1.5rem;
+  color: #f5b93a;
+  text-decoration: none;
+  text-align: center;
+}
+
+.PersianPhoneticIMEShot img {
+  display: block;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.PersianPhoneticIMEShot:hover img {
+  transform: translateY(-3px);
+}
+
+.PersianPhoneticIMEShot span {
+  display: inline-block;
+  margin-top: 0.6rem;
+  font-weight: 600;
+}
+
+.PersianPhoneticIMEText {
+  max-width: 800px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 0 2rem;
+  text-align: left;
+}
+
+.PersianPhoneticIMEText p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.PersianPhoneticIME-features h4 {
+  color: #fff;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.PersianPhoneticIME-features ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.PersianPhoneticIME-features li {
+  padding: 0.75rem 0 0.75rem 2rem;
+  position: relative;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.5;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.PersianPhoneticIME-features li:last-child {
+  border-bottom: none;
+}
+
+.PersianPhoneticIME-features li::before {
+  content: "▶";
+  position: absolute;
+  left: 0;
+  color: #f5b93a;
+  font-size: 0.8rem;
+}
+
+@media (max-width: 768px) {
+  .PersianPhoneticIME h1 {
+    font-size: 2rem;
+    padding-left: 1rem;
+  }
+
+  .PersianPhoneticIME h3 {
+    font-size: 1.1rem;
+    padding-left: 1rem;
+  }
+
+  .PersianPhoneticIMEText {
+    padding: 0 1rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .PersianPhoneticIMEShot img {
+    transition: none;
+  }
+}

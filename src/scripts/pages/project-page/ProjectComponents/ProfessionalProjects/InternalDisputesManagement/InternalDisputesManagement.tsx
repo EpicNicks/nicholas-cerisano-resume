@@ -12,7 +12,7 @@ export function InternalDisputesManagement() {
       <div className="InternalDisputesManagementText">
         <p>
           Contributed to a large-scale enterprise application designed to manage
-          internal fraud cases, working in full-stack capacity to deliver
+          internal disputes, working in full-stack capacity to deliver
           features that support critical business operations.
         </p>
         <p>
@@ -26,7 +26,7 @@ export function InternalDisputesManagement() {
           <ul>
             <li>
               <strong>Enterprise Scale:</strong> Worked on large-scale
-              application handling critical fraud prevention operations
+              application handling critical dispute case management
             </li>
             <li>
               <strong>Full-Stack Development:</strong> Developed features across
