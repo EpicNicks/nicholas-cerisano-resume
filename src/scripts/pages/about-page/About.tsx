@@ -12,49 +12,80 @@ export function About() {
       <div className="About-Main">
         <div className="About-Body">
           <h1>About Me</h1>
-          <p>
-            I'm a software developer with over 4 years of professional
-            experience building fullstack web and cloud applications - and many
-            more years across different areas of the software space, such as:
+          <p className="About-Lead">
+            I'm a software developer with over 5 years of professional
+            experience building full-stack web and cloud applications, and many
+            more years across other areas of software:
           </p>
-          <ul>
-            <li style={{ margin: 0 }}>Game Development</li>
-            <li style={{ margin: 0 }}>Android Development</li>
-            <li style={{ margin: 0 }}>Game Engine Development</li>
-            <li style={{ margin: 0 }}>
+          <ul className="About-Areas">
+            <li>Game Development</li>
+            <li>Android Development</li>
+            <li>Game Engine Development</li>
+            <li>
               Unit Testing, Integration Testing, API Testing, E2E (End-to-End)
               Testing
             </li>
           </ul>
           <p>
-            I graduated from the Specialized Honors Bachelor of Computer Science
-            program at York University, and I approach problems with a pragmatic
-            and logical mindset. Beyond work, I enjoy exploring new technologies
-            and experimenting with projects that push me to grow as a developer.
+            I graduated from the Specialized Honours Bachelor of Computer
+            Science program at York University, and I approach problems with a
+            pragmatic and logical mindset. Beyond work, I enjoy exploring new
+            technologies and experimenting with projects that push me to grow
+            as a developer.
           </p>
           <div className="About-Interests">
             <div className="AboutSoftwareInterests">
               <h3>My interests in Software include:</h3>
               <ul>
-                <li>Software Architecture and Design</li>
-                <li>Full-Stack Web Development</li>
-                <li>Game Development and Game Engine Design</li>
-                <li>DevOps and Cloud Infrastructure</li>
+                <li>
+                  <b>Agentic Development</b>
+                  <span>
+                    Building with AI agents such as Claude Code, and designing
+                    workflows around them
+                  </span>
+                </li>
+                <li>
+                  <b>Software Architecture and Design</b>
+                </li>
+                <li>
+                  <b>Full-Stack Web Development</b>
+                </li>
+                <li>
+                  <b>Game Development and Game Engine Design</b>
+                </li>
+                <li>
+                  <b>DevOps and Cloud Infrastructure</b>
+                </li>
               </ul>
             </div>
             <div className="AboutPersonalInterests">
               <h3>My interests and hobbies include:</h3>
               <ul>
                 <li>
-                  Exploring new frameworks, programming languages, and design
-                  patterns to gain fresh perspectives on problem solving
+                  <b>Exploring new frameworks, languages and design patterns</b>
+                  <span>For fresh perspectives on problem solving</span>
                 </li>
-                <li>Linguistics and languages</li>
-                <li>Designing and developing games in Unity Engine</li>
-                <li>Practicing Brazilian Jiu-Jitsu</li>
-                <li>Chess</li>
-                <li>Reading fantasy novels</li>
+                <li>
+                  <b>Linguistics and languages</b>
+                </li>
+                <li>
+                  <b>Designing and developing games in Unity Engine</b>
+                </li>
+                <li>
+                  <b>Chess</b>
+                </li>
+                <li>
+                  <b>Reading fantasy novels</b>
+                </li>
               </ul>
+              <div className="AboutFormerly">
+                <h3>Formerly,</h3>
+                <ul>
+                  <li>
+                    <b>Practicing Brazilian Jiu-Jitsu</b>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>

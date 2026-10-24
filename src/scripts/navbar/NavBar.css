@@ -1,146 +1,203 @@
+/* Floating segmented nav, inset from the left, with a detached round light switch beside it. */
 .NavBar {
-  background-color: transparent;
-  margin: 0;
-  padding: 0;
   position: fixed;
-  top: 0;
+  top: 10px;
   left: 0;
   right: 0;
   z-index: 1000;
   max-width: 100vw;
+  padding-left: 10%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
   pointer-events: none;
-  transform: translateZ(0);
-  will-change: transform;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
 }
 
 .NavBar ul {
+  display: inline-flex;
   margin: 0;
   padding: 0;
-  padding-left: 10%;
   list-style-type: none;
-  overflow: visible;
-  background-color: transparent;
-  pointer-events: none;
-  transform: translateZ(0);
-}
-
-.NavBar ul li {
-  padding: 0px;
-  background-color: transparent;
-  color: #555555;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 16pt;
-  font-weight: normal;
-  line-height: 1.6em;
-  float: left;
   pointer-events: auto;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px -8px rgba(0, 0, 0, 0.6);
 }
 
-.ActiveNavBtn {
-  color: aqua;
-  background-color: #7f7f7fdd;
+.NavBar a {
   display: block;
-  text-align: center;
-  padding: 16px;
+  padding: 12px 18px;
+  font-family: var(--subtitle-font);
+  font-size: 16px;
+  line-height: 1.4;
   white-space: nowrap;
-}
-
-.NavButton {
-  -webkit-transition: background-color 500ms ease-out,
-    background-color 200ms ease-in;
-  transition: background-color 500ms ease-out, background-color 200ms ease-in;
-  display: block;
   text-align: center;
-  padding: 16px;
-  background-color: #333333dd;
-  white-space: nowrap;
-}
-
-.NavBar ul li:first-child .NavButton,
-.NavBar ul li:first-child .ActiveNavBtn {
-  border-top-left-radius: 8px;
-  border-bottom-left-radius: 8px;
-}
-
-.NavBar ul li:last-child .NavButton,
-.NavBar ul li:last-child .ActiveNavBtn {
-  border-top-right-radius: 8px;
-  border-bottom-right-radius: 8px;
-}
-
-.NavBar a:link {
   text-decoration: none;
-  color: aliceblue;
+  color: var(--nav-ink);
+  background-color: var(--nav-bg);
+  backdrop-filter: blur(8px);
+  transition: background-color 200ms ease-in, color 200ms ease-in;
 }
 
-.NavBar a:visited {
-  color: aliceblue;
+.NavBar li:first-child a {
+  border-radius: 8px 0 0 8px;
 }
 
-.NavButton:hover {
-  background-color: #555555;
-  color: aqua;
+.NavBar li:last-child a {
+  border-radius: 0 8px 8px 0;
 }
 
+.NavBar a:hover {
+  background-color: var(--nav-hover);
+  color: var(--nav-active-ink);
+}
+
+.NavBar a.ActiveNavBtn {
+  background-color: var(--nav-active-bg);
+  color: var(--nav-active-ink);
+}
+
+.NavLabelShort {
+  display: none;
+}
+
+.NavBar a:focus-visible {
+  outline: 2px solid var(--nav-active-ink);
+  outline-offset: -2px;
+}
+
+.LightSwitch {
+  pointer-events: auto;
+  flex: none;
+  width: 46px;
+  height: 46px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  color: var(--nav-ink);
+  background-color: var(--nav-bg);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 6px 18px -8px rgba(0, 0, 0, 0.6);
+  transition: background-color 200ms, color 200ms, box-shadow 200ms;
+}
+
+.LightSwitch:hover {
+  background-color: var(--nav-hover);
+}
+
+.LightSwitch:focus-visible {
+  outline: 2px solid var(--nav-active-ink);
+  outline-offset: 2px;
+}
+
+.LightSwitch svg {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+}
+
+.LightSwitchRays {
+  opacity: 0;
+  transition: opacity 200ms;
+}
+
+.LightSwitch[aria-pressed="true"] {
+  color: #ffd54a;
+  box-shadow: 0 0 0 1px #ffd54a55, 0 0 18px -2px #ffd54a88;
+}
+
+.LightSwitch[aria-pressed="true"] .LightSwitchGlass {
+  fill: #ffd54a;
+  stroke: #ffd54a;
+}
+
+.LightSwitch[aria-pressed="true"] .LightSwitchRays {
+  opacity: 1;
+}
+
+/* Phones and small tablets: a full-width bar; the active button takes double width. */
 @media (max-width: 768px) {
-  .NavBar ul {
-    margin: 0;
+  .NavBar {
+    top: 0;
     padding: 0;
+    gap: 0;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .NavBar ul {
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    flex: 1;
+    border-radius: 0;
+    box-shadow: none;
   }
 
   .NavBar ul li {
-    float: none;
     flex: 1;
+    min-width: 0;
   }
 
   .NavBar ul li:has(.ActiveNavBtn) {
     flex: 2;
   }
 
-  .NavButton {
-    font-size: 0.6em;
+  .NavBar a {
+    font-size: 13px;
+    padding: 10px 4px;
+    border-radius: 0 !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
-  .ActiveNavBtn {
-    font-size: 0.6em;
+  .LightSwitch {
+    width: 41px;
+    height: 41px;
+    border-radius: 0;
+    box-shadow: none;
   }
 }
 
 @media (max-width: 480px) {
-  .NavButton {
-    font-size: 0.6em;
-    padding: 4px;
+  .NavBar a {
+    font-size: 11.5px;
+    padding: 8px 2px;
   }
-  .ActiveNavBtn {
-    font-size: 0.6em;
-    padding: 4px 16px;
+
+  /* The full label stays in the accessibility tree; only the visible text shortens. */
+  .NavLabelFull {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
   }
-  .NavBar ul {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+
+  .NavLabelShort {
+    display: inline;
   }
-  .NavBar ul li {
-    float: none;
-    flex: 1;
+
+  .NavBar a.ActiveNavBtn {
+    padding: 8px;
   }
-  .NavBar ul li:has(.ActiveNavBtn) {
-    flex: 2;
+
+  .LightSwitch {
+    width: 36px;
+    height: 36px;
   }
-  .NavBar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+  .LightSwitch svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .NavBar a,
+  .LightSwitch,
+  .LightSwitchRays {
+    transition: none;
   }
 }

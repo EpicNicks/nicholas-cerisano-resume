@@ -1,83 +1,91 @@
-import { FaGithub } from "react-icons/fa";
-import "./N2Engine.css";
+import { useEffect, useRef, type RefObject } from "react";
+import { ProjectDetail } from "../../ProjectDetail/ProjectDetail";
+
+const DEMO_URL = "/n2engine/index.html";
+
+// F toggles fullscreen on the demo, like the Unity games. The demo doesn't bind F itself (its controls
+// are WASD, the arrows, numbers and a few letters), and it is same-origin, so key presses made while
+// it has focus can be heard from here without touching the engine build.
+function useFullscreenKey(frameRef: RefObject<HTMLIFrameElement | null>) {
+  useEffect(() => {
+    const frame = frameRef.current;
+    if (frame === null) return;
+
+    const handleKey = (e: KeyboardEvent) => {
+      if (e.key.toLowerCase() !== "f" || e.repeat || e.ctrlKey || e.metaKey || e.altKey) return;
+      const target = e.target as HTMLElement | null;
+      if (target && (target.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(target.tagName))) return;
+      const request =
+        document.fullscreenElement === frame ? document.exitFullscreen() : frame.requestFullscreen();
+      request.catch(() => {
+        // Fullscreen can be refused (no user activation, or blocked by the browser); nothing to do.
+      });
+    };
+
+    // The demo's own window gets the key presses while it has focus; re-attach whenever it (re)loads.
+    let demoWindow: Window | null = null;
+    const attachToDemo = () => {
+      demoWindow?.removeEventListener("keydown", handleKey);
+      demoWindow = frame.contentWindow;
+      demoWindow?.addEventListener("keydown", handleKey);
+    };
+
+    window.addEventListener("keydown", handleKey);
+    frame.addEventListener("load", attachToDemo);
+    attachToDemo();
+    return () => {
+      window.removeEventListener("keydown", handleKey);
+      frame.removeEventListener("load", attachToDemo);
+      demoWindow?.removeEventListener("keydown", handleKey);
+    };
+  }, [frameRef]);
+}
 
 export function N2Engine() {
-  return (
-    <div className="N2Engine">
-      <div className="N2EngineHeader">
-        <h1>N2Engine</h1>
-        <h3>A C++ Game Engine using low-level Graphics and Physics APIs</h3>
-        <a
-          href="https://github.com/EpicNicks/N2Engine"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h3>
-            My GitHub repo &nbsp;
-            <FaGithub className="Github" size={32} />
-          </h3>
-        </a>
-      </div>
-      <div className="N2EnginePlayer">
-        <h2>Play the Lua demo</h2>
-        <p>
-          The engine compiled to WebAssembly (Emscripten) running a demo scene
-          scripted in Lua on its software renderer, with PhysX physics.
-        </p>
-        <iframe
-          title="N2Engine web demo"
-          src="/n2engine/index.html"
-          allow="autoplay; fullscreen"
-          allowFullScreen
-          className="N2EngineFrame"
-        />
-      </div>
-      <div className="N2EngineText">
-        <p>
-          N2Engine is a game engine that I am currently developing using C++. It
-          takes from my architectural experience building the first NEngine and
-          pushes higher ownership of low-level components.
-        </p>
-        <p>
-          I decided to build N2Engine when I gained the prerequisite knowledge
-          to sate my curiosity with graphics and physics programming. I decided
-          to iterate with OpenGL with Vulkan as a graphics backend target for
-          future. I focused on building an agnostic API which will be able to
-          slot in either graphics API. This interface-driven architecture is the
-          core of the design philosophy of this project.
-        </p>
+  const frameRef = useRef<HTMLIFrameElement>(null);
+  useFullscreenKey(frameRef);
 
-        <div className="N2Engine-features">
-          <h4>Key Features</h4>
-          <ul>
-            <li>
-              <strong>Hierarchical Component System:</strong>
-            </li>
-            <li>
-              <strong>Main Loop Scheduling:</strong> Full coroutine, physics,
-              and rendering on the current Scene graph along with Scene
-              management.
-            </li>
-            <li>
-              <strong>Input System:</strong> An Event-driven phased input system
-              with support for multiple input devices.
-            </li>
-            <li>
-              <strong>Asset Serialization/Deserialization:</strong> JSON
-              representation of the Scene graph containing GameObject and
-              Component properties baked into the Component architecture.
-            </li>
-            <li>
-              <strong>Rendering Backend:</strong> An efficient rendering backend
-              with support for instancing and lighting.
-            </li>
-            <li>
-              <strong>SIMD Math types</strong> Efficient math types leveraging
-              available SIMD instruction sets on the running system.
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
+  return (
+    <ProjectDetail
+      title="N2Engine"
+      subtitle="A C++ game engine using low-level graphics and physics APIs"
+      media={
+        <>
+          <iframe
+            ref={frameRef}
+            title="N2Engine web demo"
+            src={DEMO_URL}
+            allow="autoplay; fullscreen"
+            allowFullScreen
+          />
+          <p>
+            <b>Press "F" to toggle fullscreen.</b> The engine compiled to
+            WebAssembly (Emscripten), running a Lua-scripted scene on its
+            software renderer with PhysX physics.
+          </p>
+        </>
+      }
+      pointsHeading="Key Features"
+      points={[
+        ["Hierarchical component system"],
+        ["Main loop scheduling", "Coroutines, physics and rendering over the current scene graph, plus scene management"],
+        ["Input system", "Event-driven and phased, with support for multiple input devices"],
+        ["Asset serialization", "JSON representation of the scene graph built into the component architecture"],
+        ["Rendering backend", "Instancing and lighting"],
+        ["SIMD math types", "Use the SIMD instruction sets available on the running system"],
+      ]}
+      tech={["C++", "Lua", "OpenGL", "NVIDIA PhysX", "WebAssembly"]}
+      links={[
+        { label: "View on GitHub", href: "https://github.com/EpicNicks/N2Engine" },
+        { label: "Open the demo in a new tab", href: DEMO_URL },
+      ]}
+    >
+      <p>
+        N2Engine takes the architectural experience from building NEngine and
+        pushes for more ownership of low-level components. It targets OpenGL
+        first, with Vulkan planned, behind a graphics-agnostic API. That
+        interface-driven architecture is the core of the design.
+      </p>
+    </ProjectDetail>
   );
 }

@@ -7,7 +7,7 @@
     <meta name="theme-color" content="#000000" />
     <meta
       name="description"
-      content="Nicholas Cerisano - Full-Stack Software Developer with 4+ years experience in React, Java, Azure, and cloud applications. Portfolio showcasing professional projects and side work."
+      content="Nicholas Cerisano - Full-Stack Software Developer with 5+ years experience in React, Java, Azure, and cloud applications. Portfolio showcasing professional projects and side work."
     />
     <meta name="author" content="Nicholas Cerisano" />
     <meta name="keywords" content="Nicholas Cerisano, Software Developer, Full-Stack Developer, React, Java, Azure, Spring Boot, Portfolio, Toronto Developer" />
@@ -30,6 +30,14 @@
     <link rel="manifest" href="/manifest.json" />
     
     <title>Nicholas Cerisano's Portfolio</title>
+
+    <!-- Apply the saved light/dark theme before first paint so the page doesn't flash. -->
+    <script>
+      try {
+        var savedTheme = localStorage.getItem("theme");
+        if (savedTheme === "light" || savedTheme === "dark") document.documentElement.dataset.theme = savedTheme;
+      } catch (e) {}
+    </script>
 
     <!-- Turnstile - Performance optimization -->
     <link rel="preconnect" href="https://challenges.cloudflare.com">

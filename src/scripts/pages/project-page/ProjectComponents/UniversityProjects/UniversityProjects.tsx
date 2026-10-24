@@ -1,4 +1,5 @@
 import "./UniversityProjects.css";
+import { ProjectDetail } from "../ProjectDetail/ProjectDetail";
 import { InfiniteRunner } from "./InfiniteRunner/Infinite Runner";
 import { NeonBreakGame } from "./NeonBreakGame/NeonBreakGame";
 import { DummyInsomnia } from "./DummyInsomnia/DummyInsomnia";
@@ -16,96 +17,57 @@ import toyManiaClip from "../../../../../media/videos/Toy Mania clip.mp4";
 const cards: CardInfo[] = [
   {
     title: "Neon Break",
-    description: "A 2D Vectorheart Style Top-Down Shooter made in Unity",
+    description: "A 2D Vectorheart-style top-down shooter made in Unity.",
     component: NeonBreakGame,
     borderOutlineColor: "#43ceb7",
-    cardMiddle: () => (
-      <video
-        src={neonBreakTitleScreen}
-        autoPlay
-        loop
-        muted
-        playsInline
-        style={{
-          width: "100%",
-          height: "auto",
-          borderRadius: "4px",
-          marginBottom: "12px",
-        }}
-      />
-    ),
+    languages: ["C#"],
+    tools: ["Unity"],
+    footer: "Playable in the browser",
+    media: { video: neonBreakTitleScreen },
   },
   {
     title: "Dummy Insomnia",
-    description: "A 3D PG Survival Horror Game Prototype made in Unity",
+    description: "A 3D PG survival horror game prototype made in Unity.",
     component: DummyInsomnia,
-    borderOutlineColor: "#001100",
-    cardMiddle: () => (
-      <video
-        src={dummyInsomniaClip}
-        autoPlay
-        loop
-        muted
-        playsInline
-        style={{
-          width: "100%",
-          height: "auto",
-          borderRadius: "4px",
-          marginBottom: "12px",
-        }}
-      />
-    ),
+    // A dark green: the original #001100 disappeared against the dark panel.
+    borderOutlineColor: "#3f8f4a",
+    languages: ["C#"],
+    tools: ["Unity"],
+    footer: "Gameplay video",
+    media: { video: dummyInsomniaClip },
   },
   {
     title: "Toy Mania",
-    description:
-      'A puzzle builder game prototype modeled after classic game "The Incredible Machine"',
+    description: "A puzzle builder prototype modeled after the classic “The Incredible Machine”.",
     component: ToyMania,
     borderOutlineColor: "#ffff08",
-    cardMiddle: () => (
-      <video
-        src={toyManiaClip}
-        autoPlay
-        loop
-        muted
-        playsInline
-        style={{
-          width: "100%",
-          height: "auto",
-          borderRadius: "4px",
-          marginBottom: "12px",
-        }}
-      />
-    ),
+    lightOutlineColor: "#c9b800",
+    languages: ["C#"],
+    tools: ["Unity"],
+    footer: "Playable in the browser",
+    media: { video: toyManiaClip },
   },
   {
     title: "Infinity Run",
-    description: "A 2D Infinite Runner game made in Unity using C#",
+    description: "A 2D infinite runner game made in Unity using C#.",
     component: InfiniteRunner,
     borderOutlineColor: "#ff7e5f",
-    cardMiddle: () => (
-      <video
-        src={infiniteRunnerClip}
-        autoPlay
-        loop
-        muted
-        playsInline
-        style={{
-          width: "100%",
-          height: "auto",
-          borderRadius: "4px",
-          marginBottom: "12px",
-        }}
-      />
-    ),
+    languages: ["C#"],
+    tools: ["Unity"],
+    footer: "Playable in the browser",
+    media: { video: infiniteRunnerClip },
   },
 ];
 
 export function UniversityProjects() {
   return (
-    <div className="UniversityProjects">
-      <h1>University Projects</h1>
-      <ExpandableCardGrid cards={cards} className="nested-card-grid" />
-    </div>
+    <ProjectDetail
+      title="University Projects"
+      subtitle="Four games built for York University's game design classes"
+      tech={["C#", "Unity"]}
+      footer={<ExpandableCardGrid cards={cards} className="nested-card-grid" />}
+    >
+      <p>Open a game to see it in action.</p>
+    </ProjectDetail>
   );
 }

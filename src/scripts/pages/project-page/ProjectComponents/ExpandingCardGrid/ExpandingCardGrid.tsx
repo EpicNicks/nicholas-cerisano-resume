@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { usePreventBodyScroll } from "../../../../hooks/useModalPreventBodyScrolling";
+import { useTheme } from "../../../../theme/ThemeContext";
 import "./ExpandingCardGrid.css";
 
 export type CardInfo = {
@@ -8,12 +9,48 @@ export type CardInfo = {
   description: string;
   component: React.FC;
   borderOutlineColor?: string;
-  cardMiddle?: React.FC;
+  /** Outline colour on the light theme, for colours that wash out on white (near-white, neon green). */
+  lightOutlineColor?: string;
+  languages?: string[];
+  tools?: string[];
+  /** Short line at the foot of the card: a headline result or the project's status. */
+  footer?: string;
+  /** Opens in a wider panel, for details that hold their own card grid. */
+  wide?: boolean;
+  /** Shown at the top of the card in place of the language and tool chips. */
+  media?: { video?: string; image?: string };
 };
 
 interface ExpandableCardGridProps {
   cards: CardInfo[];
   className: string;
+}
+
+function CardTop({ card }: { card: CardInfo }) {
+  if (card.media?.video) {
+    return (
+      <div className="card-top card-top-media">
+        <video src={card.media.video} autoPlay loop muted playsInline aria-hidden="true" />
+      </div>
+    );
+  }
+  if (card.media?.image) {
+    return (
+      <div className="card-top card-top-media">
+        <img src={card.media.image} alt="" />
+      </div>
+    );
+  }
+  const chips = [...(card.languages ?? []), ...(card.tools ?? [])].slice(0, 6);
+  return (
+    <div className="card-top">
+      {chips.map((chip) => (
+        <span className="card-chip" key={chip}>
+          {chip}
+        </span>
+      ))}
+    </div>
+  );
 }
 
 export function ExpandableCardGrid({
@@ -22,15 +59,15 @@ export function ExpandableCardGrid({
 }: ExpandableCardGridProps) {
   const [expandedId, setExpandedId] = useState<string | null>(null);
   const zIndex = usePreventBodyScroll(expandedId !== null);
+  const { theme } = useTheme();
+  const outlineColor = (card: CardInfo) =>
+    (theme === "light" ? card.lightOutlineColor : undefined) ?? card.borderOutlineColor;
 
-  const idFromCard = (card: CardInfo, index: number) =>
-    `${className}-${card.title}-${index}`;
+  const idFromCard = (card: CardInfo) => `${className}-${card.title}`;
 
-  const ExpandedComponent =
-    expandedId !== null
-      ? cards.find((c) => expandedId !== null && expandedId.includes(c.title))!
-          .component
-      : null;
+  const expandedCard =
+    expandedId !== null ? cards.find((c) => idFromCard(c) === expandedId) : undefined;
+  const ExpandedComponent = expandedCard?.component ?? null;
 
   const handleClose = (e: React.MouseEvent) => {
     e.stopPropagation();
@@ -39,31 +76,42 @@ export function ExpandableCardGrid({
 
   return (
     <div className={`card-grid ${className || ""}`}>
-      {cards.map((card, index) => (
+      {cards.map((card) => (
         <motion.div
-          key={`${className}-${index}`}
-          layoutId={idFromCard(card, index)}
+          key={idFromCard(card)}
+          layoutId={idFromCard(card)}
           className="card"
-          style={{ borderColor: card.borderOutlineColor, textAlign: "left" }}
-          onClick={() => setExpandedId(idFromCard(card, index))}
+          role="button"
+          tabIndex={0}
+          aria-label={`${card.title}: open details`}
+          style={
+            {
+              "--c-dark": card.borderOutlineColor ?? "#888",
+              "--c-light": card.lightOutlineColor ?? card.borderOutlineColor ?? "#888",
+            } as React.CSSProperties
+          }
+          onClick={() => setExpandedId(idFromCard(card))}
+          onKeyDown={(e) => {
+            if (e.key === "Enter" || e.key === " ") {
+              e.preventDefault();
+              setExpandedId(idFromCard(card));
+            }
+          }}
           whileHover={{
             scale: expandedId ? 1 : 1.05,
-            boxShadow: `inset 0 0 8px 6px ${
-              card.borderOutlineColor ?? "transparent"
-            }`,
+            boxShadow: `inset 0 0 8px 6px ${outlineColor(card) ?? "transparent"}`,
             transition: {
               scale: { duration: 0.15, ease: "easeOut" },
               boxShadow: { duration: 0.08, ease: "linear" },
             },
           }}
         >
-          <h3>{card.title}</h3>
-          {card.cardMiddle &&
-            (() => {
-              const CardMiddle = card.cardMiddle;
-              return <CardMiddle />;
-            })()}
-          <p>{card.description}</p>
+          <CardTop card={card} />
+          <div className="card-text">
+            <h3>{card.title}</h3>
+            <p>{card.description}</p>
+            {card.footer && <div className="card-footer">{card.footer}</div>}
+          </div>
         </motion.div>
       ))}
 
@@ -78,8 +126,9 @@ export function ExpandableCardGrid({
             exit={{ opacity: 0 }}
           >
             <motion.div
-              className="expanded-content"
+              className={`expanded-content${expandedCard?.wide ? " expanded-content-wide" : ""}`}
               layoutId={expandedId}
+              style={{ "--c": (expandedCard && outlineColor(expandedCard)) ?? "#888" } as React.CSSProperties}
               onClick={(e) => e.stopPropagation()}
             >
               <button

@@ -6,14 +6,15 @@
   width: 100%;
   text-align: center;
   padding: 12px 8px; /* Reduced padding */
-  background-color: #222;
+  background-color: var(--foot-bg);
+  color: var(--ink);
 }
 
 .BottomBarTitle {
   padding-bottom: 8px; /* Fixed padding instead of vw */
   font-size: 1.2em; /* Smaller on mobile */
   text-align: center;
-  color: white;
+  color: var(--ink);
 }
 
 .BottomBarLink {
@@ -22,8 +23,8 @@
   font-size: 0.7em; /* Smaller text */
   flex: 1; /* Remove fixed width */
   text-align: center;
-  color: white;
   min-width: 0; /* Allow shrinking */
+  color: var(--muted);
 }
 
 /* Mobile-specific adjustments */
@@ -57,11 +58,11 @@
 }
 
 .BottomBarIcons a:link {
-  color: white;
+  color: var(--ink);
 }
 
 .BottomBarIcons a:visited {
-  color: white;
+  color: var(--ink);
 }
 
 .LinkedIn {

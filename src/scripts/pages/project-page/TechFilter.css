@@ -1,0 +1,71 @@
+.TechFilter {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px 18px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--surface);
+  text-align: left;
+}
+
+.TechFilterRow {
+  display: grid;
+  grid-template-columns: 82px 1fr;
+  align-items: start;
+  gap: 6px;
+}
+
+.TechFilterLabel {
+  padding-top: 5px;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.TechFilterChips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.TechFilter button {
+  all: unset;
+  cursor: pointer;
+  padding: 4px 11px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: 0.85rem;
+  line-height: 1.3;
+  color: var(--muted);
+}
+
+.TechFilter button span {
+  margin-left: 6px;
+  opacity: 0.65;
+  font-variant-numeric: tabular-nums;
+}
+
+.TechFilter button:hover {
+  color: var(--ink);
+  border-color: var(--muted);
+}
+
+.TechFilter button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.TechFilter button[aria-pressed="true"] {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.TechFilter .TechFilterAll {
+  align-self: flex-start;
+}
+
+@media (max-width: 520px) {
+  .TechFilterRow {
+    grid-template-columns: 1fr;
+  }
+}
