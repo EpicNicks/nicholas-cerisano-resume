@@ -27,15 +27,6 @@ interface ExpandableCardGridProps {
   className: string;
 }
 
-// Where each logo sits in the top band's 12-column, 2-row mosaic: one or two logos fill it side by side,
-// three split it into a tall half and two quarters, four or more take two rows (the extra one on top).
-function tileSpan(count: number, i: number) {
-  if (count <= 2) return { col: 12 / count, row: 2 };
-  if (count === 3) return { col: 6, row: i === 0 ? 2 : 1 };
-  const top = Math.ceil(count / 2);
-  return { col: 12 / (i < top ? top : count - top), row: 1 };
-}
-
 // The card's clip, image or stack logos, with its language and tool chips sliding in over it on hover.
 function CardTop({ card }: { card: CardInfo }) {
   const tech = [...(card.languages ?? []), ...(card.tools ?? [])];
@@ -50,17 +41,14 @@ function CardTop({ card }: { card: CardInfo }) {
     face = <img src={card.media.image} alt="" />;
   } else {
     face = (
-      <div className="card-icons">
-        {icons.map((name, i) => {
+      <div
+        className="card-icons"
+        style={{ "--n": icons.length, "--cols": Math.ceil(icons.length / 2) } as React.CSSProperties}
+      >
+        {icons.map((name) => {
           const { Icon, color } = techIcons[name];
-          const { col, row } = tileSpan(icons.length, i);
           return (
-            <span
-              className="card-icon"
-              key={name}
-              title={name}
-              style={{ "--brand": color, gridColumn: `span ${col}`, gridRow: `span ${row}` } as React.CSSProperties}
-            >
+            <span className="card-icon" key={name} title={name} style={{ "--brand": color } as React.CSSProperties}>
               <Icon color={color} aria-hidden="true" />
             </span>
           );

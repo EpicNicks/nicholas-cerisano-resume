@@ -40,6 +40,7 @@
 /* The same share of every card, so image, logo and text areas line up across the page. */
 .card-top {
   position: relative;
+  container-type: size;
   flex: 0 0 44%;
   overflow: hidden;
   background: color-mix(in srgb, var(--c) 22%, transparent);
@@ -53,32 +54,46 @@
   display: block;
 }
 
-/* The stack logos tile the band as one mosaic: tight panes split by hairline gaps of the band's tint,
-   each pane washed in its brand's colour with the logo scaled to the pane. */
+/* The stack logos pack into the band as square tiles, 3px apart, at the largest size that fits: all in
+   one row or split over two (--cols on top), whichever gives bigger tiles for the band's shape. Each
+   tile is washed in its brand's colour and the logo fills nearly all of it. */
 .card-icons {
+  --pad: 10px;
+  --gap: 3px;
+  --w: calc(100cqw - 2 * var(--pad));
+  --h: calc(100cqh - 2 * var(--pad));
+  --one-row: min((var(--w) - (var(--n) - 1) * var(--gap)) / var(--n), var(--h));
+  --two-rows: min((var(--w) - (var(--cols) - 1) * var(--gap)) / var(--cols), (var(--h) - var(--gap)) / 2);
+  /* Half a pixel under the fit, so rounding never wraps a tile onto another row. */
+  --size: calc(max(var(--one-row), var(--two-rows)) - 0.5px);
+  /* The row is all n tiles when they fit across, otherwise --cols of them, so four split 2 + 2 rather
+     than 3 + 1. CSS has no if, so the steep term drops the n-tile width out as soon as it overflows. */
+  --n-wide: calc(var(--n) * var(--size) + (var(--n) - 1) * var(--gap));
+  --cols-wide: calc(var(--cols) * var(--size) + (var(--cols) - 1) * var(--gap));
+  --row: min(var(--n-wide), max(var(--cols-wide), var(--w) - 100000 * (var(--n-wide) - var(--w))));
   height: 100%;
   box-sizing: border-box;
-  padding: 12px;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  gap: 3px;
-  /* Rounds only the mosaic's outer corners, inside the padding. */
-  clip-path: inset(12px round 12px);
+  padding: var(--pad) max(var(--pad), (100cqw - var(--row)) / 2 - 1px);
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  gap: var(--gap);
 }
 
 .card-icon {
-  container-type: size;
+  flex: none;
+  width: var(--size);
+  height: var(--size);
   display: grid;
   place-items: center;
-  min-width: 0;
-  min-height: 0;
+  border-radius: 4px;
   background: color-mix(in srgb, var(--brand) 12%, #f6f7f9);
 }
 
 .card-icon svg {
-  width: min(58cqw, 58cqh);
-  height: min(58cqw, 58cqh);
+  width: 88%;
+  height: 88%;
 }
 
 .card-icons,
