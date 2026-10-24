@@ -53,30 +53,32 @@
   display: block;
 }
 
+/* The stack logos tile the band as one mosaic: tight panes split by hairline gaps of the band's tint,
+   each pane washed in its brand's colour with the logo scaled to the pane. */
 .card-icons {
   height: 100%;
   box-sizing: border-box;
-  padding: 18px;
-  display: flex;
-  flex-wrap: wrap;
-  align-content: center;
-  justify-content: center;
-  gap: 10px;
+  padding: 12px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 3px;
+  /* Rounds only the mosaic's outer corners, inside the padding. */
+  clip-path: inset(12px round 12px);
 }
 
 .card-icon {
+  container-type: size;
   display: grid;
   place-items: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 10px;
-  background: #f4f6f8;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18);
+  min-width: 0;
+  min-height: 0;
+  background: color-mix(in srgb, var(--brand) 12%, #f6f7f9);
 }
 
 .card-icon svg {
-  width: 26px;
-  height: 26px;
+  width: min(58cqw, 58cqh);
+  height: min(58cqw, 58cqh);
 }
 
 .card-icons,
