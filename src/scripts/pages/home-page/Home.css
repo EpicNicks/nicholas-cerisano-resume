@@ -1,50 +1,8 @@
-.VideoPlayer {
-  position: relative;
-  -webkit-filter: blur(var(--home-blur));
-  -moz-filter: blur(var(--home-blur));
-  -o-filter: blur(var(--home-blur));
-  -ms-filter: blur(var(--home-blur));
-  filter: blur(var(--home-blur));
-  height: 80vh;
-  width: 80vw;
-  overflow: hidden;
-}
-
-.VideoPlayer video {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  pointer-events: none;
-  user-select: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-}
-
-.VideoOverlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 2;
-  background: transparent;
-}
-
+/* Home: a full-bleed blurred, sped-up coding clip behind the name, role, two headline facts and links.
+   Colours and glows come from the theme tokens in index.css. */
 .Home {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-sizing: border-box;
   margin: 0;
-  background-color: #555555;
   padding: 0;
-  min-height: 100vh;
-
-  -webkit-animation: fadein 2s;
-  -moz-animation: fadein 2s;
-  -o-animation: fadein 2s;
-  -ms-animation: fadein 2s;
   animation: fadein 2s;
 }
 
@@ -52,323 +10,204 @@
   position: relative;
 }
 
-#home::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.9) 0%,
-    rgba(0, 0, 0, 0.85) 5%,
-    rgba(0, 0, 0, 0.7) 10%,
-    rgba(85, 85, 85, 0.3) 25%,
-    rgba(85, 85, 85, 0.1) 35%,
-    transparent 40%,
-    transparent 60%,
-    rgba(85, 85, 85, 0.1) 65%,
-    rgba(85, 85, 85, 0.3) 75%,
-    rgba(0, 0, 0, 0.7) 90%,
-    rgba(0, 0, 0, 0.85) 95%,
-    rgba(0, 0, 0, 0.9) 100%
-  );
-  z-index: 10;
-  pointer-events: none;
-}
-
 .VideoContainer {
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: min(100vh, 900px);
+  min-height: 600px;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+}
+
+.VideoPlayer {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.VideoPlayer video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* scaled up a touch so the blur doesn't leave soft edges */
+  transform: scale(1.08);
+  filter: var(--video-filter);
+  opacity: var(--video-opacity);
+  pointer-events: none;
+  user-select: none;
+}
+
+.VideoOverlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: var(--vignette);
 }
 
 .VideoOverlayText {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  pointer-events: none;
-  z-index: 11;
+  position: relative;
+  z-index: 3;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  gap: 0.5rem;
-  padding: 2rem;
-}
-
-.VideoOverlayText > * {
-  pointer-events: auto;
+  padding: 96px 24px 56px;
+  text-align: center;
 }
 
 .VideoOverlayText h1 {
-  text-shadow: 2px 2px 40px #777;
-  color: rgb(127, 246, 255);
-  font-size: 5rem;
   margin: 0;
-  text-align: center;
+  font-size: clamp(2.75rem, 6.2vw, 5.25rem);
+  line-height: 1.05;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--name);
+  text-shadow: var(--name-shadow);
 }
 
 .VideoOverlayText h2 {
-  text-shadow: 1px 1px 10px #00ffff;
-  font-size: 3rem;
-  margin: 0;
-  margin-left: 8rem;
-  margin-bottom: 3rem;
-  color: #000;
-  align-self: center;
-}
-
-.VideoOverlayText h3 {
-  text-shadow: 1px 1px 8px rgba(0, 255, 255, 0.5);
-  font-size: 1.25rem;
-  margin: 0;
-  color: rgba(127, 246, 255, 0.75);
-  text-align: center;
-  font-weight: 300;
-  letter-spacing: 0.5px;
-  opacity: 0.9;
-  flex: 1;
-  max-width: 30%;
+  margin: 0.4rem 0 2.1rem 8rem;
+  font-size: clamp(1.6rem, 3.2vw, 2.9rem);
+  font-weight: 700;
+  color: var(--role-ink);
+  text-shadow: var(--role-glow);
 }
 
 .SubtitleContainer {
-  display: flex;
-  flex-direction: row;
-  gap: 2rem;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  max-width: 70%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 760px;
+  margin: 0 0 2.1rem;
+}
+
+.VideoOverlayText h3 {
+  margin: 0;
+  padding: 4px 28px;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.45;
+  color: var(--fact);
+  text-shadow: var(--fact-glow);
+}
+
+.VideoOverlayText h3 + h3 {
+  border-left: 1px solid color-mix(in srgb, var(--fact) 45%, transparent);
+}
+
+.VideoOverlayText h3 strong {
+  display: block;
+  font-size: 1.875rem;
+  font-weight: 700;
+  line-height: 1.15;
 }
 
 .SocialLinks {
   display: flex;
-  flex-direction: row;
-  gap: 1.5rem;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  margin-top: 1rem;
+  gap: 22px;
 }
 
-.SocialLinks a {
-  display: flex;
+.SocialLinks > a:not(.homepage-resume-download-btn) {
+  display: inline-flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  color: rgb(127, 246, 255);
+  gap: 4px;
+  font-family: var(--subtitle-font);
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--name);
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease, filter 0.3s ease, color 0.3s ease;
 }
 
-.SocialLinks a:hover {
-  color: white;
+.SocialLinks > a:not(.homepage-resume-download-btn) svg {
+  width: 44px;
+  height: 44px;
+}
+
+.SocialLinks > a:not(.homepage-resume-download-btn):hover,
+.SocialLinks > a:not(.homepage-resume-download-btn):focus-visible {
+  color: var(--ink);
   transform: scale(1.1);
   filter: drop-shadow(0 0 10px rgba(127, 246, 255, 0.8));
+  outline: none;
 }
 
 .homepage-resume-download-btn {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  color: rgb(127, 246, 255);
-  background: transparent;
-  border: 1px solid rgb(127, 246, 255);
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  font-size: 0.875rem;
-  font-weight: 400;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-decoration: none;
-  font-family: inherit;
+  gap: 10px;
+  padding: 12px 20px;
+  border: 1.5px solid currentColor;
+  border-radius: 6px;
+  font-family: var(--subtitle-font);
+  font-size: 1rem;
+  font-weight: 600;
   letter-spacing: 0.3px;
+  color: var(--name);
+  text-decoration: none;
+  transition: transform 0.3s ease, filter 0.3s ease, background-color 0.3s ease, color 0.3s ease;
 }
 
-.homepage-resume-download-btn:hover {
-  color: white;
-  border-color: white;
+.homepage-resume-download-btn:hover,
+.homepage-resume-download-btn:focus-visible {
+  color: var(--ink);
+  background: rgba(127, 246, 255, 0.12);
   transform: scale(1.05);
   filter: drop-shadow(0 0 10px rgba(127, 246, 255, 0.8));
-  background: rgba(127, 246, 255, 0.1);
+  outline: none;
 }
 
 .homepage-resume-download-btn:active {
   transform: scale(0.98);
 }
 
-@media screen and (max-width: 1000px) {
-  .VideoPlayer {
-    width: 100vw;
-    height: 60vh;
-    -webkit-filter: blur(var(--home-blur-mobile));
-    -moz-filter: blur(var(--home-blur-mobile));
-    -o-filter: blur(var(--home-blur-mobile));
-    -ms-filter: blur(var(--home-blur-mobile));
-    filter: blur(var(--home-blur-mobile));
-  }
-
-  #home::before {
-    background: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.95) 0%,
-      rgba(0, 0, 0, 0.8) 5%,
-      rgba(85, 85, 85, 0.6) 15%,
-      rgba(85, 85, 85, 0.4) 25%,
-      rgba(85, 85, 85, 0.2) 35%,
-      transparent 40%,
-      transparent 50%,
-      rgba(85, 85, 85, 0.2) 60%,
-      rgba(85, 85, 85, 0.4) 70%,
-      rgba(85, 85, 85, 0.6) 80%,
-      rgba(0, 0, 0, 0.8) 90%,
-      rgba(0, 0, 0, 0.95) 100%
-    );
-  }
-
-  .VideoOverlayText {
-    gap: 0.4rem;
-    padding: 1.5rem;
-  }
-
-  .VideoOverlayText h1 {
-    font-size: 3rem;
+@media (max-width: 1000px) {
+  .VideoPlayer video {
+    filter: var(--video-filter-mobile, var(--video-filter));
   }
 
   .VideoOverlayText h2 {
-    font-size: 2rem;
     margin-left: 4rem;
-    margin-bottom: 2.5rem;
-  }
-
-  .VideoOverlayText h3 {
-    font-size: 1rem;
-    max-width: 45%;
-  }
-
-  .SubtitleContainer {
-    gap: 1.5rem;
-    max-width: 90%;
-  }
-
-  .SocialLinks {
-    gap: 1rem;
-  }
-
-  .homepage-resume-download-btn {
-    font-size: 0.85rem;
-    padding: 0.5rem 0.9rem;
   }
 }
 
-@media screen and (max-width: 480px) {
-  .VideoPlayer {
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-  }
+:root {
+  --video-filter-mobile: blur(var(--home-blur-mobile));
+}
 
-  .VideoPlayer video {
-    height: 80%;
-    width: auto;
-    transform: translateX(-5%);
-  }
+:root[data-theme="light"] {
+  --video-filter-mobile: blur(var(--home-blur-mobile)) invert(1) hue-rotate(180deg);
+}
 
-  #home::before {
-    background: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.98) 0%,
-      rgba(0, 0, 0, 0.85) 5%,
-      rgba(85, 85, 85, 0.7) 15%,
-      rgba(85, 85, 85, 0.5) 25%,
-      rgba(85, 85, 85, 0.3) 35%,
-      rgba(85, 85, 85, 0.1) 40%,
-      transparent 45%,
-      transparent 50%,
-      rgba(85, 85, 85, 0.2) 60%,
-      rgba(85, 85, 85, 0.5) 70%,
-      rgba(85, 85, 85, 0.7) 80%,
-      rgba(0, 0, 0, 0.85) 90%,
-      rgba(0, 0, 0, 0.98) 100%
-    );
-  }
-
-  .VideoOverlayText {
-    gap: 0.3rem;
-    padding: 1rem;
-  }
-
-  .VideoOverlayText h1 {
-    font-size: 2rem;
-  }
-
+@media (max-width: 600px) {
   .VideoOverlayText h2 {
-    font-size: 1.25rem;
-    margin-left: 2.5rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .VideoOverlayText h3 {
-    font-size: 0.7rem;
-    max-width: 100%;
+    margin-left: 0;
   }
 
   .SubtitleContainer {
-    flex-direction: column;
-    gap: 0.75rem;
-    max-width: 95%;
+    grid-template-columns: 1fr;
+    gap: 14px;
   }
 
+  .VideoOverlayText h3 + h3 {
+    border-left: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .Home {
+    animation: none;
+  }
+
+  .SocialLinks > a,
   .homepage-resume-download-btn {
-    font-size: 0.7rem;
-    padding: 0.35rem 0.7rem;
-    gap: 0.35rem;
+    transition: none;
   }
 }
 
 @keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@-moz-keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@-ms-keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@-o-keyframes fadein {
   from {
     opacity: 0;
   }

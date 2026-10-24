@@ -1,35 +1,16 @@
-import { Unity } from "react-unity-webgl";
-import { useUnityGame } from "../../../../../hooks/useUnityGame";
-import "./ToyMania.css";
-
-const unityBuildDirPath = "/unity/toy-mania/Build/";
+import { ProjectDetail } from "../../ProjectDetail/ProjectDetail";
+import { UnityPlayer } from "../UnityPlayer";
 
 export function ToyMania() {
-  const { unityProvider, loadingProgression, isLoaded } = useUnityGame({
-    buildDirPath: unityBuildDirPath,
-    buildName: "Web",
-  });
-
   return (
-    <div className="ToyMania">
-      <div className="TextContent">
-        <h1>Toy Mania</h1>
-        <h4>
-          A puzzle builder game prototype created for a group project for my
-          University game design class DATT 4300 modeled after classic game "The
-          Incredible Machine"
-        </h4>
-      </div>
-      {!isLoaded && <p>Loading... {Math.round(loadingProgression * 100)}%</p>}
-      <Unity
-        unityProvider={unityProvider}
-        style={{ width: "960px", height: "600px", maxWidth: "100%" }}
-      />
-      <div className="TextContent">
-        <p style={{ textAlign: "center" }}>
-          <b>Press "F" to toggle fullscreen mode for a better experience!</b>
-        </p>
-      </div>
-    </div>
+    <ProjectDetail
+      title="Toy Mania"
+      subtitle={'A puzzle builder game prototype created for a group project for my University game design class DATT 4300, modeled after the classic "The Incredible Machine"'}
+      media={<UnityPlayer buildDirPath="/unity/toy-mania/Build/" buildName="Web" />}
+      tech={["C#", "Unity"]}
+      links={[{ label: "Play on itch.io", href: "https://avanic-insanity.itch.io/toy-mania" }]}
+    >
+      <p>Place moving objects in each puzzle level to guide the ball to the goal.</p>
+    </ProjectDetail>
   );
 }
