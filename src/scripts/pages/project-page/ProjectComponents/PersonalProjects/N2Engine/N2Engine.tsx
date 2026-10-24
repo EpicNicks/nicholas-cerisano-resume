@@ -1,7 +1,15 @@
 import { useEffect, useRef, type RefObject } from "react";
 import { ProjectDetail } from "../../ProjectDetail/ProjectDetail";
+import { GameScreen } from "../../../../../components/GameScreen";
 
 const DEMO_URL = "/n2engine/index.html";
+
+function toggleFullscreen(frame: HTMLIFrameElement) {
+  const request = document.fullscreenElement === frame ? document.exitFullscreen() : frame.requestFullscreen();
+  request.catch(() => {
+    // Fullscreen can be refused (no user activation, or blocked by the browser); nothing to do.
+  });
+}
 
 // F toggles fullscreen on the demo, like the Unity games. The demo doesn't bind F itself (its controls
 // are WASD, the arrows, numbers and a few letters), and it is same-origin, so key presses made while
@@ -15,11 +23,7 @@ function useFullscreenKey(frameRef: RefObject<HTMLIFrameElement | null>) {
       if (e.key.toLowerCase() !== "f" || e.repeat || e.ctrlKey || e.metaKey || e.altKey) return;
       const target = e.target as HTMLElement | null;
       if (target && (target.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(target.tagName))) return;
-      const request =
-        document.fullscreenElement === frame ? document.exitFullscreen() : frame.requestFullscreen();
-      request.catch(() => {
-        // Fullscreen can be refused (no user activation, or blocked by the browser); nothing to do.
-      });
+      toggleFullscreen(frame);
     };
 
     // The demo's own window gets the key presses while it has focus; re-attach whenever it (re)loads.
@@ -51,13 +55,15 @@ export function N2Engine() {
       subtitle="A C++ game engine using low-level graphics and physics APIs"
       media={
         <>
-          <iframe
-            ref={frameRef}
-            title="N2Engine web demo"
-            src={DEMO_URL}
-            allow="autoplay; fullscreen"
-            allowFullScreen
-          />
+          <GameScreen onFullscreen={() => frameRef.current && toggleFullscreen(frameRef.current)}>
+            <iframe
+              ref={frameRef}
+              title="N2Engine web demo"
+              src={DEMO_URL}
+              allow="autoplay; fullscreen"
+              allowFullScreen
+            />
+          </GameScreen>
           <p>
             <b>Press "F" to toggle fullscreen.</b> The engine compiled to
             WebAssembly (Emscripten), running a Lua-scripted scene on its

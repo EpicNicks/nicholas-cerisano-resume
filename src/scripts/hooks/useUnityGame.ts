@@ -67,5 +67,6 @@ export function useUnityGame({
     loadingProgression,
     isLoaded,
     isFullScreen,
+    toggleFullscreen: () => requestFullscreen(!isFullScreen),
   };
 }
