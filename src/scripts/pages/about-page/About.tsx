@@ -33,61 +33,6 @@ export function About() {
             technologies and experimenting with projects that push me to grow
             as a developer.
           </p>
-          <div className="About-Interests">
-            <div className="AboutSoftwareInterests">
-              <h3>My interests in Software include:</h3>
-              <ul>
-                <li>
-                  <b>Agentic Development</b>
-                  <span>
-                    Building with AI agents such as Claude Code, and designing
-                    workflows around them
-                  </span>
-                </li>
-                <li>
-                  <b>Software Architecture and Design</b>
-                </li>
-                <li>
-                  <b>Full-Stack Web Development</b>
-                </li>
-                <li>
-                  <b>Game Development and Game Engine Design</b>
-                </li>
-                <li>
-                  <b>DevOps and Cloud Infrastructure</b>
-                </li>
-              </ul>
-            </div>
-            <div className="AboutPersonalInterests">
-              <h3>My interests and hobbies include:</h3>
-              <ul>
-                <li>
-                  <b>Exploring new frameworks, languages and design patterns</b>
-                  <span>For fresh perspectives on problem solving</span>
-                </li>
-                <li>
-                  <b>Linguistics and languages</b>
-                </li>
-                <li>
-                  <b>Designing and developing games in Unity Engine</b>
-                </li>
-                <li>
-                  <b>Chess</b>
-                </li>
-                <li>
-                  <b>Reading fantasy novels</b>
-                </li>
-              </ul>
-              <div className="AboutFormerly">
-                <h3>Formerly,</h3>
-                <ul>
-                  <li>
-                    <b>Practicing Brazilian Jiu-Jitsu</b>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
         </div>
         <motion.div
           className="About-Image"
@@ -98,6 +43,61 @@ export function About() {
         >
           <img src={nicholasHeadshot} alt="My profile" />
         </motion.div>
+        <div className="About-Interests">
+          <div className="AboutSoftwareInterests">
+            <h3>My interests in Software include:</h3>
+            <ul>
+              <li>
+                <b>Agentic Development</b>
+                <span>
+                  Building with AI agents such as Claude Code, and designing
+                  workflows around them
+                </span>
+              </li>
+              <li>
+                <b>Software Architecture and Design</b>
+              </li>
+              <li>
+                <b>Full-Stack Web Development</b>
+              </li>
+              <li>
+                <b>Game Development and Game Engine Design</b>
+              </li>
+              <li>
+                <b>DevOps and Cloud Infrastructure</b>
+              </li>
+            </ul>
+          </div>
+          <div className="AboutPersonalInterests">
+            <h3>My interests and hobbies include:</h3>
+            <ul>
+              <li>
+                <b>Exploring new frameworks, languages and design patterns</b>
+                <span>For fresh perspectives on problem solving</span>
+              </li>
+              <li>
+                <b>Linguistics and languages</b>
+              </li>
+              <li>
+                <b>Designing and developing games in Unity Engine</b>
+              </li>
+              <li>
+                <b>Chess</b>
+              </li>
+              <li>
+                <b>Reading fantasy novels</b>
+              </li>
+            </ul>
+          </div>
+          <div className="AboutFormerly">
+            <h3>Formerly,</h3>
+            <ul>
+              <li>
+                <b>Practicing Brazilian Jiu-Jitsu</b>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
 
       <AnimatePresence>
