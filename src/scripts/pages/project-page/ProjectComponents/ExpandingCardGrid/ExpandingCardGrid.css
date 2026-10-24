@@ -6,7 +6,7 @@
   margin: auto;
 }
 
-/* A card: the project's colour as its outline, a tinted top band (chips or a clip), then title,
+/* A card: the project's colour as its outline, a tinted top band (stack logos or a clip), then title,
    description and a footer line in the project's colour. Hover adds the inset glow (framer-motion). */
 .card {
   --c: var(--c-dark, #888);
@@ -37,19 +37,12 @@
   outline-offset: 3px;
 }
 
+/* The same share of every card, so image, logo and text areas line up across the page. */
 .card-top {
-  min-height: 42%;
-  padding: 18px;
-  display: flex;
-  flex-wrap: wrap;
-  align-content: flex-end;
-  gap: 6px;
-  background: color-mix(in srgb, var(--c) 22%, transparent);
-}
-
-.card-top-media {
-  padding: 0;
+  position: relative;
+  flex: 0 0 44%;
   overflow: hidden;
+  background: color-mix(in srgb, var(--c) 22%, transparent);
 }
 
 .card-top-media img,
@@ -60,13 +53,94 @@
   display: block;
 }
 
+.card-icons {
+  height: 100%;
+  box-sizing: border-box;
+  padding: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.card-icon {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: #f4f6f8;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18);
+}
+
+.card-icon svg {
+  width: 26px;
+  height: 26px;
+}
+
+.card-icons,
+.card-top-media > img,
+.card-top-media > video {
+  transition: opacity 0.3s ease, transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Hover or keyboard focus: the logos or image dim and the chips rise in one after another. */
+.card-chips {
+  position: absolute;
+  inset: 0;
+  padding: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-end;
+  gap: 6px;
+  pointer-events: none;
+}
+
+.card-top-media .card-chips {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent 75%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
 .card-chip {
   font-size: 0.78rem;
   font-weight: 600;
   padding: 3px 9px;
   border-radius: 6px;
-  background: color-mix(in srgb, var(--surface) 55%, transparent);
+  background: var(--surface);
   color: color-mix(in srgb, var(--c) var(--cp), var(--mix));
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18);
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.25s ease, transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+  transition-delay: 0s;
+}
+
+.card:hover .card-icons,
+.card:focus-visible .card-icons {
+  opacity: 0.2;
+  transform: scale(0.94);
+  filter: blur(1px);
+}
+
+.card:hover .card-top-media > img,
+.card:focus-visible .card-top-media > img,
+.card:hover .card-top-media > video,
+.card:focus-visible .card-top-media > video {
+  transform: scale(1.04);
+}
+
+.card:hover .card-chips,
+.card:focus-visible .card-chips {
+  opacity: 1;
+}
+
+.card:hover .card-chip,
+.card:focus-visible .card-chip {
+  opacity: 1;
+  transform: none;
+  transition-delay: calc(var(--i) * 35ms);
 }
 
 .card-text {
@@ -245,7 +319,7 @@
   }
 
   .card-top {
-    min-height: 96px;
+    flex-basis: 140px;
   }
 
   .expanded-frame {
@@ -259,7 +333,12 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .card {
+  .card,
+  .card-icons,
+  .card-top-media > img,
+  .card-top-media > video,
+  .card-chips,
+  .card-chip {
     transition: none;
   }
 }

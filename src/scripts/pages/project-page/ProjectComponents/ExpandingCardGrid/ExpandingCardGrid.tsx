@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { usePreventBodyScroll } from "../../../../hooks/useModalPreventBodyScrolling";
 import { useTheme } from "../../../../theme/ThemeContext";
+import { techIcons } from "../../techIcons";
 import "./ExpandingCardGrid.css";
 
 export type CardInfo = {
@@ -17,7 +18,7 @@ export type CardInfo = {
   footer?: string;
   /** Opens in a wider panel, for details that hold their own card grid. */
   wide?: boolean;
-  /** Shown at the top of the card in place of the language and tool chips. */
+  /** Shown at the top of the card in place of the stack logos. */
   media?: { video?: string; image?: string };
 };
 
@@ -26,29 +27,43 @@ interface ExpandableCardGridProps {
   className: string;
 }
 
+// The card's clip, image or stack logos, with its language and tool chips sliding in over it on hover.
 function CardTop({ card }: { card: CardInfo }) {
+  const tech = [...(card.languages ?? []), ...(card.tools ?? [])];
+  const chips = tech.slice(0, 8);
+  // One logo per icon: Azure and Azure Functions share one.
+  const icons = [...new Map(tech.filter((t) => techIcons[t]).map((t) => [techIcons[t].Icon, t])).values()].slice(0, 8);
+
+  let face: React.ReactNode;
   if (card.media?.video) {
-    return (
-      <div className="card-top card-top-media">
-        <video src={card.media.video} autoPlay loop muted playsInline aria-hidden="true" />
+    face = <video src={card.media.video} autoPlay loop muted playsInline aria-hidden="true" />;
+  } else if (card.media?.image) {
+    face = <img src={card.media.image} alt="" />;
+  } else {
+    face = (
+      <div className="card-icons">
+        {icons.map((name) => {
+          const { Icon, color } = techIcons[name];
+          return (
+            <span className="card-icon" key={name} title={name}>
+              <Icon color={color} aria-hidden="true" />
+            </span>
+          );
+        })}
       </div>
     );
   }
-  if (card.media?.image) {
-    return (
-      <div className="card-top card-top-media">
-        <img src={card.media.image} alt="" />
-      </div>
-    );
-  }
-  const chips = [...(card.languages ?? []), ...(card.tools ?? [])].slice(0, 6);
+
   return (
-    <div className="card-top">
-      {chips.map((chip) => (
-        <span className="card-chip" key={chip}>
-          {chip}
-        </span>
-      ))}
+    <div className={`card-top${card.media ? " card-top-media" : ""}`}>
+      {face}
+      <div className="card-chips">
+        {chips.map((chip, i) => (
+          <span className="card-chip" key={chip} style={{ "--i": i } as React.CSSProperties}>
+            {chip}
+          </span>
+        ))}
+      </div>
     </div>
   );
 }
