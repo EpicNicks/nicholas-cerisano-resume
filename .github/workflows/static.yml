@@ -10,10 +10,6 @@ permissions:
   pages: write
   id-token: write
 
-env:
-  # The last commit of the pre-redesign site, served at the root while the redesign is reviewed at /alt.
-  LEGACY_SITE_REF: 1479de8e37bfe450ffd29c55ffd38bceaf9dea27
-
 concurrency:
   group: "pages"
   cancel-in-progress: false
@@ -40,48 +36,23 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      # 4. Build this branch's site (the redesign) to be served under /alt
-      - name: Build redesign at /alt
+      # 4. Build the project with environment variables
+      - name: Build project
         env:
           VITE_TURNSTILE_SITE_KEY: ${{ secrets.VITE_TURNSTILE_SITE_KEY }}
           VITE_API_URL: ${{ secrets.VITE_API_URL }}
-        run: npm run build -- --base=/alt/
-
-      # 5. Build the pre-redesign site at the root so both can be reviewed side by side.
-      #    To promote the redesign to the root, drop this step and the --base flag above.
-      - name: Checkout pre-redesign site
-        uses: actions/checkout@v5
-        with:
-          ref: ${{ env.LEGACY_SITE_REF }}
-          path: legacy
-
-      - name: Build pre-redesign site at /
-        working-directory: legacy
-        env:
-          VITE_TURNSTILE_SITE_KEY: ${{ secrets.VITE_TURNSTILE_SITE_KEY }}
-          VITE_API_URL: ${{ secrets.VITE_API_URL }}
-        run: |
-          npm ci
-          npm run build
-
-      # The redesign loads the Unity and N2Engine builds from the root's copies (unchanged between the two),
-      # so leave them out of /alt instead of shipping them twice.
-      - name: Combine the two builds
-        run: |
-          rm -rf dist/unity dist/n2engine
-          mv dist legacy/dist/alt
-          mv legacy/dist site
+        run: npm run build
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
-      # 6. Upload the combined site
+      # 5. Upload the build folder
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: site
+          path: dist
 
-      # 7. Deploy to GitHub Pages
+      # 6. Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
