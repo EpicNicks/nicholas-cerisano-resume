@@ -6,6 +6,21 @@
   margin: auto;
 }
 
+/* A card and the year it was started, set in small type beneath it. */
+.card-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0;
+}
+
+.card-year {
+  padding-left: 4px;
+  font-size: 0.85rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--muted);
+}
+
 /* A card: the project's colour as its outline, a tinted top band (stack logos or a clip), then title,
    description and a footer line in the project's colour. Hover adds the inset glow (framer-motion). */
 .card {

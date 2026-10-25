@@ -8,6 +8,7 @@ export function InfiniteRunner() {
       subtitle="A small infinite runner game created for my University game design class DATT 2300"
       media={<UnityPlayer buildDirPath="/unity/infinite-skater/Build/" />}
       tech={["C#", "Unity"]}
+      links={[{ label: "View on GitHub", href: "https://github.com/EpicNicks/Infinite-Runner" }]}
     >
       <p>
         Hover your mouse over the screen to charge up and move it away to jump,

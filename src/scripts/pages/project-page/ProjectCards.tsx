@@ -23,6 +23,7 @@ const professionalProjectCards: CardInfo[] = [
     title: "Internal Disputes Management System",
     description: "A full-stack web application for managing internal disputes.",
     component: InternalDisputesManagement,
+    year: 2022,
     borderOutlineColor: "#ff4b1f",
     languages: ["TypeScript", "Java"],
     tools: ["React", "Redux Toolkit", "Spring Boot", "REST API", "MS SQL Server", "Azure", "Docker", "Jest", "JUnit"],
@@ -32,6 +33,7 @@ const professionalProjectCards: CardInfo[] = [
     title: "Azure Cloud Functions for Internal Batch Jobs",
     description: "Serverless Azure Cloud Functions for automating internal batch jobs.",
     component: AzureBatchFunctions,
+    year: 2024,
     borderOutlineColor: "#00ddff",
     lightOutlineColor: "#00a6c7",
     languages: ["Java"],
@@ -42,6 +44,7 @@ const professionalProjectCards: CardInfo[] = [
     title: "Internal Fraud Management System",
     description: "A full-stack web application for managing internal fraud cases.",
     component: InternalFraudManagement,
+    year: 2023,
     borderOutlineColor: "#1f53ff",
     languages: ["TypeScript", "Java"],
     tools: ["React", "Redux Toolkit", "Spring Boot", "REST API", "MS SQL Server", "Azure", "Jest", "JUnit"],
@@ -51,10 +54,11 @@ const professionalProjectCards: CardInfo[] = [
     title: "End-to-End Automated Testing",
     description: "An end-to-end automated testing suite for web applications using Puppeteer.js.",
     component: EndToEndTesting,
+    year: 2019,
     borderOutlineColor: "#00ff0d",
     lightOutlineColor: "#16b322",
     languages: ["JavaScript"],
-    tools: ["Node.js", "Puppeteer", "Jest", "ReadyAPI", "CI/CD"],
+    tools: ["Node.js", "Puppeteer", "Jest", "ReadyAPI"],
     footer: "2 days → 2 h regression testing",
   },
 ];
@@ -64,6 +68,7 @@ const personalProjectCards: CardInfo[] = [
     title: "N2Engine",
     description: "A WIP C++ game engine using low-level graphics and physics APIs.",
     component: N2Engine,
+    year: 2025,
     borderOutlineColor: "#667eea",
     languages: ["C++", "Lua"],
     tools: ["OpenGL", "NVIDIA PhysX", "WebAssembly"],
@@ -73,6 +78,7 @@ const personalProjectCards: CardInfo[] = [
     title: "NEngine Editor",
     description: "A C# game engine built on SFML and a visual editor built on WPF.",
     component: NEngineEditor,
+    year: 2024,
     borderOutlineColor: "#764ba2",
     languages: ["C#"],
     tools: ["SFML.NET", "WPF", "MVVM"],
@@ -81,6 +87,7 @@ const personalProjectCards: CardInfo[] = [
     title: "Calories In",
     description: "A Flutter/Dart calorie tracking app targeting Android.",
     component: CaloriesIn,
+    year: 2023,
     borderOutlineColor: "#ff6a00",
     languages: ["Dart", "Kotlin"],
     tools: ["Flutter", "SQLite"],
@@ -91,6 +98,7 @@ const personalProjectCards: CardInfo[] = [
     title: "Persian Phonetic IME",
     description: "A Windows input method that turns Latin letters into Persian script as you type.",
     component: PersianPhoneticIME,
+    year: 2026,
     borderOutlineColor: "#e8a317",
     lightOutlineColor: "#c98a06",
     languages: ["Rust"],
@@ -102,6 +110,7 @@ const personalProjectCards: CardInfo[] = [
     title: "University Projects",
     description: "Projects completed at York University for game design classes.",
     component: UniversityProjects,
+    year: 2019,
     wide: true,
     borderOutlineColor: "#EEE",
     lightOutlineColor: "#8a8f98",
@@ -112,27 +121,36 @@ const personalProjectCards: CardInfo[] = [
   },
 ];
 
+// Tools that count under a broader filter chip: a cloud function is part of Azure.
+const filterGroup: Record<string, string> = {
+  "Azure Functions": "Azure",
+  "Durable Functions": "Azure",
+};
+const filterName = (tech: string) => filterGroup[tech] ?? tech;
+
 const usesTech = (card: CardInfo, tech: string) =>
-  (card.languages ?? []).includes(tech) || (card.tools ?? []).includes(tech);
+  [...(card.languages ?? []), ...(card.tools ?? [])].some((t) => filterName(t) === tech);
 
 // Every language and tool across both sections, most-used first.
 function countTech(cards: CardInfo[], key: "languages" | "tools"): TechCount[] {
-  const names = [...new Set(cards.flatMap((card) => card[key] ?? []))];
+  const names = [...new Set(cards.flatMap((card) => (card[key] ?? []).map(filterName)))];
   return names
     .map((name) => ({ name, count: cards.filter((card) => usesTech(card, name)).length }))
     .sort((a, b) => b.count - a.count || a.name.localeCompare(b.name));
 }
 
 export default function ProjectCards() {
-  const [activeTech, setActiveTech] = useState<string | null>(null);
+  const [activeTech, setActiveTech] = useState<string[]>([]);
 
   const { languages, tools } = useMemo(() => {
     const all = [...professionalProjectCards, ...personalProjectCards];
     return { languages: countTech(all, "languages"), tools: countTech(all, "tools") };
   }, []);
 
+  // A card shows when it uses any of the selected languages and tools.
   const visible = (cards: CardInfo[]) =>
-    activeTech === null ? cards : cards.filter((card) => usesTech(card, activeTech));
+    activeTech.length === 0 ? cards : cards.filter((card) => activeTech.some((tech) => usesTech(card, tech)));
+  const activeNames = activeTech.join(" or ");
   const professional = visible(professionalProjectCards);
   const personal = visible(personalProjectCards);
 
@@ -140,32 +158,39 @@ export default function ProjectCards() {
     <div className="ProjectCards">
       <div className="ProjectsIntro">
         <h1>Projects</h1>
-        <p>Open any card for the full story. Filter by the language or tool you're interested in.</p>
-        <TechFilter languages={languages} tools={tools} active={activeTech} onChange={setActiveTech} />
+        <p>Open any card for the full story.</p>
       </div>
 
-      <div className="ProfessionalProjects">
-        <div className="ProjectGroupHeader">
-          <h2>Professional Projects</h2>
-          <span>Built at Moneris</span>
-        </div>
-        {professional.length > 0 ? (
-          <ExpandableCardGrid cards={professional} className="professional-projects-card-grid" />
-        ) : (
-          <p className="ProjectsEmpty">None of the professional projects use {activeTech}.</p>
-        )}
-      </div>
+      <div className="ProjectsLayout">
+        <aside className="ProjectsSidebar">
+          <TechFilter languages={languages} tools={tools} active={activeTech} onChange={setActiveTech} />
+        </aside>
 
-      <div className="PersonalProjects">
-        <div className="ProjectGroupHeader">
-          <h2>Personal Projects</h2>
-          <span>Engines, apps, tools and games built on my own time</span>
+        <div className="ProjectsMain">
+        <div className="ProfessionalProjects">
+          <div className="ProjectGroupHeader">
+            <h2>Professional Projects</h2>
+            <span>Built at Moneris</span>
+          </div>
+          {professional.length > 0 ? (
+            <ExpandableCardGrid cards={professional} className="professional-projects-card-grid" />
+          ) : (
+            <p className="ProjectsEmpty">None of the professional projects use {activeNames}.</p>
+          )}
         </div>
-        {personal.length > 0 ? (
-          <ExpandableCardGrid cards={personal} className="personal-projects-card-grid" />
-        ) : (
-          <p className="ProjectsEmpty">None of the personal projects use {activeTech}.</p>
-        )}
+
+        <div className="PersonalProjects">
+          <div className="ProjectGroupHeader">
+            <h2>Personal Projects</h2>
+            <span>Engines, apps, tools and games built on my own time</span>
+          </div>
+          {personal.length > 0 ? (
+            <ExpandableCardGrid cards={personal} className="personal-projects-card-grid" />
+          ) : (
+            <p className="ProjectsEmpty">None of the personal projects use {activeNames}.</p>
+          )}
+        </div>
+        </div>
       </div>
     </div>
   );

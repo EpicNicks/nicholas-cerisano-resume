@@ -8,24 +8,22 @@ export interface TechCount {
 interface TechFilterProps {
   languages: TechCount[];
   tools: TechCount[];
-  active: string | null;
-  onChange: (tech: string | null) => void;
+  active: string[];
+  onChange: (tech: string[]) => void;
 }
 
-// Chips for every language and tool used across the projects; selecting one narrows both sections to the
-// projects that use it, and selecting it again (or "All projects") clears the filter.
+// Chips for every language and tool used across the projects. Select as many as you like: the sections
+// show the projects that use any of them. Selecting a chip again deselects it, and "All projects" clears.
 export function TechFilter({ languages, tools, active, onChange }: TechFilterProps) {
-  const row = (label: string, items: TechCount[]) => (
-    <div className="TechFilterRow">
-      <span className="TechFilterLabel">{label}</span>
+  const toggle = (name: string) =>
+    onChange(active.includes(name) ? active.filter((t) => t !== name) : [...active, name]);
+
+  const group = (label: string, items: TechCount[]) => (
+    <div className="TechFilterGroup">
+      <h3 className="TechFilterLabel">{label}</h3>
       <div className="TechFilterChips">
         {items.map(({ name, count }) => (
-          <button
-            key={name}
-            type="button"
-            aria-pressed={active === name}
-            onClick={() => onChange(active === name ? null : name)}
-          >
+          <button key={name} type="button" aria-pressed={active.includes(name)} onClick={() => toggle(name)}>
             {name}
             <span>{count}</span>
           </button>
@@ -35,17 +33,20 @@ export function TechFilter({ languages, tools, active, onChange }: TechFilterPro
   );
 
   return (
-    <div className="TechFilter" role="group" aria-label="Filter projects by language or tool">
+    <div className="TechFilter" role="group" aria-labelledby="tech-filter-heading">
+      <h2 className="TechFilterHeading" id="tech-filter-heading">
+        Filter by the language or tool you're interested in
+      </h2>
       <button
         type="button"
         className="TechFilterAll"
-        aria-pressed={active === null}
-        onClick={() => onChange(null)}
+        aria-pressed={active.length === 0}
+        onClick={() => onChange([])}
       >
         All projects
       </button>
-      {row("Languages", languages)}
-      {row("Tools", tools)}
+      {group("Languages", languages)}
+      {group("Tools", tools)}
     </div>
   );
 }

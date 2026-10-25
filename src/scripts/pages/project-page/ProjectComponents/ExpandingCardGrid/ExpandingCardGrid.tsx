@@ -8,6 +8,8 @@ import "./ExpandingCardGrid.css";
 export type CardInfo = {
   title: string;
   description: string;
+  /** The year the project was started; cards are listed newest first and show it beneath. */
+  year: number;
   component: React.FC;
   borderOutlineColor?: string;
   /** Outline colour on the light theme, for colours that wash out on white (near-white, neon green). */
@@ -91,6 +93,8 @@ export function ExpandableCardGrid({
   const outlineColor = (card: CardInfo) =>
     (theme === "light" ? card.lightOutlineColor : undefined) ?? card.borderOutlineColor;
 
+  const sorted = [...cards].sort((a, b) => b.year - a.year);
+
   const idFromCard = (card: CardInfo) => `${className}-${card.title}`;
 
   const expandedCard =
@@ -104,43 +108,45 @@ export function ExpandableCardGrid({
 
   return (
     <div className={`card-grid ${className || ""}`}>
-      {cards.map((card) => (
-        <motion.div
-          key={idFromCard(card)}
-          layoutId={idFromCard(card)}
-          className="card"
-          role="button"
-          tabIndex={0}
-          aria-label={`${card.title}: open details`}
-          style={
-            {
-              "--c-dark": card.borderOutlineColor ?? "#888",
-              "--c-light": card.lightOutlineColor ?? card.borderOutlineColor ?? "#888",
-            } as React.CSSProperties
-          }
-          onClick={() => setExpandedId(idFromCard(card))}
-          onKeyDown={(e) => {
-            if (e.key === "Enter" || e.key === " ") {
-              e.preventDefault();
-              setExpandedId(idFromCard(card));
+      {sorted.map((card) => (
+        <div className="card-cell" key={idFromCard(card)}>
+          <motion.div
+            layoutId={idFromCard(card)}
+            className="card"
+            role="button"
+            tabIndex={0}
+            aria-label={`${card.title}: open details`}
+            style={
+              {
+                "--c-dark": card.borderOutlineColor ?? "#888",
+                "--c-light": card.lightOutlineColor ?? card.borderOutlineColor ?? "#888",
+              } as React.CSSProperties
             }
-          }}
-          whileHover={{
-            scale: expandedId ? 1 : 1.05,
-            boxShadow: `inset 0 0 8px 6px ${outlineColor(card) ?? "transparent"}`,
-            transition: {
-              scale: { duration: 0.15, ease: "easeOut" },
-              boxShadow: { duration: 0.08, ease: "linear" },
-            },
-          }}
-        >
-          <CardTop card={card} />
-          <div className="card-text">
-            <h3>{card.title}</h3>
-            <p>{card.description}</p>
-            {card.footer && <div className="card-footer">{card.footer}</div>}
-          </div>
-        </motion.div>
+            onClick={() => setExpandedId(idFromCard(card))}
+            onKeyDown={(e) => {
+              if (e.key === "Enter" || e.key === " ") {
+                e.preventDefault();
+                setExpandedId(idFromCard(card));
+              }
+            }}
+            whileHover={{
+              scale: expandedId ? 1 : 1.05,
+              boxShadow: `inset 0 0 8px 6px ${outlineColor(card) ?? "transparent"}`,
+              transition: {
+                scale: { duration: 0.15, ease: "easeOut" },
+                boxShadow: { duration: 0.08, ease: "linear" },
+              },
+            }}
+          >
+            <CardTop card={card} />
+            <div className="card-text">
+              <h3>{card.title}</h3>
+              <p>{card.description}</p>
+              {card.footer && <div className="card-footer">{card.footer}</div>}
+            </div>
+          </motion.div>
+          <span className="card-year">{card.year}</span>
+        </div>
       ))}
 
       <AnimatePresence initial={false}>
