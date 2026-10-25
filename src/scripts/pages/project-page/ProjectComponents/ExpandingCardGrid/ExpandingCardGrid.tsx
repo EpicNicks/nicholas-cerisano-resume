@@ -43,23 +43,46 @@ function CardTop({ card }: { card: CardInfo }) {
   const tech = [...(card.languages ?? []), ...(card.tools ?? [])];
   const chips = tech.slice(0, 8);
   // One logo per icon: Azure and Azure Functions share one.
-  const icons = [...new Map(tech.filter((t) => techIcons[t]).map((t) => [techIcons[t].Icon, t])).values()].slice(0, 8);
+  const icons = [
+    ...new Map(
+      tech.filter((t) => techIcons[t]).map((t) => [techIcons[t].Icon, t]),
+    ).values(),
+  ].slice(0, 8);
 
   let face: React.ReactNode;
   if (card.media?.video) {
-    face = <video src={card.media.video} autoPlay loop muted playsInline aria-hidden="true" />;
+    face = (
+      <video
+        src={card.media.video}
+        autoPlay
+        loop
+        muted
+        playsInline
+        aria-hidden="true"
+      />
+    );
   } else if (card.media?.image) {
     face = <img src={card.media.image} alt="" />;
   } else {
     face = (
       <div
         className="card-icons"
-        style={{ "--n": icons.length, "--cols": Math.ceil(icons.length / 2) } as React.CSSProperties}
+        style={
+          {
+            "--n": icons.length,
+            "--cols": Math.ceil(icons.length / 2),
+          } as React.CSSProperties
+        }
       >
         {icons.map((name) => {
           const { Icon, color } = techIcons[name];
           return (
-            <span className="card-icon" key={name} title={name} style={{ "--brand": color } as React.CSSProperties}>
+            <span
+              className="card-icon"
+              key={name}
+              title={name}
+              style={{ "--brand": color } as React.CSSProperties}
+            >
               <Icon color={color} aria-hidden="true" />
             </span>
           );
@@ -71,12 +94,20 @@ function CardTop({ card }: { card: CardInfo }) {
   return (
     <div
       className={`card-top${card.media ? " card-top-media" : ""}${card.media?.contain ? " card-top-contain" : ""}`}
-      style={card.media?.background ? { background: card.media.background } : undefined}
+      style={
+        card.media?.background
+          ? { background: card.media.background }
+          : undefined
+      }
     >
       {face}
       <div className="card-chips">
         {chips.map((chip, i) => (
-          <span className="card-chip" key={chip} style={{ "--i": i } as React.CSSProperties}>
+          <span
+            className="card-chip"
+            key={chip}
+            style={{ "--i": i } as React.CSSProperties}
+          >
             {chip}
           </span>
         ))}
@@ -93,14 +124,17 @@ export function ExpandableCardGrid({
   const zIndex = usePreventBodyScroll(expandedId !== null);
   const { theme } = useTheme();
   const outlineColor = (card: CardInfo) =>
-    (theme === "light" ? card.lightOutlineColor : undefined) ?? card.borderOutlineColor;
+    (theme === "light" ? card.lightOutlineColor : undefined) ??
+    card.borderOutlineColor;
 
-  const sorted = [...cards].sort((a, b) => (b.endYear ?? b.year) - (a.endYear ?? a.year));
+  const sorted = [...cards].sort((a, b) => b.year - a.year);
 
   const idFromCard = (card: CardInfo) => `${className}-${card.title}`;
 
   const expandedCard =
-    expandedId !== null ? cards.find((c) => idFromCard(c) === expandedId) : undefined;
+    expandedId !== null
+      ? cards.find((c) => idFromCard(c) === expandedId)
+      : undefined;
   const ExpandedComponent = expandedCard?.component ?? null;
 
   const handleClose = (e: React.MouseEvent) => {
@@ -121,7 +155,8 @@ export function ExpandableCardGrid({
             style={
               {
                 "--c-dark": card.borderOutlineColor ?? "#888",
-                "--c-light": card.lightOutlineColor ?? card.borderOutlineColor ?? "#888",
+                "--c-light":
+                  card.lightOutlineColor ?? card.borderOutlineColor ?? "#888",
               } as React.CSSProperties
             }
             onClick={() => setExpandedId(idFromCard(card))}
@@ -166,7 +201,11 @@ export function ExpandableCardGrid({
             <motion.div
               className={`expanded-content${expandedCard?.wide ? " expanded-content-wide" : ""}`}
               layoutId={expandedId}
-              style={{ "--c": (expandedCard && outlineColor(expandedCard)) ?? "#888" } as React.CSSProperties}
+              style={
+                {
+                  "--c": (expandedCard && outlineColor(expandedCard)) ?? "#888",
+                } as React.CSSProperties
+              }
               onClick={(e) => e.stopPropagation()}
             >
               <button

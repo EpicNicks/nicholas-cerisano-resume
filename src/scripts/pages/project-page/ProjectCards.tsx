@@ -27,34 +27,62 @@ const professionalProjectCards: CardInfo[] = [
     endYear: 2026,
     borderOutlineColor: "#ff4b1f",
     languages: ["TypeScript", "Java"],
-    tools: ["React", "Redux Toolkit", "Spring Boot", "REST API", "MS SQL Server", "Azure", "Docker", "Jest", "JUnit"],
+    tools: [
+      "React",
+      "Redux Toolkit",
+      "Spring Boot",
+      "REST API",
+      "MS SQL Server",
+      "Azure",
+      "Docker",
+      "Jest",
+      "JUnit",
+    ],
     footer: "+15% cases resolved per week",
   },
   {
     title: "Azure Cloud Functions for Internal Batch Jobs",
-    description: "Serverless Azure Cloud Functions for automating internal batch jobs.",
+    description:
+      "Serverless Azure Cloud Functions for automating internal batch jobs.",
     component: AzureBatchFunctions,
     year: 2025,
     endYear: 2026,
     borderOutlineColor: "#00ddff",
     lightOutlineColor: "#00a6c7",
     languages: ["Java"],
-    tools: ["Spring Boot", "Azure Functions", "Durable Functions", "MS SQL Server", "JUnit"],
+    tools: [
+      "Spring Boot",
+      "Azure Functions",
+      "Durable Functions",
+      "MS SQL Server",
+      "JUnit",
+    ],
     footer: "−60% incidents per month",
   },
   {
     title: "Internal Fraud Management System",
-    description: "A full-stack web application for managing internal fraud cases.",
+    description:
+      "A full-stack web application for managing internal fraud cases.",
     component: InternalFraudManagement,
     year: 2023,
     borderOutlineColor: "#1f53ff",
     languages: ["TypeScript", "Java"],
-    tools: ["React", "Redux Toolkit", "Spring Boot", "REST API", "MS SQL Server", "Azure", "Jest", "JUnit"],
+    tools: [
+      "React",
+      "Redux Toolkit",
+      "Spring Boot",
+      "REST API",
+      "MS SQL Server",
+      "Azure",
+      "Jest",
+      "JUnit",
+    ],
     footer: "99.99% uptime, up from 99.5%",
   },
   {
     title: "End-to-End Automated Testing",
-    description: "An end-to-end automated testing suite for web applications using Puppeteer.js.",
+    description:
+      "An end-to-end automated testing suite for web applications using Puppeteer.js.",
     component: EndToEndTesting,
     year: 2019,
     borderOutlineColor: "#00ff0d",
@@ -68,9 +96,11 @@ const professionalProjectCards: CardInfo[] = [
 const personalProjectCards: CardInfo[] = [
   {
     title: "N2Engine",
-    description: "A WIP C++ game engine using low-level graphics and physics APIs.",
+    description:
+      "A WIP C++ game engine using low-level graphics and physics APIs.",
     component: N2Engine,
     year: 2025,
+    endYear: 2026,
     borderOutlineColor: "#667eea",
     languages: ["C++", "Lua"],
     tools: ["OpenGL", "NVIDIA PhysX", "WebAssembly"],
@@ -78,7 +108,8 @@ const personalProjectCards: CardInfo[] = [
   },
   {
     title: "NEngine Editor",
-    description: "A C# game engine built on SFML and a visual editor built on WPF.",
+    description:
+      "A C# game engine built on SFML and a visual editor built on WPF.",
     component: NEngineEditor,
     year: 2024,
     borderOutlineColor: "#764ba2",
@@ -90,6 +121,7 @@ const personalProjectCards: CardInfo[] = [
     description: "A Flutter/Dart calorie tracking app targeting Android.",
     component: CaloriesIn,
     year: 2023,
+    endYear: 2026,
     borderOutlineColor: "#ff6a00",
     languages: ["Dart", "Kotlin"],
     tools: ["Flutter", "SQLite"],
@@ -98,7 +130,8 @@ const personalProjectCards: CardInfo[] = [
   },
   {
     title: "Persian Phonetic IME",
-    description: "A Windows input method that turns Latin letters into Persian script as you type.",
+    description:
+      "A Windows input method that turns Latin letters into Persian script as you type.",
     component: PersianPhoneticIME,
     year: 2026,
     borderOutlineColor: "#e8a317",
@@ -110,7 +143,8 @@ const personalProjectCards: CardInfo[] = [
   },
   {
     title: "University Projects",
-    description: "Projects completed at York University for game design classes.",
+    description:
+      "Projects completed at York University for game design classes.",
     component: UniversityProjects,
     year: 2019,
     wide: true,
@@ -131,13 +165,28 @@ const filterGroup: Record<string, string> = {
 const filterName = (tech: string) => filterGroup[tech] ?? tech;
 
 const usesTech = (card: CardInfo, tech: string) =>
-  [...(card.languages ?? []), ...(card.tools ?? [])].some((t) => filterName(t) === tech);
+  [...(card.languages ?? []), ...(card.tools ?? [])].some(
+    (t) => filterName(t) === tech,
+  );
+
+const orFold = (names: string[]): string => {
+  if (names.length <= 1) {
+    return names[0] ?? "";
+  }
+
+  return `${names.slice(0, -1).join(", ")}, or ${names[names.length - 1]}`;
+};
 
 // Every language and tool across both sections, most-used first.
 function countTech(cards: CardInfo[], key: "languages" | "tools"): TechCount[] {
-  const names = [...new Set(cards.flatMap((card) => (card[key] ?? []).map(filterName)))];
+  const names = [
+    ...new Set(cards.flatMap((card) => (card[key] ?? []).map(filterName))),
+  ];
   return names
-    .map((name) => ({ name, count: cards.filter((card) => usesTech(card, name)).length }))
+    .map((name) => ({
+      name,
+      count: cards.filter((card) => usesTech(card, name)).length,
+    }))
     .sort((a, b) => b.count - a.count || a.name.localeCompare(b.name));
 }
 
@@ -146,13 +195,19 @@ export default function ProjectCards() {
 
   const { languages, tools } = useMemo(() => {
     const all = [...professionalProjectCards, ...personalProjectCards];
-    return { languages: countTech(all, "languages"), tools: countTech(all, "tools") };
+    return {
+      languages: countTech(all, "languages"),
+      tools: countTech(all, "tools"),
+    };
   }, []);
 
   // A card shows when it uses any of the selected languages and tools.
   const visible = (cards: CardInfo[]) =>
-    activeTech.length === 0 ? cards : cards.filter((card) => activeTech.some((tech) => usesTech(card, tech)));
-  const activeNames = activeTech.join(" or ");
+    activeTech.length === 0
+      ? cards
+      : cards.filter((card) => activeTech.some((tech) => usesTech(card, tech)));
+
+  const activeNames = orFold(activeTech);
   const professional = visible(professionalProjectCards);
   const personal = visible(personalProjectCards);
 
@@ -163,7 +218,12 @@ export default function ProjectCards() {
         <p>Open any card for the full story.</p>
       </div>
 
-      <TechFilter languages={languages} tools={tools} active={activeTech} onChange={setActiveTech} />
+      <TechFilter
+        languages={languages}
+        tools={tools}
+        active={activeTech}
+        onChange={setActiveTech}
+      />
 
       <div className="ProfessionalProjects">
         <div className="ProjectGroupHeader">
@@ -171,9 +231,14 @@ export default function ProjectCards() {
           <span>Built at Moneris</span>
         </div>
         {professional.length > 0 ? (
-          <ExpandableCardGrid cards={professional} className="professional-projects-card-grid" />
+          <ExpandableCardGrid
+            cards={professional}
+            className="professional-projects-card-grid"
+          />
         ) : (
-          <p className="ProjectsEmpty">None of the professional projects use {activeNames}.</p>
+          <p className="ProjectsEmpty">
+            None of my professional projects use {activeNames}.
+          </p>
         )}
       </div>
 
@@ -183,9 +248,14 @@ export default function ProjectCards() {
           <span>Engines, apps, tools and games built on my own time</span>
         </div>
         {personal.length > 0 ? (
-          <ExpandableCardGrid cards={personal} className="personal-projects-card-grid" />
+          <ExpandableCardGrid
+            cards={personal}
+            className="personal-projects-card-grid"
+          />
         ) : (
-          <p className="ProjectsEmpty">None of the personal projects use {activeNames}.</p>
+          <p className="ProjectsEmpty">
+            None of my personal projects use {activeNames}.
+          </p>
         )}
       </div>
     </div>
