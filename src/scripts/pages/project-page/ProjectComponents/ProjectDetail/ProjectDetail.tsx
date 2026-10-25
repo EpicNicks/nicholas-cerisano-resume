@@ -13,6 +13,8 @@ interface ProjectDetailProps {
   metric?: [string, string];
   /** A screenshot, clip, game or demo shown above the write-up. */
   media?: ReactNode;
+  /** Shows an image in `media` whole at its own proportions, on this colour, instead of cropping it to fill the width. */
+  mediaBackground?: string;
   /** The write-up: usually a few <p>s. */
   children?: ReactNode;
   /** Heading for the skimmable list, e.g. "Key Contributions". */
@@ -32,6 +34,7 @@ export function ProjectDetail({
   subtitle,
   metric,
   media,
+  mediaBackground,
   children,
   pointsHeading,
   points,
@@ -49,7 +52,14 @@ export function ProjectDetail({
           {metric[1]}
         </div>
       )}
-      {media && <div className="ProjectDetailMedia">{media}</div>}
+      {media && (
+        <div
+          className={`ProjectDetailMedia${mediaBackground ? " ProjectDetailMedia-contain" : ""}`}
+          style={mediaBackground ? { background: mediaBackground } : undefined}
+        >
+          {media}
+        </div>
+      )}
       {children && <div className="ProjectDetailBody">{children}</div>}
       {points && points.length > 0 && (
         <section className="ProjectDetailPoints">
