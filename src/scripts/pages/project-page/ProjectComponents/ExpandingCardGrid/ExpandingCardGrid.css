@@ -56,7 +56,7 @@
 
 /* The stack logos pack into the band as square tiles, 3px apart, at the largest size that fits: all in
    one row or split over two (--cols on top), whichever gives bigger tiles for the band's shape. Each
-   tile is washed in its brand's colour and the logo fills nearly all of it. */
+   tile has no background of its own, so the band's tint shows behind the logo, which fills nearly all of it. */
 .card-icons {
   --pad: 10px;
   --gap: 3px;
@@ -87,8 +87,6 @@
   height: var(--size);
   display: grid;
   place-items: center;
-  border-radius: 4px;
-  background: color-mix(in srgb, var(--brand) 12%, #f6f7f9);
 }
 
 .card-icon svg {
