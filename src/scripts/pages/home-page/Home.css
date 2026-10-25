@@ -65,7 +65,7 @@
 }
 
 .VideoOverlayText h2 {
-  margin: 0.4rem 0 2.1rem 8rem;
+  margin: 0.4rem 0 2.1rem;
   font-size: clamp(1.6rem, 3.2vw, 2.9rem);
   font-weight: 700;
   color: var(--role-ink);
@@ -130,7 +130,7 @@
 .SocialLinks > a:not(.homepage-resume-download-btn):focus-visible {
   color: var(--ink);
   transform: scale(1.1);
-  filter: drop-shadow(0 0 10px rgba(127, 246, 255, 0.8));
+  filter: var(--link-glow);
   outline: none;
 }
 
@@ -155,7 +155,7 @@
   color: var(--ink);
   background: rgba(127, 246, 255, 0.12);
   transform: scale(1.05);
-  filter: drop-shadow(0 0 10px rgba(127, 246, 255, 0.8));
+  filter: var(--link-glow);
   outline: none;
 }
 
@@ -166,10 +166,6 @@
 @media (max-width: 1000px) {
   .VideoPlayer video {
     filter: var(--video-filter-mobile, var(--video-filter));
-  }
-
-  .VideoOverlayText h2 {
-    margin-left: 4rem;
   }
 }
 
@@ -182,10 +178,6 @@
 }
 
 @media (max-width: 600px) {
-  .VideoOverlayText h2 {
-    margin-left: 0;
-  }
-
   .SubtitleContainer {
     grid-template-columns: 1fr;
     gap: 14px;

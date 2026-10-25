@@ -1,5 +1,6 @@
 /* Professional projects on the page background; personal projects on their own contrasting band. */
 .ProjectCards {
+  position: relative;
   display: flex;
   flex-direction: column;
   color: var(--ink);

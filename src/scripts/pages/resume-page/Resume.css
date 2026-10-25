@@ -10,15 +10,17 @@
 
 /* Dark Mode (Default) */
 .resume-container.dark-mode {
-  --resume-accent: #00ceff;
-  --resume-accent-hover: #6fe3ff;
+  /* A muted steel blue for text (5:1 on the page) over deep navy rules and panels. */
+  --resume-accent: #6b97d6;
+  --resume-accent-hover: #8fb3e3;
+  --resume-navy: #2f4f80;
   background-color: var(--bg);
   color: #e8e8e8;
 }
 
 .resume-container.dark-mode .resume-section-title {
   color: var(--resume-accent);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid color-mix(in srgb, var(--resume-navy) 70%, transparent);
 }
 
 .resume-container.dark-mode .resume-job-title,
@@ -35,8 +37,8 @@
 }
 
 .resume-container.dark-mode .resume-sidebar {
-  background-color: rgba(0, 0, 0, 0.15);
-  border-right: 1px solid rgba(255, 255, 255, 0.05);
+  background-color: color-mix(in srgb, var(--resume-navy) 14%, transparent);
+  border-right: 1px solid color-mix(in srgb, var(--resume-navy) 45%, transparent);
 }
 
 .resume-container.dark-mode .resume-separator {

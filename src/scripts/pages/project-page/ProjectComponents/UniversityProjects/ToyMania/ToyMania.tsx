@@ -8,7 +8,10 @@ export function ToyMania() {
       subtitle={'A puzzle builder game prototype created for a group project for my University game design class DATT 4300, modeled after the classic "The Incredible Machine"'}
       media={<UnityPlayer buildDirPath="/unity/toy-mania/Build/" buildName="Web" />}
       tech={["C#", "Unity"]}
-      links={[{ label: "Play on itch.io", href: "https://avanic-insanity.itch.io/toy-mania" }]}
+      links={[
+        { label: "Play on itch.io", href: "https://avanic-insanity.itch.io/toy-mania" },
+        { label: "View on GitHub", href: "https://github.com/EpicNicks/TheIncredibleMachineRemake" },
+      ]}
     >
       <p>Place moving objects in each puzzle level to guide the ball to the goal.</p>
     </ProjectDetail>

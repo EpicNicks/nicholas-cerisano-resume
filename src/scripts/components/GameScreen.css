@@ -1,0 +1,103 @@
+.game-screen {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #000;
+}
+
+.game-screen > iframe,
+.game-screen > canvas {
+  display: block;
+  width: 100%;
+  border: 0;
+}
+
+.game-screen > iframe {
+  aspect-ratio: 16 / 9;
+}
+
+/* A shade along the foot of the screen behind the button. It never takes the mouse, so the game
+   underneath keeps every click except those on the button itself. */
+.game-screen-overlay {
+  position: absolute;
+  inset: auto 0 0 0;
+  display: flex;
+  justify-content: flex-end;
+  padding: 36px 12px 12px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.55), transparent);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.game-screen-overlay.is-visible,
+.game-screen-overlay:focus-within {
+  opacity: 1;
+}
+
+.game-screen-overlay.is-visible .game-screen-fullscreen,
+.game-screen-fullscreen:focus-visible {
+  pointer-events: auto;
+}
+
+.game-screen-fullscreen {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 8px 6px 10px;
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #fff;
+  background: rgba(20, 20, 24, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 8px;
+  backdrop-filter: blur(4px);
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.game-screen-fullscreen:hover {
+  background: rgba(20, 20, 24, 0.9);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.game-screen-fullscreen:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+.game-screen-fullscreen svg {
+  width: 20px;
+  height: 20px;
+}
+
+.game-screen-fullscreen kbd {
+  padding: 1px 6px;
+  font: inherit;
+  font-size: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 4px;
+}
+
+/* No hover on touch screens: keep the button up, without the key hint. */
+@media (hover: none) {
+  .game-screen-overlay {
+    opacity: 1;
+  }
+
+  .game-screen-fullscreen {
+    pointer-events: auto;
+  }
+
+  .game-screen-fullscreen kbd {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .game-screen-overlay,
+  .game-screen-fullscreen {
+    transition: none;
+  }
+}
