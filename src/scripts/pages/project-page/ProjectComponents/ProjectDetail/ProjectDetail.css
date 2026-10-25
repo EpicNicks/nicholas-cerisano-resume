@@ -57,6 +57,21 @@
   object-fit: cover;
 }
 
+/* An image shown whole on its own background colour: centred, never stretched or cropped. */
+.ProjectDetailMedia-contain {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.ProjectDetailMedia-contain > img,
+.ProjectDetailMedia-contain > a > img {
+  width: auto;
+  max-width: 100%;
+  margin: 0 auto;
+  border-radius: 0;
+  object-fit: contain;
+}
+
 .ProjectDetailMedia > iframe {
   aspect-ratio: 16 / 9;
   background: #000;

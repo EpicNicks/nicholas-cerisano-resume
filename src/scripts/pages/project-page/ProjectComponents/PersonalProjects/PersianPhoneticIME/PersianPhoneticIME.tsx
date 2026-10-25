@@ -8,6 +8,7 @@ export function PersianPhoneticIME() {
     <ProjectDetail
       title="Persian Phonetic IME"
       subtitle="A phonetic Persian input method for Windows, written in Rust"
+      mediaBackground="#eef1f7"
       media={
         <a href={SITE_URL} target="_blank" rel="noopener noreferrer">
           <img src={siteScreenshot} alt="The Persian Phonetic IME site, with its try-it-now typing demo" />

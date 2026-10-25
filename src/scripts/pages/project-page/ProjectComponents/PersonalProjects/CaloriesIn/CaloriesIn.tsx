@@ -6,6 +6,7 @@ export function CaloriesIn() {
     <ProjectDetail
       title="Calories In"
       subtitle="A calorie-tracking mobile app created with Flutter and Dart"
+      mediaBackground="#ff5722"
       media={<img src={caloriesInLogo} alt="Calories In app icon" />}
       tech={["Flutter", "Dart", "Kotlin", "SQLite"]}
       links={[
