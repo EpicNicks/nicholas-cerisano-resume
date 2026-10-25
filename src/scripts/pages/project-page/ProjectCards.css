@@ -6,37 +6,48 @@
   text-align: left;
 }
 
+.ProjectCards {
+  --content: min(1240px, 100% - 56px);
+}
+
 .ProjectsIntro,
 .ProjectsLayout {
-  width: min(1240px, 100% - 56px);
+  width: var(--content);
   margin-left: auto;
   margin-right: auto;
 }
 
-/* The filter on the left (sticky) and both project sections on the right; stacked on narrower screens. */
+/* The filter sits above the projects on narrower screens. */
 .ProjectsLayout {
+  position: relative;
   display: grid;
   grid-template-columns: minmax(0, 1fr);
   gap: 28px;
   padding-top: 8px;
 }
 
-.ProjectsSidebar {
-  min-width: 0;
-}
-
+.ProjectsSidebar,
 .ProjectsMain {
   min-width: 0;
 }
 
-@media (min-width: 1180px) {
-  .ProjectsLayout {
-    grid-template-columns: 250px minmax(0, 1fr);
-    gap: 36px;
-    align-items: start;
+/* On wide screens the projects stay centred and as wide as the room allows, and the filter hangs in the
+   gutter to their left, sticking as the page scrolls. The content gives up 280px a side (a 224px filter,
+   a 28px gap and a 28px edge) so the two stay balanced; past ~1800px it is the full 1240px. */
+@media (min-width: 1280px) {
+  .ProjectCards {
+    --content: min(1240px, 100% - 560px);
   }
 
   .ProjectsSidebar {
+    position: absolute;
+    top: 8px;
+    bottom: 0;
+    right: calc(100% + 28px);
+    width: 224px;
+  }
+
+  .ProjectsSidebar .TechFilter {
     position: sticky;
     top: 96px;
   }
@@ -100,9 +111,8 @@
 }
 
 @media (max-width: 768px) {
-  .ProjectsIntro,
-  .ProjectsLayout {
-    width: calc(100% - 32px);
+  .ProjectCards {
+    --content: calc(100% - 32px);
   }
 
   .PersonalProjects {

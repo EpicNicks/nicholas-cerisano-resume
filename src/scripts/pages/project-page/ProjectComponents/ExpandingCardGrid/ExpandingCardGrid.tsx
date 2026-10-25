@@ -8,8 +8,10 @@ import "./ExpandingCardGrid.css";
 export type CardInfo = {
   title: string;
   description: string;
-  /** The year the project was started; cards are listed newest first and show it beneath. */
+  /** The year the project was started; cards show it beneath. */
   year: number;
+  /** The year the project ended, for work that spanned years; cards are listed newest first by this, else by `year`. */
+  endYear?: number;
   component: React.FC;
   borderOutlineColor?: string;
   /** Outline colour on the light theme, for colours that wash out on white (near-white, neon green). */
@@ -93,7 +95,7 @@ export function ExpandableCardGrid({
   const outlineColor = (card: CardInfo) =>
     (theme === "light" ? card.lightOutlineColor : undefined) ?? card.borderOutlineColor;
 
-  const sorted = [...cards].sort((a, b) => b.year - a.year);
+  const sorted = [...cards].sort((a, b) => (b.endYear ?? b.year) - (a.endYear ?? a.year));
 
   const idFromCard = (card: CardInfo) => `${className}-${card.title}`;
 
@@ -145,7 +147,9 @@ export function ExpandableCardGrid({
               {card.footer && <div className="card-footer">{card.footer}</div>}
             </div>
           </motion.div>
-          <span className="card-year">{card.year}</span>
+          <span className="card-year">
+            {card.endYear ? `${card.year}–${card.endYear}` : card.year}
+          </span>
         </div>
       ))}
 

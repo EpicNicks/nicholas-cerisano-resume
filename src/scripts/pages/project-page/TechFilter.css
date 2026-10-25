@@ -1,5 +1,5 @@
-/* Below the sidebar breakpoint the filter is a panel above the projects; from 1180px up it is a narrow
-   column beside them (see ProjectCards.css). */
+/* Below the sidebar breakpoint the filter is a panel above the projects; from 1280px up it is a narrow
+   column in the gutter to their left (see ProjectCards.css). */
 .TechFilter {
   display: flex;
   flex-direction: column;
@@ -78,7 +78,7 @@
 
 /* Beside the projects: no box of its own, just the page's colours and a rule down its edge, scrolling
    on its own when the lists are taller than the window. */
-@media (min-width: 1180px) {
+@media (min-width: 1280px) {
   .TechFilter {
     gap: 18px;
     padding: 0 22px 0 0;

@@ -24,6 +24,7 @@ const professionalProjectCards: CardInfo[] = [
     description: "A full-stack web application for managing internal disputes.",
     component: InternalDisputesManagement,
     year: 2022,
+    endYear: 2026,
     borderOutlineColor: "#ff4b1f",
     languages: ["TypeScript", "Java"],
     tools: ["React", "Redux Toolkit", "Spring Boot", "REST API", "MS SQL Server", "Azure", "Docker", "Jest", "JUnit"],
