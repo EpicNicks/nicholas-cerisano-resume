@@ -15,6 +15,7 @@ export function DummyInsomnia() {
         ></iframe>
       }
       tech={["C#", "Unity"]}
+      links={[{ label: "View on GitHub", href: "https://github.com/EpicNicks/SleepySlothGame" }]}
     >
       <p>
         The project was built for Unity's HD Render Pipeline (HDRP), which

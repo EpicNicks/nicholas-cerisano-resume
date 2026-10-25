@@ -1,7 +1,9 @@
+/* Below the sidebar breakpoint the filter is a panel above the projects; from 1180px up it is a narrow
+   column beside them (see ProjectCards.css). */
 .TechFilter {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 14px;
   padding: 16px 18px;
   border: 1px solid var(--line);
   border-radius: 14px;
@@ -9,16 +11,24 @@
   text-align: left;
 }
 
-.TechFilterRow {
-  display: grid;
-  grid-template-columns: 82px 1fr;
-  align-items: start;
-  gap: 6px;
+.TechFilterHeading {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--ink);
+}
+
+.TechFilterGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .TechFilterLabel {
-  padding-top: 5px;
+  margin: 0;
   font-size: 0.8rem;
+  font-weight: 600;
   color: var(--muted);
 }
 
@@ -37,6 +47,7 @@
   font-size: 0.85rem;
   line-height: 1.3;
   color: var(--muted);
+  transition: color 0.15s ease, border-color 0.15s ease, background-color 0.15s ease;
 }
 
 .TechFilter button span {
@@ -58,14 +69,32 @@
 .TechFilter button[aria-pressed="true"] {
   color: var(--accent);
   border-color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 14%, transparent);
 }
 
 .TechFilter .TechFilterAll {
   align-self: flex-start;
 }
 
-@media (max-width: 520px) {
-  .TechFilterRow {
-    grid-template-columns: 1fr;
+/* Beside the projects: no box of its own, just the page's colours and a rule down its edge, scrolling
+   on its own when the lists are taller than the window. */
+@media (min-width: 1180px) {
+  .TechFilter {
+    gap: 18px;
+    padding: 0 22px 0 0;
+    border: 0;
+    border-right: 1px solid var(--line);
+    border-radius: 0;
+    background: none;
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--line) transparent;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .TechFilter button {
+    transition: none;
   }
 }
