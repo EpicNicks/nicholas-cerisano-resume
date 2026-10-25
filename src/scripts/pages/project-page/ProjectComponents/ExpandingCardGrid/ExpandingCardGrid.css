@@ -54,6 +54,10 @@
   display: block;
 }
 
+.card-top-contain img {
+  object-fit: contain;
+}
+
 /* The stack logos pack into the band as square tiles, 3px apart, at the largest size that fits: all in
    one row or split over two (--cols on top), whichever gives bigger tiles for the band's shape. Each
    tile has no background of its own, so the band's tint shows behind the logo, which fills nearly all of it. */

@@ -19,7 +19,14 @@ export type CardInfo = {
   /** Opens in a wider panel, for details that hold their own card grid. */
   wide?: boolean;
   /** Shown at the top of the card in place of the stack logos. */
-  media?: { video?: string; image?: string };
+  media?: {
+    video?: string;
+    image?: string;
+    /** Show the image whole at its own proportions instead of cropping it to fill the band. */
+    contain?: boolean;
+    /** Fills the band behind the image, so a contained image blends into it. */
+    background?: string;
+  };
 };
 
 interface ExpandableCardGridProps {
@@ -58,7 +65,10 @@ function CardTop({ card }: { card: CardInfo }) {
   }
 
   return (
-    <div className={`card-top${card.media ? " card-top-media" : ""}`}>
+    <div
+      className={`card-top${card.media ? " card-top-media" : ""}${card.media?.contain ? " card-top-contain" : ""}`}
+      style={card.media?.background ? { background: card.media.background } : undefined}
+    >
       {face}
       <div className="card-chips">
         {chips.map((chip, i) => (
