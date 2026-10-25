@@ -32,11 +32,11 @@
 }
 
 .ProfessionalProjects {
-  padding: 48px 0 80px;
+  padding: 0px 0 40px;
 }
 
 .PersonalProjects {
-  padding: 72px 0 88px;
+  padding: 40px 0 40px;
   background: var(--bg-2);
   border-top: 1px solid var(--line);
   transition: background-color 0.25s ease;
@@ -61,12 +61,9 @@
   color: var(--muted);
 }
 
-.professional-projects-card-grid.card-grid {
-  grid-template-columns: repeat(4, 1fr);
-}
-
+.professional-projects-card-grid.card-grid,
 .personal-projects-card-grid.card-grid {
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .ProjectsEmpty {
@@ -74,12 +71,9 @@
 }
 
 @media (max-width: 1180px) {
-  .professional-projects-card-grid.card-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
+  .professional-projects-card-grid.card-grid,
   .personal-projects-card-grid.card-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -88,10 +82,6 @@
   .ProfessionalProjects > *,
   .PersonalProjects > * {
     width: calc(100% - 32px);
-  }
-
-  .personal-projects-card-grid.card-grid {
-    grid-template-columns: repeat(2, 1fr);
   }
 }
 
