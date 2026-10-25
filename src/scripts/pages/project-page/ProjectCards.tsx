@@ -85,7 +85,7 @@ const personalProjectCards: CardInfo[] = [
     languages: ["Dart", "Kotlin"],
     tools: ["Flutter", "SQLite"],
     footer: "On Google Play",
-    media: { image: caloriesInLogo },
+    media: { image: caloriesInLogo, contain: true, background: "#ff5722" },
   },
   {
     title: "Persian Phonetic IME",
