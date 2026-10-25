@@ -34,7 +34,8 @@ const professionalProjectCards: CardInfo[] = [
     title: "Azure Cloud Functions for Internal Batch Jobs",
     description: "Serverless Azure Cloud Functions for automating internal batch jobs.",
     component: AzureBatchFunctions,
-    year: 2024,
+    year: 2025,
+    endYear: 2026,
     borderOutlineColor: "#00ddff",
     lightOutlineColor: "#00a6c7",
     languages: ["Java"],
@@ -162,36 +163,30 @@ export default function ProjectCards() {
         <p>Open any card for the full story.</p>
       </div>
 
-      <div className="ProjectsLayout">
-        <aside className="ProjectsSidebar">
-          <TechFilter languages={languages} tools={tools} active={activeTech} onChange={setActiveTech} />
-        </aside>
+      <TechFilter languages={languages} tools={tools} active={activeTech} onChange={setActiveTech} />
 
-        <div className="ProjectsMain">
-        <div className="ProfessionalProjects">
-          <div className="ProjectGroupHeader">
-            <h2>Professional Projects</h2>
-            <span>Built at Moneris</span>
-          </div>
-          {professional.length > 0 ? (
-            <ExpandableCardGrid cards={professional} className="professional-projects-card-grid" />
-          ) : (
-            <p className="ProjectsEmpty">None of the professional projects use {activeNames}.</p>
-          )}
+      <div className="ProfessionalProjects">
+        <div className="ProjectGroupHeader">
+          <h2>Professional Projects</h2>
+          <span>Built at Moneris</span>
         </div>
+        {professional.length > 0 ? (
+          <ExpandableCardGrid cards={professional} className="professional-projects-card-grid" />
+        ) : (
+          <p className="ProjectsEmpty">None of the professional projects use {activeNames}.</p>
+        )}
+      </div>
 
-        <div className="PersonalProjects">
-          <div className="ProjectGroupHeader">
-            <h2>Personal Projects</h2>
-            <span>Engines, apps, tools and games built on my own time</span>
-          </div>
-          {personal.length > 0 ? (
-            <ExpandableCardGrid cards={personal} className="personal-projects-card-grid" />
-          ) : (
-            <p className="ProjectsEmpty">None of the personal projects use {activeNames}.</p>
-          )}
+      <div className="PersonalProjects">
+        <div className="ProjectGroupHeader">
+          <h2>Personal Projects</h2>
+          <span>Engines, apps, tools and games built on my own time</span>
         </div>
-        </div>
+        {personal.length > 0 ? (
+          <ExpandableCardGrid cards={personal} className="personal-projects-card-grid" />
+        ) : (
+          <p className="ProjectsEmpty">None of the personal projects use {activeNames}.</p>
+        )}
       </div>
     </div>
   );

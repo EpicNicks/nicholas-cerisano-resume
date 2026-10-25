@@ -8,10 +8,10 @@
 
 /* A card and the year it was started, set in small type beneath it. */
 .card-cell {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-content: start;
   gap: 10px;
-  min-width: 0;
 }
 
 .card-year {
