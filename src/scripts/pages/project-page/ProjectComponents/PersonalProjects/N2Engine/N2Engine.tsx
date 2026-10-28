@@ -67,20 +67,29 @@ export function N2Engine() {
           <p>
             <b>Press "F" to toggle fullscreen.</b> The engine compiled to
             WebAssembly (Emscripten), running a Lua-scripted scene on its
-            software renderer with PhysX physics.
+            software renderer with PhysX physics. Keys 1-7, 8, 9, 0 and -
+            jump between stations, WASD and the arrows fly the camera, and
+            the on-screen HUD lists each station's own keys.
           </p>
         </>
       }
       pointsHeading="Key Features"
+      pointsInColumns
       points={[
-        ["Hierarchical component system"],
-        ["Main loop scheduling", "Coroutines, physics and rendering over the current scene graph, plus scene management"],
-        ["Input system", "Event-driven and phased, with support for multiple input devices"],
-        ["Asset serialization", "JSON representation of the scene graph built into the component architecture"],
-        ["Rendering backend", "Instancing and lighting"],
+        ["Component system", "GameObject hierarchy, scenes, coroutines and JSON serialization with prefabs"],
+        ["Renderers", "OpenGL, WebGPU, software and Vulkan (in progress) behind one graphics-agnostic API"],
+        ["Physics", "PhysX and Jolt behind one backend interface; Jolt state can be saved, restored and hashed"],
+        ["Soft bodies and particles", "CPU solvers everywhere, optional PhysX GPU backends"],
+        ["Text, UI and input", "SDF text, screen and world-space UI, phased action maps for many devices"],
+        ["Lua scripting", "Lifecycle scripts, serializable fields and editor extensions"],
+        ["Netcode (n2net)", "Own packet layer with reliable and unreliable channels, prediction, lag compensation, rollback and spectators"],
+        ["Determinism", "Golden replay and physics hashes compared across Windows, Linux and arm64 in CI"],
+        ["Editor", "TCP host with a versioned binary protocol, driven by an Electron and Preact editor"],
+        ["MCP bridge (early)", "Lets AI agents inspect and edit a scene under per-agent tokens"],
+        ["WebAssembly", "Emscripten build with size budgets enforced in CI"],
         ["SIMD math types", "Use the SIMD instruction sets available on the running system"],
       ]}
-      tech={["C++", "Lua", "OpenGL", "NVIDIA PhysX", "WebAssembly"]}
+      tech={["C++23", "Lua", "OpenGL", "Vulkan", "WebGPU", "NVIDIA PhysX", "Jolt", "WebAssembly", "TypeScript"]}
       links={[
         { label: "View on GitHub", href: "https://github.com/EpicNicks/N2Engine" },
         { label: "Open the demo in a new tab", href: DEMO_URL },
@@ -88,9 +97,11 @@ export function N2Engine() {
     >
       <p>
         N2Engine takes the architectural experience from building NEngine and
-        pushes for more ownership of low-level components. It targets OpenGL
-        first, with Vulkan planned, behind a graphics-agnostic API. That
-        interface-driven architecture is the core of the design.
+        pushes for more ownership of low-level components. Rendering and
+        physics sit behind interfaces, so OpenGL, WebGPU and a software
+        renderer (with Vulkan in progress) and PhysX or Jolt can be swapped
+        without touching game code. That interface-driven architecture is the
+        core of the design.
       </p>
     </ProjectDetail>
   );
