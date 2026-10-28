@@ -102,8 +102,15 @@ const personalProjectCards: CardInfo[] = [
     year: 2025,
     endYear: 2026,
     borderOutlineColor: "#667eea",
-    languages: ["C++", "Lua"],
-    tools: ["OpenGL", "NVIDIA PhysX", "WebAssembly"],
+    languages: ["C++", "C++23", "Lua"],
+    tools: [
+      "OpenGL",
+      "Vulkan",
+      "WebGPU",
+      "NVIDIA PhysX",
+      "Jolt",
+      "WebAssembly",
+    ],
     footer: "Playable web demo",
   },
   {
