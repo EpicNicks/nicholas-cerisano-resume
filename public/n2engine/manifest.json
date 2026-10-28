@@ -4,34 +4,34 @@
   "precompressed": true,
   "files": {
     "index.data": {
-      "raw": 82141,
-      "sha256": "b48a2cac99c141b9b2b31edcbba1f38272b75716a0832b456a641a6a39b65a31",
-      "gzip": 20389,
-      "brotli": 17282
+      "raw": 92210,
+      "sha256": "2f318baed0be63aca297b4215d01813e0d46fc0a01d26cfa64942ece8eb21f34",
+      "gzip": 22986,
+      "brotli": 19418
     },
     "index.html": {
-      "raw": 4302,
-      "sha256": "a7d4b238edef9d58ba348578c9c5ee6bdd3f8d16cdfa7aff5d83a5b414a7a5ad",
-      "gzip": 1957,
-      "brotli": 1600
+      "raw": 5319,
+      "sha256": "6af2c78f4c64e8749412c7ca8d0e0213524c3dec83b398a6d1aa4a4d8d306b38",
+      "gzip": 2404,
+      "brotli": 1966
     },
     "index.js": {
-      "raw": 160632,
-      "sha256": "2c6bd03c77a275388035c7383d6014999ba4072869c59fcb078ec0539cfde116",
-      "gzip": 40708,
-      "brotli": 35621
+      "raw": 164345,
+      "sha256": "9f93f4ba1fc1d761987e53baab56174dfc2e2dc306ef30a2029a258716850be0",
+      "gzip": 41353,
+      "brotli": 36223
     },
     "index.wasm": {
-      "raw": 6851779,
-      "sha256": "91195f804d0c5fbfe72abcc393a89556a9d60d1094554ff74a1b6cda90c7dc6c",
-      "gzip": 2249614,
-      "brotli": 1579121
+      "raw": 7121224,
+      "sha256": "8a63deb64c54ffd115eb42b8ebc99ecb572270256656f2dffd5778cbaae101d0",
+      "gzip": 2292682,
+      "brotli": 1612860
     },
     "n2-loader.js": {
-      "raw": 25782,
-      "sha256": "1f35046550f3aa20ed6ed0dc310309b2c62564f39c00c26966849c4fae0682e0",
-      "gzip": 7586,
-      "brotli": 6600
+      "raw": 32049,
+      "sha256": "d3622c6c8a4874ba6a4b871bf25923683cc1710fcda5474d87913c440de9e948",
+      "gzip": 9520,
+      "brotli": 8287
     }
   }
 }

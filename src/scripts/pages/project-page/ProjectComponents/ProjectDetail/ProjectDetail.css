@@ -140,6 +140,18 @@
   color: var(--muted);
 }
 
+@media (min-width: 720px) {
+  .ProjectDetailPoints-columns ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 32px;
+  }
+
+  .ProjectDetailPoints-columns li:nth-last-child(-n + 2) {
+    border-bottom: 0;
+  }
+}
+
 .ProjectDetailTech {
   display: flex;
   flex-wrap: wrap;

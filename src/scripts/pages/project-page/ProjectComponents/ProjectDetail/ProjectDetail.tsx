@@ -21,6 +21,8 @@ interface ProjectDetailProps {
   pointsHeading?: string;
   /** Each point is a bold label with an optional line of detail. */
   points?: [string, string?][];
+  /** Lays the points out in two columns on wide screens. */
+  pointsInColumns?: boolean;
   tech?: string[];
   links?: ProjectLink[];
   /** Anything that comes after everything else, e.g. a nested card grid. */
@@ -38,6 +40,7 @@ export function ProjectDetail({
   children,
   pointsHeading,
   points,
+  pointsInColumns,
   tech,
   links,
   footer,
@@ -62,7 +65,7 @@ export function ProjectDetail({
       )}
       {children && <div className="ProjectDetailBody">{children}</div>}
       {points && points.length > 0 && (
-        <section className="ProjectDetailPoints">
+        <section className={`ProjectDetailPoints${pointsInColumns ? " ProjectDetailPoints-columns" : ""}`}>
           {pointsHeading && <h3>{pointsHeading}</h3>}
           <ul>
             {points.map(([label, detail]) => (
